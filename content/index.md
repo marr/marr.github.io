@@ -1,16 +1,14 @@
-# Welcome to Nuxt Content Starter
+# Welcome to my site
 
-This is the main page displaying Markdown located at [content/index.md](https://github.com/larbish/starter/blob/content/content/index.md).
+This is a new start to sharing some of the things I like to do with my development time outside of work.
 
-Move to [about](/about) page.
+## Current Focus
 
-## Manage your Contents
+Right now (Jan 2025), I have been working primarily with Vue and Nuxt as a frontend environment. I enjoy the productivity boost that the two offer, and feel more fluid when moving around in the component landscape. I aim to integrate some of my recent work around authentication, data visualization, and devops tooling.
 
-Create new pages or modify the existing ones in `content/` directory.
+## Data Munging on the Daily
 
-## Query & Render Pages
-
-You can find an example of querying contents and rendering them in a [catch-all page](https://github.com/larbish/starter/blob/content/app/pages/%5B...slug%5D.vue)
+I use the [Observable Framework]() as well as their online platform for prototyping and exploring interesting data sets. The data I work with is geospatial in nature and offering immersive detail with mapping is something I find fun to do.
 
 ## Integrate Vue Component
 
