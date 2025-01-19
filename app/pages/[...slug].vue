@@ -14,6 +14,6 @@ if (!page.value) {
   <ContentRenderer
     v-if="page"
     :value="page"
-    class="dark:bg-slate-800 prose dark:prose-invert prose-slate md:prose-lg lg:prose-xl"
+    class="prose dark:prose-invert prose-slate md:prose-lg lg:prose-xl"
   />
 </template>
