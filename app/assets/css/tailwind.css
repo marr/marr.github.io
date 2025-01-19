@@ -76,6 +76,9 @@
     @apply bg-background text-foreground;
   }
   a {
-    @apply underline text-primary;
+    @apply font-medium text-primary underline underline-offset-4;
+  }
+  code {
+    @apply bg-muted dark:bg-white text-muted-foreground dark:text-black border border-border rounded px-1;
   }
 }
