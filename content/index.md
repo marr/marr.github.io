@@ -12,8 +12,12 @@ I use the [Observable Framework]() as well as their online platform for prototyp
 
 ## Integrate Vue Component
 
-::alert{color="green"}
+::alert
 The current [alert](https://github.com/larbish/starter/blob/content/app/components/Alert.vue) and the [counter](https://github.com/larbish/starter/blob/content/app/components/Counter.vue) below are `Vue` components integrated into the Markdown.
+::
+
+::button
+test
 ::
 
 ::counter
