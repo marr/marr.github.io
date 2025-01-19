@@ -1,5 +1,7 @@
 # Welcome to my site
 
+`code`{class="not-prose"} example
+
 I will be sharing some of the things I like to do with my development time outside of work.
 
 ## Current Focus
@@ -8,7 +10,7 @@ Right now (Jan 2025), I have been working primarily with Vue and Nuxt as a front
 
 ## Data Munging on the Daily
 
-I use the [Observable Framework]() as well as their online platform for prototyping and exploring interesting data sets. The data I work with is geospatial in nature and offering immersive detail with mapping is something I find fun to do.
+I use the [Observable Framework](https://observablehq.com) as well as their online platform for prototyping and exploring interesting data sets. The data I work with is geospatial in nature and offering immersive detail with mapping is something I find fun to do.
 
 ## Integrated Vue Component
 
