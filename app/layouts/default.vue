@@ -19,7 +19,7 @@ const colorMode = useColorMode()
     <div class="mx-auto p-4">
       <Alert>
         <AlertDescription>
-          This is a demo of a Nuxt.js app with Tailwind CSS and Radix UI components.
+          This is a demo of a Nuxt.js app with Tailwind CSS and Radix UI components using nuxt studio.
         </AlertDescription>
       </Alert>
       <slot />
