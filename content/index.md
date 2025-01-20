@@ -12,6 +12,10 @@ Right now (Jan 2025), I have been working primarily with Vue and Nuxt as a front
 
 I use the [Observable Framework](https://observablehq.com) as well as their online platform for prototyping and exploring interesting data sets. The data I work with is geospatial in nature and offering immersive detail with mapping is something I find fun to do.
 
+### Nuxt Studio
+
+Not the easiest thing to get working with your `user.github.io` repo. You need to manually set the deploy branch to `gh-pages` from within github repo settings.
+
 ## Integrated Vue Component
 
 Example embedded counter via markdown
