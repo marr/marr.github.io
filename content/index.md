@@ -1,6 +1,6 @@
 # Welcome to my site
 
-`code`{class="not-prose"} example
+`code` example
 
 I will be sharing some of the things I like to do with my development time outside of work.
 
