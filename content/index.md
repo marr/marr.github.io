@@ -14,7 +14,7 @@ I use the [Observable Framework](https://observablehq.com) as well as their onli
 
 ### Nuxt Studio
 
-Not the easiest thing to get working with your `user.github.io` repo. You need to manually set the deploy branch to `gh-pages` from within github repo settings.
+Not the easiest thing to get working with your `user.github.io` repo. You need to manually set the deploy branch to `gh-pages` from within github repo settings. Honestly it was a challenge and really tested my patience. Subsequent deploys were not always happening.
 
 ## Integrated Vue Component
 
