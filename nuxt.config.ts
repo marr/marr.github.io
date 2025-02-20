@@ -1,10 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    "@nuxt/content",
     "@nuxtjs/tailwindcss",
     "shadcn-nuxt",
     "@nuxtjs/color-mode",
+    "@nuxt/content",
   ],
   devtools: { enabled: true },
   future: {
@@ -19,14 +18,6 @@ export default defineNuxtConfig({
     componentDir: "./app/components/ui",
     prefix: "",
   },
-  components: [
-    "~/components",
-    {
-      path: "~/components/ui",
-      global: true, // sets the path to global so you can use the components in your markdown
-      pathPrefix: false,
-    },
-  ],
   compatibilityDate: "2024-04-03",
   content: {
     build: {
