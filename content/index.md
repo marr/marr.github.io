@@ -18,7 +18,10 @@ Not the easiest thing to get working with your `user.github.io` repo. You need t
 
 ## Integrated Vue Component
 
-Example embedded counter via markdown
+Don't use the primitives from the ui directory though!
+
+::color_mode
+::
 
 ::counter
 ::
