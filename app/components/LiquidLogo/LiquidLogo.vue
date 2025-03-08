@@ -3,7 +3,7 @@
     v-if="processing"
     class="flex size-full items-center justify-center text-2xl font-bold text-primary/50"
   >
-    <span> Processing Logo </span>
+    <span> Processing...  </span>
   </div>
   <canvas
     ref="liquidLogoRef"
