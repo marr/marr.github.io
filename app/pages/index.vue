@@ -1,9 +1,8 @@
 <template>
-  <div class="flex h-96 w-full items-center justify-center">
-    <LiquidLogo :image-url="imageUrl" />
+  <div class="flex flex-col h-72 max-w-[950px] items-center justify-center">
+    <LiquidLogo class="translate-x-5" image-url="/cxl-icon.svg" />
+    <ClientOnly>
+      <MorphingText :texts="['Context', 'Labs']" />
+    </ClientOnly>
   </div>
 </template>
-
-<script lang="ts" setup>
-const imageUrl = "/cxl-icon.svg";
-</script>
