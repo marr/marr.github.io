@@ -18,6 +18,11 @@ export default defineNuxtConfig({
     componentDir: "./app/components/ui",
     prefix: "",
   },
+  tailwindcss: {
+    config: {
+      content: ["./app/components/**/*.{vue,ts}", "./app/pages/**/*.{vue,ts}"],
+    },
+  },
   compatibilityDate: "2024-04-03",
   content: {
     build: {
