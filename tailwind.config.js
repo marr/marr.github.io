@@ -1,5 +1,6 @@
-import animate from 'tailwindcss-animate'
+import { setupInspiraUI } from "@inspira-ui/plugins";
 import typography from '@tailwindcss/typography'
+import animate from 'tailwindcss-animate'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -86,5 +87,5 @@ export default {
       },
     },
   },
-  plugins: [animate, typography()],
+  plugins: [animate, setupInspiraUI, typography()],
 }
