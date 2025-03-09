@@ -1,1 +1,0 @@
-import{j as s,c as r,i as n,P as o}from"./CQG33X_H.js";const t={};function c(e,a){return n(),r("em",null,[o(e.$slots,"default")])}const _=Object.assign(s(t,[["render",c]]),{__name:"ProseEm"});export{_ as default};
