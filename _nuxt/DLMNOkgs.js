@@ -1,1 +1,0 @@
-import{j as r,c as o,i as s,P as t}from"./CQG33X_H.js";const a={},c={class:"prose-code border rounded-md p-1 bg-gray-800 text-white dark:bg-gray-900 dark:text-gray-100"};function d(e,n){return s(),o("code",c,[t(e.$slots,"default")])}const l=Object.assign(r(a,[["render",d]]),{__name:"ProseCode"});export{l as default};
