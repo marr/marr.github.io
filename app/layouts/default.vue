@@ -1,17 +1,17 @@
 <script setup lang="ts">
 const items = ref([
   { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
+  // { label: 'About', to: '/about' },
   // { title: 'Posts', to: '/posts' },
   // { title: 'Tags', to: '/tags' }
 ])
 </script>
 <template>
   <UContainer>
-    <div class="flex items-center w-full">
+    <div class="flex flex-end gap-3 items-center py-4 w-full">
       <UNavigationMenu :items="items" />
-      <div class="ml-auto">
-        <ColorModeButton class="ml-auto" />
+      <div>
+        <ColorModeButton />
       </div>
     </div>
     <slot />
