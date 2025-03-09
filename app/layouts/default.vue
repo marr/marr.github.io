@@ -1,11 +1,19 @@
+<script setup lang="ts">
+const items = ref([
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/about' },
+  // { title: 'Posts', to: '/posts' },
+  // { title: 'Tags', to: '/tags' }
+])
+</script>
 <template>
-  <div class="container mx-auto">
-    <p class="flex p-4 pb-2">
-      <ColorMode />
-      <NuxtLink v-if="$route.path === '/'" to="/about" class="ml-auto">About</NuxtLink>
-    </p>
-    <div class="mx-auto p-4">
-      <slot />
+  <UContainer>
+    <div class="flex items-center w-full">
+      <UNavigationMenu :items="items" />
+      <div class="ml-auto">
+        <ColorModeButton class="ml-auto" />
+      </div>
     </div>
-  </div>
+    <slot />
+  </UContainer>
 </template>

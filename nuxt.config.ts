@@ -1,7 +1,8 @@
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   modules: [
-    "@nuxtjs/tailwindcss",
-    "shadcn-nuxt",
+    '@nuxt/ui',
     "@nuxtjs/color-mode",
     "@nuxt/content",
   ],
@@ -14,15 +15,12 @@ export default defineNuxtConfig({
     fallback: "dark",
     classSuffix: "",
   },
-  shadcn: {
-    componentDir: "./app/components/ui",
-    prefix: "",
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
   },
-  tailwindcss: {
-    config: {
-      content: ["./app/components/**/*.{vue,ts}", "./app/pages/**/*.{vue,ts}"],
-    },
-  },
+  css: ['~/assets/css/main.css'],
   compatibilityDate: "2024-04-03",
   content: {
     build: {
@@ -41,7 +39,7 @@ export default defineNuxtConfig({
     },
     renderer: {
       alias: {
-        button: "Button",
+        button: "UButton",
       },
     },
   },
