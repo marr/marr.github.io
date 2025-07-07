@@ -3,7 +3,7 @@
     v-if="processing"
     class="flex size-full items-center justify-center text-2xl font-bold text-primary/50"
   >
-    <span> Context...  </span>
+    <span> loading...  </span>
   </div>
   <canvas
     ref="liquidLogoRef"
