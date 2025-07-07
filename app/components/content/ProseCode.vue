@@ -1,5 +1,5 @@
 <template>
-  <code class="prose-code border rounded-md p-1 bg-gray-800 text-white dark:bg-gray-900 dark:text-gray-100">
+  <UBadge size="lg" variant="subtle">
     <slot />
-  </code>
+  </UBadge>
 </template>
