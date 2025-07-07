@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h3>Counter: {{ count }}</h3>
+  <h3>Counter: {{ count }}</h3>
+  <div class="flex gap-2">
     <UButton @click="increment">
       Increment
     </UButton>
