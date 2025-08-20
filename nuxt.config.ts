@@ -45,6 +45,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/nuxt-maplibre': { prerender: false },
+    '/vue-squircle': { prerender: false },
   }
 
 });
