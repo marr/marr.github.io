@@ -1,4 +1,9 @@
-::liquid-logo{.w-10.h-10 image-url="/cxl-icon.svg"}
-::
+---
+title: Blog
+---
 
-coming soon..
+### Hosting nuxt studio on github pages
+
+Using Nuxt Studio, which is now only available as a self-hosted platform.
+
+<https://nuxt.studio/docs/deployment/github-pages>
