@@ -1,11 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/ui',
-    "@nuxtjs/color-mode",
-    "@nuxt/content",
-  ],
+  modules: ["@nuxt/ui", "@nuxtjs/color-mode", "@nuxt/content", "nuxt-studio"],
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
@@ -16,11 +12,9 @@ export default defineNuxtConfig({
     classSuffix: "",
   },
   vite: {
-    plugins: [
-      tailwindcss(),
-    ],
+    plugins: [tailwindcss()],
   },
-  css: ['~/assets/css/main.css'],
+  css: ["~/assets/css/main.css"],
   compatibilityDate: "2024-04-03",
   content: {
     build: {
@@ -28,14 +22,14 @@ export default defineNuxtConfig({
         highlight: {
           theme: {
             // Default theme (same as single string)
-            default: 'github-light',
+            default: "github-light",
             // Theme used if `html.dark`
-            dark: 'github-dark',
+            dark: "github-dark",
             // Theme used if `html.sepia`
-            sepia: 'monokai'
-          }
-        }
-      }
+            sepia: "monokai",
+          },
+        },
+      },
     },
     renderer: {
       alias: {
@@ -43,9 +37,20 @@ export default defineNuxtConfig({
       },
     },
   },
-  routeRules: {
-    '/nuxt-maplibre': { prerender: false },
-    '/vue-squircle': { prerender: false },
-  }
+  studio: {
+    // Studio admin route (default: '/_studio')
+    route: "/_studio",
 
+    // Git repository configuration (owner and repo are required)
+    repository: {
+      provider: "github", // 'github' or 'gitlab'
+      owner: "marr", // your GitHub/GitLab username or organization
+      repo: "marr.github.io", // your repository name
+      branch: "main", // the branch to commit to (default: main)
+    },
+  },
+  routeRules: {
+    "/nuxt-maplibre": { prerender: false },
+    "/vue-squircle": { prerender: false },
+  },
 });
