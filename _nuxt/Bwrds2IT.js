@@ -1,0 +1,1 @@
+import{x as l,O as r,d as c,i as p,Y as u,n as d,aj as s}from"./DdZ-rz0p.js";const i={base:""},_={__name:"ProseTbody",props:{class:{type:null,required:!1}},setup(e){const a=e,o=l(),t=r(()=>s({extend:s(i),...o.ui?.prose?.tbody||{}}));return(n,m)=>(p(),c("tbody",{class:d(t.value({class:a.class}))},[u(n.$slots,"default")],2))}};export{_ as default};
