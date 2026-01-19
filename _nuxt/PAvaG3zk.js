@@ -1,0 +1,1 @@
+import{x as l,d as r,e as c,a1 as p,n as u,V as d,a3 as s}from"./i-gDrAnY.js";const i={base:""},_={__name:"ProseTbody",props:{class:{type:null,required:!1}},setup(e){const a=e,o=l(),t=d(()=>s({extend:s(i),...o.ui?.prose?.tbody||{}}));return(n,m)=>(c(),r("tbody",{class:u(t.value({class:a.class}))},[p(n.$slots,"default")],2))}};export{_ as default};
