@@ -1,1 +1,0 @@
-import{x as l,O as r,d as c,i as p,Y as u,n as d,aj as e}from"./DdZ-rz0p.js";const i={base:"bg-muted"},h={__name:"ProseThead",props:{class:{type:null,required:!1}},setup(s){const a=s,t=l(),o=r(()=>e({extend:e(i),...t.ui?.prose?.thead||{}}));return(n,m)=>(p(),c("thead",{class:d(o.value({class:a.class}))},[u(n.$slots,"default")],2))}};export{h as default};
