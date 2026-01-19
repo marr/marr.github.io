@@ -1,7 +1,11 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: 'blog',
+})
+
 const route = useRoute()
-const { data: page } = await useAsyncData('page-' + route.path, () => {
-  return queryCollection('content').path(route.path).first()
+const { data: page } = await useAsyncData('blog-' + route.path, () => {
+  return queryCollection('blog').path(route.path).first()
 })
 
 if (!page.value) {
