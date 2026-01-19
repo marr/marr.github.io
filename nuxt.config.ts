@@ -3,9 +3,6 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxtjs/color-mode", "@nuxt/content", "nuxt-studio"],
   devtools: { enabled: true },
-  future: {
-    compatibilityVersion: 4,
-  },
   colorMode: {
     preference: "system",
     fallback: "dark",

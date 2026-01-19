@@ -1,19 +1,11 @@
-<script setup lang="ts">
-const items = ref([
-  { label: 'Home', to: '/' },
-  { label: 'Blog', to: '/blog' },
-  // { title: 'Posts', to: '/posts' },
-  // { title: 'Tags', to: '/tags' }
-])
-</script>
 <template>
-  <UContainer>
-    <div class="flex flex-end gap-3 items-center py-4 w-full">
-      <UNavigationMenu :items="items" />
-      <div class="ml-auto">
-        <ColorModeButton />
+  <div class="min-h-screen flex flex-col">
+    <SiteHeader />
+    <main class="flex-1">
+      <div class="max-w-3xl mx-auto px-4">
+        <slot />
       </div>
-    </div>
-    <slot />
-  </UContainer>
+    </main>
+    <SiteFooter />
+  </div>
 </template>
