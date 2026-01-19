@@ -21,9 +21,8 @@ socials:
     url: https://linkedin.com/in/davidmarr
 avatar: https://github.com/marr.png
 title: David Marr
+description: Building tools to monitor and address emissions at Context Labs, and contributing to the Vue/Nuxt ecosystem.
 ---
-#description
-Building tools to monitor and address emissions at Context Labs, and contributing to the Vue/Nuxt ecosystem.
 ::
 
 ::project-grid{title="Open Source"}
@@ -35,8 +34,8 @@ Building tools to monitor and address emissions at Context Labs, and contributin
   icon: i-mdi-map
   title: nuxt-maplibre
   url: https://marr.github.io/nuxt-maplibre
+  description: A Nuxt module for swapping map providers in a declarative way.
   ---
-  A Nuxt module for swapping map providers in a declarative way.
   :::
 
   :::project-card
@@ -47,8 +46,8 @@ Building tools to monitor and address emissions at Context Labs, and contributin
   icon: i-mdi-shape
   title: vue-squircle
   url: https://marr.github.io/vue-squircle
+  description: Turn your rounded corners into more interesting squircles.
   ---
-  Turn your rounded corners into more interesting squircles.
   :::
 ::
 
@@ -60,8 +59,8 @@ Building tools to monitor and address emissions at Context Labs, and contributin
   icon: i-mdi-kubernetes
   title: Talos
   url: https://talos.dev
+  description: Secure, immutable Linux for Kubernetes.
   ---
-  Secure, immutable Linux for Kubernetes.
   :::
 
   :::project-card
@@ -71,8 +70,8 @@ Building tools to monitor and address emissions at Context Labs, and contributin
   icon: i-mdi-desktop-mac
   title: Omarchy
   url: https://omarchy.dev
+  description: A modern development environment.
   ---
-  A modern development environment.
   :::
 
   :::project-card
@@ -83,8 +82,8 @@ Building tools to monitor and address emissions at Context Labs, and contributin
   icon: i-mdi-rocket-launch
   title: TanStack Start
   url: https://tanstack.com/start
+  description: The next generation of full-stack web applications.
   ---
-  The next generation of full-stack web applications.
   :::
 
   :::project-card
@@ -95,8 +94,8 @@ Building tools to monitor and address emissions at Context Labs, and contributin
   icon: i-mdi-robot
   title: Vercel AI SDK
   url: https://ai-sdk.dev
+  description: Build integrations between model providers and web frameworks.
   ---
-  Build integrations between model providers and web frameworks.
   :::
 
   :::project-card
@@ -107,8 +106,8 @@ Building tools to monitor and address emissions at Context Labs, and contributin
   icon: i-mdi-notebook
   title: Obsidian
   url: https://obsidian.md
+  description: A powerful knowledge base that works on local Markdown files.
   ---
-  A powerful knowledge base that works on local Markdown files.
   :::
 
   :::project-card
@@ -119,7 +118,7 @@ Building tools to monitor and address emissions at Context Labs, and contributin
   icon: i-mdi-connection
   title: Obsidian MCP
   url: https://github.com/smithery-ai/mcp-obsidian
+  description: Connect AI assistants to your Obsidian vault via Model Context Protocol.
   ---
-  Connect AI assistants to your Obsidian vault via Model Context Protocol.
   :::
 ::
