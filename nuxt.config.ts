@@ -1,13 +1,8 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  modules: ["@nuxt/ui", "@nuxtjs/color-mode", "@nuxt/content", "nuxt-studio"],
+  modules: ["@nuxt/ui", "@nuxt/content", "nuxt-studio"],
   devtools: { enabled: true },
-  colorMode: {
-    preference: "system",
-    fallback: "dark",
-    classSuffix: "",
-  },
   vite: {
     plugins: [tailwindcss()],
   },
