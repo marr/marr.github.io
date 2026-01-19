@@ -10,7 +10,7 @@
     <span
       ref="text1Ref"
       :class="cn(TEXT_CLASSES)"
-    />
+    >{{ texts[0] }}</span>
     <span
       ref="text2Ref"
       :class="cn(TEXT_CLASSES)"

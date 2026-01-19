@@ -5,6 +5,7 @@
     }"
   >
     <div class="flex items-start gap-4">
+      <!-- Icon -->
       <div v-if="icon" class="flex items-center justify-center rounded-lg bg-muted p-2.5 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
         <UIcon :name="icon" class="size-5 group-hover:text-primary transition-colors" />
       </div>
@@ -16,8 +17,8 @@
         >
           {{ title }}
         </ULink>
-        <p class="text-sm text-muted">
-          <slot />
+        <p v-if="description" class="text-sm text-muted">
+          {{ description }}
         </p>
         <div v-if="tags?.length" class="flex flex-wrap gap-2 mt-2">
           <UBadge
@@ -40,6 +41,7 @@ interface Props {
   title: string
   url: string
   icon?: string
+  description?: string
   tags?: string[]
 }
 
@@ -47,6 +49,7 @@ const {
   title,
   url,
   icon = '',
+  description = '',
   tags = [],
 } = defineProps<Props>()
 </script>
