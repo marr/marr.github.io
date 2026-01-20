@@ -9,7 +9,7 @@
         <img
           :src="avatar"
           :alt="title"
-          class="relative size-32 md:size-40 rounded-full ring-2 ring-primary/50"
+          class="relative size-32 md:size-40 rounded-full ring-2 ring-primary/50 object-cover"
           width="160"
           height="160"
         />

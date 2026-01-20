@@ -3,7 +3,7 @@
 const hero = {
   title: 'David Marr',
   description: 'Building tools to monitor and address emissions at Context Labs, and contributing to the Vue/Nuxt ecosystem.',
-  avatar: 'https://github.com/marr.png',
+  avatar: '/avatar.png',
   roles: ['Engineering Leader', 'Open Source Creator', 'Climate Tech Builder'],
   socials: [
     { icon: 'i-mdi-github', url: 'https://github.com/marr' },
