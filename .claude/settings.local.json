@@ -10,7 +10,21 @@
       "mcp__context7__query-docs",
       "Bash(pnpm add:*)",
       "Bash(pnpm dev)",
-      "mcp__obsidian-mcp-tools__fetch"
+      "mcp__obsidian-mcp-tools__fetch",
+      "Bash(pnpm list:*)",
+      "mcp__chrome-dev-tools__list_pages",
+      "mcp__chrome-dev-tools__select_page",
+      "mcp__chrome-dev-tools__list_console_messages",
+      "WebSearch",
+      "Bash(pnpm dev:*)",
+      "mcp__chrome-dev-tools__new_page",
+      "mcp__nuxt__get-documentation-page",
+      "mcp__nuxt__list-modules",
+      "mcp__chrome-dev-tools__get_console_message",
+      "Bash(git checkout:*)",
+      "mcp__nuxt__list-documentation-pages",
+      "Bash(pnpm build:*)",
+      "Bash(curl:*)"
     ]
   }
 }

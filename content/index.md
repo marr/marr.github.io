@@ -19,9 +19,10 @@ socials:
     url: https://x.com/dmarr
   - icon: i-mdi-linkedin
     url: https://linkedin.com/in/davidmarr
-avatar: https://github.com/marr.png
+avatar: /avatar.png
+description: Building tools to monitor and address emissions at Context Labs,
+  and contributing to the Vue/Nuxt ecosystem.
 title: David Marr
-description: Building tools to monitor and address emissions at Context Labs, and contributing to the Vue/Nuxt ecosystem.
 ---
 ::
 
@@ -31,10 +32,10 @@ description: Building tools to monitor and address emissions at Context Labs, an
   tags:
     - Nuxt
     - Maps
-  icon: i-mdi-map
+  description: A Nuxt module for swapping map providers in a declarative way.
+  icon: i-logos-nuxt-icon
   title: nuxt-maplibre
   url: https://marr.github.io/nuxt-maplibre
-  description: A Nuxt module for swapping map providers in a declarative way.
   ---
   :::
 
@@ -43,10 +44,10 @@ description: Building tools to monitor and address emissions at Context Labs, an
   tags:
     - Vue
     - UI
-  icon: i-mdi-shape
+  description: Turn your rounded corners into more interesting squircles.
+  icon: i-logos-vue
   title: vue-squircle
   url: https://marr.github.io/vue-squircle
-  description: Turn your rounded corners into more interesting squircles.
   ---
   :::
 ::
@@ -56,10 +57,10 @@ description: Building tools to monitor and address emissions at Context Labs, an
   ---
   tags:
     - Infrastructure
-  icon: i-mdi-kubernetes
+  description: Secure, immutable Linux for Kubernetes.
+  icon: i-logos-kubernetes
   title: Talos
   url: https://talos.dev
-  description: Secure, immutable Linux for Kubernetes.
   ---
   :::
 
@@ -67,10 +68,10 @@ description: Building tools to monitor and address emissions at Context Labs, an
   ---
   tags:
     - Developer Tools
-  icon: i-mdi-desktop-mac
+  description: A modern development environment.
+  icon: i-logos-archlinux
   title: Omarchy
   url: https://omarchy.dev
-  description: A modern development environment.
   ---
   :::
 
@@ -79,10 +80,10 @@ description: Building tools to monitor and address emissions at Context Labs, an
   tags:
     - React
     - Vue
+  description: The next generation of full-stack web applications.
   icon: i-mdi-rocket-launch
   title: TanStack Start
   url: https://tanstack.com/start
-  description: The next generation of full-stack web applications.
   ---
   :::
 
@@ -91,10 +92,22 @@ description: Building tools to monitor and address emissions at Context Labs, an
   tags:
     - AI
     - SDK
-  icon: i-mdi-robot
+  description: Build integrations between model providers and web frameworks.
+  icon: i-logos-vercel-icon
   title: Vercel AI SDK
   url: https://ai-sdk.dev
-  description: Build integrations between model providers and web frameworks.
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - AI
+    - Developer Tools
+  description: A novel method for autonomous AI-driven software development.
+  icon: i-logos-claude-icon
+  title: Ralph Loop
+  url: https://claytonfarr.github.io/ralph-playbook/
   ---
   :::
 
@@ -103,22 +116,10 @@ description: Building tools to monitor and address emissions at Context Labs, an
   tags:
     - Notes
     - PKM
-  icon: i-mdi-notebook
+  description: A powerful knowledge base that works on local Markdown files.
+  icon: i-logos-obsidian-icon
   title: Obsidian
   url: https://obsidian.md
-  description: A powerful knowledge base that works on local Markdown files.
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - AI
-    - MCP
-  icon: i-mdi-connection
-  title: Obsidian MCP
-  url: https://github.com/smithery-ai/mcp-obsidian
-  description: Connect AI assistants to your Obsidian vault via Model Context Protocol.
   ---
   :::
 ::
