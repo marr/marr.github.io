@@ -1,0 +1,1 @@
+import{x as r,d as c,e as l,J as p,n as m,L as u,M as s}from"./XKfp31o2.js";const i={base:""},_={__name:"ProseEm",props:{class:{type:String,required:!1}},setup(e){const a=e,t=r(),o=u(()=>s({extend:s(i),...t.ui?.prose?.em||{}}));return(n,d)=>(c(),l("em",{class:m(o.value({class:a.class}))},[p(n.$slots,"default")],2))}};export{_ as default};
