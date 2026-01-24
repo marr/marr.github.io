@@ -1,7 +1,7 @@
 ---
 title: A simple publishing platform
 description: How I built this site with Nuxt Studio and Nuxt UI
-date: 2026-01-18
+date: 2026-01-18T00:00:00.000Z
 ---
 
 I've been through the cycle of over-engineering personal sites more times than I'd like to admit. This time, I wanted something different: a setup that gets out of the way and lets me focus on writing.
