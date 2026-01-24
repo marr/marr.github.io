@@ -1,0 +1,1 @@
+import{x as l,d as r,e as c,J as p,n as u,L as d,M as e}from"./XKfp31o2.js";const m={base:"bg-muted"},h={__name:"ProseThead",props:{class:{type:null,required:!1}},setup(s){const a=s,t=l(),o=d(()=>e({extend:e(m),...t.ui?.prose?.thead||{}}));return(n,i)=>(r(),c("thead",{class:u(o.value({class:a.class}))},[p(n.$slots,"default")],2))}};export{h as default};

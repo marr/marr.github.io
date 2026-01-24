@@ -1,0 +1,1 @@
+import{_ as c,d as _,e as a,h as e,f as o,J as r,bO as l,bP as d}from"./XKfp31o2.js";const f={},i={class:"min-h-screen flex flex-col"},m={class:"flex-1"},x={class:"max-w-3xl mx-auto px-4"};function p(t,u){const s=l,n=d;return _(),a("div",i,[e(s),o("main",m,[o("div",x,[r(t.$slots,"default")])]),e(n)])}const B=c(f,[["render",p]]);export{B as default};

@@ -1,1 +1,0 @@
-import{_ as c,d as _,e as a,g as e,h as o,bM as r,a1 as l,bN as d}from"./Ujaopc8t.js";const i={},m={class:"min-h-screen flex flex-col"},f={class:"flex-1"},x={class:"max-w-3xl mx-auto px-4"};function p(t,u){const s=r,n=d;return a(),_("div",m,[e(s),o("main",f,[o("div",x,[l(t.$slots,"default")])]),e(n)])}const B=c(i,[["render",p]]);export{B as default};
