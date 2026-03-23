@@ -67,11 +67,36 @@ title: David Marr
   :::project-card
   ---
   tags:
+    - Build Tools
+    - Frontend
+  description: A plugin suite that extends Vite with practical DX upgrades.
+  icon: i-logos-vitejs
+  title: vite-plus
+  url: https://vite-plus.js.org
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - JavaScript
+    - UI
+  description: A tiny reactive JavaScript library for building user interfaces.
+  icon: i-simple-icons-javascript
+  title: arrow-js
+  url: https://www.arrow-js.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Typography
     - Developer Tools
-  description: A modern development environment.
-  icon: i-logos-archlinux
-  title: Omarchy
-  url: https://omarchy.dev
+  description: A clean monospace typeface designed for coding workflows.
+  icon: i-mdi-format-font
+  title: pi-mono
+  url: https://github.com/picocss/pi-mono
   ---
   :::
 
