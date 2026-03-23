@@ -1,0 +1,134 @@
+cv:
+  name: David Marr
+  headline: Engineering Leader | 25 Years Scaling Modern Software, Global Teams &
+    AI Integration
+  location: "Boston, MA"
+  phone: "+10000000000"
+  email: "dave.marr@gmail.com"
+  sections:
+    summary:
+      - Engineering leader with 25 years building production software in
+        startups and enterprises. I lead cross-functional teams, scale systems,
+        and ship reliable, user-focused products. I integrate AI into workflows,
+        improve performance and observability, and build developer platforms
+        that speed delivery.
+    experience:
+      - company: "Context Labs"
+        position: "Principal UI Engineer / Engineering Manager"
+        start_date: 2022-06
+        end_date: 2026-03
+        location: "Boston, MA"
+        summary: "Led a distributed UI/UX engineering organization to deliver a
+          multi-tenant, production-grade analytics platform for energy and
+          sustainability customers. Combined hands-on frontend development with
+          people management, OKR-driven delivery, and platform-thinking to
+          reduce time-to-market and improve product quality."
+        highlights:
+          - Managed and grew a team of UI/UX engineers across three continents;
+            introduced OKRs and regular reviews to increase velocity and
+            accountability.
+          - Designed and launched Decarbonization-as-a-Service (DaaS) for
+            tracking greenhouse gas emissions, providing analytics and reporting
+            for major global energy companies.
+          - Built a production platform integrating backend services,
+            multi-tenancy, SSO authentication, RBAC, and internationalization.
+          - Developed a shared UI component library with data visualizations,
+            interactive maps, and accessible controls to ensure consistency and
+            speed across products.
+          - Improved CI/CD pipelines and observability for frontend deployments,
+            reducing mean time to recovery and increasing deployment frequency.
+      - company: "Filtered.ai"
+        position: "Lead Engineer"
+        start_date: 2020-02
+        end_date: 2022-02
+        location: "Boston, MA"
+        summary: Architected scalable recruitment workflows for enterprise employers
+          managing high-volume applicant pipelines, leveraging AI for automated
+          grading and fraud detection.
+        highlights:
+          - "Directed development of recruitment workflows including interview
+            scheduling, candidate pipelines, and assessment portals for
+            enterprise customers."
+          - "Implemented AI-driven grading, automated feedback, and
+            fraud-detection systems to scale technical evaluations while
+            maintaining integrity."
+          - "Collaborated with product and data teams to iterate on models and
+            metrics that measured candidate success and system effectiveness."
+      - company: "Turo"
+        position: "Staff Software Engineer"
+        start_date: 2018-04
+        end_date: "2019-12"
+        location: "San Francisco, CA & Boston, MA"
+        summary: "Owned host-facing product features that increased host engagement and
+          revenue; worked cross-functionally to define programs that rewarded
+          high-performing users."
+        highlights:
+          - "Built host product features such as calendar availability, trip
+            management, and dynamic pricing controls to improve host experience
+            and utilization."
+          - "Led the 'All-star' program initiative to recognize and incentivize
+            top hosts, contributing to retention and higher-quality listings."
+          - "Partnered with analytics to measure feature impact and iterate
+            based on host behavior and revenue metrics."
+      - company: "OneMarket / Westfield Labs"
+        position: "Senior Software Architect"
+        start_date: "2016-01"
+        end_date: 2018-05
+        location: "San Francisco, CA"
+        summary: "Designed and implemented intelligent retail and parking solutions that
+          combined computer vision, mapping, and payment systems to improve
+          customer experience and operations."
+        highlights:
+          - "Developed smart parking solutions leveraging facial recognition,
+            subscription billing, and automated gates to streamline access and
+            payments."
+          - "Built indoor mapping, directory kiosks, and wayfinding systems to
+            enhance navigation in complex retail environments."
+          - "Integrated edge devices with cloud services for reliable,
+            low-latency user interactions and centralized management."
+      - company: "Tilt.com"
+        position: "Senior Systems Engineer"
+        start_date: 2013-07
+        end_date: 2015-12
+        location: "San Francisco, CA"
+        summary: "Optimized core user flows and backend systems to increase conversion
+          and streamline operations during high-growth phases."
+        highlights:
+          - "Redesigned and optimized the user signup and onboarding flow,
+            yielding a measurable 15% increase in revenue."
+          - "Improved system reliability and scalability to support surge
+            traffic during fundraising campaigns and promotions."
+      - company: "Earlier roles (2000–2013)"
+        position: "Web Developer → Senior Engineer / Design Technologist / Technical Co-Founder"
+        start_date: 2000-01
+        end_date: 2013-04
+        location: "Massachusetts & California"
+        summary: "Industrial automation web interfaces and dashboards (GE Fanuc /
+          Intellution); enterprise web integrations (SoftArtisans); user-facing
+          features and a Webby-recognized career advice site (Monster.com);
+          scalable frontend architecture for high-traffic Yahoo properties;
+          design-to-production prototyping (Frog Design); co-founder/CTO for an
+          early social product (Secret Feature); publishing and ad-tech at Say
+          Media."
+    education:
+      - institution: "University of New Hampshire"
+        area: "Management of Information Systems"
+        degree: "BS"
+        start_date: "1996-01"
+        end_date: "2000-12"
+        location: "Durham, NH"
+    skills:
+      - label: "Languages"
+        details: "JavaScript, TypeScript, Go, Python, HTML, CSS"
+      - label: "Frameworks"
+        details: "React, Svelte, Vue"
+      - label: "Metaframeworks"
+        details: "Next.js, Nuxt, SvelteKit, TanStack Start"
+      - label: "Infrastructure & Tools"
+        details: "Docker, Kubernetes, AWS, PostgreSQL, MongoDB, Trino, ArcadeDB,
+          OrientDB, Vite"
+      - label: "Frontend & Visualization"
+        details: "Tailwind, Tanstack, Vega Lite, Apache ECharts, Mapbox, Maplibre, QGIS"
+      - label: "AI"
+        details: "AI SDKs, OpenAI, Claude, Codex, private LLM integrations"
+  website: https://marr.github.io
