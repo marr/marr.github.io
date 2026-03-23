@@ -2,6 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/content", "nuxt-studio"],
+  $production: { studio: false },
   devtools: { enabled: true },
   // Make content components global to avoid async loading hydration issues
   hooks: {
