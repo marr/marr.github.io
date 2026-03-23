@@ -1,1 +1,0 @@
-import{_ as c,h as _,j as a,m as e,k as o,O as r,bM as l,bN as d}from"./BLHOuY3j.js";const m={},i={class:"min-h-screen flex flex-col"},f={class:"flex-1"},x={class:"max-w-3xl mx-auto px-4"};function p(t,u){const s=l,n=d;return _(),a("div",i,[e(s),o("main",f,[o("div",x,[r(t.$slots,"default")])]),e(n)])}const k=c(m,[["render",p]]);export{k as default};
