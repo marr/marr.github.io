@@ -12,7 +12,6 @@ Also available as [**PDF**](/resume.pdf).
 
 # David Marr's CV
 
-- Phone: +1 000 000 0000
 - Email: [dave.marr@gmail.com](mailto:dave.marr@gmail.com)
 - Location: Boston, MA
 - Website: [marr.github.io](https://marr.github.io/)

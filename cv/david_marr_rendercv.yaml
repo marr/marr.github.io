@@ -1,9 +1,11 @@
 cv:
+  # Phone is intentionally omitted from git to reduce scraping/spam. To bake a
+  # number into the PDF only, run: CV_PHONE="+1…" pnpm run cv:render
+  # (E.164). Optional GitHub Actions secret CV_PHONE does the same in CI.
   name: David Marr
   headline: Engineering Leader | 25 Years Scaling Modern Software, Global Teams &
     AI Integration
   location: "Boston, MA"
-  phone: "+10000000000"
   email: "dave.marr@gmail.com"
   sections:
     summary:

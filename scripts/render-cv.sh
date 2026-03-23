@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Render CV YAML to public/resume.pdf and content/resume.md (RenderCV CLI).
+# Optional: CV_PHONE="+14155551234" (E.164) to include a phone in the PDF
+# without committing it (see cv/david_marr_rendercv.yaml).
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
@@ -11,12 +13,18 @@ fi
 GEN="$(mktemp)"
 trap 'rm -f "$GEN"' EXIT
 
+RENDERCV_EXTRA=()
+if [ -n "${CV_PHONE:-}" ]; then
+  RENDERCV_EXTRA+=(--cv.phone "$CV_PHONE")
+fi
+
 python3 -m rendercv render "$ROOT/cv/david_marr_rendercv.yaml" \
   -o "$ROOT/.rendercv-output" \
   -pdf ../public/resume.pdf \
   -md "$GEN" \
   -nohtml -nopng \
-  -q
+  -q \
+  "${RENDERCV_EXTRA[@]}"
 
 {
   cat <<'EOF'

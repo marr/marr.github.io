@@ -63,6 +63,10 @@ jobs:
           python-version: "3.12"
 
       - name: Render resume PDF (RenderCV)
+        env:
+          # Optional repo secret CV_PHONE (E.164). Leave unset so the public PDF
+          # matches the repo and has no phone in the artifact.
+          CV_PHONE: ${{ secrets.CV_PHONE }}
         run: |
           python3 -m pip install -r requirements-cv.txt
           bash scripts/render-cv.sh
