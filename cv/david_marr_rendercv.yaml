@@ -99,8 +99,9 @@ cv:
           - "Improved system reliability and scalability to support surge
             traffic during fundraising campaigns and promotions."
       - company: "Earlier roles (2000–2013)"
-        position: "Web Developer → Senior Engineer / Design Technologist / Technical Co-Founder"
-        start_date: 2000-01
+        position: "Web Developer → Senior Engineer / Design Technologist / Technical
+          Co-Founder"
+        start_date: 2000-09
         end_date: 2013-04
         location: "Massachusetts & California"
         summary: "Industrial automation web interfaces and dashboards (GE Fanuc /
@@ -114,8 +115,8 @@ cv:
       - institution: "University of New Hampshire"
         area: "Management of Information Systems"
         degree: "BS"
-        start_date: "1996-01"
-        end_date: "2000-12"
+        start_date: "1996-09"
+        end_date: 2000-05
         location: "Durham, NH"
     skills:
       - label: "Languages"
