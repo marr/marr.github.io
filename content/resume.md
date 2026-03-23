@@ -28,10 +28,6 @@ Boston, MA
 
 June 2022 – Mar 2026
 
-
-
-3 years 10 months
-
 Led a distributed UI/UX engineering organization to deliver a multi-tenant, production-grade analytics platform for energy and sustainability customers. Combined hands-on frontend development with people management, OKR-driven delivery, and platform-thinking to reduce time-to-market and improve product quality.
 
 - Managed and grew a team of UI/UX engineers across three continents; introduced OKRs and regular reviews to increase velocity and accountability.
@@ -52,10 +48,6 @@ Boston, MA
 
 Feb 2020 – Feb 2022
 
-
-
-2 years 1 month
-
 Architected scalable recruitment workflows for enterprise employers managing high-volume applicant pipelines, leveraging AI for automated grading and fraud detection.
 
 - Directed development of recruitment workflows including interview scheduling, candidate pipelines, and assessment portals for enterprise customers.
@@ -71,10 +63,6 @@ Architected scalable recruitment workflows for enterprise employers managing hig
 San Francisco, CA & Boston, MA
 
 Apr 2018 – Dec 2019
-
-
-
-1 year 9 months
 
 Owned host-facing product features that increased host engagement and revenue; worked cross-functionally to define programs that rewarded high-performing users.
 
@@ -92,10 +80,6 @@ San Francisco, CA
 
 Jan 2016 – May 2018
 
-
-
-2 years 5 months
-
 Designed and implemented intelligent retail and parking solutions that combined computer vision, mapping, and payment systems to improve customer experience and operations.
 
 - Developed smart parking solutions leveraging facial recognition, subscription billing, and automated gates to streamline access and payments.
@@ -112,10 +96,6 @@ San Francisco, CA
 
 July 2013 – Dec 2015
 
-
-
-2 years 6 months
-
 Optimized core user flows and backend systems to increase conversion and streamline operations during high-growth phases.
 
 - Redesigned and optimized the user signup and onboarding flow, yielding a measurable 15% increase in revenue.
@@ -129,10 +109,6 @@ Optimized core user flows and backend systems to increase conversion and streaml
 Massachusetts & California
 
 Sept 2000 – Apr 2013
-
-
-
-12 years 8 months
 
 Industrial automation web interfaces and dashboards (GE Fanuc / Intellution); enterprise web integrations (SoftArtisans); user-facing features and a Webby-recognized career advice site (Monster.com); scalable frontend architecture for high-traffic Yahoo properties; design-to-production prototyping (Frog Design); co-founder/CTO for an early social product (Secret Feature); publishing and ad-tech at Say Media.
 
