@@ -13,18 +13,20 @@ fi
 GEN="$(mktemp)"
 trap 'rm -f "$GEN"' EXIT
 
-RENDERCV_EXTRA=()
+# Build argv in one array so `set -u` never expands an empty/unset optional array
+# (some Bash versions error on "${optional[@]}" when optional was never appended to).
+cmd=(
+  python3 -m rendercv render "$ROOT/cv/david_marr_rendercv.yaml"
+  -o "$ROOT/.rendercv-output"
+  -pdf ../public/resume.pdf
+  -md "$GEN"
+  -nohtml -nopng
+  -q
+)
 if [ -n "${CV_PHONE:-}" ]; then
-  RENDERCV_EXTRA+=(--cv.phone "$CV_PHONE")
+  cmd+=(--cv.phone "$CV_PHONE")
 fi
-
-python3 -m rendercv render "$ROOT/cv/david_marr_rendercv.yaml" \
-  -o "$ROOT/.rendercv-output" \
-  -pdf ../public/resume.pdf \
-  -md "$GEN" \
-  -nohtml -nopng \
-  -q \
-  "${RENDERCV_EXTRA[@]}"
+"${cmd[@]}"
 
 {
   cat <<'EOF'
