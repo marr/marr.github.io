@@ -19,8 +19,6 @@ socials:
     url: https://x.com/dmarr
   - icon: i-mdi-linkedin
     url: https://linkedin.com/in/davidmarr
-resumeUrl: /resume.pdf
-resumeLabel: Resume
 avatar: /avatar.png
 description: Building tools to monitor and address emissions at Context Labs,
   and contributing to the Vue/Nuxt ecosystem.
