@@ -68,10 +68,10 @@ title: David Marr
   tags:
     - Build Tools
     - Frontend
-  description: A plugin suite that extends Vite with practical DX upgrades.
+  description: A unified web toolchain from VoidZero built around Vite.
   icon: i-logos-vitejs
-  title: vite-plus
-  url: https://vite-plus.js.org
+  title: Vite+
+  url: https://viteplus.dev
   ---
   :::
 
