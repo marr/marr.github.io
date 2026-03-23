@@ -1,0 +1,2 @@
+# RenderCV: PDF from cv/david_marr_rendercv.yaml (see scripts/render-cv.sh)
+rendercv[full]==2.8

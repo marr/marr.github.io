@@ -58,6 +58,15 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.pkgman.outputs.package_manager }} install
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render resume PDF (RenderCV)
+        run: |
+          python3 -m pip install -r requirements-cv.txt
+          bash scripts/render-cv.sh
+
       - name: Generate
         run: npx nuxi build --preset github_pages
         env:
