@@ -135,7 +135,7 @@ const mountArrowApp = () => {
 
       <div class="overflow-hidden rounded-xl border border-default bg-elevated">
         <svg
-          viewBox="0 0 ${viewport.width} ${viewport.height}"
+          viewBox="${`0 0 ${viewport.width} ${viewport.height}`}"
           class="h-72 w-full"
           role="img"
           aria-label="Streaming line chart"
