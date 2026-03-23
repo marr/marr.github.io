@@ -100,6 +100,8 @@ const resetSeries = () => {
 };
 
 let intervalHandle: ReturnType<typeof setInterval> | undefined;
+let stopWatchingMount: (() => void) | undefined;
+let appMounted = false;
 
 const restartInterval = () => {
   if (intervalHandle) clearInterval(intervalHandle);
@@ -108,12 +110,8 @@ const restartInterval = () => {
   }, state.tickMs);
 };
 
-onMounted(() => {
-  resetSeries();
-  restartInterval();
-
-  if (!mountEl.value) return;
-
+const mountArrowApp = () => {
+  if (!mountEl.value || appMounted) return;
   const app = html`
     <section class="space-y-6">
       <div class="grid gap-4 md:grid-cols-4">
@@ -237,10 +235,28 @@ onMounted(() => {
 
   mountEl.value.replaceChildren();
   app(mountEl.value);
+  appMounted = true;
+};
+
+onMounted(() => {
+  resetSeries();
+  restartInterval();
+
+  stopWatchingMount = watch(
+    mountEl,
+    (el) => {
+      if (!el) return;
+      mountArrowApp();
+      stopWatchingMount?.();
+      stopWatchingMount = undefined;
+    },
+    { immediate: true, flush: "post" },
+  );
 });
 
 onBeforeUnmount(() => {
   if (intervalHandle) clearInterval(intervalHandle);
+  stopWatchingMount?.();
 });
 </script>
 
