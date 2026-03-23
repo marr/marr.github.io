@@ -50,6 +50,7 @@
         <UButton
           v-if="resumeUrl"
           :to="resumeUrl"
+          external
           target="_blank"
           rel="noopener noreferrer"
           color="neutral"
