@@ -16,9 +16,12 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ["clsx", "tailwind-merge"],
+    },
   },
   css: ["~/assets/css/main.css"],
-  compatibilityDate: "2024-04-03",
+  compatibilityDate: "2026-03-03",
   icon: {
     // Use CSS mode for consistent SSR rendering (icons as background-image)
     mode: "css",
