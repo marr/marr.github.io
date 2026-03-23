@@ -31,19 +31,34 @@
         {{ description }}
       </p>
 
-      <!-- Social Links -->
-      <div v-if="socials?.length" class="flex items-center gap-4">
+      <div class="flex flex-col items-center gap-4">
+        <!-- Social Links -->
+        <div v-if="socials?.length" class="flex items-center gap-4">
+          <UButton
+            v-for="social in socials"
+            :key="social.url"
+            :to="social.url"
+            target="_blank"
+            :icon="social.icon"
+            color="neutral"
+            variant="ghost"
+            size="lg"
+            :aria-label="social.label || social.icon"
+          />
+        </div>
+
         <UButton
-          v-for="social in socials"
-          :key="social.url"
-          :to="social.url"
+          v-if="resumeUrl"
+          :to="resumeUrl"
           target="_blank"
-          :icon="social.icon"
+          rel="noopener noreferrer"
           color="neutral"
-          variant="ghost"
+          variant="outline"
           size="lg"
-          :aria-label="social.label || social.icon"
-        />
+          icon="i-mdi-file-document-outline"
+        >
+          {{ resumeLabel }}
+        </UButton>
       </div>
     </div>
   </section>
@@ -62,6 +77,9 @@ interface Props {
   avatar?: string
   roles?: string[]
   socials?: Social[]
+  /** Static path (e.g. /resume.pdf) or absolute URL to the résumé PDF */
+  resumeUrl?: string
+  resumeLabel?: string
 }
 
 const {
@@ -70,5 +88,7 @@ const {
   avatar = '',
   roles = ['Engineering Leader', 'Open Source Creator', 'Building for the Future'],
   socials = [],
+  resumeUrl = '',
+  resumeLabel = 'Resume',
 } = defineProps<Props>()
 </script>

@@ -4,10 +4,11 @@
   "type": "module",
   "packageManager": "pnpm@9.15.4",
   "scripts": {
-    "build": "nuxt build",
+    "build": "bash scripts/render-cv.sh && nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "generate": "bash scripts/render-cv.sh && nuxt generate",
+    "preview": "nuxt preview",
+    "cv:render": "bash scripts/render-cv.sh"
   },
   "dependencies": {
     "@iconify-json/mdi": "^1.2.3",
