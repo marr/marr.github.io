@@ -92,10 +92,10 @@ title: David Marr
   tags:
     - Typography
     - Developer Tools
-  description: A clean monospace typeface designed for coding workflows.
+  description: AI agent toolkit with coding CLI, unified LLM API, and UI libraries.
   icon: i-mdi-format-font
   title: pi-mono
-  url: https://github.com/picocss/pi-mono
+  url: https://github.com/badlogic/pi-mono
   ---
   :::
 
