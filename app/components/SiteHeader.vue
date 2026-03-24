@@ -20,12 +20,6 @@ const items = computed(() => [
     icon: "i-mdi-book-open-page-variant",
     active: route.path.startsWith("/blog"),
   },
-  {
-    label: "Streaming",
-    to: "/streaming-chart",
-    icon: "i-mdi-chart-line",
-    active: route.path.startsWith("/streaming-chart"),
-  },
 ]);
 </script>
 
