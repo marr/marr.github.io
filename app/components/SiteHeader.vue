@@ -20,6 +20,12 @@ const items = computed(() => [
     icon: "i-mdi-book-open-page-variant",
     active: route.path.startsWith("/blog"),
   },
+  {
+    label: "Experiments",
+    to: "/experiments",
+    icon: "i-mdi-flask-outline",
+    active: route.path.startsWith("/experiments"),
+  },
 ]);
 </script>
 
