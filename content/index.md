@@ -2,7 +2,7 @@
 title: David Marr – Engineering Leader
 description: Fan of new technology products
 seo:
-  description: Engineering leader and open source creator building tools for climate tech and the Vue ecosystem.
+  description: Engineering leader and open source creator building AI tooling, developer productivity systems, and modern frontend frameworks.
   title: David Marr – Engineering Leader
 ---
 
@@ -11,7 +11,7 @@ seo:
 roles:
   - Engineering Leader
   - Open Source Creator
-  - Climate Tech Builder
+  - AI Tooling Builder
 socials:
   - icon: i-mdi-github
     url: https://github.com/marr
@@ -20,8 +20,7 @@ socials:
   - icon: i-mdi-linkedin
     url: https://linkedin.com/in/davidmarr
 avatar: /avatar.png
-description: Building tools to monitor and address emissions at Context Labs,
-  and contributing to the Vue/Nuxt ecosystem.
+description: Building AI tooling, developer productivity systems, and modern frontend frameworks.
 title: David Marr
 ---
 ::
