@@ -8,6 +8,18 @@ I've been thinking about how to bring my [Obsidian](https://obsidian.md) vault c
 
 This post is a working draft—more of a map of what I want to try than a finished conclusion.
 
+## Investigation: `/last30days` and what turned up
+
+The [`/last30days` skill](https://github.com/mvanhorn/last30days-skill) (e.g. in Claude Code: `plugin install last30days@last30days-skill`) is built for **recency-first research**: it pulls from Reddit, X, Hacker News, YouTube, optional Polymarket, and web search, then synthesizes with citations. I do not have that skill wired into this repo’s agent session, so this section is a **manual analogue**—a focused web pass on “Obsidian + MCP” from roughly the **last 30 days** of posts and releases, not a scored multi-source brief.
+
+**Themes that keep showing up:**
+
+- **File-first servers** – Several implementations talk to the vault as Markdown on disk (search, read/write, tags, links, sometimes graph or canvas). The pitch is the same: MCP in Claude Desktop, **Cursor**, or similar without a bespoke Obsidian plugin for every client—though some write-ups still pair with Obsidian’s **Local REST API** or other bridges depending on the stack.
+- **“Feature-complete” npm projects** – [obsidian-mcp-pro](https://www.npmjs.com/package/obsidian-mcp-pro) and write-ups such as [this Dev.to walkthrough](https://dev.to/rps321321/i-built-the-most-feature-complete-mcp-server-for-obsidian-heres-how-o0k) describe deep tool sets (search, graph-style traversal, canvas, validation). Worth treating as **candidates to evaluate**, not endorsements, until you’ve read the code and threat model.
+- **Tutorial wave (March 2026)** – A cluster of practical guides appeared around the same time, e.g. [Joe François on Medium](https://medium.com/@joemugen/supercharging-obsidian-with-ai-using-mcp-319679a36c97), [Gagandeep Bhatia on Medium](https://medium.com/@gagandeep023/build-an-mcp-server-that-connects-claude-directly-to-your-obsidian-vault-d3ced0f67e98), [BSWEN’s Claude + vault integration](https://docs.bswen.com/blog/2026-03-17-mcp-server-obsidian-claude), and [Web Moves on connecting Obsidian to Claude](https://www.webmoves.net/2026/03/15/teaching-ai-to-read-my-second-brain-connecting-obsidian-to-claude/). Useful for setup patterns; still verify versions and security against your own vault.
+
+**Takeaway for this draft:** the space is **active** and **fragmented**—multiple servers, overlapping goals, different trust assumptions. Running the real `/last30days` prompt on *“Obsidian MCP server”* or *“vault MCP Cursor”* in an environment where the skill is installed should surface community threads and gripes the web-only pass misses.
+
 ## Why Obsidian and MCP together
 
 Obsidian stores notes as Markdown files on disk. That is a good fit for MCP: you can expose read and write operations, search, and (depending on the server) graph or metadata features without inventing a new API for each assistant. The vault stays **yours**—plain files, version control friendly, and portable.
