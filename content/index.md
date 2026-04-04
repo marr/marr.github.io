@@ -93,7 +93,7 @@ title: David Marr
     - AI
     - Developer Tools
   description: AI agent toolkit with coding CLI, unified LLM API, and UI libraries.
-  icon: i-mdi-format-font
+  image: /pi-logo.svg
   title: pi-mono
   url: https://github.com/badlogic/pi-mono
   ---

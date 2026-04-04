@@ -5,9 +5,22 @@
     }"
   >
     <div class="flex items-start gap-4">
-      <!-- Icon -->
-      <div v-if="icon" class="flex items-center justify-center rounded-lg bg-muted p-2.5 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-        <UIcon :name="icon" class="size-5 group-hover:text-primary transition-colors" />
+      <!-- Icon or custom image (e.g. project logo from public/) -->
+      <div
+        v-if="image || icon"
+        class="flex items-center justify-center rounded-lg bg-muted p-2.5 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 shrink-0"
+      >
+        <img
+          v-if="image"
+          :src="image"
+          :alt="title"
+          class="size-5 object-contain invert dark:invert-0 group-hover:opacity-90 transition-opacity"
+        />
+        <UIcon
+          v-else
+          :name="icon"
+          class="size-5 group-hover:text-primary transition-colors"
+        />
       </div>
       <div class="flex flex-col gap-1">
         <ULink
@@ -40,7 +53,10 @@
 interface Props {
   title: string
   url: string
+  /** Nuxt Icon collection name (e.g. i-mdi-github) */
   icon?: string
+  /** Path under public/ or absolute URL for project logo */
+  image?: string
   description?: string
   tags?: string[]
 }
@@ -49,6 +65,7 @@ const {
   title,
   url,
   icon = '',
+  image = '',
   description = '',
   tags = [],
 } = defineProps<Props>()
