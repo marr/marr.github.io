@@ -16,6 +16,7 @@ This is a Nuxt 4 personal portfolio/blog site (`@dmarr/cv`). It is a single appl
 
 ### Notes
 
+- **Cursor skills:** Skills such as `/last30days` may appear in Cursor’s skills list and are invoked in the IDE; autonomous cloud agents do not necessarily run them unless you trigger them or wire equivalent tooling.
 - **No ESLint or linter** is configured in this project. Typecheck via `npx nuxi typecheck`.
 - **No automated tests** exist in this project.
 - The project uses **pnpm 9.15.4** (pinned via `packageManager` in `package.json`). Node v22 is required.
