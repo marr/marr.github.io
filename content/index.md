@@ -90,7 +90,7 @@ title: David Marr
   :::project-card
   ---
   tags:
-    - Typography
+    - AI
     - Developer Tools
   description: AI agent toolkit with coding CLI, unified LLM API, and UI libraries.
   icon: i-mdi-format-font
