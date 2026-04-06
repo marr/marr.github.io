@@ -11,10 +11,10 @@
     "cv:render": "bash scripts/render-cv.sh"
   },
   "dependencies": {
-    "@arrow-js/core": "^1.0.0",
+    "@arrow-js/core": "^1.0.6",
     "@iconify-json/mdi": "^1.2.3",
     "@nuxt/content": "^3.12.0",
-    "@nuxt/ui": "^4.6.0",
+    "@nuxt/ui": "^4.6.1",
     "@tailwindcss/vite": "^4.2.2",
     "@vueuse/core": "^14.2.1",
     "better-sqlite3": "^12.8.0",
@@ -28,7 +28,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.98",
+    "@iconify-json/lucide": "^1.2.101",
     "@nuxtjs/mdc": "^0.20.2",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.5.0"
