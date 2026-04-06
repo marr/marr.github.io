@@ -4,14 +4,6 @@ const { data: page } = await useAsyncData("blog-layout-" + route.path, () => {
   return queryCollection("blog").path(route.path).first();
 });
 
-const formattedDate = computed(() => {
-  if (!page.value?.date) return null;
-  return new Date(page.value.date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-});
 </script>
 
 <template>
@@ -28,14 +20,20 @@ const formattedDate = computed(() => {
             >
               {{ page.description }}
             </p>
-            <time
-              v-if="formattedDate"
-              :datetime="String(page.date)"
+            <div
+              v-if="page.date"
               class="flex items-center gap-1 text-sm text-muted-foreground"
             >
               <UIcon name="i-mdi-calendar" class="w-4 h-4" />
-              {{ formattedDate }}
-            </time>
+              <NuxtTime
+                :datetime="page.date"
+                locale="en-US"
+                year="numeric"
+                month="long"
+                day="numeric"
+                time-zone="UTC"
+              />
+            </div>
           </header>
           <slot />
         </article>

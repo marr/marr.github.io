@@ -37,13 +37,16 @@ useSeoMeta({
           <p v-if="post.description" class="mt-2 text-muted-foreground">
             {{ post.description }}
           </p>
-          <time
+          <NuxtTime
             v-if="post.date"
-            :datetime="post.date.toString()"
+            :datetime="post.date"
+            locale="en-US"
+            year="numeric"
+            month="long"
+            day="numeric"
+            time-zone="UTC"
             class="mt-2 block text-sm text-muted-foreground"
-          >
-            {{ new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) }}
-          </time>
+          />
         </NuxtLink>
       </article>
     </div>

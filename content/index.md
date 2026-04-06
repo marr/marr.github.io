@@ -41,12 +41,13 @@ title: David Marr
   :::project-card
   ---
   tags:
-    - Vue
-    - UI
-  description: Turn your rounded corners into more interesting squircles.
-  icon: i-logos-vue
-  title: vue-squircle
-  url: https://marr.github.io/vue-squircle
+    - Kubernetes
+    - GitOps
+    - AI
+  description: Agent skill for Flux GitOps homelabs—reconciles, SOPS secrets, homepage widgets, and cluster hygiene.
+  icon: i-simple-icons-flux
+  title: flux-homelab-skill
+  url: https://github.com/marr/flux-homelab-skill
   ---
   :::
 ::
@@ -84,6 +85,18 @@ title: David Marr
   icon: i-simple-icons-javascript
   title: arrow-js
   url: https://www.arrow-js.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Vue
+    - UI
+  description: Vue component for squircle-style corners; demo and docs on GitHub Pages.
+  icon: i-logos-vue
+  title: vue-squircle
+  url: https://marr.github.io/vue-squircle
   ---
   :::
 
