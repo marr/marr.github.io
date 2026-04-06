@@ -1,9 +1,8 @@
 ---
-
-## title: Building a Knowledge Graph with Obsidian and MCP
-
+title: Building a Knowledge Graph with Obsidian and MCP
 description: How to turn your Obsidian vault into a queryable knowledge graph that AI assistants can navigate, search, and learn from.
 date: 2026-04-04T00:00:00.000Z
+---
 
 # Building a Knowledge Graph with Obsidian and MCP
 
@@ -59,6 +58,8 @@ When you ask "What decisions have I made about authentication?", the model doesn
 For larger vaults, semantic search becomes essential. Some users create a vault vector database with MCP to let AI perform similarity search across their knowledge base. That way assistants can surface relevant notes even when the exact keywords don't match.
 
 The setup: run a local embedding model, index your vault, and expose it through MCP. Now "find notes about my authentication decisions" works even if the notes say "OAuth implementation" or "login flow."
+
+If you want that class of search without assembling pieces yourself, [QMD (Query Markup Documents)](https://github.com/tobi/qmd) is worth a look: it indexes Markdown on-device, combines BM25 keyword search with vector semantic search and optional local re-ranking, and ships an MCP server (`query`, `get`, `multi_get`, and friends) so your client can retrieve structured results and full documents in one workflow.
 
 ## The Docker MCP Toolkit
 
