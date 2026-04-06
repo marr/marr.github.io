@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const currentYear = new Date().getFullYear()
+/** Single instant for copyright year; NuxtTime keeps SSR + client output aligned. */
+const copyrightNow = new Date()
 
 const socialLinks = [
   { icon: 'i-mdi-github', url: 'https://github.com/marr', label: 'GitHub' },
@@ -13,7 +14,15 @@ const socialLinks = [
     <div class="max-w-3xl mx-auto px-4 py-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-sm text-muted-foreground">
-          &copy; {{ currentYear }} David Marr
+          &copy;
+          {{ " " }}
+          <NuxtTime
+            :datetime="copyrightNow"
+            locale="en-US"
+            year="numeric"
+            time-zone="America/New_York"
+          />
+          {{ " " }}David Marr
         </p>
         <div class="flex items-center gap-4">
           <a
