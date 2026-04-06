@@ -91,18 +91,6 @@ title: David Marr
   :::project-card
   ---
   tags:
-    - Vue
-    - UI
-  description: Vue component for squircle-style corners; demo and docs on GitHub Pages.
-  icon: i-logos-vue
-  title: vue-squircle
-  url: https://marr.github.io/vue-squircle
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
     - AI
     - Developer Tools
   description: AI agent toolkit with coding CLI, unified LLM API, and UI libraries.
@@ -157,6 +145,21 @@ title: David Marr
   icon: i-logos-obsidian-icon
   title: Obsidian
   url: https://obsidian.md
+  ---
+  :::
+::
+
+::project-grid{title="Previously"}
+  :::project-card
+  ---
+  tags:
+    - Vue
+    - UI
+    - Deprecated
+  description: 'Vue squircle masks are largely superseded by native CSS `corner-shape: squircle`; demo kept for reference.'
+  icon: i-logos-vue
+  title: vue-squircle
+  url: https://marr.github.io/vue-squircle
   ---
   :::
 ::
