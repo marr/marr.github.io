@@ -29,9 +29,9 @@ June 2022 – Mar 2026
 
 Led a distributed UI/UX engineering organization to deliver a multi-tenant, production-grade analytics platform for energy and sustainability customers. Combined hands-on frontend development with people management, OKR-driven delivery, and platform-thinking to reduce time-to-market and improve product quality.
 
-- Managed the UI/UX engineering organization, growing it from **[M]** to **[N]** engineers across three continents; introduced OKRs and regular reviews to increase velocity and accountability.
+- Managed the UI/UX engineering organization, growing it from **3** to **10** engineers across three continents; introduced OKRs and regular reviews to increase velocity and accountability.
 
-- Designed and launched Decarbonization-as-a-Service (DaaS) for **greenhouse gas (GHG) inventories in metric tonnes CO₂e** (CO₂-equivalent), with analytics and reporting for major global energy companies. **[CO2_DETAIL]**
+- Designed and launched Decarbonization-as-a-Service (DaaS) for **greenhouse gas (GHG) inventories in metric tonnes CO₂e** (CO₂-equivalent), with analytics and reporting for major global energy companies. **Supported programs including Williams NextGen Gas:** **QMRV** (quantification, monitoring, reporting, verification) across production through market, with multi-layer monitoring (e.g. satellite, aerial, fixed sensors, source-level measurement) and third-party emissions-intensity certification (KPMG).
 
 - Championed onboarding efforts to bring **AI tooling** into daily engineering workflows.
 
@@ -49,9 +49,9 @@ Boston, MA
 
 Feb 2020 – Feb 2022
 
-Architected scalable recruitment workflows for **[EMPLOYER_FRAMING]** — high-volume applicant pipelines with AI-driven grading and fraud detection.
+Architected scalable recruitment workflows for **large employers in financial services and technology** — high-volume applicant pipelines with AI-driven grading and fraud detection.
 
-- Directed development of interview scheduling, candidate pipelines, assessment portals, and **live video interviews** used by **[EMPLOYER_FRAMING]** to run technical hiring at scale.
+- Directed development of interview scheduling, candidate pipelines, assessment portals, and **live video interviews** used by **large employers in financial services and technology** to run technical hiring at scale.
 
 - Implemented AI-driven grading, automated feedback, and fraud-detection systems to scale technical evaluations while maintaining integrity.
 
@@ -109,29 +109,99 @@ Optimized core user flows and backend systems to increase conversion and streaml
 
 
 
-## **Earlier roles (2000–2013)**, Web Developer → Senior Engineer / Design Technologist / Technical Co-Founder
+## **Say Media**, Senior Software Engineer
 
-Massachusetts & California
+San Francisco, CA
 
-Sept 2000 – Apr 2013
+Mar 2012 – Apr 2013
 
-Industrial automation web interfaces and dashboards (GE Fanuc / Intellution); enterprise web integrations (SoftArtisans); user-facing features and a Webby-recognized career advice site (Monster.com); scalable frontend architecture for high-traffic Yahoo properties; design-to-production prototyping (Frog Design); co-founder/CTO for an early social product (Secret Feature); publishing and ad-tech at Say Media.
+Publishing and ad-tech; **Ember.js** tools for digital content and monetization.
 
-- **Say Media** (2012–2013): **Ember.js** publishing tools; monetized digital content and lifted **engaged time** via headlines, traffic-driving modules, and in-article **user reactions**.
+- **Ember.js** publishing tools; monetized digital content and lifted **engaged time** via headlines, traffic-driving modules, and in-article **user reactions**.
 
-- **Secret Feature** (2010–2011): Co-founder; work contributed to **Diversion, Inc.** closing a **Series A**. Shipped an early social product on **Node.js** as Flash end-of-life loomed.
 
-- **CBS Interactive** (2011): **tv.com** — **SVG**-heavy web UI and **Python** APIs for shows and metadata.
 
-- **Frog Design** (2009–2010): **Disney** park data **API** and web work for **MagicBand**; design-to-production **prototypes** (incl. Flash) and **embedded** work for physical products.
+## **CBS Interactive**, Software Engineer (tv.com)
 
-- **Yahoo** (2006–2008): **PHP/MySQL** (Yahoo! Answers / Small Business); **Brickhouse** — **Yahoo! Live** live-streaming. **60+ min** average time-on-site; **~2M signups** in nine months.
+San Francisco, CA
 
-- **Monster.com** (2004–2006): Early **.NET**; migrated CMS from classic **ASP** to **ASP.NET**; **Webby**-recognized career advice site.
+June 2011 – Dec 2011
 
-- **SoftArtisans** (2003–2004): **SAFileUp** and enterprise **multipart/form-data** uploads for **Microsoft** server stacks.
+Show and metadata surfaces for **tv.com**.
 
-- **GE Fanuc / Intellution** (2000–2003): **CRM** web apps (**SQL Server**, **IIS**, classic **ASP**); industrial automation customers.
+- **tv.com** — **SVG**-heavy web UI and **Python** APIs for shows and metadata.
+
+
+
+## **Secret Feature**, Technical Co-Founder / CTO
+
+San Francisco, CA
+
+Jan 2010 – May 2011
+
+Early social product as Flash end-of-life reshaped the web stack.
+
+- Co-founder; work contributed to **Diversion, Inc.** closing a **Series A**. Shipped an early social product on **Node.js** as Flash end-of-life loomed.
+
+
+
+## **Frog Design**, Design Technologist
+
+San Francisco, CA
+
+Jan 2009 – Mar 2010
+
+Design-to-production prototyping and embedded experiences for physical products.
+
+- **Disney** park data **API** and web work for **MagicBand**; design-to-production **prototypes** (incl. Flash) and **embedded** work for physical products.
+
+
+
+## **Yahoo**, Senior Frontend Engineer
+
+Sunnyvale / San Francisco, CA
+
+Sept 2006 – Dec 2008
+
+Scalable frontend architecture for high-traffic Yahoo properties.
+
+- **PHP/MySQL** (Yahoo! Answers / Small Business); **Brickhouse** — **Yahoo! Live** live-streaming. **60+ min** average time-on-site; **~2M signups** in nine months.
+
+
+
+## **Monster.com**, Senior Web Developer
+
+Maynard, MA
+
+Mar 2004 – Aug 2006
+
+User-facing features and a **Webby**-recognized career advice site.
+
+- Early **.NET**; migrated CMS from classic **ASP** to **ASP.NET**; **Webby**-recognized career advice site.
+
+
+
+## **SoftArtisans**, Web Applications Developer
+
+Brookline, MA
+
+Mar 2003 – Apr 2004
+
+Enterprise web integrations for **Microsoft** server stacks.
+
+- **SAFileUp** and enterprise **multipart/form-data** uploads for **Microsoft** server stacks.
+
+
+
+## **GE Fanuc / Intellution**, Web Developer
+
+Foxborough, MA
+
+Jan 2000 – Dec 2003
+
+Industrial automation web interfaces and dashboards for plant and operations customers.
+
+- **CRM** web apps (**SQL Server**, **IIS**, classic **ASP**); industrial automation customers.
 
 
 

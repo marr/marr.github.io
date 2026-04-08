@@ -4,10 +4,11 @@ cv:
   # (E.164). Optional GitHub Actions secret CV_PHONE does the same in CI.
   #
   # --- Replace bracket placeholders before publishing (search for [N], [M], etc.) ---
-  # Context Labs: [M]→[N] = UI/UX org size you managed (start → peak). [CO2_DETAIL] =
-  #   optional: total tCO2e monitored, # of facilities, or delete clause if unverifiable.
-  # Filtered.ai: [EMPLOYER_FRAMING] = e.g. "Fortune 50 banks", "global auto OEMs".
+  # Context Labs: [M]→[N] = UI/UX org size you managed (start → peak). GHG bullet cites
+  #   public program detail (e.g. Williams NextGen Gas deck); no aggregate tCO2e on slide.
+  # Filtered.ai: employer framing set (large employers, financial services + technology).
   # Turo: bracket facts are from public sources (WSJ 2019, company history); trim if too long.
+  # Pre-2016 roles: each stint is its own experience entry (Say Media → … → GE Fanuc).
   name: David Marr
   headline: Engineering Leader | 25 Years Scaling Modern Software, Global Teams &
     AI Integration
@@ -33,13 +34,17 @@ cv:
           people management, OKR-driven delivery, and platform-thinking to
           reduce time-to-market and improve product quality."
         highlights:
-          - "Managed the UI/UX engineering organization, growing it from **[M]**
-            to **[N]** engineers across three continents; introduced OKRs and
+          - "Managed the UI/UX engineering organization, growing it from **3**
+            to **10** engineers across three continents; introduced OKRs and
             regular reviews to increase velocity and accountability."
           - "Designed and launched Decarbonization-as-a-Service (DaaS) for
             **greenhouse gas (GHG) inventories in metric tonnes CO₂e**
             (CO₂-equivalent), with analytics and reporting for major global
-            energy companies. **[CO2_DETAIL]**"
+            energy companies. **Supported programs including Williams NextGen
+            Gas:** **QMRV** (quantification, monitoring, reporting, verification)
+            across production through market, with multi-layer monitoring
+            (e.g. satellite, aerial, fixed sensors, source-level measurement) and
+            third-party emissions-intensity certification (KPMG)."
           - Championed onboarding efforts to bring **AI tooling** into daily
             engineering workflows.
           - Built a production platform integrating backend services,
@@ -54,13 +59,14 @@ cv:
         start_date: 2020-02
         end_date: 2022-02
         location: "Boston, MA"
-        summary: "Architected scalable recruitment workflows for **[EMPLOYER_FRAMING]**
-          — high-volume applicant pipelines with AI-driven grading and fraud
-          detection."
+        summary: "Architected scalable recruitment workflows for **large employers
+          in financial services and technology** — high-volume applicant
+          pipelines with AI-driven grading and fraud detection."
         highlights:
           - "Directed development of interview scheduling, candidate pipelines,
-            assessment portals, and **live video interviews** used by
-            **[EMPLOYER_FRAMING]** to run technical hiring at scale."
+            assessment portals, and **live video interviews** used by **large
+            employers in financial services and technology** to run technical
+            hiring at scale."
           - "Implemented AI-driven grading, automated feedback, and
             fraud-detection systems to scale technical evaluations while
             maintaining integrity."
@@ -123,41 +129,87 @@ cv:
             frontend talent."
           - "Improved system reliability and scalability to support surge
             traffic during fundraising campaigns and promotions."
-      - company: "Earlier roles (2000–2013)"
-        position: "Web Developer → Senior Engineer / Design Technologist / Technical
-          Co-Founder"
-        start_date: 2000-09
+      - company: "Say Media"
+        position: "Senior Software Engineer"
+        start_date: 2012-03
         end_date: 2013-04
-        location: "Massachusetts & California"
-        summary: "Industrial automation web interfaces and dashboards (GE Fanuc /
-          Intellution); enterprise web integrations (SoftArtisans); user-facing
-          features and a Webby-recognized career advice site (Monster.com);
-          scalable frontend architecture for high-traffic Yahoo properties;
-          design-to-production prototyping (Frog Design); co-founder/CTO for an
-          early social product (Secret Feature); publishing and ad-tech at Say
-          Media."
+        location: "San Francisco, CA"
+        summary: "Publishing and ad-tech; **Ember.js** tools for digital content and
+          monetization."
         highlights:
-          - "**Say Media** (2012–2013): **Ember.js** publishing tools; monetized
-            digital content and lifted **engaged time** via headlines,
-            traffic-driving modules, and in-article **user reactions**."
-          - "**Secret Feature** (2010–2011): Co-founder; work contributed to
-            **Diversion, Inc.** closing a **Series A**. Shipped an early social
-            product on **Node.js** as Flash end-of-life loomed."
-          - "**CBS Interactive** (2011): **tv.com** — **SVG**-heavy web UI and
-            **Python** APIs for shows and metadata."
-          - "**Frog Design** (2009–2010): **Disney** park data **API** and web
-            work for **MagicBand**; design-to-production **prototypes** (incl.
-            Flash) and **embedded** work for physical products."
-          - "**Yahoo** (2006–2008): **PHP/MySQL** (Yahoo! Answers / Small
-            Business); **Brickhouse** — **Yahoo! Live** live-streaming.
-            **60+ min** average time-on-site; **~2M signups** in nine months."
-          - "**Monster.com** (2004–2006): Early **.NET**; migrated CMS from
-            classic **ASP** to **ASP.NET**; **Webby**-recognized career advice
-            site."
-          - "**SoftArtisans** (2003–2004): **SAFileUp** and enterprise
-            **multipart/form-data** uploads for **Microsoft** server stacks."
-          - "**GE Fanuc / Intellution** (2000–2003): **CRM** web apps (**SQL
-            Server**, **IIS**, classic **ASP**); industrial automation customers."
+          - "**Ember.js** publishing tools; monetized digital content and lifted
+            **engaged time** via headlines, traffic-driving modules, and
+            in-article **user reactions**."
+      - company: "CBS Interactive"
+        position: "Software Engineer (tv.com)"
+        start_date: 2011-06
+        end_date: 2011-12
+        location: "San Francisco, CA"
+        summary: "Show and metadata surfaces for **tv.com**."
+        highlights:
+          - "**tv.com** — **SVG**-heavy web UI and **Python** APIs for shows and
+            metadata."
+      - company: "Secret Feature"
+        position: "Technical Co-Founder / CTO"
+        start_date: 2010-01
+        end_date: 2011-05
+        location: "San Francisco, CA"
+        summary: "Early social product as Flash end-of-life reshaped the web stack."
+        highlights:
+          - "Co-founder; work contributed to **Diversion, Inc.** closing a
+            **Series A**. Shipped an early social product on **Node.js** as Flash
+            end-of-life loomed."
+      - company: "Frog Design"
+        position: "Design Technologist"
+        start_date: 2009-01
+        end_date: 2010-03
+        location: "San Francisco, CA"
+        summary: "Design-to-production prototyping and embedded experiences for
+          physical products."
+        highlights:
+          - "**Disney** park data **API** and web work for **MagicBand**;
+            design-to-production **prototypes** (incl. Flash) and **embedded**
+            work for physical products."
+      - company: "Yahoo"
+        position: "Senior Frontend Engineer"
+        start_date: 2006-09
+        end_date: 2008-12
+        location: "Sunnyvale / San Francisco, CA"
+        summary: "Scalable frontend architecture for high-traffic Yahoo
+          properties."
+        highlights:
+          - "**PHP/MySQL** (Yahoo! Answers / Small Business); **Brickhouse** —
+            **Yahoo! Live** live-streaming. **60+ min** average time-on-site;
+            **~2M signups** in nine months."
+      - company: "Monster.com"
+        position: "Senior Web Developer"
+        start_date: 2004-03
+        end_date: 2006-08
+        location: "Maynard, MA"
+        summary: "User-facing features and a **Webby**-recognized career advice
+          site."
+        highlights:
+          - "Early **.NET**; migrated CMS from classic **ASP** to **ASP.NET**;
+            **Webby**-recognized career advice site."
+      - company: "SoftArtisans"
+        position: "Web Applications Developer"
+        start_date: 2003-03
+        end_date: 2004-04
+        location: "Brookline, MA"
+        summary: "Enterprise web integrations for **Microsoft** server stacks."
+        highlights:
+          - "**SAFileUp** and enterprise **multipart/form-data** uploads for
+            **Microsoft** server stacks."
+      - company: "GE Fanuc / Intellution"
+        position: "Web Developer"
+        start_date: 2000-01
+        end_date: 2003-12
+        location: "Foxborough, MA"
+        summary: "Industrial automation web interfaces and dashboards for plant and
+          operations customers."
+        highlights:
+          - "**CRM** web apps (**SQL Server**, **IIS**, classic **ASP**);
+            industrial automation customers."
     education:
       - institution: "University of New Hampshire"
         area: "Management of Information Systems"
