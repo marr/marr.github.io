@@ -270,6 +270,41 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   filter: invert(1) brightness(1.05);
 }
 
+/* Light/dark asset pairs (e.g. black eyes vs pink eyes): no CSS filter */
+.resume-content :deep(.resume-exp-logo-img--theme-light) {
+  display: block;
+}
+
+.resume-content :deep(.resume-exp-logo-img--theme-dark) {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .resume-content :deep(.resume-exp-logo-img--theme-light) {
+    display: none;
+  }
+
+  .resume-content :deep(.resume-exp-logo-img--theme-dark) {
+    display: block;
+  }
+}
+
+.dark .resume-content :deep(.resume-exp-logo-img--theme-light) {
+  display: none;
+}
+
+.dark .resume-content :deep(.resume-exp-logo-img--theme-dark) {
+  display: block;
+}
+
+html.light .resume-content :deep(.resume-exp-logo-img--theme-light) {
+  display: block;
+}
+
+html.light .resume-content :deep(.resume-exp-logo-img--theme-dark) {
+  display: none;
+}
+
 /* Role meta: location, dates, then intro paragraph */
 .resume-content :deep(h3 + p) {
   margin: 0.15rem 0 0;
