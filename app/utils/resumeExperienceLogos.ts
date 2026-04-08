@@ -24,6 +24,11 @@ export type ResumeExperienceLogo = {
   src: string;
   companionSrcs?: CompanionLogo[];
   /**
+   * Optional alternate asset for dark UI (e.g. pink mark on dark vs black on light).
+   * When set, `invertInDarkMode` is ignored for this logo.
+   */
+  srcDark?: string;
+  /**
    * When set, overrides `wide` for companion pills only.
    * Omit to match the primary (`wide`).
    */
@@ -63,10 +68,10 @@ const LOGO_BY_COMPANY: Partial<
   "Tilt.com": { src: "/resume-logos/tilt.svg?v=2", wide: true },
   /* Wordmark: same compact sizing as other marks (use a tight crop if illegible). */
   "Say Media": { src: "/resume-logos/say-logotype.jpeg" },
-  /* Circular badge from brand sheet (secretfeature_seb.ai); invert on dark UI */
+  /* Small eyes mark: black on light UI, pink on dark */
   "Secret Feature": {
-    src: "/resume-logos/secret-feature-badge.png",
-    invertInDarkMode: true,
+    src: "/resume-logos/secret-feature-eyes-small-black.png?v=2",
+    srcDark: "/resume-logos/secret-feature-eyes-small-pink.png?v=2",
   },
   /* Red eye + wordmark: slate on light / white in dark (SVG @media, like OneMarket) */
   "CBS Interactive": {
@@ -145,6 +150,7 @@ function companionKey(c: CompanionLogo): string {
 export function resumeExperienceLogoSignature(logo: ResumeExperienceLogo): string {
   return [
     logo.src,
+    logo.srcDark ?? "",
     ...(logo.companionSrcs ?? []).map(companionKey),
     logo.wide ? "w" : "",
     logo.wideTall === "xl"

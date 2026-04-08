@@ -16,7 +16,24 @@
               pill.lightForeground ? 'resume-exp-logo-wrap--light-foreground' : '',
             ]"
           >
+            <template v-if="pill.srcDark">
+              <img
+                :src="pill.src"
+                alt=""
+                :class="pill.imgClassLight"
+                loading="lazy"
+                decoding="async"
+              >
+              <img
+                :src="pill.srcDark"
+                alt=""
+                :class="pill.imgClassDark"
+                loading="lazy"
+                decoding="async"
+              >
+            </template>
             <img
+              v-else
               :src="pill.src"
               alt=""
               :class="pill.imgClass"
@@ -38,7 +55,24 @@
           :data-resume-logo="decoration.sig"
           aria-hidden="true"
         >
+          <template v-if="decoration.primary.srcDark">
+            <img
+              :src="decoration.primary.src"
+              alt=""
+              :class="decoration.imgClassLight"
+              loading="lazy"
+              decoding="async"
+            >
+            <img
+              :src="decoration.primary.srcDark"
+              alt=""
+              :class="decoration.imgClassDark"
+              loading="lazy"
+              decoding="async"
+            >
+          </template>
           <img
+            v-else
             :src="decoration.primary.src"
             alt=""
             :class="decoration.imgClass"
@@ -162,9 +196,12 @@ function imgClassList(
 
 type Pill = {
   src: string;
+  srcDark?: string;
   wide: boolean;
   lightForeground?: boolean;
   imgClass: string;
+  imgClassLight?: string;
+  imgClassDark?: string;
 };
 
 const decoration = computed(() => {
@@ -178,18 +215,31 @@ const decoration = computed(() => {
   const companionPillWide =
     cfg.companionWide !== undefined ? cfg.companionWide : !!cfg.wide;
 
+  const primaryInvert = cfg.srcDark ? false : !!cfg.invertInDarkMode;
+  const primaryBaseClass = imgClassList(
+    !!cfg.wide,
+    primaryInvert,
+    cfg.wideTall,
+  );
+
   if (companions.length > 0) {
     const pills: Pill[] = [
-      {
-        src: cfg.src,
-        wide: !!cfg.wide,
-        lightForeground: cfg.lightForeground,
-        imgClass: imgClassList(
-          !!cfg.wide,
-          !!cfg.invertInDarkMode,
-          cfg.wideTall,
-        ),
-      },
+      cfg.srcDark
+        ? {
+            src: cfg.src,
+            srcDark: cfg.srcDark,
+            wide: !!cfg.wide,
+            lightForeground: cfg.lightForeground,
+            imgClass: "",
+            imgClassLight: `${primaryBaseClass} resume-exp-logo-img--theme-light`,
+            imgClassDark: `${primaryBaseClass} resume-exp-logo-img--theme-dark`,
+          }
+        : {
+            src: cfg.src,
+            wide: !!cfg.wide,
+            lightForeground: cfg.lightForeground,
+            imgClass: primaryBaseClass,
+          },
     ];
     for (const c of companions) {
       const { src, invertInDarkMode } = normalizeCompanion(c);
@@ -206,15 +256,20 @@ const decoration = computed(() => {
     return { kind: "group" as const, sig, pills };
   }
 
-  return {
-    kind: "single" as const,
-    sig,
-    primary: cfg as ResumeExperienceLogo,
-    imgClass: imgClassList(
-      !!cfg.wide,
-      !!cfg.invertInDarkMode,
-      cfg.wideTall,
-    ),
-  };
+  return cfg.srcDark
+    ? {
+        kind: "single" as const,
+        sig,
+        primary: cfg,
+        imgClass: "",
+        imgClassLight: `${primaryBaseClass} resume-exp-logo-img--theme-light`,
+        imgClassDark: `${primaryBaseClass} resume-exp-logo-img--theme-dark`,
+      }
+    : {
+        kind: "single" as const,
+        sig,
+        primary: cfg,
+        imgClass: primaryBaseClass,
+      };
 });
 </script>
