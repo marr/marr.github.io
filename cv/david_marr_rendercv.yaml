@@ -324,12 +324,15 @@ design:
     time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
     one_line_entry:
       main_column: "**LABEL:** DETAILS"
+    # Degree in main column (no separate degree column): default 1cm degree column
+    # truncates long lines like "BS, Business Administration" in the PDF.
     education_entry:
       main_column: |-
         **INSTITUTION**, AREA
+        **DEGREE**
         SUMMARY
         HIGHLIGHTS
-      degree_column: "**DEGREE**"
+      degree_column: null
       date_and_location_column: |-
         LOCATION
         DATE

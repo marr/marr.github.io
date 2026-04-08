@@ -49,8 +49,8 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
  * Web résumé DOM contract (content/resume.md):
  * - scripts/harmonize_resume_headings.py: one h1 (name), section h2 (Summary, Experience, …),
  *   each role/school is h3 (**Company**, title).
- * - Typical role block: h3 → p (location) → p (dates) → p (summary) → ul (bullets). Education may
- *   add extra paragraphs (e.g. Dean's List) before bullets.
+ * - Typical role block: h3 → p (location) → p (dates) → p (summary) → ul (bullets).
+ * - Education (RenderCV md): h3 → p (location) → p (dates) → p (degree) → p (e.g. Dean's List).
  * - Section h2 headings are plain text; role h3 lines use <strong> for the company name (logo match).
  */
 
@@ -295,6 +295,30 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   color: var(--ui-text);
 }
 
+/*
+ * Education: same paragraph order as Experience for the first two lines (location, dates),
+ * then degree, then summary — overrides generic h3+p+p+p so the degree line isn’t body-sized.
+ */
+.resume-content :deep(h2#education + h3 + p + p + p),
+.resume-content :deep(h2:nth-of-type(3) + h3 + p + p + p) {
+  margin: 0.5rem 0 0;
+  padding-left: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ui-text);
+}
+
+.resume-content :deep(h2#education + h3 + p + p + p + p),
+.resume-content :deep(h2:nth-of-type(3) + h3 + p + p + p + p) {
+  margin: 0.35rem 0 0;
+  padding-left: 0;
+  max-width: 65ch;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--ui-text);
+}
+
 /* Roles without a mapped logo: slight inset so meta + body align with the shell */
 .resume-content :deep(h3:not(:has(.resume-exp-logo-wrap)) + p) {
   padding-left: 0.65rem;
@@ -317,6 +341,10 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
 }
 
 .resume-content :deep(h3:has(.resume-exp-logo-wrap) + p + p + p) {
+  padding-left: 0;
+}
+
+.resume-content :deep(h3:has(.resume-exp-logo-wrap) + p + p + p + p) {
   padding-left: 0;
 }
 
