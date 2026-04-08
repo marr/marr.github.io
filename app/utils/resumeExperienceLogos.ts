@@ -69,7 +69,7 @@ const LOGO_BY_COMPANY: Partial<
   },
   "Filtered.ai": { src: "/resume-logos/filtered.png" },
   Turo: { src: "/resume-logos/turo.svg", invertInDarkMode: true },
-  /* Icon = one-market-logo.svg with wordmark paths removed; same defs/circle as source */
+  /* Icon-only SVG (full wordmark asset not kept in repo) */
   "OneMarket / Westfield Labs": {
     src: "/resume-logos/one-market-icon.svg?v=5",
     companionSrcs: [
@@ -96,7 +96,7 @@ const LOGO_BY_COMPANY: Partial<
     wide: true,
     wideTall: true,
   },
-  /* Red eye icon only (wordmark in CBSi-white.svg is very wide at chip size) */
+  /* Red eye icon only (full wordmark too wide at chip size) */
   "CBS Interactive": {
     src: "/resume-logos/CBSi-icon.svg?v=2",
   },
@@ -113,11 +113,7 @@ const LOGO_BY_COMPANY: Partial<
     src: "/resume-logos/earlier-ge.svg",
     invertInDarkMode: true,
   },
-  /**
-   * Options in public/resume-logos/: `softartisans-logo-light.png` (navy/grey on white, best on light UI),
-   * `softartisans-logo-dark.png` (white on dark texture), legacy `softartisans-logo.gif` (horizontal strip).
-   * `header-logo.png` in assets is a wide banner — poor at small sizes.
-   */
+  /* Navy/grey on white — works on light UI; invert on dark */
   SoftArtisans: {
     src: "/resume-logos/softartisans-logo-light.png?v=1",
     wide: true,
