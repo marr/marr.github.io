@@ -5,7 +5,12 @@ export type ResumeCompanyName =
   | "Turo"
   | "OneMarket / Westfield Labs"
   | "Tilt.com"
-  | "Earlier roles (2000–2013)"
+  | "Say Media"
+  | "Secret Feature"
+  | "Frog Design"
+  | "Yahoo"
+  | "Monster.com"
+  | "GE Fanuc / Intellution"
   | "University of New Hampshire";
 
 export type ResumeExperienceLogo = {
@@ -45,6 +50,25 @@ const LOGO_BY_COMPANY: Partial<
     lightForeground: true,
   },
   "Tilt.com": { src: "/resume-logos/tilt.svg?v=2", wide: true },
+  "Say Media": { src: "/resume-logos/say-logotype.jpeg", wide: true },
+  "Secret Feature": {
+    src: "/resume-logos/eyes_bigger.png",
+    wide: true,
+    lightForeground: true,
+  },
+  "Frog Design": {
+    src: "/resume-logos/frog-design.svg",
+    invertInDarkMode: true,
+  },
+  Yahoo: { src: "/resume-logos/earlier-yahoo.svg", invertInDarkMode: true },
+  "Monster.com": {
+    src: "/resume-logos/earlier-monster.svg",
+    invertInDarkMode: true,
+  },
+  "GE Fanuc / Intellution": {
+    src: "/resume-logos/earlier-ge.svg",
+    invertInDarkMode: true,
+  },
   "University of New Hampshire": {
     src: "/resume-logos/unh-logo.svg",
     wide: true,
