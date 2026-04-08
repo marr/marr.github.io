@@ -4,6 +4,8 @@
 
 This is a Nuxt 4 personal portfolio/blog site (`@dmarr/cv`). It is a single application — not a monorepo.
 
+**Design:** Follow `.impeccable.md` for brand, typography, and Nuxt UI semantic-token conventions when changing layout or styling.
+
 ### Quick reference
 
 | Action | Command |

@@ -1,14 +1,14 @@
 <template>
   <UCard
     :ui="{
-      root: 'group hover:ring-primary hover:ring-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10',
+      root: 'group ring-1 ring-inset ring-default/40 transition-all duration-300 hover:-translate-y-0.5 hover:ring-primary/50 hover:shadow-md hover:shadow-primary/5',
     }"
   >
     <div class="flex items-start gap-4">
       <!-- Icon or custom image (e.g. project logo from public/) -->
       <div
         v-if="image || icon"
-        class="flex items-center justify-center rounded-lg bg-muted p-2.5 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 shrink-0"
+        class="flex items-center justify-center rounded-lg bg-elevated/80 p-2.5 ring-1 ring-inset ring-default/30 group-hover:bg-primary/10 group-hover:ring-primary/25 transition-all duration-300 shrink-0"
       >
         <img
           v-if="image"
@@ -26,7 +26,7 @@
         <ULink
           :to="url"
           target="_blank"
-          class="font-semibold hover:text-primary transition-colors"
+          class="font-semibold text-default hover:text-primary transition-colors"
         >
           {{ title }}
         </ULink>

@@ -10,10 +10,10 @@ const socialLinks = [
 </script>
 
 <template>
-  <footer class="border-t border-muted/20 mt-16">
-    <div class="max-w-3xl mx-auto px-4 py-8">
+  <footer class="border-t border-default/60 mt-20">
+    <div class="max-w-4xl mx-auto px-4 py-10">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-muted-foreground">
+        <p class="text-sm text-muted">
           &copy;
           {{ " " }}
           <NuxtTime
@@ -32,7 +32,7 @@ const socialLinks = [
             :aria-label="link.label"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-muted-foreground hover:text-foreground transition-colors"
+            class="text-muted hover:text-default transition-colors rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             <UIcon :name="link.icon" class="w-5 h-5" />
           </a>

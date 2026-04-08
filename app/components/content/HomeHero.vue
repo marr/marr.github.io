@@ -1,33 +1,31 @@
 <template>
-  <section class="relative py-16 md:py-24">
+  <section class="relative py-16 md:py-28">
     <div class="flex flex-col items-center text-center">
-      <!-- Animated Ring Avatar -->
-      <div v-if="avatar" class="relative mb-8 p-4">
-        <!-- Pulsing gradient glow -->
-        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-emerald-400 to-primary opacity-60 blur-xl animate-pulse" />
-        <!-- Avatar -->
+      <div v-if="avatar" class="relative mb-10 p-4 motion-safe:transition-transform motion-safe:duration-500">
+        <div
+          class="absolute inset-2 rounded-full bg-primary/20 blur-2xl motion-safe:animate-pulse motion-reduce:animate-none"
+          aria-hidden="true"
+        />
         <img
           :src="avatar"
           :alt="title"
-          class="relative size-32 md:size-40 rounded-full ring-2 ring-primary/50 object-cover"
+          class="relative size-32 md:size-40 rounded-full ring-2 ring-default object-cover shadow-sm"
           width="160"
           height="160"
         />
       </div>
 
-      <!-- Title -->
-      <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-default mb-3">
         {{ title }}
       </h1>
 
-      <!-- Morphing Roles - component handles SSR by showing first role until mounted -->
       <MorphingText
         v-if="roles?.length"
         :texts="roles"
-        class="text-muted mb-6"
+        class="text-primary mb-6"
       />
 
-      <p v-if="description" class="text-lg text-muted max-w-2xl mb-8">
+      <p v-if="description" class="text-lg text-muted max-w-2xl text-pretty mb-10 leading-relaxed">
         {{ description }}
       </p>
 
