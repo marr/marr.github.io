@@ -18,11 +18,24 @@ export type ResumeCompanyName =
 /** Companion slot: string or explicit invert for dark UI (slate glyphs on light → invert on dark). */
 export type CompanionLogo =
   | string
-  | { src: string; invertInDarkMode?: boolean };
+  | {
+      src: string;
+      /** Alternate asset for dark UI (e.g. white mark vs slate on light). */
+      srcDark?: string;
+      invertInDarkMode?: boolean;
+      /** Match primary `wideTall` when set (e.g. Westfield square next to OneMarket wordmark). */
+      wideTall?: boolean | "xl";
+      /** Render smaller than the primary pill (e.g. Westfield next to OneMarket). */
+      smaller?: boolean;
+    };
 
 export type ResumeExperienceLogo = {
   src: string;
   companionSrcs?: CompanionLogo[];
+  /** Stack primary + companion logo pills vertically (default: row). */
+  companionStack?: boolean;
+  /** Between pills: gradient rule + stagger animation (implies row; use without stack). */
+  companionDivider?: boolean;
   /**
    * Optional alternate asset for dark UI (e.g. pink mark on dark vs black on light).
    * When set, `invertInDarkMode` is ignored for this logo.
@@ -52,32 +65,40 @@ const LOGO_BY_COMPANY: Partial<
   Record<ResumeCompanyName, ResumeExperienceLogo>
 > = {
   "Context Labs": {
-    src: "/resume-logos/cxl-icon.svg",
-    invertInDarkMode: true,
+    src: "/resume-logos/contextlabs.svg?v=1",
   },
   "Filtered.ai": { src: "/resume-logos/filtered.png" },
   Turo: { src: "/resume-logos/turo.svg", invertInDarkMode: true },
+  /* Icon = one-market-logo.svg with wordmark paths removed; same defs/circle as source */
   "OneMarket / Westfield Labs": {
-    src: "/resume-logos/one-market-logo.svg?v=2",
+    src: "/resume-logos/one-market-icon.svg?v=5",
     companionSrcs: [
-      { src: "/resume-logos/westfield-logo.svg?v=2", invertInDarkMode: true },
+      {
+        src: "/resume-logos/westfield-logo.svg?v=2",
+        srcDark: "/resume-logos/westfield-logo-white.svg?v=1",
+        smaller: true,
+      },
     ],
+    companionStack: false,
+    companionDivider: true,
     companionWide: false,
-    wide: true,
   },
-  "Tilt.com": { src: "/resume-logos/tilt.svg?v=2", wide: true },
-  /* Wordmark: same compact sizing as other marks (use a tight crop if illegible). */
-  "Say Media": { src: "/resume-logos/say-logotype.jpeg" },
-  /* Small eyes mark: black on light UI, pink on dark */
+  "Tilt.com": { src: "/resume-logos/tilt-icon.svg?v=3" },
+  /* SAY on black square — invert on dark UI for contrast */
+  "Say Media": {
+    src: "/resume-logos/say-bw.png?v=2",
+    invertInDarkMode: true,
+  },
+  /* Eyes mark from brand SVG: slate on light UI, pink on dark */
   "Secret Feature": {
-    src: "/resume-logos/secret-feature-eyes-small-black.png?v=2",
-    srcDark: "/resume-logos/secret-feature-eyes-small-pink.png?v=2",
-  },
-  /* Red eye + wordmark: slate on light / white in dark (SVG @media, like OneMarket) */
-  "CBS Interactive": {
-    src: "/resume-logos/CBSi-white.svg?v=3",
+    src: "/resume-logos/secret-feature-eyes.svg?v=1",
+    srcDark: "/resume-logos/secret-feature-eyes-dark.svg?v=2",
     wide: true,
     wideTall: true,
+  },
+  /* Red eye icon only (wordmark in CBSi-white.svg is very wide at chip size) */
+  "CBS Interactive": {
+    src: "/resume-logos/CBSi-icon.svg?v=2",
   },
   "Frog Design": {
     src: "/resume-logos/frog-design.svg",
@@ -103,26 +124,34 @@ const LOGO_BY_COMPANY: Partial<
     wideTall: true,
   },
   "University of New Hampshire": {
-    src: "/resume-logos/unh-logo.svg?v=2",
-    wide: true,
-    wideTall: "xl",
+    src: "/resume-logos/unh-icon.svg?v=2",
     invertInDarkMode: true,
   },
 };
 
 /** Strip `**…**` from the company segment (RenderCV uses bold in headings). */
 function normalizeCompanySegment(raw: string): string {
-  const s = raw.trim();
+  let s = raw.trim().replace(/\s+/g, " ");
   const mdBold = /^\*\*(.+)\*\*$/;
   const m = s.match(mdBold);
-  return m ? m[1].trim() : s;
+  if (m?.[1] != null) {
+    return m[1].trim();
+  }
+  if (s.startsWith("**") && s.endsWith("**") && s.length > 4) {
+    return s.slice(2, -2).trim();
+  }
+  return s;
 }
 
 export function parseCompanyFromExperienceHeading(
   text: string,
 ): ResumeCompanyName | null {
-  const t = text.trim();
-  const comma = t.indexOf(",");
+  const t = text
+    .trim()
+    .replace(/\u200b/g, "")
+    .replace(/\s+/g, " ");
+  const commaMatch = t.match(/[,\uFF0C]/);
+  const comma = commaMatch?.index ?? -1;
   if (comma <= 0) {
     return null;
   }
@@ -143,7 +172,10 @@ function companionKey(c: CompanionLogo): string {
   if (typeof c === "string") {
     return `${c}|`;
   }
-  return `${c.src}|${c.invertInDarkMode ? "i" : ""}`;
+  const wt =
+    c.wideTall === "xl" ? "wtxl" : c.wideTall ? "wt" : "";
+  const sm = c.smaller ? "s" : "";
+  return `${c.src}|${c.srcDark ?? ""}|${c.invertInDarkMode ? "i" : ""}|${wt}|${sm}`;
 }
 
 /** Stable fingerprint for DOM: bump when mapping changes so resume page re-decorates. */
@@ -152,6 +184,8 @@ export function resumeExperienceLogoSignature(logo: ResumeExperienceLogo): strin
     logo.src,
     logo.srcDark ?? "",
     ...(logo.companionSrcs ?? []).map(companionKey),
+    logo.companionStack ? "stack" : "",
+    logo.companionDivider ? "div" : "",
     logo.wide ? "w" : "",
     logo.wideTall === "xl"
       ? "wtxl"
