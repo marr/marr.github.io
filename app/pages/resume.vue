@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import { nextTick, onMounted, onUpdated, ref, watch } from "vue";
-import { useMutationObserver } from "@vueuse/core";
-import {
-  logoForResumeCompany,
-  parseCompanyFromExperienceHeading,
-  resumeExperienceLogoSignature,
-} from "~/utils/resumeExperienceLogos";
+import ResumeProseExperienceH3 from "~/components/resume/ResumeProseExperienceH3.vue";
 
 const { data: page } = await useAsyncData("resume-page", () =>
   queryCollection("content").path("/resume").first(),
@@ -24,132 +18,8 @@ useSeoMeta({
   description: page.value.seo?.description || page.value.description,
 });
 
-const resumeRoot = ref<HTMLElement | null>(null);
-
-/** Undo experience h2 decoration (logo group/pill + heading text wrapper). */
-function stripExperienceHeadingDecoration(h2: HTMLElement) {
-  const textWrap = h2.querySelector(":scope > .resume-exp-heading-text");
-  if (textWrap) {
-    while (textWrap.firstChild) {
-      h2.insertBefore(textWrap.firstChild, textWrap);
-    }
-    textWrap.remove();
-  }
-  h2.querySelector(":scope > .resume-exp-logo-group")?.remove();
-  h2.querySelector(":scope > .resume-exp-logo-wrap")?.remove();
-}
-
-function decorateExperienceLogos(root: HTMLElement) {
-  root.querySelectorAll("h2").forEach((node) => {
-    const h2 = node as HTMLElement;
-    const company = parseCompanyFromExperienceHeading(
-      h2.textContent ?? "",
-    );
-    if (!company) {
-      return;
-    }
-    const logo = logoForResumeCompany(company);
-    if (!logo) {
-      return;
-    }
-    const cfg = logo;
-
-    const sig = resumeExperienceLogoSignature(cfg);
-    const existing =
-      h2.querySelector(":scope > .resume-exp-logo-group") ??
-      h2.querySelector(":scope > .resume-exp-logo-wrap");
-    if (existing?.getAttribute("data-resume-logo") === sig) {
-      return;
-    }
-
-    stripExperienceHeadingDecoration(h2);
-
-    function makeLogoPill(src: string, pillWide: boolean): HTMLSpanElement {
-      const wrap = document.createElement("span");
-      wrap.className = [
-        "resume-exp-logo-wrap",
-        pillWide ? "resume-exp-logo-wrap--wide" : "",
-        cfg.lightForeground ? "resume-exp-logo-wrap--light-foreground" : "",
-      ]
-        .filter(Boolean)
-        .join(" ");
-      wrap.setAttribute("aria-hidden", "true");
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = "";
-      img.className = [
-        "resume-exp-logo-img",
-        pillWide ? "resume-exp-logo-img--wide" : "",
-        cfg.invertInDarkMode ? "resume-exp-logo-img--invert-dark" : "",
-      ]
-        .filter(Boolean)
-        .join(" ");
-      wrap.appendChild(img);
-      return wrap;
-    }
-
-    const companionPillWide =
-      cfg.companionWide !== undefined ? cfg.companionWide : !!cfg.wide;
-
-    const companions = cfg.companionSrcs ?? [];
-    let first: HTMLElement;
-    if (companions.length > 0) {
-      const group = document.createElement("span");
-      group.className = "resume-exp-logo-group";
-      group.setAttribute("data-resume-logo", sig);
-      group.setAttribute("aria-hidden", "true");
-      group.appendChild(makeLogoPill(cfg.src, !!cfg.wide));
-      for (const src of companions) {
-        group.appendChild(makeLogoPill(src, companionPillWide));
-      }
-      first = group;
-    } else {
-      const wrap = makeLogoPill(cfg.src, !!cfg.wide);
-      wrap.setAttribute("data-resume-logo", sig);
-      first = wrap;
-    }
-
-    h2.insertBefore(first, h2.firstChild);
-
-    const textWrap = document.createElement("span");
-    textWrap.className = "resume-exp-heading-text";
-    while (first.nextSibling) {
-      textWrap.appendChild(first.nextSibling);
-    }
-    h2.appendChild(textWrap);
-  });
-}
-
-function runDecorate() {
-  const el = resumeRoot.value;
-  if (el) {
-    decorateExperienceLogos(el);
-  }
-}
-
-onMounted(() => {
-  void nextTick(() => {
-    runDecorate();
-    requestAnimationFrame(runDecorate);
-  });
-});
-
-onUpdated(() => {
-  void nextTick(runDecorate);
-});
-
-watch(page, () => void nextTick(runDecorate));
-
-useMutationObserver(
-  resumeRoot,
-  () => {
-    void nextTick(runDecorate);
-  },
-  {
-    childList: true,
-    subtree: true,
-  },
-);
+/** Maps markdown `h3` to SSR logo + heading (see components/resume/ResumeProseExperienceH3.vue). */
+const resumeContentComponents = { h3: ResumeProseExperienceH3 };
 </script>
 
 <template>
@@ -162,8 +32,12 @@ useMutationObserver(
         aria-hidden="true"
       />
       <div class="relative px-5 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12">
-        <div ref="resumeRoot">
-          <ContentRenderer :value="page" class="resume-content" />
+        <div>
+          <ContentRenderer
+            :value="page"
+            class="resume-content"
+            :components="resumeContentComponents"
+          />
         </div>
       </div>
     </div>
@@ -171,6 +45,15 @@ useMutationObserver(
 </template>
 
 <style scoped>
+/*
+ * Web résumé DOM contract (content/resume.md):
+ * - scripts/harmonize_resume_headings.py: one h1 (name), section h2 (Summary, Experience, …),
+ *   each role/school is h3 (**Company**, title).
+ * - Typical role block: h3 → p (location) → p (dates) → p (summary) → ul (bullets). Education may
+ *   add extra paragraphs (e.g. Dean's List) before bullets.
+ * - Section h2 headings are plain text; role h3 lines use <strong> for the company name (logo match).
+ */
+
 .resume-content {
   font-size: 0.9375rem;
   line-height: 1.65;
@@ -198,12 +81,13 @@ useMutationObserver(
   scroll-margin-top: 5rem;
 }
 
-.resume-content :deep(h1:nth-of-type(1)) {
+.resume-content :deep(h1:first-of-type) {
   margin: 0 0 0.5rem;
   font-size: clamp(1.625rem, 4vw, 2.125rem);
 }
 
-.resume-content :deep(h1:nth-of-type(n + 2)) {
+/* Section labels: Summary, Experience, Education, Skills (no <strong> in the heading) */
+.resume-content :deep(h2:not(:has(strong))) {
   margin: 2.75rem 0 1rem;
   padding-bottom: 0.5rem;
   font-size: 0.7rem;
@@ -214,7 +98,7 @@ useMutationObserver(
   border-bottom: 1px solid color-mix(in oklab, var(--ui-border) 80%, transparent);
 }
 
-.resume-content :deep(h1:nth-of-type(2)) {
+.resume-content :deep(h2:not(:has(strong)):first-of-type) {
   margin-top: 1.25rem;
 }
 
@@ -249,7 +133,16 @@ useMutationObserver(
   color: var(--ui-primary);
 }
 
-.resume-content :deep(h2) {
+.resume-content :deep(h2:first-of-type + p) {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  max-width: 65ch;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ui-text);
+}
+
+.resume-content :deep(h3) {
   margin: 2rem 0 0.35rem;
   padding-left: 0;
   border-left: none;
@@ -258,10 +151,19 @@ useMutationObserver(
   line-height: 1.35;
   color: var(--ui-text-highlighted);
   text-wrap: balance;
+  scroll-margin-top: 4rem;
 }
 
-/* Logo chip(s), company, and role title on one line (wraps when narrow) */
-.resume-content :deep(h2:has(.resume-exp-logo-wrap)) {
+.resume-content :deep(h2 + h3) {
+  margin-top: 1rem;
+}
+
+.resume-content :deep(h3 + h3) {
+  margin-top: 2rem;
+}
+
+/* Logo chip(s), company line, and role title on one line (wraps when narrow) */
+.resume-content :deep(h3:has(.resume-exp-logo-wrap)) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -271,9 +173,10 @@ useMutationObserver(
   padding-left: 0;
 }
 
-.resume-content :deep(h2:has(.resume-exp-logo-wrap) > .resume-exp-logo-wrap),
-.resume-content :deep(h2:has(.resume-exp-logo-wrap) > .resume-exp-logo-group) {
+.resume-content :deep(h3:has(.resume-exp-logo-wrap) > .resume-exp-logo-wrap),
+.resume-content :deep(h3:has(.resume-exp-logo-wrap) > .resume-exp-logo-group) {
   flex-shrink: 0;
+  min-width: 3rem;
 }
 
 .resume-content :deep(.resume-exp-logo-group) {
@@ -314,12 +217,14 @@ useMutationObserver(
   box-sizing: border-box;
   width: fit-content;
   max-width: 100%;
-  height: 2.125rem;
-  min-width: 2rem;
-  padding: 0 0.5rem;
+  min-height: 2.125rem;
+  height: auto;
+  min-width: 3rem;
+  flex-shrink: 0;
+  padding: 0 0.35rem;
   border-radius: calc(var(--ui-radius) + 2px);
-  border: 1px solid color-mix(in oklab, var(--ui-border) 88%, transparent);
-  background: color-mix(in oklab, var(--ui-bg-muted) 50%, transparent);
+  border: none;
+  background: transparent;
 }
 
 .resume-content :deep(.resume-exp-logo-wrap--wide) {
@@ -327,37 +232,32 @@ useMutationObserver(
   padding: 0 0.55rem;
 }
 
-/* Light-colored logos (white wordmarks): readable on light theme */
 .resume-content :deep(.resume-exp-logo-wrap--light-foreground) {
-  background: color-mix(in oklab, var(--ui-text) 90%, var(--ui-bg-muted));
-  border-color: color-mix(in oklab, var(--ui-text) 22%, var(--ui-border));
-}
-
-@media (prefers-color-scheme: dark) {
-  .resume-content :deep(.resume-exp-logo-wrap--light-foreground) {
-    background: color-mix(in oklab, var(--ui-bg-muted) 50%, transparent);
-    border-color: color-mix(in oklab, var(--ui-border) 88%, transparent);
-  }
-}
-
-.dark .resume-content :deep(.resume-exp-logo-wrap--light-foreground) {
-  background: color-mix(in oklab, var(--ui-bg-muted) 50%, transparent);
-  border-color: color-mix(in oklab, var(--ui-border) 88%, transparent);
+  background: transparent;
 }
 
 .resume-content :deep(.resume-exp-logo-img) {
   display: block;
-  max-width: 1.4rem;
-  max-height: 1.28rem;
-  width: auto;
+  width: 3rem;
   height: auto;
+  max-height: 3rem;
   object-fit: contain;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .resume-content :deep(.resume-exp-logo-img--wide) {
-  max-width: 7.4rem;
-  max-height: 1.52rem;
+  width: auto;
+  max-width: 9rem;
+  max-height: 2rem;
+}
+
+.resume-content :deep(.resume-exp-logo-img--wide.resume-exp-logo-img--wide-tall) {
+  max-height: 3rem;
+}
+
+.resume-content :deep(.resume-exp-logo-img--wide.resume-exp-logo-img--wide-tall-xl) {
+  max-height: 3.75rem;
+  max-width: 12rem;
 }
 
 .resume-content :deep(.resume-exp-logo-img--invert-dark) {
@@ -370,18 +270,15 @@ useMutationObserver(
   filter: invert(1) brightness(1.05);
 }
 
-.resume-content :deep(h2:first-of-type) {
-  margin-top: 0.5rem;
-}
-
-.resume-content :deep(h2 + p) {
+/* Role meta: location, dates, then intro paragraph */
+.resume-content :deep(h3 + p) {
   margin: 0.15rem 0 0;
   padding-left: 0;
   font-size: 0.8125rem;
   color: var(--ui-text-muted);
 }
 
-.resume-content :deep(h2 + p + p) {
+.resume-content :deep(h3 + p + p) {
   margin: 0.1rem 0 0;
   padding-left: 0;
   font-size: 0.8125rem;
@@ -389,7 +286,7 @@ useMutationObserver(
   color: color-mix(in oklab, var(--ui-text-muted) 92%, var(--ui-text) 8%);
 }
 
-.resume-content :deep(h2 + p + p + p) {
+.resume-content :deep(h3 + p + p + p) {
   margin: 0.85rem 0 0;
   padding-left: 0;
   max-width: 65ch;
@@ -398,43 +295,34 @@ useMutationObserver(
   color: var(--ui-text);
 }
 
-/* Headings without a logo chip: light inset so meta + body aren’t flush to the shell edge */
-.resume-content :deep(h2:not(:has(.resume-exp-logo-wrap)) + p) {
+/* Roles without a mapped logo: slight inset so meta + body align with the shell */
+.resume-content :deep(h3:not(:has(.resume-exp-logo-wrap)) + p) {
   padding-left: 0.65rem;
 }
 
-.resume-content :deep(h2:not(:has(.resume-exp-logo-wrap)) + p + p) {
+.resume-content :deep(h3:not(:has(.resume-exp-logo-wrap)) + p + p) {
   padding-left: 0.65rem;
 }
 
-.resume-content :deep(h2:not(:has(.resume-exp-logo-wrap)) + p + p + p) {
+.resume-content :deep(h3:not(:has(.resume-exp-logo-wrap)) + p + p + p) {
   padding-left: 0.65rem;
 }
 
-/* Meta + body share the same left edge as the title (logo sits above) */
-.resume-content :deep(h2:has(.resume-exp-logo-wrap) + p) {
+.resume-content :deep(h3:has(.resume-exp-logo-wrap) + p) {
   padding-left: 0;
 }
 
-.resume-content :deep(h2:has(.resume-exp-logo-wrap) + p + p) {
+.resume-content :deep(h3:has(.resume-exp-logo-wrap) + p + p) {
   padding-left: 0;
 }
 
-.resume-content :deep(h2:has(.resume-exp-logo-wrap) + p + p + p) {
+.resume-content :deep(h3:has(.resume-exp-logo-wrap) + p + p + p) {
   padding-left: 0;
 }
 
 .resume-content :deep(p) {
   margin: 0 0 1rem;
   text-wrap: pretty;
-}
-
-.resume-content :deep(h1 + p) {
-  margin-top: 0;
-  margin-bottom: 1.25rem;
-  max-width: 65ch;
-  font-size: 0.9375rem;
-  line-height: 1.65;
 }
 
 .resume-content :deep(ul:not(:first-of-type)) {
@@ -460,18 +348,39 @@ useMutationObserver(
   text-underline-offset: 3px;
 }
 
+/* MDC wraps section labels (Summary, …) in <a href="#…">; keep them label-like, not body links */
+.resume-content :deep(h2:not(:has(strong)) a) {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+.resume-content :deep(h2:not(:has(strong)) a:hover) {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--ui-primary) 50%, transparent);
+  text-underline-offset: 3px;
+}
+
+.resume-content :deep(h2:not(:has(strong)) a:focus-visible) {
+  outline: 2px solid color-mix(in oklab, var(--ui-primary) 45%, transparent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 .resume-content :deep(strong) {
   font-weight: 600;
   color: var(--ui-text-highlighted);
 }
 
-.resume-content :deep(h1:last-of-type ~ p) {
+/* Skills block: paragraphs after the last section h2 */
+.resume-content :deep(h2:last-of-type ~ p) {
   margin-bottom: 0.65rem;
   font-size: 0.875rem;
   line-height: 1.55;
 }
 
-.resume-content :deep(h1:last-of-type ~ p strong) {
+.resume-content :deep(h2:last-of-type ~ p strong) {
   min-width: fit-content;
   margin-right: 0.35rem;
 }

@@ -7,7 +7,7 @@ cv:
   # Context Labs: [M]→[N] = UI/UX org size you managed (start → peak). GHG bullet cites
   #   public program detail (e.g. Williams NextGen Gas deck); no aggregate tCO2e on slide.
   # Filtered.ai: employer framing set (large employers, financial services + technology).
-  # Turo: bracket facts are from public sources (WSJ 2019, company history); trim if too long.
+  # Turo: WSJ 2019 (IAC); gross revenue / geography from company-disclosed milestones (~2018).
   # Pre-2016 roles: each stint is its own experience entry (Say Media → … → GE Fanuc).
   name: David Marr
   headline: Engineering Leader | 25 Years Scaling Modern Software, Global Teams &
@@ -16,12 +16,10 @@ cv:
   email: "dave.marr@gmail.com"
   sections:
     summary:
-      - Engineering leader with 25 years building and launching technical
-        products at category-leading companies (e.g. Yahoo, Westfield Labs,
-        Context Labs, Turo). I lead cross-functional teams, scale systems, and
-        ship reliable, user-focused products; I integrate AI into workflows,
-        improve performance and observability, and build developer platforms
-        that speed delivery.
+      - Engineering leader with 25 years shipping products at category-leading
+        companies (e.g. Yahoo, Westfield Labs, Context Labs, Turo). Cross-functional
+        leadership and systems at scale; AI in engineering workflows, observability,
+        and platforms that accelerate delivery.
     experience:
       - company: "Context Labs"
         position: "Principal UI Engineer / Engineering Manager"
@@ -45,15 +43,13 @@ cv:
             across production through market, with multi-layer monitoring
             (e.g. satellite, aerial, fixed sensors, source-level measurement) and
             third-party emissions-intensity certification (KPMG)."
-          - Championed onboarding efforts to bring **AI tooling** into daily
-            engineering workflows.
-          - Built a production platform integrating backend services,
-            multi-tenancy, SSO authentication, RBAC, and internationalization.
-          - Developed a shared UI component library with data visualizations,
-            interactive maps, and accessible controls to ensure consistency and
-            speed across products.
-          - Improved CI/CD pipelines and observability for frontend deployments,
-            reducing mean time to recovery and increasing deployment frequency.
+          - "Built a production platform integrating backend services,
+            multi-tenancy, SSO authentication, RBAC, and internationalization;
+            developed a shared UI component library with data visualizations,
+            interactive maps, and accessible controls."
+          - "Championed **AI tooling** in engineering workflows; improved CI/CD and
+            observability for frontend deployments—lower MTTR and higher deploy
+            frequency."
       - company: "Filtered.ai"
         position: "Lead Engineer"
         start_date: 2020-02
@@ -67,41 +63,37 @@ cv:
             assessment portals, and **live video interviews** used by **large
             employers in financial services and technology** to run technical
             hiring at scale."
-          - "Implemented AI-driven grading, automated feedback, and
-            fraud-detection systems to scale technical evaluations while
-            maintaining integrity."
-          - "Collaborated with product and data teams to iterate on models and
-            metrics that measured candidate success and system effectiveness."
+          - "Implemented AI-driven grading, automated feedback, and fraud detection;
+            collaborated with product and data on models and metrics for candidate
+            success and system effectiveness."
       - company: "Turo"
         position: "Staff Software Engineer"
         start_date: 2018-04
         end_date: "2019-12"
         location: "San Francisco, CA & Boston, MA"
-        summary: "Owned host-facing product work during rapid marketplace scaling
-          (including **IAC’s $250M investment at a >$1B valuation, Jul 2019,
-          WSJ**) and international expansion; shipped programs that lifted host
-          engagement, revenue, and listing quality."
+        summary: "Owned host-facing product work while the marketplace scaled to
+          **~$236M gross revenue** and **40+ countries** by 2018 (company metrics)
+          and through **IAC’s $250M investment at a >$1B valuation, Jul 2019,
+          WSJ**; shipped programs that lifted host engagement, revenue, and listing
+          quality."
         highlights:
-          - "I shipped host-facing capabilities for **Turo’s full host base**:
-            **availability calendar**, **trip lifecycle management**, and
-            **dynamic pricing controls**—raising utilization and host-side
-            revenue."
+          - "Shipped **availability calendar**, **trip lifecycle management**, and
+            **dynamic pricing** for **Turo’s full host base**—raising utilization
+            and host-side revenue; partnered with analytics to quantify lift and
+            iterate releases."
           - "Led the **All-star** host recognition program end-to-end, tying
             incentives to quality and retention metrics."
-          - "Partnered with analytics to quantify lift on host behavior and
-            revenue, then iterated releases against those metrics."
       - company: "OneMarket / Westfield Labs"
         position: "Senior Software Architect"
         start_date: "2016-01"
         end_date: 2018-05
         location: "San Francisco, CA"
-        summary: "Architected retail and parking products for **OneMarket**, the
-          **Westfield Labs** spin-out formed to help global retailers compete on
-          data and speed with large e-commerce players; parent Westfield
+        summary: "Architected retail and parking for **OneMarket**, **Westfield
+          Labs** spin-out—**omnichannel** retail at **~1.1B annual shopping
+          visits** across **85+** Westfield centers worldwide; parent Westfield
           announced a carve-out toward an **ASX listing with ~US$198M cash** on
-          the balance sheet at announcement (**Feb 2018, iTnews**), amid its
-          proposed combination with **Unibail-Rodamco** (described in press as
-          creating the **world’s largest retail landlord**)."
+          the balance sheet (**Feb 2018, iTnews**), amid its proposed combination
+          with **Unibail-Rodamco** (press: **world’s largest retail landlord**)."
         highlights:
           - "Delivered smart parking with facial recognition, subscription
             billing, and gate automation—reducing friction for high-traffic
@@ -110,36 +102,34 @@ cv:
           - "Built **interior mapping** tools so partners could verify leased
             space; shipped directory and wayfinding for **large-format malls and
             retail campuses**."
-          - "Built account and operations tooling with **React**, **Node**,
-            and **PostgreSQL**."
-          - "Integrated edge devices with cloud services for reliable,
-            low-latency shopper flows and centralized operations tooling."
+          - "Built account and operations tooling with **React**, **Node**, and
+            **PostgreSQL**; integrated edge devices with cloud services for
+            reliable shopper flows and centralized operations."
       - company: "Tilt.com"
         position: "Senior Systems Engineer"
         start_date: 2013-07
         end_date: 2015-12
         location: "San Francisco, CA"
-        summary: "Optimized core user flows and backend systems to increase conversion
-          and streamline operations during high-growth phases."
+        summary: "Optimized core user flows during **Y Combinator**–era growth
+          (**Series A $12M**, Apr 2013; **Series B $23M**, Dec 2013)."
         highlights:
-          - "Redesigned and optimized the **first-party user signup** and
-            onboarding flow, yielding a **~15% lift** in conversions and
-            associated revenue."
-          - "Advocated **React** for new product work—helped attract and align
-            frontend talent."
-          - "Improved system reliability and scalability to support surge
-            traffic during fundraising campaigns and promotions."
+          - "Redesigned **first-party signup** and onboarding (**~15%** lift in
+            conversions and revenue); advocated **React** for new product work."
+          - "Improved reliability and scalability for surge traffic during
+            fundraising campaigns and promotions."
       - company: "Say Media"
         position: "Senior Software Engineer"
         start_date: 2012-03
         end_date: 2013-04
         location: "San Francisco, CA"
-        summary: "Publishing and ad-tech; **Ember.js** tools for digital content and
-          monetization."
+        summary: "**Conversational media** publisher network (VideoEgg + Six Apart
+          merger); **Ember.js** tools for digital content and monetization."
         highlights:
           - "**Ember.js** publishing tools; monetized digital content and lifted
             **engaged time** via headlines, traffic-driving modules, and
             in-article **user reactions**."
+          - "**SheKnows** (network flagship): cited as the **fastest-growing women's
+            lifestyle brand** in its category (**comScore**)."
       - company: "CBS Interactive"
         position: "Software Engineer (tv.com)"
         start_date: 2011-06
