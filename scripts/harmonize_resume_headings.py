@@ -26,7 +26,8 @@ def harmonize(md: str) -> str:
         elif line == "# Experience":
             out.append("## Experience")
         elif line == "# Education":
-            out.append("## Education")
+            # Stable hook for web CSS (Education paragraph order differs from Experience).
+            out.append("## Education {#education}")
         elif line == "# Skills":
             out.append("## Skills")
         elif line.startswith("## **"):
