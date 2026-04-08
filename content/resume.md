@@ -23,7 +23,7 @@ Engineering leader with 25 years shipping products at category-leading companies
 ## Experience
 ### **Context Labs**, Principal UI Engineer / Engineering Manager
 
-Boston, MA
+Cambridge, MA
 
 June 2022 – Mar 2026
 
@@ -47,7 +47,7 @@ Feb 2020 – Feb 2022
 
 Architected scalable recruitment workflows for **large employers in financial services and technology** — high-volume applicant pipelines with AI-driven grading and fraud detection.
 
-- Directed development of interview scheduling, candidate pipelines, assessment portals, and **live video interviews** used by **large employers in financial services and technology** to run technical hiring at scale.
+- Directed development of interview scheduling, candidate pipelines, assessment portals, and **live video interviews** for technical hiring at scale.
 
 - Implemented AI-driven grading, automated feedback, and fraud detection; collaborated with product and data on models and metrics for candidate success and system effectiveness.
 
@@ -55,7 +55,7 @@ Architected scalable recruitment workflows for **large employers in financial se
 
 ### **Turo**, Staff Software Engineer
 
-San Francisco, CA & Boston, MA
+San Francisco, CA & Cambridge, MA
 
 Apr 2018 – Dec 2019
 
@@ -69,7 +69,7 @@ Owned host-facing product work while the marketplace scaled to **~$236M gross re
 
 ### **OneMarket / Westfield Labs**, Senior Software Architect
 
-San Francisco, CA
+San Francisco, CA & London, UK
 
 Jan 2016 – May 2018
 
@@ -103,9 +103,9 @@ San Francisco, CA
 
 Mar 2012 – Apr 2013
 
-**Conversational media** publisher network (VideoEgg + Six Apart merger); **Ember.js** tools for digital content and monetization.
+**Conversational media** publisher network (VideoEgg + Six Apart merger); **Ember.js** for content and monetization.
 
-- **Ember.js** publishing tools; monetized digital content and lifted **engaged time** via headlines, traffic-driving modules, and in-article **user reactions**.
+- Lifted **engaged time** via headlines, traffic modules, and in-article **user reactions**.
 
 - **SheKnows** (network flagship): cited as the **fastest-growing women's lifestyle brand** in its category (**comScore**).
 
@@ -117,9 +117,7 @@ San Francisco, CA
 
 June 2011 – Dec 2011
 
-Show and metadata surfaces for **tv.com**.
-
-- **tv.com** — **SVG**-heavy web UI and **Python** APIs for shows and metadata.
+Show and metadata for **tv.com**: **SVG**-heavy web UI and **Python** APIs for shows and metadata.
 
 
 
@@ -129,9 +127,7 @@ San Francisco, CA
 
 Jan 2010 – May 2011
 
-Early social product as Flash end-of-life reshaped the web stack.
-
-- Co-founder; work contributed to **Diversion, Inc.** closing a **Series A**. Shipped an early social product on **Node.js** as Flash end-of-life loomed.
+Co-founder; shipped an early social product on **Node.js** as the stack moved beyond Flash; contributed to **Diversion, Inc.** closing a **Series A**.
 
 
 
@@ -141,9 +137,7 @@ San Francisco, CA
 
 Jan 2009 – Mar 2010
 
-Design-to-production prototyping and embedded experiences for physical products.
-
-- **Disney** park data **API** and web work for **MagicBand**; design-to-production **prototypes** (incl. Flash) and **embedded** work for physical products.
+Design-to-production and embedded work for physical products—**Disney** park data **API** and web for **MagicBand**; Flash-era prototypes and embedded hardware.
 
 
 
@@ -153,9 +147,7 @@ Sunnyvale / San Francisco, CA
 
 Sept 2006 – Dec 2008
 
-Scalable frontend architecture for high-traffic Yahoo properties.
-
-- **PHP/MySQL** (Yahoo! Answers / Small Business); **Brickhouse** — **Yahoo! Live** live-streaming. **60+ min** average time-on-site; **~2M signups** in nine months.
+Scalable frontend for high-traffic properties: **PHP/MySQL** (Yahoo! Answers / Small Business); **Brickhouse** — **Yahoo! Live** live-streaming; **60+ min** average time-on-site; **~2M signups** in nine months.
 
 
 
@@ -165,9 +157,7 @@ Maynard, MA
 
 Mar 2004 – Aug 2006
 
-User-facing features and a **Webby**-recognized career advice site.
-
-- Early **.NET**; migrated CMS from classic **ASP** to **ASP.NET**; **Webby**-recognized career advice site.
+User-facing work on a **Webby**-recognized career advice site; early **.NET**, migrated CMS from classic **ASP** to **ASP.NET**.
 
 
 
@@ -177,9 +167,7 @@ Brookline, MA
 
 Mar 2003 – Apr 2004
 
-Enterprise web integrations for **Microsoft** server stacks.
-
-- **SAFileUp** and enterprise **multipart/form-data** uploads for **Microsoft** server stacks.
+Enterprise **SAFileUp** and **multipart/form-data** uploads on **Microsoft** server stacks.
 
 
 
@@ -189,9 +177,7 @@ Foxborough, MA
 
 Jan 2000 – Dec 2003
 
-Industrial automation web interfaces and dashboards for plant and operations customers.
-
-- **CRM** web apps (**SQL Server**, **IIS**, classic **ASP**); industrial automation customers.
+Industrial automation web interfaces and dashboards: **CRM** apps (**SQL Server**, **IIS**, classic **ASP**) for plant and operations customers.
 
 
 

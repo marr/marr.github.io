@@ -83,7 +83,7 @@ const LOGO_BY_COMPANY: Partial<
     companionDivider: true,
     companionWide: false,
   },
-  "Tilt.com": { src: "/resume-logos/tilt-icon.svg?v=3" },
+  "Tilt.com": { src: "/resume-logos/tilt-icon.svg?v=4" },
   /* SAY on black square — invert on dark UI for contrast */
   "Say Media": {
     src: "/resume-logos/say-bw.png?v=2",
@@ -125,18 +125,13 @@ const LOGO_BY_COMPANY: Partial<
   },
 };
 
-/** Strip `**…**` from the company segment (RenderCV uses bold in headings). */
+/** Strip markdown bold markers from the company segment (handles unbalanced `**` from MDC). */
 function normalizeCompanySegment(raw: string): string {
-  let s = raw.trim().replace(/\s+/g, " ");
-  const mdBold = /^\*\*(.+)\*\*$/;
-  const m = s.match(mdBold);
-  if (m?.[1] != null) {
-    return m[1].trim();
-  }
-  if (s.startsWith("**") && s.endsWith("**") && s.length > 4) {
-    return s.slice(2, -2).trim();
-  }
-  return s;
+  return raw
+    .trim()
+    .replace(/\s+/g, " ")
+    .replace(/\*\*/g, "")
+    .trim();
 }
 
 export function parseCompanyFromExperienceHeading(
@@ -155,6 +150,12 @@ export function parseCompanyFromExperienceHeading(
   if (name in LOGO_BY_COMPANY) {
     return name as ResumeCompanyName;
   }
+  const lower = name.toLowerCase();
+  for (const key of Object.keys(LOGO_BY_COMPANY) as ResumeCompanyName[]) {
+    if (key.toLowerCase() === lower) {
+      return key;
+    }
+  }
   return null;
 }
 
@@ -166,7 +167,7 @@ export function logoForResumeCompany(
 
 function companionKey(c: CompanionLogo): string {
   if (typeof c === "string") {
-    return `${c}|`;
+    return c;
   }
   const wt =
     c.wideTall === "xl" ? "wtxl" : c.wideTall ? "wt" : "";
@@ -191,5 +192,7 @@ export function resumeExperienceLogoSignature(logo: ResumeExperienceLogo): strin
     logo.companionWide === undefined ? "" : logo.companionWide ? "cw1" : "cw0",
     logo.lightForeground ? "l" : "",
     logo.invertInDarkMode ? "i" : "",
-  ].join("|");
+  ]
+    .filter((segment) => segment !== "")
+    .join("|");
 }

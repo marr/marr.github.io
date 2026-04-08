@@ -25,7 +25,7 @@ cv:
         position: "Principal UI Engineer / Engineering Manager"
         start_date: 2022-06
         end_date: 2026-03
-        location: "Boston, MA"
+        location: "Cambridge, MA"
         summary: "Led a distributed UI/UX engineering organization to deliver a
           multi-tenant, production-grade analytics platform for energy and
           sustainability customers. Combined hands-on frontend development with
@@ -60,8 +60,7 @@ cv:
           pipelines with AI-driven grading and fraud detection."
         highlights:
           - "Directed development of interview scheduling, candidate pipelines,
-            assessment portals, and **live video interviews** used by **large
-            employers in financial services and technology** to run technical
+            assessment portals, and **live video interviews** for technical
             hiring at scale."
           - "Implemented AI-driven grading, automated feedback, and fraud detection;
             collaborated with product and data on models and metrics for candidate
@@ -70,7 +69,7 @@ cv:
         position: "Staff Software Engineer"
         start_date: 2018-04
         end_date: "2019-12"
-        location: "San Francisco, CA & Boston, MA"
+        location: "San Francisco, CA & Cambridge, MA"
         summary: "Owned host-facing product work while the marketplace scaled to
           **~$236M gross revenue** and **40+ countries** by 2018 (company metrics)
           and through **IAC’s $250M investment at a >$1B valuation, Jul 2019,
@@ -87,7 +86,7 @@ cv:
         position: "Senior Software Architect"
         start_date: "2016-01"
         end_date: 2018-05
-        location: "San Francisco, CA"
+        location: "San Francisco, CA & London, UK"
         summary: "Architected retail and parking for **OneMarket**, **Westfield
           Labs** spin-out—**omnichannel** retail at **~1.1B annual shopping
           visits** across **85+** Westfield centers worldwide; parent Westfield
@@ -123,11 +122,10 @@ cv:
         end_date: 2013-04
         location: "San Francisco, CA"
         summary: "**Conversational media** publisher network (VideoEgg + Six Apart
-          merger); **Ember.js** tools for digital content and monetization."
+          merger); **Ember.js** for content and monetization."
         highlights:
-          - "**Ember.js** publishing tools; monetized digital content and lifted
-            **engaged time** via headlines, traffic-driving modules, and
-            in-article **user reactions**."
+          - "Lifted **engaged time** via headlines, traffic modules, and in-article
+            **user reactions**."
           - "**SheKnows** (network flagship): cited as the **fastest-growing women's
             lifestyle brand** in its category (**comScore**)."
       - company: "CBS Interactive"
@@ -135,71 +133,54 @@ cv:
         start_date: 2011-06
         end_date: 2011-12
         location: "San Francisco, CA"
-        summary: "Show and metadata surfaces for **tv.com**."
-        highlights:
-          - "**tv.com** — **SVG**-heavy web UI and **Python** APIs for shows and
-            metadata."
+        summary: "Show and metadata for **tv.com**: **SVG**-heavy web UI and **Python**
+          APIs for shows and metadata."
       - company: "Secret Feature"
         position: "Technical Co-Founder / CTO"
         start_date: 2010-01
         end_date: 2011-05
         location: "San Francisco, CA"
-        summary: "Early social product as Flash end-of-life reshaped the web stack."
-        highlights:
-          - "Co-founder; work contributed to **Diversion, Inc.** closing a
-            **Series A**. Shipped an early social product on **Node.js** as Flash
-            end-of-life loomed."
+        summary: "Co-founder; shipped an early social product on **Node.js** as the
+          stack moved beyond Flash; contributed to **Diversion, Inc.** closing a
+          **Series A**."
       - company: "Frog Design"
         position: "Design Technologist"
         start_date: 2009-01
         end_date: 2010-03
         location: "San Francisco, CA"
-        summary: "Design-to-production prototyping and embedded experiences for
-          physical products."
-        highlights:
-          - "**Disney** park data **API** and web work for **MagicBand**;
-            design-to-production **prototypes** (incl. Flash) and **embedded**
-            work for physical products."
+        summary: "Design-to-production and embedded work for physical products—**Disney**
+          park data **API** and web for **MagicBand**; Flash-era prototypes and
+          embedded hardware."
       - company: "Yahoo"
         position: "Senior Frontend Engineer"
         start_date: 2006-09
         end_date: 2008-12
         location: "Sunnyvale / San Francisco, CA"
-        summary: "Scalable frontend architecture for high-traffic Yahoo
-          properties."
-        highlights:
-          - "**PHP/MySQL** (Yahoo! Answers / Small Business); **Brickhouse** —
-            **Yahoo! Live** live-streaming. **60+ min** average time-on-site;
-            **~2M signups** in nine months."
+        summary: "Scalable frontend for high-traffic properties: **PHP/MySQL** (Yahoo!
+          Answers / Small Business); **Brickhouse** — **Yahoo! Live** live-streaming;
+          **60+ min** average time-on-site; **~2M signups** in nine months."
       - company: "Monster.com"
         position: "Senior Web Developer"
         start_date: 2004-03
         end_date: 2006-08
         location: "Maynard, MA"
-        summary: "User-facing features and a **Webby**-recognized career advice
-          site."
-        highlights:
-          - "Early **.NET**; migrated CMS from classic **ASP** to **ASP.NET**;
-            **Webby**-recognized career advice site."
+        summary: "User-facing work on a **Webby**-recognized career advice site;
+          early **.NET**, migrated CMS from classic **ASP** to **ASP.NET**."
       - company: "SoftArtisans"
         position: "Web Applications Developer"
         start_date: 2003-03
         end_date: 2004-04
         location: "Brookline, MA"
-        summary: "Enterprise web integrations for **Microsoft** server stacks."
-        highlights:
-          - "**SAFileUp** and enterprise **multipart/form-data** uploads for
-            **Microsoft** server stacks."
+        summary: "Enterprise **SAFileUp** and **multipart/form-data** uploads on
+          **Microsoft** server stacks."
       - company: "GE Fanuc / Intellution"
         position: "Web Developer"
         start_date: 2000-01
         end_date: 2003-12
         location: "Foxborough, MA"
-        summary: "Industrial automation web interfaces and dashboards for plant and
-          operations customers."
-        highlights:
-          - "**CRM** web apps (**SQL Server**, **IIS**, classic **ASP**);
-            industrial automation customers."
+        summary: "Industrial automation web interfaces and dashboards: **CRM** apps
+          (**SQL Server**, **IIS**, classic **ASP**) for plant and operations
+          customers."
     education:
       - institution: "University of New Hampshire"
         area: "Management of Information Systems"
@@ -229,12 +210,13 @@ design:
   theme: classic
   page:
     size: us-letter
-    top_margin: 0.7in
-    bottom_margin: 0.7in
-    left_margin: 0.7in
-    right_margin: 0.7in
+    # Balanced for ~2-page PDF (between cramped and airy)
+    top_margin: 0.52in
+    bottom_margin: 0.52in
+    left_margin: 0.52in
+    right_margin: 0.52in
     show_footer: true
-    show_top_note: true
+    show_top_note: false
   colors:
     body: rgb(0, 0, 0)
     name: rgb(0, 0, 0)
@@ -245,7 +227,7 @@ design:
     footer: rgb(128, 128, 128)
     top_note: rgb(128, 128, 128)
   typography:
-    line_spacing: 0.6em
+    line_spacing: 0.53em
     alignment: left
     date_and_location_column_alignment: right
     font_family:
@@ -255,11 +237,11 @@ design:
       connections: Open Sans
       section_titles: Open Sans
     font_size:
-      body: 10pt
-      name: 30pt
-      headline: 10pt
-      connections: 10pt
-      section_titles: 1.4em
+      body: 9.5pt
+      name: 27pt
+      headline: 9.5pt
+      connections: 9.5pt
+      section_titles: 1.3em
     small_caps:
       name: false
       headline: false
@@ -279,9 +261,9 @@ design:
     photo_position: left
     photo_space_left: 0.4cm
     photo_space_right: 0.4cm
-    space_below_name: 0.7cm
-    space_below_headline: 0.7cm
-    space_below_connections: 0.7cm
+    space_below_name: 0.5cm
+    space_below_headline: 0.45cm
+    space_below_connections: 0.45cm
     connections:
       phone_number_format: national
       hyperlink: true
@@ -292,12 +274,12 @@ design:
   section_titles:
     type: without_line
     line_thickness: 0.5pt
-    space_above: 0.5cm
-    space_below: 0.3cm
+    space_above: 0.38cm
+    space_below: 0.16cm
   sections:
     allow_page_break: true
-    space_between_regular_entries: 1.2em
-    space_between_text_based_entries: 0.3em
+    space_between_regular_entries: 0.95em
+    space_between_text_based_entries: 0.24em
     show_time_spans_in: []
   entries:
     date_and_location_width: 4.15cm
@@ -315,7 +297,7 @@ design:
       space_left: 0.15cm
       space_above: 0cm
       space_between_items: 0cm
-      space_between_bullet_and_text: 0.5em
+      space_between_bullet_and_text: 0.4em
   templates:
     footer: "*NAME -- PAGE_NUMBER/TOTAL_PAGES*"
     top_note: "*LAST_UPDATED CURRENT_DATE*"
