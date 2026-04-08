@@ -23,9 +23,9 @@ Engineering leader with 25 years shipping products at category-leading companies
 ## Experience
 ### **Context Labs**, Principal UI Engineer / Engineering Manager
 
-Cambridge, MA
+Cambridge, MA · June 2022 – Mar 2026
 
-June 2022 – Mar 2026
+
 
 Led a distributed UI/UX engineering organization to deliver a multi-tenant, production-grade analytics platform for energy and sustainability customers. Combined hands-on frontend development with people management, OKR-driven delivery, and platform-thinking to reduce time-to-market and improve product quality.
 
@@ -41,9 +41,9 @@ Led a distributed UI/UX engineering organization to deliver a multi-tenant, prod
 
 ### **Filtered.ai**, Lead Engineer
 
-Boston, MA
+Boston, MA · Feb 2020 – Feb 2022
 
-Feb 2020 – Feb 2022
+
 
 Architected scalable recruitment workflows for **large employers in financial services and technology** — high-volume applicant pipelines with AI-driven grading and fraud detection.
 
@@ -55,9 +55,9 @@ Architected scalable recruitment workflows for **large employers in financial se
 
 ### **Turo**, Staff Software Engineer
 
-San Francisco, CA & Cambridge, MA
+San Francisco, CA & Cambridge, MA · Apr 2018 – Dec 2019
 
-Apr 2018 – Dec 2019
+
 
 Owned host-facing product work while the marketplace scaled to **~$236M gross revenue** and **40+ countries** by 2018 (company metrics) and through **IAC’s $250M investment at a >$1B valuation, Jul 2019, WSJ**; shipped programs that lifted host engagement, revenue, and listing quality.
 
@@ -69,9 +69,9 @@ Owned host-facing product work while the marketplace scaled to **~$236M gross re
 
 ### **OneMarket / Westfield Labs**, Senior Software Architect
 
-San Francisco, CA & London, UK
+San Francisco, CA & London, UK · Jan 2016 – May 2018
 
-Jan 2016 – May 2018
+
 
 Architected retail and parking for **OneMarket**, **Westfield Labs** spin-out—**omnichannel** retail at **~1.1B annual shopping visits** across **85+** Westfield centers worldwide; parent Westfield announced a carve-out toward an **ASX listing with ~US$198M cash** on the balance sheet (**Feb 2018, iTnews**), amid its proposed combination with **Unibail-Rodamco** (press: **world’s largest retail landlord**).
 
@@ -85,9 +85,9 @@ Architected retail and parking for **OneMarket**, **Westfield Labs** spin-out—
 
 ### **Tilt.com**, Senior Systems Engineer
 
-San Francisco, CA
+San Francisco, CA · July 2013 – Dec 2015
 
-July 2013 – Dec 2015
+
 
 Optimized core user flows during **Y Combinator**–era growth (**Series A $12M**, Apr 2013; **Series B $23M**, Dec 2013).
 
@@ -99,9 +99,9 @@ Optimized core user flows during **Y Combinator**–era growth (**Series A $12M*
 
 ### **Say Media**, Senior Software Engineer
 
-San Francisco, CA
+San Francisco, CA · Mar 2012 – Apr 2013
 
-Mar 2012 – Apr 2013
+
 
 **Conversational media** publisher network (VideoEgg + Six Apart merger); **Ember.js** for content and monetization.
 
@@ -113,9 +113,7 @@ Mar 2012 – Apr 2013
 
 ### **CBS Interactive**, Software Engineer (tv.com)
 
-San Francisco, CA
-
-June 2011 – Dec 2011
+San Francisco, CA · June 2011 – Dec 2011
 
 Show and metadata for **tv.com**: **SVG**-heavy web UI and **Python** APIs for shows and metadata.
 
@@ -123,9 +121,7 @@ Show and metadata for **tv.com**: **SVG**-heavy web UI and **Python** APIs for s
 
 ### **Secret Feature**, Technical Co-Founder / CTO
 
-San Francisco, CA
-
-Jan 2010 – May 2011
+San Francisco, CA · Jan 2010 – May 2011
 
 Co-founder; shipped an early social product on **Node.js** as the stack moved beyond Flash; contributed to **Diversion, Inc.** closing a **Series A**.
 
@@ -133,9 +129,7 @@ Co-founder; shipped an early social product on **Node.js** as the stack moved be
 
 ### **Frog Design**, Design Technologist
 
-San Francisco, CA
-
-Jan 2009 – Mar 2010
+San Francisco, CA · Jan 2009 – Mar 2010
 
 Design-to-production and embedded work for physical products—**Disney** park data **API** and web for **MagicBand**; Flash-era prototypes and embedded hardware.
 
@@ -143,9 +137,7 @@ Design-to-production and embedded work for physical products—**Disney** park d
 
 ### **Yahoo**, Senior Frontend Engineer
 
-Sunnyvale / San Francisco, CA
-
-Sept 2006 – Dec 2008
+Sunnyvale / San Francisco, CA · Sept 2006 – Dec 2008
 
 Scalable frontend for high-traffic properties: **PHP/MySQL** (Yahoo! Answers / Small Business); **Brickhouse** — **Yahoo! Live** live-streaming; **60+ min** average time-on-site; **~2M signups** in nine months.
 
@@ -153,9 +145,7 @@ Scalable frontend for high-traffic properties: **PHP/MySQL** (Yahoo! Answers / S
 
 ### **Monster.com**, Senior Web Developer
 
-Maynard, MA
-
-Mar 2004 – Aug 2006
+Maynard, MA · Mar 2004 – Aug 2006
 
 User-facing work on a **Webby**-recognized career advice site; early **.NET**, migrated CMS from classic **ASP** to **ASP.NET**.
 
@@ -163,9 +153,7 @@ User-facing work on a **Webby**-recognized career advice site; early **.NET**, m
 
 ### **SoftArtisans**, Web Applications Developer
 
-Brookline, MA
-
-Mar 2003 – Apr 2004
+Brookline, MA · Mar 2003 – Apr 2004
 
 Enterprise **SAFileUp** and **multipart/form-data** uploads on **Microsoft** server stacks.
 
@@ -173,9 +161,7 @@ Enterprise **SAFileUp** and **multipart/form-data** uploads on **Microsoft** ser
 
 ### **GE Fanuc / Intellution**, Web Developer
 
-Foxborough, MA
-
-Jan 2000 – Dec 2003
+Foxborough, MA · Jan 2000 – Dec 2003
 
 Industrial automation web interfaces and dashboards: **CRM** apps (**SQL Server**, **IIS**, classic **ASP**) for plant and operations customers.
 
@@ -183,12 +169,10 @@ Industrial automation web interfaces and dashboards: **CRM** apps (**SQL Server*
 
 ## Education
 ### **University of New Hampshire**, Management of Information Systems
-Durham, NH
-
-
-Sept 1996 – May 2000
 
 **BS, Business Administration**
+
+Durham, NH · Sept 1996 – May 2000
 
 Dean's List
 

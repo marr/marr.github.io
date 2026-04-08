@@ -14,6 +14,7 @@ Reads stdin, writes stdout.
 """
 from __future__ import annotations
 
+import re
 import sys
 
 
@@ -36,6 +37,13 @@ def harmonize(md: str) -> str:
             out.append(line)
     trailing = md.endswith("\n")
     text = "\n".join(out)
+    # RenderCV education MD glues **DEGREE** to the ## heading line when date_and_location_column is empty.
+    text = re.sub(
+        r"(### \*\*University of New Hampshire\*\*, Management of Information Systems)"
+        r"(\*\*BS, Business Administration\*\*)",
+        r"\1\n\n\2",
+        text,
+    )
     return text + ("\n" if trailing else "")
 
 

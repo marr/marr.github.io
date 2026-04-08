@@ -229,7 +229,8 @@ design:
   typography:
     line_spacing: 0.53em
     alignment: left
-    date_and_location_column_alignment: right
+    # Dates/locations live in main column (full width); no separate right rail
+    date_and_location_column_alignment: left
     font_family:
       body: Mukta
       name: Open Sans
@@ -282,14 +283,15 @@ design:
     space_between_text_based_entries: 0.24em
     show_time_spans_in: []
   entries:
-    date_and_location_width: 4.15cm
+    # Collapse right column — dates render in main_column (better on narrow PDF viewers)
+    date_and_location_width: 0cm
     side_space: 0.2cm
-    space_between_columns: 0.1cm
+    space_between_columns: 0cm
     allow_page_break: false
     short_second_row: true
     degree_width: 1cm
     summary:
-      space_above: 0cm
+      space_above: 0.12em
       space_left: 0cm
     highlights:
       bullet: •
@@ -312,28 +314,28 @@ design:
       main_column: |-
         **INSTITUTION**, AREA
         **DEGREE**
+        LOCATION · DATE
+
         SUMMARY
         HIGHLIGHTS
       degree_column: null
-      date_and_location_column: |-
-        LOCATION
-        DATE
+      date_and_location_column: ""
     normal_entry:
       main_column: |-
         **NAME**
+        LOCATION · DATE
+
         SUMMARY
         HIGHLIGHTS
-      date_and_location_column: |-
-        LOCATION
-        DATE
+      date_and_location_column: ""
     experience_entry:
       main_column: |-
         **COMPANY**, POSITION
+        LOCATION · DATE
+
         SUMMARY
         HIGHLIGHTS
-      date_and_location_column: |-
-        LOCATION
-        DATE
+      date_and_location_column: ""
     publication_entry:
       main_column: |-
         **TITLE**
