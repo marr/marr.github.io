@@ -18,7 +18,7 @@ Also available as [**PDF**](/resume.pdf){external}.
 
 
 ## Summary
-Engineering leader with 25 years shipping products at category-leading companies (e.g. Yahoo, Westfield Labs, Context Labs, Turo). Cross-functional leadership and systems at scale; AI in engineering workflows, observability, and platforms that accelerate delivery.
+Engineering leader with 25 years shipping products at category-leading companies (e.g. Yahoo, Westfield Labs, Context Labs, Turo). Brings cross-functional leadership and systems at scale; applies AI in engineering workflows, observability, and platforms that accelerate delivery.
 
 ## Experience
 ### **Context Labs**, Principal UI Engineer / Engineering Manager
@@ -195,7 +195,7 @@ Industrial automation web interfaces and dashboards for plant and operations cus
 
 
 
-## Education {#education}
+## Education
 ### **University of New Hampshire**, Management of Information Systems
 Durham, NH
 

@@ -4,43 +4,55 @@
       <template v-if="decoration.kind === 'group'">
         <span
           class="resume-exp-logo-group"
+          :class="{
+            'resume-exp-logo-group--stack': decoration.stack,
+            'resume-exp-logo-group--pair': decoration.divider && !decoration.stack,
+          }"
           :data-resume-logo="decoration.sig"
           aria-hidden="true"
         >
-          <span
+          <template
             v-for="(pill, idx) in decoration.pills"
             :key="idx"
-            class="resume-exp-logo-wrap"
-            :class="[
-              pill.wide ? 'resume-exp-logo-wrap--wide' : '',
-              pill.lightForeground ? 'resume-exp-logo-wrap--light-foreground' : '',
-            ]"
           >
-            <template v-if="pill.srcDark">
+            <span
+              v-if="idx > 0 && decoration.divider"
+              class="resume-exp-logo-divider"
+            ><span class="resume-exp-logo-divider__line" /></span>
+            <span
+              class="resume-exp-logo-wrap"
+              :class="[
+                pill.wide ? 'resume-exp-logo-wrap--wide' : '',
+                pill.lightForeground ? 'resume-exp-logo-wrap--light-foreground' : '',
+                pill.companionSm ? 'resume-exp-logo-wrap--companion-sm' : '',
+              ]"
+            >
+              <template v-if="pill.srcDark">
+                <img
+                  :src="pill.src"
+                  alt=""
+                  :class="pill.imgClassLight"
+                  loading="lazy"
+                  decoding="async"
+                >
+                <img
+                  :src="pill.srcDark"
+                  alt=""
+                  :class="pill.imgClassDark"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </template>
               <img
+                v-else
                 :src="pill.src"
                 alt=""
-                :class="pill.imgClassLight"
+                :class="pill.imgClass"
                 loading="lazy"
                 decoding="async"
               >
-              <img
-                :src="pill.srcDark"
-                alt=""
-                :class="pill.imgClassDark"
-                loading="lazy"
-                decoding="async"
-              >
-            </template>
-            <img
-              v-else
-              :src="pill.src"
-              alt=""
-              :class="pill.imgClass"
-              loading="lazy"
-              decoding="async"
-            >
-          </span>
+            </span>
+          </template>
         </span>
       </template>
       <template v-else>
@@ -100,7 +112,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, useSlots, type VNode, type VNodeChild } from "vue";
+import { computed, useSlots } from "vue";
+import { nodeTextContent } from "@nuxtjs/mdc/runtime";
 import type { CompanionLogo, ResumeExperienceLogo } from "~/utils/resumeExperienceLogos";
 import {
   logoForResumeCompany,
@@ -123,41 +136,16 @@ const generate = computed(
 
 const slots = useSlots();
 
-function vnodeChildrenToText(children: VNodeChild | VNodeChild[]): string {
-  if (children == null || children === false) {
-    return "";
-  }
-  if (typeof children === "string" || typeof children === "number") {
-    return String(children);
-  }
-  if (Array.isArray(children)) {
-    return children.map((c) => vnodeChildrenToText(c)).join("");
-  }
-  if (typeof children === "object") {
-    const vn = children as VNode;
-    if (vn.children != null) {
-      if (typeof vn.children === "string") {
-        return vn.children;
-      }
-      if (Array.isArray(vn.children)) {
-        return vnodeChildrenToText(vn.children);
-      }
-      // Component / slot vnodes
-      const slotFn = (vn.children as { default?: () => VNodeChild[] }).default;
-      if (typeof slotFn === "function") {
-        return vnodeChildrenToText(slotFn());
-      }
-    }
-  }
-  return "";
-}
-
+/** MDC’s walker handles Text nodes (`value` vs `children`) and component slots — required for company matching (e.g. Tilt.com). */
 const headingPlainText = computed(() => {
   const raw = slots.default?.();
-  if (!raw) {
+  if (raw == null) {
     return "";
   }
-  return vnodeChildrenToText(raw);
+  if (typeof raw === "string" || typeof raw === "number") {
+    return String(raw);
+  }
+  return nodeTextContent(raw as never);
 });
 
 const company = computed(() =>
@@ -170,12 +158,21 @@ const logoCfg = computed(() =>
 
 function normalizeCompanion(c: CompanionLogo): {
   src: string;
+  srcDark?: string;
   invertInDarkMode: boolean;
+  wideTall?: boolean | "xl";
+  smaller?: boolean;
 } {
   if (typeof c === "string") {
     return { src: c, invertInDarkMode: false };
   }
-  return { src: c.src, invertInDarkMode: !!c.invertInDarkMode };
+  return {
+    src: c.src,
+    srcDark: c.srcDark,
+    invertInDarkMode: !!c.invertInDarkMode,
+    wideTall: c.wideTall,
+    smaller: !!c.smaller,
+  };
 }
 
 function imgClassList(
@@ -199,6 +196,8 @@ type Pill = {
   srcDark?: string;
   wide: boolean;
   lightForeground?: boolean;
+  /** Companion pill scaled down vs primary (see `resume-exp-logo-img--companion-sm`). */
+  companionSm?: boolean;
   imgClass: string;
   imgClassLight?: string;
   imgClassDark?: string;
@@ -242,18 +241,45 @@ const decoration = computed(() => {
           },
     ];
     for (const c of companions) {
-      const { src, invertInDarkMode } = normalizeCompanion(c);
-      pills.push({
+      const {
         src,
-        wide: companionPillWide,
-        imgClass: imgClassList(
-          companionPillWide,
-          invertInDarkMode,
-          undefined,
-        ),
-      });
+        srcDark: companionSrcDark,
+        invertInDarkMode,
+        wideTall: companionWideTall,
+        smaller: companionSmaller,
+      } = normalizeCompanion(c);
+      const companionBase = imgClassList(
+        companionPillWide,
+        companionSrcDark ? false : invertInDarkMode,
+        companionWideTall,
+      );
+      const sm = companionSmaller ? " resume-exp-logo-img--companion-sm" : "";
+      if (companionSrcDark) {
+        pills.push({
+          src,
+          srcDark: companionSrcDark,
+          wide: companionPillWide,
+          companionSm: companionSmaller,
+          imgClass: "",
+          imgClassLight: `${companionBase}${sm} resume-exp-logo-img--theme-light`,
+          imgClassDark: `${companionBase}${sm} resume-exp-logo-img--theme-dark`,
+        });
+      } else {
+        pills.push({
+          src,
+          wide: companionPillWide,
+          companionSm: companionSmaller,
+          imgClass: `${companionBase}${sm}`,
+        });
+      }
     }
-    return { kind: "group" as const, sig, pills };
+    return {
+      kind: "group" as const,
+      sig,
+      pills,
+      stack: !!cfg.companionStack,
+      divider: !!cfg.companionDivider,
+    };
   }
 
   return cfg.srcDark

@@ -176,7 +176,7 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
 .resume-content :deep(h3:has(.resume-exp-logo-wrap) > .resume-exp-logo-wrap),
 .resume-content :deep(h3:has(.resume-exp-logo-wrap) > .resume-exp-logo-group) {
   flex-shrink: 0;
-  min-width: 3rem;
+  min-width: 2.75rem;
 }
 
 .resume-content :deep(.resume-exp-logo-group) {
@@ -187,6 +187,82 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   gap: 0.35rem 0.5rem;
   width: auto;
   max-width: 100%;
+}
+
+.resume-content :deep(.resume-exp-logo-group--stack) {
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-start;
+  gap: 0.4rem;
+}
+
+/* OneMarket + Westfield: row + gradient rule + staggered fade-in */
+.resume-content :deep(.resume-exp-logo-group--pair) {
+  align-items: center;
+  gap: 0.35rem 0.55rem;
+}
+
+.resume-content :deep(.resume-exp-logo-divider) {
+  display: inline-flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 0.05rem;
+  flex-shrink: 0;
+}
+
+.resume-content :deep(.resume-exp-logo-divider__line) {
+  display: block;
+  width: 1px;
+  height: 1.35rem;
+  border-radius: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in oklab, var(--ui-border) 85%, var(--ui-text-muted)) 40%,
+    color-mix(in oklab, var(--ui-border) 85%, var(--ui-text-muted)) 60%,
+    transparent 100%
+  );
+  opacity: 0.72;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.resume-content :deep(.resume-exp-logo-group--pair:hover .resume-exp-logo-divider__line) {
+  opacity: 1;
+}
+
+@keyframes resume-exp-logo-pair-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.28rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resume-content :deep(.resume-exp-logo-group--pair .resume-exp-logo-wrap) {
+  animation: resume-exp-logo-pair-enter 0.48s ease backwards;
+}
+
+.resume-content :deep(.resume-exp-logo-group--pair .resume-exp-logo-divider) {
+  animation: resume-exp-logo-pair-enter 0.38s ease 0.05s backwards;
+}
+
+.resume-content :deep(.resume-exp-logo-group--pair .resume-exp-logo-wrap:nth-child(3)) {
+  animation-delay: 0.1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-content :deep(.resume-exp-logo-group--pair .resume-exp-logo-wrap),
+  .resume-content :deep(.resume-exp-logo-group--pair .resume-exp-logo-divider) {
+    animation: none;
+  }
+
+  .resume-content :deep(.resume-exp-logo-divider__line) {
+    transition: none;
+  }
 }
 
 .resume-content :deep(.resume-exp-logo-group .resume-exp-logo-wrap--wide) {
@@ -217,9 +293,9 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   box-sizing: border-box;
   width: fit-content;
   max-width: 100%;
-  min-height: 2.125rem;
+  min-height: 1.875rem;
   height: auto;
-  min-width: 3rem;
+  min-width: 2.75rem;
   flex-shrink: 0;
   padding: 0 0.35rem;
   border-radius: calc(var(--ui-radius) + 2px);
@@ -228,8 +304,8 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
 }
 
 .resume-content :deep(.resume-exp-logo-wrap--wide) {
-  min-width: 6rem;
-  padding: 0 0.55rem;
+  min-width: 5rem;
+  padding: 0 0.5rem;
 }
 
 .resume-content :deep(.resume-exp-logo-wrap--light-foreground) {
@@ -238,26 +314,38 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
 
 .resume-content :deep(.resume-exp-logo-img) {
   display: block;
-  width: 3rem;
+  width: 2.75rem;
   height: auto;
-  max-height: 3rem;
+  max-height: 2.75rem;
   object-fit: contain;
   opacity: 0.95;
 }
 
+/* Companion mark smaller than primary (e.g. Westfield vs OneMarket) */
+.resume-content :deep(.resume-exp-logo-img--companion-sm) {
+  width: 2.125rem;
+  max-height: 2.125rem;
+}
+
+.resume-content :deep(.resume-exp-logo-wrap--companion-sm) {
+  min-width: 2.35rem;
+  padding: 0 0.25rem;
+}
+
+/* Wide marks (wordmarks / rasters): keep below default chips so none dominate */
 .resume-content :deep(.resume-exp-logo-img--wide) {
   width: auto;
-  max-width: 9rem;
-  max-height: 2rem;
+  max-width: 7rem;
+  max-height: 1.65rem;
 }
 
 .resume-content :deep(.resume-exp-logo-img--wide.resume-exp-logo-img--wide-tall) {
-  max-height: 3rem;
+  max-height: 2.5rem;
 }
 
 .resume-content :deep(.resume-exp-logo-img--wide.resume-exp-logo-img--wide-tall-xl) {
-  max-height: 3.75rem;
-  max-width: 12rem;
+  max-height: 3.125rem;
+  max-width: 10rem;
 }
 
 .resume-content :deep(.resume-exp-logo-img--invert-dark) {
@@ -334,7 +422,6 @@ html.light .resume-content :deep(.resume-exp-logo-img--theme-dark) {
  * Education: same paragraph order as Experience for the first two lines (location, dates),
  * then degree, then summary — overrides generic h3+p+p+p so the degree line isn’t body-sized.
  */
-.resume-content :deep(h2#education + h3 + p + p + p),
 .resume-content :deep(h2:nth-of-type(3) + h3 + p + p + p) {
   margin: 0.5rem 0 0;
   padding-left: 0;
@@ -343,7 +430,6 @@ html.light .resume-content :deep(.resume-exp-logo-img--theme-dark) {
   color: var(--ui-text);
 }
 
-.resume-content :deep(h2#education + h3 + p + p + p + p),
 .resume-content :deep(h2:nth-of-type(3) + h3 + p + p + p + p) {
   margin: 0.35rem 0 0;
   padding-left: 0;
