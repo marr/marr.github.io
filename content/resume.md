@@ -18,7 +18,7 @@ Also available as [**PDF**](/resume.pdf){external}.
 
 
 # Summary
-Engineering leader with 25 years building production software in startups and enterprises. I lead cross-functional teams, scale systems, and ship reliable, user-focused products. I integrate AI into workflows, improve performance and observability, and build developer platforms that speed delivery.
+Engineering leader with 25 years building and launching technical products at category-leading companies (e.g. Yahoo, Westfield Labs, Context Labs, Turo). I lead cross-functional teams, scale systems, and ship reliable, user-focused products; I integrate AI into workflows, improve performance and observability, and build developer platforms that speed delivery.
 
 # Experience
 ## **Context Labs**, Principal UI Engineer / Engineering Manager
@@ -29,9 +29,11 @@ June 2022 – Mar 2026
 
 Led a distributed UI/UX engineering organization to deliver a multi-tenant, production-grade analytics platform for energy and sustainability customers. Combined hands-on frontend development with people management, OKR-driven delivery, and platform-thinking to reduce time-to-market and improve product quality.
 
-- Managed and grew a team of UI/UX engineers across three continents; introduced OKRs and regular reviews to increase velocity and accountability.
+- Managed the UI/UX engineering organization, growing it from **[M]** to **[N]** engineers across three continents; introduced OKRs and regular reviews to increase velocity and accountability.
 
-- Designed and launched Decarbonization-as-a-Service (DaaS) for tracking greenhouse gas emissions, providing analytics and reporting for major global energy companies.
+- Designed and launched Decarbonization-as-a-Service (DaaS) for **greenhouse gas (GHG) inventories in metric tonnes CO₂e** (CO₂-equivalent), with analytics and reporting for major global energy companies. **[CO2_DETAIL]**
+
+- Championed onboarding efforts to bring **AI tooling** into daily engineering workflows.
 
 - Built a production platform integrating backend services, multi-tenancy, SSO authentication, RBAC, and internationalization.
 
@@ -47,9 +49,9 @@ Boston, MA
 
 Feb 2020 – Feb 2022
 
-Architected scalable recruitment workflows for enterprise employers managing high-volume applicant pipelines, leveraging AI for automated grading and fraud detection.
+Architected scalable recruitment workflows for **[EMPLOYER_FRAMING]** — high-volume applicant pipelines with AI-driven grading and fraud detection.
 
-- Directed development of recruitment workflows including interview scheduling, candidate pipelines, and assessment portals for enterprise customers.
+- Directed development of interview scheduling, candidate pipelines, assessment portals, and **live video interviews** used by **[EMPLOYER_FRAMING]** to run technical hiring at scale.
 
 - Implemented AI-driven grading, automated feedback, and fraud-detection systems to scale technical evaluations while maintaining integrity.
 
@@ -63,13 +65,13 @@ San Francisco, CA & Boston, MA
 
 Apr 2018 – Dec 2019
 
-Owned host-facing product features that increased host engagement and revenue; worked cross-functionally to define programs that rewarded high-performing users.
+Owned host-facing product work during rapid marketplace scaling (including **IAC’s $250M investment at a >$1B valuation, Jul 2019, WSJ**) and international expansion; shipped programs that lifted host engagement, revenue, and listing quality.
 
-- Built host product features such as calendar availability, trip management, and dynamic pricing controls to improve host experience and utilization.
+- I shipped host-facing capabilities for **Turo’s full host base**: **availability calendar**, **trip lifecycle management**, and **dynamic pricing controls**—raising utilization and host-side revenue.
 
-- Led the 'All-star' program initiative to recognize and incentivize top hosts, contributing to retention and higher-quality listings.
+- Led the **All-star** host recognition program end-to-end, tying incentives to quality and retention metrics.
 
-- Partnered with analytics to measure feature impact and iterate based on host behavior and revenue metrics.
+- Partnered with analytics to quantify lift on host behavior and revenue, then iterated releases against those metrics.
 
 
 
@@ -79,13 +81,15 @@ San Francisco, CA
 
 Jan 2016 – May 2018
 
-Designed and implemented intelligent retail and parking solutions that combined computer vision, mapping, and payment systems to improve customer experience and operations.
+Architected retail and parking products for **OneMarket**, the **Westfield Labs** spin-out formed to help global retailers compete on data and speed with large e-commerce players; parent Westfield announced a carve-out toward an **ASX listing with ~US$198M cash** on the balance sheet at announcement (**Feb 2018, iTnews**), amid its proposed combination with **Unibail-Rodamco** (described in press as creating the **world’s largest retail landlord**).
 
-- Developed smart parking solutions leveraging facial recognition, subscription billing, and automated gates to streamline access and payments.
+- Delivered smart parking with facial recognition, subscription billing, and gate automation—reducing friction for high-traffic retail estates; parking and payment products on the order of **£2m/month** in recurring revenue.
 
-- Built indoor mapping, directory kiosks, and wayfinding systems to enhance navigation in complex retail environments.
+- Built **interior mapping** tools so partners could verify leased space; shipped directory and wayfinding for **large-format malls and retail campuses**.
 
-- Integrated edge devices with cloud services for reliable, low-latency user interactions and centralized management.
+- Built account and operations tooling with **React**, **Node**, and **PostgreSQL**.
+
+- Integrated edge devices with cloud services for reliable, low-latency shopper flows and centralized operations tooling.
 
 
 
@@ -97,7 +101,9 @@ July 2013 – Dec 2015
 
 Optimized core user flows and backend systems to increase conversion and streamline operations during high-growth phases.
 
-- Redesigned and optimized the user signup and onboarding flow, yielding a measurable 15% increase in revenue.
+- Redesigned and optimized the **first-party user signup** and onboarding flow, yielding a **~15% lift** in conversions and associated revenue.
+
+- Advocated **React** for new product work—helped attract and align frontend talent.
 
 - Improved system reliability and scalability to support surge traffic during fundraising campaigns and promotions.
 
@@ -111,18 +117,36 @@ Sept 2000 – Apr 2013
 
 Industrial automation web interfaces and dashboards (GE Fanuc / Intellution); enterprise web integrations (SoftArtisans); user-facing features and a Webby-recognized career advice site (Monster.com); scalable frontend architecture for high-traffic Yahoo properties; design-to-production prototyping (Frog Design); co-founder/CTO for an early social product (Secret Feature); publishing and ad-tech at Say Media.
 
+- **Say Media** (2012–2013): **Ember.js** publishing tools; monetized digital content and lifted **engaged time** via headlines, traffic-driving modules, and in-article **user reactions**.
+
+- **Secret Feature** (2010–2011): Co-founder; work contributed to **Diversion, Inc.** closing a **Series A**. Shipped an early social product on **Node.js** as Flash end-of-life loomed.
+
+- **CBS Interactive** (2011): **tv.com** — **SVG**-heavy web UI and **Python** APIs for shows and metadata.
+
+- **Frog Design** (2009–2010): **Disney** park data **API** and web work for **MagicBand**; design-to-production **prototypes** (incl. Flash) and **embedded** work for physical products.
+
+- **Yahoo** (2006–2008): **PHP/MySQL** (Yahoo! Answers / Small Business); **Brickhouse** — **Yahoo! Live** live-streaming. **60+ min** average time-on-site; **~2M signups** in nine months.
+
+- **Monster.com** (2004–2006): Early **.NET**; migrated CMS from classic **ASP** to **ASP.NET**; **Webby**-recognized career advice site.
+
+- **SoftArtisans** (2003–2004): **SAFileUp** and enterprise **multipart/form-data** uploads for **Microsoft** server stacks.
+
+- **GE Fanuc / Intellution** (2000–2003): **CRM** web apps (**SQL Server**, **IIS**, classic **ASP**); industrial automation customers.
+
 
 
 # Education
 ## **University of New Hampshire**, Management of Information Systems
 
-**BS**
+**BS, Business Administration**
 
 
 Durham, NH
 
 
 Sept 1996 – May 2000
+
+Dean's List
 
 
 
@@ -133,8 +157,8 @@ Sept 1996 – May 2000
 
 **Metaframeworks:** Next.js, Nuxt, SvelteKit, TanStack Start
 
-**Infrastructure & Tools:** Docker, Kubernetes, AWS, PostgreSQL, MongoDB, Trino, ArcadeDB, OrientDB, Vite
+**Infrastructure & Tools:** Docker, Kubernetes, AWS, Google Cloud Platform, OpenAPI, PostgreSQL, MongoDB, Trino, ArcadeDB, OrientDB, Vite
 
-**Frontend & Visualization:** Tailwind, Tanstack, Vega Lite, Apache ECharts, Mapbox, Maplibre, QGIS
+**Frontend & Visualization:** Tailwind, Tanstack, Vega Lite, Apache ECharts, WebGL, Mapbox, Maplibre, QGIS
 
 **AI:** AI SDKs, OpenAI, Claude, Codex, private LLM integrations
