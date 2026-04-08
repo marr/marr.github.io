@@ -20,8 +20,8 @@ useSeoMeta({
     <SiteHeader />
     <main class="flex-1 flex items-center justify-center">
       <div class="text-center px-4">
-        <h1 class="text-6xl font-bold text-muted-foreground mb-4">{{ error.statusCode }}</h1>
-        <p class="text-xl text-muted-foreground mb-8">{{ error.statusMessage || 'Page not found' }}</p>
+        <h1 class="text-6xl font-bold text-muted mb-4 tabular-nums">{{ error.statusCode }}</h1>
+        <p class="text-xl text-muted mb-8">{{ error.statusMessage || 'Page not found' }}</p>
         <UButton to="/" variant="outline">
           Go home
         </UButton>

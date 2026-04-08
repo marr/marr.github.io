@@ -25,9 +25,9 @@ const items = computed(() => [
 
 <template>
   <header
-    class="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-muted/20"
+    class="sticky top-0 z-50 border-b border-default/60 bg-default/75 backdrop-blur-md supports-backdrop-filter:bg-default/65"
   >
-    <div class="max-w-3xl mx-auto px-4">
+    <div class="max-w-4xl mx-auto px-4">
       <div class="flex gap-3 items-center py-4 w-full">
         <UNavigationMenu :items="items" />
         <div class="ml-auto">

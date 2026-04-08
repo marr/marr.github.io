@@ -5,6 +5,22 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/content", "nuxt-studio"],
   $production: { studio: false },
   devtools: { enabled: true },
+  app: {
+    head: {
+      link: [
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300..800;1,300..800&display=swap",
+        },
+      ],
+    },
+  },
   // Make content components global to avoid async loading hydration issues
   hooks: {
     "components:extend": (components) => {
