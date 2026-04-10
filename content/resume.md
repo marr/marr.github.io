@@ -21,21 +21,21 @@ Also available as [**PDF**](/resume.pdf){external}.
 Engineering leader with 25 years shipping products at category-leading companies (e.g. Yahoo, Westfield Labs, Context Labs, Turo). Brings cross-functional leadership and systems at scale; applies AI in engineering workflows, observability, and platforms that accelerate delivery.
 
 ## Experience
-### **Context Labs**, Principal UI Engineer / Engineering Manager
+### **Context Labs**, Engineering Lead (UI)
 
 Cambridge, MA · June 2022 – Mar 2026
 
 
 
-Led a distributed UI/UX engineering organization to deliver a multi-tenant, production-grade analytics platform for energy and sustainability customers. Combined hands-on frontend development with people management, OKR-driven delivery, and platform-thinking to reduce time-to-market and improve product quality.
+Promoted from **Principal UI Engineer** to **Engineering Lead (UI)** when assuming direct reports. Led the UI engineering organization for a multi-tenant production analytics product for global energy and sustainability customers. Scope included customer web applications, a BFF layer, and shared modules for authentication and access control, with hands-on work on data-intensive product surfaces; OKRs and cross-team alignment to improve time-to-market and quality.
 
-- Managed the UI/UX engineering organization, growing it from **3** to **10** engineers across three continents; introduced OKRs and regular reviews to increase velocity and accountability.
+- Managed **9** engineers across three continents; mentored ICs and leads; OKRs and reviews for velocity and accountability.
 
 - Designed and launched Decarbonization-as-a-Service (DaaS) for **greenhouse gas (GHG) inventories in metric tonnes CO₂e** (CO₂-equivalent), with analytics and reporting for major global energy companies. **Supported programs including Williams NextGen Gas:** **QMRV** (quantification, monitoring, reporting, verification) across production through market, with multi-layer monitoring (e.g. satellite, aerial, fixed sensors, source-level measurement) and third-party emissions-intensity certification (KPMG).
 
-- Built a production platform integrating backend services, multi-tenancy, SSO authentication, RBAC, and internationalization; developed a shared UI component library with data visualizations, interactive maps, and accessible controls.
+- Delivered web applications integrated with backend services, multi-tenancy, SSO authentication, RBAC, and internationalization; shared UI component library with data visualizations, interactive maps, and accessible controls.
 
-- Championed **AI tooling** in engineering workflows; improved CI/CD and observability for frontend deployments—lower MTTR and higher deploy frequency.
+- Championed **AI tooling** in engineering workflows; improved CI/CD and observability for frontend deployments; lower MTTR and higher deploy frequency.
 
 
 
