@@ -59,7 +59,7 @@ San Francisco, CA & Cambridge, MA · Apr 2018 – Dec 2019
 
 
 
-Owned host-facing product work while the marketplace scaled to **~$236M gross revenue** and **40+ countries** by 2018 (company metrics) and through **IAC’s $250M investment at a >$1B valuation, Jul 2019, WSJ**; shipped programs that lifted host engagement, revenue, and listing quality.
+Owned host-facing product work while the marketplace scaled to **~$236M gross revenue** and **40+ countries** by 2018 (company metrics), through **IAC’s $250M investment** at a **>$1B valuation** (Jul 2019; reported in the **Wall Street Journal**). Shipped programs that lifted host engagement, revenue, and listing quality.
 
 - Shipped **availability calendar**, **trip lifecycle management**, and **dynamic pricing** for **Turo’s full host base**—raising utilization and host-side revenue; partnered with analytics to quantify lift and iterate releases.
 
@@ -73,13 +73,13 @@ San Francisco, CA & London, UK · Jan 2016 – May 2018
 
 
 
-Architected retail and parking for **OneMarket**, **Westfield Labs** spin-out—**omnichannel** retail at **~1.1B annual shopping visits** across **85+** Westfield centers worldwide; parent Westfield announced a carve-out toward an **ASX listing with ~US$198M cash** on the balance sheet (**Feb 2018, iTnews**), amid its proposed combination with **Unibail-Rodamco** (press: **world’s largest retail landlord**).
+**OneMarket** was spun out of **Westfield Labs** as its omnichannel retail venture; I architected **parking** and omnichannel retail platform work there, in the context of **~1.1B annual shopping visits** across **85+** Westfield centers worldwide. Parent Westfield announced a carve-out toward an **ASX listing with ~US$198M cash** on the balance sheet (**Feb 2018, iTnews**), amid its proposed combination with **Unibail-Rodamco** (press: **world’s largest retail landlord**).
 
-- Delivered smart parking with facial recognition, subscription billing, and gate automation—reducing friction for high-traffic retail estates; parking and payment products on the order of **£2m/month** in recurring revenue.
+- Architected **parking and payment** products—**facial recognition**, **subscription billing**, and **gate automation** at point of entry—on the order of **£2m/month** in recurring revenue across high-traffic Westfield estates.
 
-- Built **interior mapping** tools so partners could verify leased space; shipped directory and wayfinding for **large-format malls and retail campuses**.
+- Built **beacon-based** interior mapping and wayfinding (indoor navigation for **multi-story malls**—directory and maps in the spirit of consumer mapping UX); partner tooling to verify **leased space**.
 
-- Built account and operations tooling with **React**, **Node**, and **PostgreSQL**; integrated edge devices with cloud services for reliable shopper flows and centralized operations.
+- Designed **API services** and **customer-facing** applications for **Westfield** centers worldwide; **React**, **Node**, **PostgreSQL**, and **edge-to-cloud** integration for operations and shopper flows. Several months on-site at a **London flagship** mall.
 
 
 
@@ -115,7 +115,7 @@ San Francisco, CA · Mar 2012 – Apr 2013
 
 San Francisco, CA · June 2011 – Dec 2011
 
-Show and metadata for **tv.com**: **SVG**-heavy web UI and **Python** APIs for shows and metadata.
+**tv.com** shows and metadata: **SVG**-heavy UI and **Python** APIs; **A/B tested** parallel variants on core flows for engagement and conversion.
 
 
 
