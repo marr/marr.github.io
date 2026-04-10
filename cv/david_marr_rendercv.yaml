@@ -4,7 +4,7 @@ cv:
   # (E.164). Optional GitHub Actions secret CV_PHONE does the same in CI.
   #
   # --- Replace bracket placeholders before publishing (search for [N], [M], etc.) ---
-  # Context Labs: [M]→[N] = UI/UX org size you managed (start → peak). GHG bullet cites
+  # Context Labs: Principal UI Engineer → Eng Lead (UI) when reports; team **9**; BFF, shared auth/ACL. GHG cites
   #   public program detail (e.g. Williams NextGen Gas deck); no aggregate tCO2e on slide.
   # Filtered.ai: employer framing set (large employers, financial services + technology).
   # Turo: WSJ 2019 (IAC); gross revenue / geography from company-disclosed milestones (~2018).
@@ -22,19 +22,20 @@ cv:
         workflows, observability, and platforms that accelerate delivery.
     experience:
       - company: "Context Labs"
-        position: "Principal UI Engineer / Engineering Manager"
+        position: "Engineering Lead (UI)"
         start_date: 2022-06
         end_date: 2026-03
         location: "Cambridge, MA"
-        summary: "Led a distributed UI/UX engineering organization to deliver a
-          multi-tenant, production-grade analytics platform for energy and
-          sustainability customers. Combined hands-on frontend development with
-          people management, OKR-driven delivery, and platform-thinking to
-          reduce time-to-market and improve product quality."
+        summary: "Promoted from **Principal UI Engineer** to **Engineering Lead
+          (UI)** when assuming direct reports. Led the UI engineering organization
+          for a multi-tenant production analytics product for global energy and
+          sustainability customers. Scope included customer web applications, a
+          BFF layer, and shared modules for authentication and access control,
+          with hands-on work on data-intensive product surfaces; OKRs and
+          cross-team alignment to improve time-to-market and quality."
         highlights:
-          - "Managed the UI/UX engineering organization, growing it from **3**
-            to **10** engineers across three continents; introduced OKRs and
-            regular reviews to increase velocity and accountability."
+          - "Managed **9** engineers across three continents; mentored ICs and leads;
+            OKRs and reviews for velocity and accountability."
           - "Designed and launched Decarbonization-as-a-Service (DaaS) for
             **greenhouse gas (GHG) inventories in metric tonnes CO₂e**
             (CO₂-equivalent), with analytics and reporting for major global
@@ -43,12 +44,12 @@ cv:
             across production through market, with multi-layer monitoring
             (e.g. satellite, aerial, fixed sensors, source-level measurement) and
             third-party emissions-intensity certification (KPMG)."
-          - "Built a production platform integrating backend services,
+          - "Delivered web applications integrated with backend services,
             multi-tenancy, SSO authentication, RBAC, and internationalization;
-            developed a shared UI component library with data visualizations,
-            interactive maps, and accessible controls."
+            shared UI component library with data visualizations, interactive maps,
+            and accessible controls."
           - "Championed **AI tooling** in engineering workflows; improved CI/CD and
-            observability for frontend deployments—lower MTTR and higher deploy
+            observability for frontend deployments; lower MTTR and higher deploy
             frequency."
       - company: "Filtered.ai"
         position: "Lead Engineer"
@@ -229,7 +230,7 @@ design:
     footer: rgb(0, 0, 0)
     top_note: rgb(0, 0, 0)
   typography:
-    line_spacing: 0.52em
+    line_spacing: 0.48em
     alignment: justified
     date_and_location_column_alignment: left
     font_family:
@@ -239,7 +240,7 @@ design:
       connections: Raleway
       section_titles: Raleway
     font_size:
-      body: 9.5pt
+      body: 9.25pt
       name: 27pt
       headline: 9.5pt
       connections: 9.5pt
@@ -276,12 +277,12 @@ design:
   section_titles:
     type: with_full_line
     line_thickness: 0.5pt
-    space_above: 0.36cm
-    space_below: 0.14cm
+    space_above: 0.28cm
+    space_below: 0.1cm
   sections:
     allow_page_break: true
-    space_between_regular_entries: 0.92em
-    space_between_text_based_entries: 0.22em
+    space_between_regular_entries: 0.78em
+    space_between_text_based_entries: 0.18em
     show_time_spans_in: []
   entries:
     # Keep engineeringclassic styling, but move date/location into main column for mobile readability.
