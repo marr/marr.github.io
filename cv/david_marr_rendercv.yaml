@@ -71,10 +71,10 @@ cv:
         end_date: "2019-12"
         location: "San Francisco, CA & Cambridge, MA"
         summary: "Owned host-facing product work while the marketplace scaled to
-          **~$236M gross revenue** and **40+ countries** by 2018 (company metrics)
-          and through **IAC’s $250M investment at a >$1B valuation, Jul 2019,
-          WSJ**; shipped programs that lifted host engagement, revenue, and listing
-          quality."
+          **~$236M gross revenue** and **40+ countries** by 2018 (company metrics),
+          through **IAC’s $250M investment** at a **>$1B valuation** (Jul 2019;
+          reported in the **Wall Street Journal**). Shipped programs that lifted host
+          engagement, revenue, and listing quality."
         highlights:
           - "Shipped **availability calendar**, **trip lifecycle management**, and
             **dynamic pricing** for **Turo’s full host base**—raising utilization
@@ -87,23 +87,25 @@ cv:
         start_date: "2016-01"
         end_date: 2018-05
         location: "San Francisco, CA & London, UK"
-        summary: "Architected retail and parking for **OneMarket**, **Westfield
-          Labs** spin-out—**omnichannel** retail at **~1.1B annual shopping
-          visits** across **85+** Westfield centers worldwide; parent Westfield
+        summary: "**OneMarket** was spun out of **Westfield Labs** as its
+          omnichannel retail venture; I architected **parking** and omnichannel
+          retail platform work there, in the context of **~1.1B annual shopping
+          visits** across **85+** Westfield centers worldwide. Parent Westfield
           announced a carve-out toward an **ASX listing with ~US$198M cash** on
           the balance sheet (**Feb 2018, iTnews**), amid its proposed combination
           with **Unibail-Rodamco** (press: **world’s largest retail landlord**)."
         highlights:
-          - "Delivered smart parking with facial recognition, subscription
-            billing, and gate automation—reducing friction for high-traffic
-            retail estates; parking and payment products on the order of
-            **£2m/month** in recurring revenue."
-          - "Built **interior mapping** tools so partners could verify leased
-            space; shipped directory and wayfinding for **large-format malls and
-            retail campuses**."
-          - "Built account and operations tooling with **React**, **Node**, and
-            **PostgreSQL**; integrated edge devices with cloud services for
-            reliable shopper flows and centralized operations."
+          - "Architected **parking and payment** products—**facial recognition**,
+            **subscription billing**, and **gate automation** at point of entry—on
+            the order of **£2m/month** in recurring revenue across high-traffic
+            Westfield estates."
+          - "Built **beacon-based** interior mapping and wayfinding (indoor
+            navigation for **multi-story malls**—directory and maps in the spirit
+            of consumer mapping UX); partner tooling to verify **leased space**."
+          - "Designed **API services** and **customer-facing** applications for
+            **Westfield** centers worldwide; **React**, **Node**, **PostgreSQL**,
+            and **edge-to-cloud** integration for operations and shopper flows.
+            Several months on-site at a **London flagship** mall."
       - company: "Tilt.com"
         position: "Senior Systems Engineer"
         start_date: 2013-07
@@ -133,8 +135,8 @@ cv:
         start_date: 2011-06
         end_date: 2011-12
         location: "San Francisco, CA"
-        summary: "Show and metadata for **tv.com**: **SVG**-heavy web UI and **Python**
-          APIs for shows and metadata."
+        summary: "**tv.com** shows and metadata: **SVG**-heavy UI and **Python** APIs;
+          **A/B tested** parallel variants on core flows for engagement and conversion."
       - company: "Secret Feature"
         position: "Technical Co-Founder / CTO"
         start_date: 2010-01
@@ -207,10 +209,10 @@ cv:
   website: https://marr.github.io
 
 design:
-  theme: classic
+  theme: engineeringclassic
+  # Tuned for ~2 pages; if copy grows, trim wording or nudge spacing slightly.
   page:
     size: us-letter
-    # Balanced for ~2-page PDF (between cramped and airy)
     top_margin: 0.52in
     bottom_margin: 0.52in
     left_margin: 0.52in
@@ -220,23 +222,22 @@ design:
   colors:
     body: rgb(0, 0, 0)
     name: rgb(0, 0, 0)
-    headline: black
-    connections: black
-    section_titles: black
-    links: black
-    footer: rgb(128, 128, 128)
-    top_note: rgb(128, 128, 128)
+    headline: rgb(0, 0, 0)
+    connections: rgb(0, 0, 0)
+    section_titles: rgb(0, 0, 0)
+    links: rgb(0, 0, 0)
+    footer: rgb(0, 0, 0)
+    top_note: rgb(0, 0, 0)
   typography:
-    line_spacing: 0.53em
-    alignment: left
-    # Dates/locations live in main column (full width); no separate right rail
+    line_spacing: 0.52em
+    alignment: justified
     date_and_location_column_alignment: left
     font_family:
-      body: Mukta
-      name: Open Sans
-      headline: Open Sans
-      connections: Open Sans
-      section_titles: Open Sans
+      body: Raleway
+      name: Raleway
+      headline: Raleway
+      connections: Raleway
+      section_titles: Raleway
     font_size:
       body: 9.5pt
       name: 27pt
@@ -249,20 +250,20 @@ design:
       connections: false
       section_titles: false
     bold:
-      name: true
+      name: false
       headline: false
       connections: false
-      section_titles: true
+      section_titles: false
   links:
     underline: false
     show_external_link_icon: false
   header:
-    alignment: center
+    alignment: left
     photo_width: 3.5cm
     photo_position: left
     photo_space_left: 0.4cm
     photo_space_right: 0.4cm
-    space_below_name: 0.5cm
+    space_below_name: 0.65cm
     space_below_headline: 0.45cm
     space_below_connections: 0.45cm
     connections:
@@ -270,20 +271,20 @@ design:
       hyperlink: true
       show_icons: true
       display_urls_instead_of_usernames: false
-      separator: ""
+      separator: ''
       space_between_connections: 0.5cm
   section_titles:
-    type: without_line
+    type: with_full_line
     line_thickness: 0.5pt
-    space_above: 0.38cm
-    space_below: 0.16cm
+    space_above: 0.36cm
+    space_below: 0.14cm
   sections:
     allow_page_break: true
-    space_between_regular_entries: 0.95em
-    space_between_text_based_entries: 0.24em
+    space_between_regular_entries: 0.92em
+    space_between_text_based_entries: 0.22em
     show_time_spans_in: []
   entries:
-    # Collapse right column — dates render in main_column (better on narrow PDF viewers)
+    # Keep engineeringclassic styling, but move date/location into main column for mobile readability.
     date_and_location_width: 0cm
     side_space: 0.2cm
     space_between_columns: 0cm
@@ -291,25 +292,23 @@ design:
     short_second_row: true
     degree_width: 1cm
     summary:
-      space_above: 0.12em
+      space_above: 0.1cm
       space_left: 0cm
     highlights:
       bullet: •
       nested_bullet: •
-      space_left: 0.15cm
+      space_left: 0cm
       space_above: 0cm
       space_between_items: 0cm
-      space_between_bullet_and_text: 0.4em
+      space_between_bullet_and_text: 0.44em
   templates:
-    footer: "*NAME -- PAGE_NUMBER/TOTAL_PAGES*"
-    top_note: "*LAST_UPDATED CURRENT_DATE*"
+    footer: '*NAME -- PAGE_NUMBER/TOTAL_PAGES*'
+    top_note: '*LAST_UPDATED CURRENT_DATE*'
     single_date: MONTH_ABBREVIATION YEAR
     date_range: START_DATE – END_DATE
     time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
     one_line_entry:
-      main_column: "**LABEL:** DETAILS"
-    # Degree in main column (no separate degree column): default 1cm degree column
-    # truncates long lines like "BS, Business Administration" in the PDF.
+      main_column: '**LABEL:** DETAILS'
     education_entry:
       main_column: |-
         **INSTITUTION**, AREA
@@ -318,7 +317,7 @@ design:
 
         SUMMARY
         HIGHLIGHTS
-      degree_column: null
+      degree_column:
       date_and_location_column: ""
     normal_entry:
       main_column: |-
