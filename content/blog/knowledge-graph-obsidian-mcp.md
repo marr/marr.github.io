@@ -27,7 +27,11 @@ One developer in the community built an Obsidian plugin specifically for this: d
 
 ## Step 2: Connect via MCP
 
-The connection itself is straightforward. Install the [Local REST API plugin](https://github.com/coddingtonbear/obsidian-local-rest-api), enable it, copy the API key from the plugin settings, then add [Markus Pfundstein's mcp-obsidian server](https://github.com/MarkusPfundstein/mcp-obsidian) (the community default for talking to Obsidian over HTTP):
+The connection itself is straightforward. Install the [Local REST API plugin](https://github.com/coddingtonbear/obsidian-local-rest-api), enable it, copy the API key from the plugin settings, then add [Markus Pfundstein's mcp-obsidian server](https://github.com/MarkusPfundstein/mcp-obsidian) (the community default for talking to Obsidian over HTTP).
+
+**Dataview** — Install the [Dataview](https://github.com/blacksmithgu/obsidian-dataview) community plugin as well. `mcp-obsidian` relies on Dataview for structured queries over your vault; without it, graph-style retrieval and many tool paths will not behave as intended.
+
+**TLS certificate** — The Local REST API serves HTTPS by default with a plugin-generated certificate. For the default `OBSIDIAN_HOST` / `OBSIDIAN_PORT` setup to work without TLS errors, install or trust that certificate using the plugin’s instructions (usually from the plugin settings: export or open the cert and add it to your OS trust store). Until the client trusts the cert, connections can fail even with the correct API key.
 
 ```json
 {
@@ -82,10 +86,11 @@ The vault becomes an extension of your thinking. Not just a place to store notes
 
 If you're starting from scratch:
 
-1. Install Obsidian and the Local REST API plugin
-2. Define 3-4 note types with templates
-3. Connect via MCP
-4. Start writing. Link everything.
+1. Install Obsidian, the Local REST API plugin, and **Dataview**
+2. Trust the Local REST API **SSL certificate** so the default MCP env can connect over HTTPS
+3. Define 3-4 note types with templates
+4. Connect via MCP
+5. Start writing. Link everything.
 
 Your future self will thank you.
 
