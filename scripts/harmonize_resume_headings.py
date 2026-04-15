@@ -27,7 +27,6 @@ def harmonize(md: str) -> str:
         elif line == "# Experience":
             out.append("## Experience")
         elif line == "# Education":
-            # Web CSS targets Education via h2:nth-of-type(3) (Summary, Experience, Education, Skills).
             out.append("## Education")
         elif line == "# Skills":
             out.append("## Skills")
@@ -44,6 +43,9 @@ def harmonize(md: str) -> str:
         r"\1\n\n\2",
         text,
     )
+    # RenderCV moderncv emits " -- " between title/company and location; on the web it
+    # reads like a broken em dash. Use a middle dot instead.
+    text = text.replace(" -- ", " · ")
     return text + ("\n" if trailing else "")
 
 

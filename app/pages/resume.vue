@@ -25,21 +25,13 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
 <template>
   <UPageBody v-if="page" class="pb-16 pt-2 md:pt-4">
     <div
-      class="resume-shell relative overflow-hidden rounded-2xl border border-default/60 bg-elevated/40 shadow-sm ring-1 ring-inset ring-default/10 md:rounded-3xl"
+      class="resume-shell mx-auto max-w-4xl px-1 py-6 sm:px-8 sm:py-8 md:px-12 md:py-10"
     >
-      <div
-        class="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-default/20 to-transparent"
-        aria-hidden="true"
+      <ContentRenderer
+        :value="page"
+        class="resume-content"
+        :components="resumeContentComponents"
       />
-      <div class="relative px-5 py-8 sm:px-8 sm:py-10 md:px-12 md:py-12">
-        <div>
-          <ContentRenderer
-            :value="page"
-            class="resume-content"
-            :components="resumeContentComponents"
-          />
-        </div>
-      </div>
     </div>
   </UPageBody>
 </template>
@@ -50,8 +42,10 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
  * - scripts/harmonize_resume_headings.py: one h1 (name), section h2 (Summary, Experience, …),
  *   each role/school is h3 (**Company**, title).
  * - Typical role block: h3 → p (location) → p (dates) → p (summary) → ul (bullets).
- * - Education (RenderCV md): h3 → p (location) → p (dates) → p (degree) → p (e.g. Dean's List).
+ * - Education: h3 may include degree in the heading; following lines are p (dates), p (e.g. Dean's List).
  * - Section h2 headings are plain text; role h3 lines use <strong> for the company name (logo match).
+ * - MDC auto-ids: #summary, #experience, #education, #skills — keep section titles or update selectors.
+ * - PDF link line: any p containing a link to resume.pdf (not necessarily first node).
  */
 
 .resume-content {
@@ -60,7 +54,7 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   color: var(--ui-text);
 }
 
-.resume-content :deep(p:first-child) {
+.resume-content :deep(p:has(a[href$="resume.pdf"])) {
   margin: 0 0 1.75rem;
   padding: 0.65rem 1rem;
   border-radius: var(--ui-radius);
@@ -69,7 +63,7 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   font-size: 0.875rem;
 }
 
-.resume-content :deep(p:first-child a) {
+.resume-content :deep(p:has(a[href$="resume.pdf"]) a) {
   font-weight: 600;
 }
 
@@ -98,11 +92,11 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   border-bottom: 1px solid color-mix(in oklab, var(--ui-border) 80%, transparent);
 }
 
-.resume-content :deep(h2:not(:has(strong)):first-of-type) {
+.resume-content :deep(h2#summary) {
   margin-top: 1.25rem;
 }
 
-.resume-content :deep(ul:first-of-type) {
+.resume-content :deep(h1 + ul) {
   margin: 0 0 2rem;
   padding: 0;
   list-style: none;
@@ -113,27 +107,29 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   color: var(--ui-text-muted);
 }
 
-.resume-content :deep(ul:first-of-type li) {
+.resume-content :deep(h1 + ul li) {
   position: relative;
   padding-left: 0;
 }
 
-.resume-content :deep(ul:first-of-type li::before) {
+.resume-content :deep(h1 + ul li::before) {
   display: none;
 }
 
-.resume-content :deep(ul:first-of-type a) {
+.resume-content :deep(h1 + ul a) {
   color: var(--ui-text);
   text-decoration: underline;
   text-decoration-color: color-mix(in oklab, var(--ui-primary) 45%, transparent);
   text-underline-offset: 3px;
 }
 
-.resume-content :deep(ul:first-of-type a:hover) {
+.resume-content :deep(h1 + ul a:hover) {
   color: var(--ui-primary);
 }
 
-.resume-content :deep(h2:first-of-type + p) {
+.resume-content :deep(h2#summary + p),
+.resume-content :deep(h2#summary + p + p),
+.resume-content :deep(h2#summary + p + p + p) {
   margin-top: 0;
   margin-bottom: 1.25rem;
   max-width: 65ch;
@@ -318,7 +314,37 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   height: auto;
   max-height: 2.75rem;
   object-fit: contain;
-  opacity: 0.95;
+  opacity: 1;
+}
+
+/*
+ * invertInDarkMode assets: mask from the same URL, fill with Nuxt UI primary (teal).
+ * A 90/10 text/primary mix was effectively identical to --ui-text (computed ~L 0.92); use primary directly.
+ */
+.resume-content :deep(.resume-exp-logo-img--theme-tint) {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  max-height: 2.75rem;
+  object-fit: none;
+  opacity: 1;
+  background-color: var(--ui-primary);
+  -webkit-mask-image: var(--resume-logo-src);
+  mask-image: var(--resume-logo-src);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  /* Default luminance (e.g. Turo). Dark-gray fills (#111827…) look faint — see --mask-alpha. */
+  -webkit-mask-mode: luminance;
+  mask-mode: luminance;
+}
+
+.resume-content :deep(.resume-exp-logo-img--theme-tint.resume-exp-logo-img--mask-alpha) {
+  -webkit-mask-mode: alpha;
+  mask-mode: alpha;
 }
 
 /* Companion mark smaller than primary (e.g. Westfield vs OneMarket) */
@@ -348,14 +374,28 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   max-width: 10rem;
 }
 
-.resume-content :deep(.resume-exp-logo-img--invert-dark) {
-  @media (prefers-color-scheme: dark) {
-    filter: invert(1) brightness(1.05);
-  }
+.resume-content :deep(.resume-exp-logo-img--wide.resume-exp-logo-img--theme-tint) {
+  width: auto;
+  min-width: 3rem;
+  height: 1.65rem;
+  max-height: 1.65rem;
 }
 
-.dark .resume-content :deep(.resume-exp-logo-img--invert-dark) {
-  filter: invert(1) brightness(1.05);
+.resume-content :deep(.resume-exp-logo-img--wide.resume-exp-logo-img--wide-tall.resume-exp-logo-img--theme-tint) {
+  height: 2.5rem;
+  max-height: 2.5rem;
+}
+
+.resume-content :deep(.resume-exp-logo-img--wide.resume-exp-logo-img--wide-tall-xl.resume-exp-logo-img--theme-tint) {
+  height: 3.125rem;
+  max-height: 3.125rem;
+  max-width: 10rem;
+}
+
+.resume-content :deep(.resume-exp-logo-img--companion-sm.resume-exp-logo-img--theme-tint) {
+  width: 2.125rem;
+  height: 2.125rem;
+  max-height: 2.125rem;
 }
 
 /* Light/dark asset pairs (e.g. black eyes vs pink eyes): no CSS filter */
@@ -419,18 +459,10 @@ html.light .resume-content :deep(.resume-exp-logo-img--theme-dark) {
 }
 
 /*
- * Education: same paragraph order as Experience for the first two lines (location, dates),
- * then degree, then summary — overrides generic h3+p+p+p so the degree line isn’t body-sized.
+ * Education: degree may sit in the h3; following ps are not role “dates” + intro.
+ * Override generic h3+p+p when the second line is body (e.g. Dean’s List), not dates.
  */
-.resume-content :deep(h2:nth-of-type(3) + h3 + p + p + p) {
-  margin: 0.5rem 0 0;
-  padding-left: 0;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--ui-text);
-}
-
-.resume-content :deep(h2:nth-of-type(3) + h3 + p + p + p + p) {
+.resume-content :deep(h2#education + h3 + p + p) {
   margin: 0.35rem 0 0;
   padding-left: 0;
   max-width: 65ch;
@@ -474,17 +506,17 @@ html.light .resume-content :deep(.resume-exp-logo-img--theme-dark) {
   text-wrap: pretty;
 }
 
-.resume-content :deep(ul:not(:first-of-type)) {
+.resume-content :deep(h3 ~ ul) {
   margin: 0.5rem 0 1.25rem;
   padding-left: 1.15rem;
 }
 
-.resume-content :deep(ul:not(:first-of-type) li) {
+.resume-content :deep(h3 ~ ul li) {
   margin: 0.35rem 0;
   padding-left: 0.35rem;
 }
 
-.resume-content :deep(ul:not(:first-of-type) li::marker) {
+.resume-content :deep(h3 ~ ul li::marker) {
   color: color-mix(in oklab, var(--ui-text-muted) 88%, var(--ui-text) 12%);
 }
 
@@ -522,14 +554,14 @@ html.light .resume-content :deep(.resume-exp-logo-img--theme-dark) {
   color: var(--ui-text-highlighted);
 }
 
-/* Skills block: paragraphs after the last section h2 */
-.resume-content :deep(h2:last-of-type ~ p) {
+/* Skills block */
+.resume-content :deep(h2#skills ~ p) {
   margin-bottom: 0.65rem;
   font-size: 0.875rem;
   line-height: 1.55;
 }
 
-.resume-content :deep(h2:last-of-type ~ p strong) {
+.resume-content :deep(h2#skills ~ p strong) {
   min-width: fit-content;
   margin-right: 0.35rem;
 }

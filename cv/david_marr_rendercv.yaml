@@ -1,189 +1,157 @@
 cv:
+  # Voice: plain English first; say what a non-specialist would recognize. Keep a few
+  # standard tech names for search. Avoid acronym stacks (BFF, RBAC, RAG, MTTR, etc.)
+  # unless paired with a plain-English gloss. Resume clichés: spearheaded→led, etc.
+  #
   # Phone is intentionally omitted from git to reduce scraping/spam. To bake a
   # number into the PDF only, run: CV_PHONE="+1…" pnpm run cv:render
   # (E.164). Optional GitHub Actions secret CV_PHONE does the same in CI.
   #
   # --- Replace bracket placeholders before publishing (search for [N], [M], etc.) ---
-  # Context Labs: Principal UI Engineer → Eng Lead (UI) when reports; team **9**; BFF, shared auth/ACL. GHG cites
-  #   public program detail (e.g. Williams NextGen Gas deck); no aggregate tCO2e on slide.
+  # Context Labs: Principal UI Engineer → Eng Lead (UI) when reports; team 9; GenAI/RAG/evals, BFF, auth/ACL.
   # Filtered.ai: employer framing set (large employers, financial services + technology).
-  # Turo: WSJ 2019 (IAC); gross revenue / geography from company-disclosed milestones (~2018).
+  # Turo: host-facing product; availability, pricing, All-star program.
   # Pre-2016 roles: each stint is its own experience entry (Say Media → … → GE Fanuc).
   name: David Marr
-  headline: Engineering Leader | 25 Years Scaling Modern Software, Global Teams &
-    AI Integration
+  headline: Principal Software Engineer | TypeScript & Modern Web | AI and
+    Data Products
   location: "Boston, MA"
   email: "dave.marr@gmail.com"
   sections:
     summary:
-      - Engineering leader with 25 years shipping products at category-leading
-        companies (e.g. Yahoo, Westfield Labs, Context Labs, Turo). Brings
-        cross-functional leadership and systems at scale; applies AI in engineering
-        workflows, observability, and platforms that accelerate delivery.
+      - "Twenty-five years building demanding web products and the data behind them:
+        marketplaces, business software, and energy and climate tools. I stay hands
+        on while growing teams, raising quality, and shipping faster. I own the path
+        from browser through APIs and work closely with data and machine learning
+        partners."
+      - "My current focus is AI-assisted development: tools and custom automation that
+        turn specs into shippable features with tight spec-and-build loops (including
+        ralph-loop style runs) so teams spend less time on glue work and more on the
+        product."
     experience:
       - company: "Context Labs"
         position: "Engineering Lead (UI)"
         start_date: 2022-06
         end_date: 2026-03
         location: "Cambridge, MA"
-        summary: "Promoted from **Principal UI Engineer** to **Engineering Lead
-          (UI)** when assuming direct reports. Led the UI engineering organization
-          for a multi-tenant production analytics product for global energy and
-          sustainability customers. Scope included customer web applications, a
-          BFF layer, and shared modules for authentication and access control,
-          with hands-on work on data-intensive product surfaces; OKRs and
-          cross-team alignment to improve time-to-market and quality."
+        summary: "Live analytics for global energy and sustainability teams (Vue, Nuxt).
+          Owned customer-facing web apps, APIs, and authentication and access control,
+          plus hands-on work on data-heavy screens; set quarterly goals and kept teams
+          aligned across the company."
         highlights:
-          - "Managed **9** engineers across three continents; mentored ICs and leads;
-            OKRs and reviews for velocity and accountability."
-          - "Designed and launched Decarbonization-as-a-Service (DaaS) for
-            **greenhouse gas (GHG) inventories in metric tonnes CO₂e**
-            (CO₂-equivalent), with analytics and reporting for major global
-            energy companies. **Supported programs including Williams NextGen
-            Gas:** **QMRV** (quantification, monitoring, reporting, verification)
-            across production through market, with multi-layer monitoring
-            (e.g. satellite, aerial, fixed sensors, source-level measurement) and
-            third-party emissions-intensity certification (KPMG)."
-          - "Delivered web applications integrated with backend services,
-            multi-tenancy, SSO authentication, RBAC, and internationalization;
-            shared UI component library with data visualizations, interactive maps,
-            and accessible controls."
-          - "Championed **AI tooling** in engineering workflows; improved CI/CD and
-            observability for frontend deployments; lower MTTR and higher deploy
-            frequency."
+          - "Managed nine engineers across three continents; mentored engineers and team leads; set goals and ran reviews focused on speed and ownership."
+          - "Designed and shipped decarbonization reporting: greenhouse gas inventories,
+            charts, and compliance-style reporting for large energy programs (CO₂e)."
+          - "Delivered multi-tenant enterprise features for customer organizations:
+            single sign-on, role-based access, and localized UI in one codebase."
+          - "Built a component library using Vue, Tailwind, and Nuxt with charts and
+            maps, shared across multiple apps."
+          - "Shipped document-grounded AI (RAG): retrieval, context assembly, and
+            evaluation checks before release; spec-driven delivery and iteration."
+          - "Drove adoption of AI coding assistants and tightened CI/CD for the web
+            stack: faster incident recovery and more frequent deploys."
       - company: "Filtered.ai"
         position: "Lead Engineer"
         start_date: 2020-02
         end_date: 2022-02
         location: "Boston, MA"
-        summary: "Architected scalable recruitment workflows for **large employers
-          in financial services and technology** — high-volume applicant
-          pipelines with AI-driven grading and fraud detection."
+        summary: "Hiring software for large employers in finance and tech: high volume
+          from application through interview, with automatic scoring and fraud checks."
         highlights:
-          - "Directed development of interview scheduling, candidate pipelines,
-            assessment portals, and **live video interviews** for technical
-            hiring at scale."
-          - "Implemented AI-driven grading, automated feedback, and fraud detection;
-            collaborated with product and data on models and metrics for candidate
-            success and system effectiveness."
+          - "Owned scheduling, candidate flows, assessment sites, and live video
+            interviews for technical hiring at scale."
+          - "Built automatic scoring, instant feedback to candidates, and fraud
+            detection; defined success metrics with product and data science and
+            tracked model and funnel health in production."
       - company: "Turo"
         position: "Staff Software Engineer"
         start_date: 2018-04
         end_date: "2019-12"
         location: "San Francisco, CA & Cambridge, MA"
-        summary: "Owned host-facing product work while the marketplace scaled to
-          **~$236M gross revenue** and **40+ countries** by 2018 (company metrics),
-          through **IAC’s $250M investment** at a **>$1B valuation** (Jul 2019;
-          reported in the **Wall Street Journal**). Shipped programs that lifted host
-          engagement, revenue, and listing quality."
+        summary: "Product for people who list their cars while the marketplace grew
+          fast. Owned work that helped hosts stay active, keep listings in good shape,
+          and earn more; worked with analytics to see what moved the numbers and what
+          to ship next."
         highlights:
-          - "Shipped **availability calendar**, **trip lifecycle management**, and
-            **dynamic pricing** for **Turo’s full host base**—raising utilization
-            and host-side revenue; partnered with analytics to quantify lift and
-            iterate releases."
-          - "Led the **All-star** host recognition program end-to-end, tying
-            incentives to quality and retention metrics."
+          - "Shipped availability calendar, trip lifecycle management, and dynamic
+            pricing for the full host base, raising utilization and host-side revenue;
+            partnered with analytics to quantify lift and iterate releases."
+          - "Ran the All-star host program end to end, linking rewards to quality
+            and whether hosts stuck around."
       - company: "OneMarket / Westfield Labs"
         position: "Senior Software Architect"
         start_date: "2016-01"
         end_date: 2018-05
         location: "San Francisco, CA & London, UK"
-        summary: "**OneMarket** was spun out of **Westfield Labs** as its
-          omnichannel retail venture; I architected **parking** and omnichannel
-          retail platform work there, in the context of **~1.1B annual shopping
-          visits** across **85+** Westfield centers worldwide. Parent Westfield
-          announced a carve-out toward an **ASX listing with ~US$198M cash** on
-          the balance sheet (**Feb 2018, iTnews**), amid its proposed combination
-          with **Unibail-Rodamco** (press: **world’s largest retail landlord**)."
+        summary: "Built retail software that spans the web and the physical mall: parking, payments, and finding your way inside busy shopping centers."
         highlights:
-          - "Architected **parking and payment** products—**facial recognition**,
-            **subscription billing**, and **gate automation** at point of entry—on
-            the order of **£2m/month** in recurring revenue across high-traffic
-            Westfield estates."
-          - "Built **beacon-based** interior mapping and wayfinding (indoor
-            navigation for **multi-story malls**—directory and maps in the spirit
-            of consumer mapping UX); partner tooling to verify **leased space**."
-          - "Designed **API services** and **customer-facing** applications for
-            **Westfield** centers worldwide; **React**, **Node**, **PostgreSQL**,
-            and **edge-to-cloud** integration for operations and shopper flows.
-            Several months on-site at a **London flagship** mall."
+          - "Designed parking and payment products: recognition at the gate,
+            subscriptions, and automated gates; rolled out across Westfield malls in
+            production."
+          - "Built indoor maps and turn by turn directions using beacons in malls
+            for partners to confirm store footprints."
+          - "Designed APIs and customer facing apps for Westfield locations
+            worldwide; React, Node, PostgreSQL."
       - company: "Tilt.com"
         position: "Senior Systems Engineer"
         start_date: 2013-07
         end_date: 2015-12
         location: "San Francisco, CA"
-        summary: "Optimized core user flows during **Y Combinator**–era growth
-          (**Series A $12M**, Apr 2013; **Series B $23M**, Dec 2013)."
+        summary: "Responsible for signup and core product flows. Focused on conversion, uptime, and handling spikes when demand peaked."
         highlights:
-          - "Redesigned **first-party signup** and onboarding (**~15%** lift in
-            conversions and revenue); advocated **React** for new product work."
-          - "Improved reliability and scalability for surge traffic during
-            fundraising campaigns and promotions."
+          - "Redesigned signup and onboarding flows (~15% lift in conversions and
+            revenue)."
       - company: "Say Media"
         position: "Senior Software Engineer"
         start_date: 2012-03
         end_date: 2013-04
         location: "San Francisco, CA"
-        summary: "**Conversational media** publisher network (VideoEgg + Six Apart
-          merger); **Ember.js** for content and monetization."
+        summary: "Publisher network (VideoEgg / Six Apart); Django for editorial and
+          publishing tools."
         highlights:
-          - "Lifted **engaged time** via headlines, traffic modules, and in-article
-            **user reactions**."
-          - "**SheKnows** (network flagship): cited as the **fastest-growing women's
-            lifestyle brand** in its category (**comScore**)."
+          - "Improved engaged time across sites: in-article user reactions, editorial
+            tooling, and modules for recirculation and related content (headlines owned
+            by editorial)."
       - company: "CBS Interactive"
-        position: "Software Engineer (tv.com)"
+        position: "Senior Front End Web Developer"
         start_date: 2011-06
         end_date: 2011-12
         location: "San Francisco, CA"
-        summary: "**tv.com** shows and metadata: **SVG**-heavy UI and **Python** APIs;
-          **A/B tested** parallel variants on core flows for engagement and conversion."
+        summary: "Built features for tv.com with Python and JavaScript; A/B tested
+          variants on core flows to improve engagement and conversion."
       - company: "Secret Feature"
         position: "Technical Co-Founder / CTO"
         start_date: 2010-01
         end_date: 2011-05
         location: "San Francisco, CA"
-        summary: "Co-founder; shipped an early social product on **Node.js** as the
-          stack moved beyond Flash; contributed to **Diversion, Inc.** closing a
-          **Series A**."
+        summary: "The company split time between client agency work and internal
+          creative experiments (social, video, exploratory product)."
       - company: "Frog Design"
         position: "Design Technologist"
         start_date: 2009-01
         end_date: 2010-03
         location: "San Francisco, CA"
-        summary: "Design-to-production and embedded work for physical products—**Disney**
-          park data **API** and web for **MagicBand**; Flash-era prototypes and
-          embedded hardware."
+        summary: "Built web applications for MagicBand wristband at Disney World, and other prototypes and code on small devices in hardware."
       - company: "Yahoo"
         position: "Senior Frontend Engineer"
         start_date: 2006-09
         end_date: 2008-12
         location: "Sunnyvale / San Francisco, CA"
-        summary: "Scalable frontend for high-traffic properties: **PHP/MySQL** (Yahoo!
-          Answers / Small Business); **Brickhouse** — **Yahoo! Live** live-streaming;
-          **60+ min** average time-on-site; **~2M signups** in nine months."
+        highlights:
+          - "Built Yahoo! Answers integration for the Small Business product (PHP,
+            MySQL, high traffic)."
+          - "Shipped Yahoo! Live live streaming at Brickhouse (frontend and playback
+            UX); the product reached 60+ minute average time on site and ~2M signups
+            in nine months."
       - company: "Monster.com"
         position: "Senior Web Developer"
         start_date: 2004-03
         end_date: 2006-08
         location: "Maynard, MA"
-        summary: "User-facing work on a **Webby**-recognized career advice site;
-          early **.NET**, migrated CMS from classic **ASP** to **ASP.NET**."
-      - company: "SoftArtisans"
-        position: "Web Applications Developer"
-        start_date: 2003-03
-        end_date: 2004-04
-        location: "Brookline, MA"
-        summary: "Enterprise **SAFileUp** and **multipart/form-data** uploads on
-          **Microsoft** server stacks."
-      - company: "GE Fanuc / Intellution"
-        position: "Web Developer"
-        start_date: 2000-01
-        end_date: 2003-12
-        location: "Foxborough, MA"
-        summary: "Industrial automation web interfaces and dashboards: **CRM** apps
-          (**SQL Server**, **IIS**, classic **ASP**) for plant and operations
-          customers."
+        highlights:
+          - "careers.monster.com (Webby-recognized career advice): CMS, information
+            architecture, and front-end work on career content."
+          - "Migrated the content system from classic ASP to ASP.NET."
     education:
       - institution: "University of New Hampshire"
         area: "Management of Information Systems"
@@ -195,29 +163,24 @@ cv:
     skills:
       - label: "Languages"
         details: "JavaScript, TypeScript, Go, Python, HTML, CSS"
-      - label: "Frameworks"
-        details: "React, Svelte, Vue"
-      - label: "Metaframeworks"
-        details: "Next.js, Nuxt, SvelteKit, TanStack Start"
-      - label: "Infrastructure & Tools"
-        details: "Docker, Kubernetes, AWS, Google Cloud Platform, OpenAPI,
-          PostgreSQL, MongoDB, Trino, ArcadeDB, OrientDB, Vite"
-      - label: "Frontend & Visualization"
-        details: "Tailwind, Tanstack, Vega Lite, Apache ECharts, WebGL, Mapbox,
-          Maplibre, QGIS"
+      - label: "Infrastructure & data"
+        details: "Docker, Kubernetes, Amazon Web Services, Google Cloud Platform, OpenAPI, PostgreSQL, MongoDB, Trino, ArcadeDB, OrientDB"
+      - label: "UI Frameworks and libraries"
+        details: "Vue, React, Tailwind, TanStack, Vega Lite, WebGL, Mapbox,
+          Maplibre, Deck.gl, Nuxt, Vite, Vitest"
       - label: "AI"
-        details: "AI SDKs, OpenAI, Claude, Codex, private LLM integrations"
+        details: "Azure Foundry, RAG, OpenAI, Anthropic, Google Gemini, Claude"
   website: https://marr.github.io
 
 design:
-  theme: engineeringclassic
-  # Tuned for ~2 pages; if copy grows, trim wording or nudge spacing slightly.
+  theme: moderncv
+  # Balance: readable spacing while staying near two pages; check PDF if copy changes.
   page:
     size: us-letter
-    top_margin: 0.52in
-    bottom_margin: 0.52in
-    left_margin: 0.52in
-    right_margin: 0.52in
+    top_margin: 0.58in
+    bottom_margin: 0.58in
+    left_margin: 0.6in
+    right_margin: 0.6in
     show_footer: true
     show_top_note: false
   colors:
@@ -230,9 +193,9 @@ design:
     footer: rgb(0, 0, 0)
     top_note: rgb(0, 0, 0)
   typography:
-    line_spacing: 0.48em
+    line_spacing: 0.54em
     alignment: justified
-    date_and_location_column_alignment: left
+    date_and_location_column_alignment: right
     font_family:
       body: Raleway
       name: Raleway
@@ -240,11 +203,11 @@ design:
       connections: Raleway
       section_titles: Raleway
     font_size:
-      body: 9.25pt
-      name: 27pt
+      body: 9.5pt
+      name: 24pt
       headline: 9.5pt
       connections: 9.5pt
-      section_titles: 1.3em
+      section_titles: 1.32em
     small_caps:
       name: false
       headline: false
@@ -256,17 +219,17 @@ design:
       connections: false
       section_titles: false
   links:
-    underline: false
+    underline: true
     show_external_link_icon: false
   header:
     alignment: left
-    photo_width: 3.5cm
+    photo_width: 4.15cm
     photo_position: left
-    photo_space_left: 0.4cm
-    photo_space_right: 0.4cm
-    space_below_name: 0.65cm
-    space_below_headline: 0.45cm
-    space_below_connections: 0.45cm
+    photo_space_left: 0cm
+    photo_space_right: 0.3cm
+    space_below_name: 0.58cm
+    space_below_headline: 0.52cm
+    space_below_connections: 0.52cm
     connections:
       phone_number_format: national
       hyperlink: true
@@ -275,22 +238,21 @@ design:
       separator: ''
       space_between_connections: 0.5cm
   section_titles:
-    type: with_full_line
-    line_thickness: 0.5pt
-    space_above: 0.28cm
-    space_below: 0.1cm
+    type: moderncv
+    line_thickness: 0.15cm
+    space_above: 0.46cm
+    space_below: 0.24cm
   sections:
     allow_page_break: true
-    space_between_regular_entries: 0.78em
-    space_between_text_based_entries: 0.18em
+    space_between_regular_entries: 0.98em
+    space_between_text_based_entries: 0.26em
     show_time_spans_in: []
   entries:
-    # Keep engineeringclassic styling, but move date/location into main column for mobile readability.
-    date_and_location_width: 0cm
-    side_space: 0.2cm
-    space_between_columns: 0cm
+    date_and_location_width: 3.9cm
+    side_space: 0cm
+    space_between_columns: 0.26cm
     allow_page_break: false
-    short_second_row: true
+    short_second_row: false
     degree_width: 1cm
     summary:
       space_above: 0.1cm
@@ -299,9 +261,9 @@ design:
       bullet: •
       nested_bullet: •
       space_left: 0cm
-      space_above: 0cm
-      space_between_items: 0cm
-      space_between_bullet_and_text: 0.44em
+      space_above: 0.12cm
+      space_between_items: 0.09cm
+      space_between_bullet_and_text: 0.3em
   templates:
     footer: '*NAME -- PAGE_NUMBER/TOTAL_PAGES*'
     top_note: '*LAST_UPDATED CURRENT_DATE*'
@@ -312,30 +274,23 @@ design:
       main_column: '**LABEL:** DETAILS'
     education_entry:
       main_column: |-
-        **INSTITUTION**, AREA
-        **DEGREE**
-        LOCATION · DATE
-
+        **INSTITUTION**, DEGREE_WITH_AREA -- LOCATION
         SUMMARY
         HIGHLIGHTS
       degree_column:
-      date_and_location_column: ""
+      date_and_location_column: DATE
     normal_entry:
       main_column: |-
-        **NAME**
-        LOCATION · DATE
-
+        **NAME** -- **LOCATION**
         SUMMARY
         HIGHLIGHTS
-      date_and_location_column: ""
+      date_and_location_column: DATE
     experience_entry:
       main_column: |-
-        **COMPANY**, POSITION
-        LOCATION · DATE
-
+        **POSITION**, COMPANY -- LOCATION
         SUMMARY
         HIGHLIGHTS
-      date_and_location_column: ""
+      date_and_location_column: DATE
     publication_entry:
       main_column: |-
         **TITLE**

@@ -12,168 +12,142 @@ Also available as [**PDF**](/resume.pdf){external}.
 
 # David Marr's CV
 
-- Phone: +1 415 248 6633
 - Email: [dave.marr@gmail.com](mailto:dave.marr@gmail.com)
 - Location: Boston, MA
 - Website: [marr.github.io](https://marr.github.io/)
 
 
 ## Summary
-Engineering leader with 25 years shipping products at category-leading companies (e.g. Yahoo, Westfield Labs, Context Labs, Turo). Brings cross-functional leadership and systems at scale; applies AI in engineering workflows, observability, and platforms that accelerate delivery.
+Twenty-five years building demanding web products and the data behind them: marketplaces, business software, and energy and climate tools. I stay hands on while growing teams, raising quality, and shipping faster. I own the path from browser through APIs and work closely with data and machine learning partners.
+
+My current focus is AI-assisted development: tools and custom automation that turn specs into shippable features with tight spec-and-build loops (including ralph-loop style runs) so teams spend less time on glue work and more on the product.
 
 ## Experience
-### **Context Labs**, Engineering Lead (UI)
+### **Engineering Lead (UI)**, Context Labs · Cambridge, MA
 
-Cambridge, MA · June 2022 – Mar 2026
+June 2022 – Mar 2026
 
+Live analytics for global energy and sustainability teams (Vue, Nuxt). Owned customer-facing web apps, APIs, and authentication and access control, plus hands-on work on data-heavy screens; set quarterly goals and kept teams aligned across the company.
 
+- Managed nine engineers across three continents; mentored engineers and team leads; set goals and ran reviews focused on speed and ownership.
 
-Promoted from **Principal UI Engineer** to **Engineering Lead (UI)** when assuming direct reports. Led the UI engineering organization for a multi-tenant production analytics product for global energy and sustainability customers. Scope included customer web applications, a BFF layer, and shared modules for authentication and access control, with hands-on work on data-intensive product surfaces; OKRs and cross-team alignment to improve time-to-market and quality.
+- Designed and shipped decarbonization reporting: greenhouse gas inventories, charts, and compliance-style reporting for large energy programs (CO₂e).
 
-- Managed **9** engineers across three continents; mentored ICs and leads; OKRs and reviews for velocity and accountability.
+- Delivered multi-tenant enterprise features for customer organizations: single sign-on, role-based access, and localized UI in one codebase.
 
-- Designed and launched Decarbonization-as-a-Service (DaaS) for **greenhouse gas (GHG) inventories in metric tonnes CO₂e** (CO₂-equivalent), with analytics and reporting for major global energy companies. **Supported programs including Williams NextGen Gas:** **QMRV** (quantification, monitoring, reporting, verification) across production through market, with multi-layer monitoring (e.g. satellite, aerial, fixed sensors, source-level measurement) and third-party emissions-intensity certification (KPMG).
+- Built a component library using Vue, Tailwind, and Nuxt with charts and maps, shared across multiple apps.
 
-- Delivered web applications integrated with backend services, multi-tenancy, SSO authentication, RBAC, and internationalization; shared UI component library with data visualizations, interactive maps, and accessible controls.
+- Shipped document-grounded AI (RAG): retrieval, context assembly, and evaluation checks before release; spec-driven delivery and iteration.
 
-- Championed **AI tooling** in engineering workflows; improved CI/CD and observability for frontend deployments; lower MTTR and higher deploy frequency.
+- Drove adoption of AI coding assistants and tightened CI/CD for the web stack: faster incident recovery and more frequent deploys.
 
 
 
-### **Filtered.ai**, Lead Engineer
+### **Lead Engineer**, Filtered.ai · Boston, MA
 
-Boston, MA · Feb 2020 – Feb 2022
+Feb 2020 – Feb 2022
 
+Hiring software for large employers in finance and tech: high volume from application through interview, with automatic scoring and fraud checks.
 
+- Owned scheduling, candidate flows, assessment sites, and live video interviews for technical hiring at scale.
 
-Architected scalable recruitment workflows for **large employers in financial services and technology** — high-volume applicant pipelines with AI-driven grading and fraud detection.
+- Built automatic scoring, instant feedback to candidates, and fraud detection; defined success metrics with product and data science and tracked model and funnel health in production.
 
-- Directed development of interview scheduling, candidate pipelines, assessment portals, and **live video interviews** for technical hiring at scale.
 
-- Implemented AI-driven grading, automated feedback, and fraud detection; collaborated with product and data on models and metrics for candidate success and system effectiveness.
 
+### **Staff Software Engineer**, Turo · San Francisco, CA & Cambridge, MA
 
+Apr 2018 – Dec 2019
 
-### **Turo**, Staff Software Engineer
+Product for people who list their cars while the marketplace grew fast. Owned work that helped hosts stay active, keep listings in good shape, and earn more; worked with analytics to see what moved the numbers and what to ship next.
 
-San Francisco, CA & Cambridge, MA · Apr 2018 – Dec 2019
+- Shipped availability calendar, trip lifecycle management, and dynamic pricing for the full host base, raising utilization and host-side revenue; partnered with analytics to quantify lift and iterate releases.
 
+- Ran the All-star host program end to end, linking rewards to quality and whether hosts stuck around.
 
 
-Owned host-facing product work while the marketplace scaled to **~$236M gross revenue** and **40+ countries** by 2018 (company metrics), through **IAC’s $250M investment** at a **>$1B valuation** (Jul 2019; reported in the **Wall Street Journal**). Shipped programs that lifted host engagement, revenue, and listing quality.
 
-- Shipped **availability calendar**, **trip lifecycle management**, and **dynamic pricing** for **Turo’s full host base**—raising utilization and host-side revenue; partnered with analytics to quantify lift and iterate releases.
+### **Senior Software Architect**, OneMarket / Westfield Labs · San Francisco, CA & London, UK
 
-- Led the **All-star** host recognition program end-to-end, tying incentives to quality and retention metrics.
+Jan 2016 – May 2018
 
+Built retail software that spans the web and the physical mall: parking, payments, and finding your way inside busy shopping centers.
 
+- Designed parking and payment products: recognition at the gate, subscriptions, and automated gates; rolled out across Westfield malls in production.
 
-### **OneMarket / Westfield Labs**, Senior Software Architect
+- Built indoor maps and turn by turn directions using beacons in malls for partners to confirm store footprints.
 
-San Francisco, CA & London, UK · Jan 2016 – May 2018
+- Designed APIs and customer facing apps for Westfield locations worldwide; React, Node, PostgreSQL.
 
 
 
-**OneMarket** was spun out of **Westfield Labs** as its omnichannel retail venture; I architected **parking** and omnichannel retail platform work there, in the context of **~1.1B annual shopping visits** across **85+** Westfield centers worldwide. Parent Westfield announced a carve-out toward an **ASX listing with ~US$198M cash** on the balance sheet (**Feb 2018, iTnews**), amid its proposed combination with **Unibail-Rodamco** (press: **world’s largest retail landlord**).
+### **Senior Systems Engineer**, Tilt.com · San Francisco, CA
 
-- Architected **parking and payment** products—**facial recognition**, **subscription billing**, and **gate automation** at point of entry—on the order of **£2m/month** in recurring revenue across high-traffic Westfield estates.
+July 2013 – Dec 2015
 
-- Built **beacon-based** interior mapping and wayfinding (indoor navigation for **multi-story malls**—directory and maps in the spirit of consumer mapping UX); partner tooling to verify **leased space**.
+Responsible for signup and core product flows. Focused on conversion, uptime, and handling spikes when demand peaked.
 
-- Designed **API services** and **customer-facing** applications for **Westfield** centers worldwide; **React**, **Node**, **PostgreSQL**, and **edge-to-cloud** integration for operations and shopper flows. Several months on-site at a **London flagship** mall.
+- Redesigned signup and onboarding flows (~15% lift in conversions and revenue).
 
 
 
-### **Tilt.com**, Senior Systems Engineer
+### **Senior Software Engineer**, Say Media · San Francisco, CA
 
-San Francisco, CA · July 2013 – Dec 2015
+Mar 2012 – Apr 2013
 
+Publisher network (VideoEgg / Six Apart); Django for editorial and publishing tools.
 
+- Improved engaged time across sites: in-article user reactions, editorial tooling, and modules for recirculation and related content (headlines owned by editorial).
 
-Optimized core user flows during **Y Combinator**–era growth (**Series A $12M**, Apr 2013; **Series B $23M**, Dec 2013).
 
-- Redesigned **first-party signup** and onboarding (**~15%** lift in conversions and revenue); advocated **React** for new product work.
 
-- Improved reliability and scalability for surge traffic during fundraising campaigns and promotions.
+### **Senior Front End Web Developer**, CBS Interactive · San Francisco, CA
 
+June 2011 – Dec 2011
 
+Built features for tv.com with Python and JavaScript; A/B tested variants on core flows to improve engagement and conversion.
 
-### **Say Media**, Senior Software Engineer
 
-San Francisco, CA · Mar 2012 – Apr 2013
 
+### **Technical Co-Founder / CTO**, Secret Feature · San Francisco, CA
 
+Jan 2010 – May 2011
 
-**Conversational media** publisher network (VideoEgg + Six Apart merger); **Ember.js** for content and monetization.
+The company split time between client agency work and internal creative experiments (social, video, exploratory product).
 
-- Lifted **engaged time** via headlines, traffic modules, and in-article **user reactions**.
 
-- **SheKnows** (network flagship): cited as the **fastest-growing women's lifestyle brand** in its category (**comScore**).
 
+### **Design Technologist**, Frog Design · San Francisco, CA
 
+Jan 2009 – Mar 2010
 
-### **CBS Interactive**, Software Engineer (tv.com)
+Built web applications for MagicBand wristband at Disney World, and other prototypes and code on small devices in hardware.
 
-San Francisco, CA · June 2011 – Dec 2011
 
-**tv.com** shows and metadata: **SVG**-heavy UI and **Python** APIs; **A/B tested** parallel variants on core flows for engagement and conversion.
 
+### **Senior Frontend Engineer**, Yahoo · Sunnyvale / San Francisco, CA
 
+Sept 2006 – Dec 2008
 
-### **Secret Feature**, Technical Co-Founder / CTO
+- Built Yahoo! Answers integration for the Small Business product (PHP, MySQL, high traffic).
 
-San Francisco, CA · Jan 2010 – May 2011
+- Shipped Yahoo! Live live streaming at Brickhouse (frontend and playback UX); the product reached 60+ minute average time on site and ~2M signups in nine months.
 
-Co-founder; shipped an early social product on **Node.js** as the stack moved beyond Flash; contributed to **Diversion, Inc.** closing a **Series A**.
 
 
+### **Senior Web Developer**, Monster.com · Maynard, MA
 
-### **Frog Design**, Design Technologist
+Mar 2004 – Aug 2006
 
-San Francisco, CA · Jan 2009 – Mar 2010
+- careers.monster.com (Webby-recognized career advice): CMS, information architecture, and front-end work on career content.
 
-Design-to-production and embedded work for physical products—**Disney** park data **API** and web for **MagicBand**; Flash-era prototypes and embedded hardware.
-
-
-
-### **Yahoo**, Senior Frontend Engineer
-
-Sunnyvale / San Francisco, CA · Sept 2006 – Dec 2008
-
-Scalable frontend for high-traffic properties: **PHP/MySQL** (Yahoo! Answers / Small Business); **Brickhouse** — **Yahoo! Live** live-streaming; **60+ min** average time-on-site; **~2M signups** in nine months.
-
-
-
-### **Monster.com**, Senior Web Developer
-
-Maynard, MA · Mar 2004 – Aug 2006
-
-User-facing work on a **Webby**-recognized career advice site; early **.NET**, migrated CMS from classic **ASP** to **ASP.NET**.
-
-
-
-### **SoftArtisans**, Web Applications Developer
-
-Brookline, MA · Mar 2003 – Apr 2004
-
-Enterprise **SAFileUp** and **multipart/form-data** uploads on **Microsoft** server stacks.
-
-
-
-### **GE Fanuc / Intellution**, Web Developer
-
-Foxborough, MA · Jan 2000 – Dec 2003
-
-Industrial automation web interfaces and dashboards: **CRM** apps (**SQL Server**, **IIS**, classic **ASP**) for plant and operations customers.
+- Migrated the content system from classic ASP to ASP.NET.
 
 
 
 ## Education
-### **University of New Hampshire**, Management of Information Systems
-
-**BS, Business Administration**
-
-Durham, NH · Sept 1996 – May 2000
+### **University of New Hampshire**, BS, Business Administration in Management of Information Systems · Durham, NH
+Sept 1996 – May 2000
 
 Dean's List
 
@@ -182,12 +156,8 @@ Dean's List
 ## Skills
 **Languages:** JavaScript, TypeScript, Go, Python, HTML, CSS
 
-**Frameworks:** React, Svelte, Vue
+**Infrastructure & data:** Docker, Kubernetes, Amazon Web Services, Google Cloud Platform, OpenAPI, PostgreSQL, MongoDB, Trino, ArcadeDB, OrientDB
 
-**Metaframeworks:** Next.js, Nuxt, SvelteKit, TanStack Start
+**UI Frameworks and libraries:** Vue, React, Tailwind, TanStack, Vega Lite, WebGL, Mapbox, Maplibre, Deck.gl, Nuxt, Vite, Vitest
 
-**Infrastructure & Tools:** Docker, Kubernetes, AWS, Google Cloud Platform, OpenAPI, PostgreSQL, MongoDB, Trino, ArcadeDB, OrientDB, Vite
-
-**Frontend & Visualization:** Tailwind, Tanstack, Vega Lite, Apache ECharts, WebGL, Mapbox, Maplibre, QGIS
-
-**AI:** AI SDKs, OpenAI, Claude, Codex, private LLM integrations
+**AI:** Azure Foundry, RAG, OpenAI, Anthropic, Google Gemini, Claude
