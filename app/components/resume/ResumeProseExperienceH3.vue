@@ -43,6 +43,13 @@
                   decoding="async"
                 >
               </template>
+              <span
+                v-else-if="pill.themeTint"
+                :class="pill.imgClass"
+                :style="{
+                  '--resume-logo-src': `url(${JSON.stringify(pill.src)})`,
+                }"
+              />
               <img
                 v-else
                 :src="pill.src"
@@ -83,6 +90,13 @@
               decoding="async"
             >
           </template>
+          <span
+            v-else-if="decoration.themeTint"
+            :class="decoration.imgClass"
+            :style="{
+              '--resume-logo-src': `url(${JSON.stringify(decoration.primary.src)})`,
+            }"
+          />
           <img
             v-else
             :src="decoration.primary.src"
@@ -179,14 +193,25 @@ function imgClassList(
   wide: boolean,
   invert: boolean,
   wideTall: boolean | "xl" | undefined,
+  themeTint?: boolean,
+  maskAlpha?: boolean,
 ): string {
-  return [
+  const base = [
     "resume-exp-logo-img",
     wide ? "resume-exp-logo-img--wide" : "",
     wide && wideTall === true ? "resume-exp-logo-img--wide-tall" : "",
     wide && wideTall === "xl" ? "resume-exp-logo-img--wide-tall-xl" : "",
-    invert ? "resume-exp-logo-img--invert-dark" : "",
-  ]
+  ].filter(Boolean);
+  if (themeTint) {
+    return [
+      ...base,
+      "resume-exp-logo-img--theme-tint",
+      maskAlpha ? "resume-exp-logo-img--mask-alpha" : "",
+    ]
+      .filter(Boolean)
+      .join(" ");
+  }
+  return [...base, invert ? "resume-exp-logo-img--invert-dark" : ""]
     .filter(Boolean)
     .join(" ");
 }
@@ -198,6 +223,8 @@ type Pill = {
   lightForeground?: boolean;
   /** Companion pill scaled down vs primary (see `resume-exp-logo-img--companion-sm`). */
   companionSm?: boolean;
+  /** Dark-on-transparent marks: CSS mask + `var(--ui-text)` (see resume.vue). */
+  themeTint?: boolean;
   imgClass: string;
   imgClassLight?: string;
   imgClassDark?: string;
@@ -215,10 +242,14 @@ const decoration = computed(() => {
     cfg.companionWide !== undefined ? cfg.companionWide : !!cfg.wide;
 
   const primaryInvert = cfg.srcDark ? false : !!cfg.invertInDarkMode;
+  const primaryThemeTint = primaryInvert && !cfg.srcDark;
+  const primaryMaskAlpha = !!cfg.maskAlpha;
   const primaryBaseClass = imgClassList(
     !!cfg.wide,
-    primaryInvert,
+    primaryThemeTint ? false : primaryInvert,
     cfg.wideTall,
+    primaryThemeTint,
+    primaryMaskAlpha,
   );
 
   if (companions.length > 0) {
@@ -229,6 +260,7 @@ const decoration = computed(() => {
             srcDark: cfg.srcDark,
             wide: !!cfg.wide,
             lightForeground: cfg.lightForeground,
+            themeTint: false,
             imgClass: "",
             imgClassLight: `${primaryBaseClass} resume-exp-logo-img--theme-light`,
             imgClassDark: `${primaryBaseClass} resume-exp-logo-img--theme-dark`,
@@ -237,6 +269,7 @@ const decoration = computed(() => {
             src: cfg.src,
             wide: !!cfg.wide,
             lightForeground: cfg.lightForeground,
+            themeTint: primaryThemeTint,
             imgClass: primaryBaseClass,
           },
     ];
@@ -248,10 +281,13 @@ const decoration = computed(() => {
         wideTall: companionWideTall,
         smaller: companionSmaller,
       } = normalizeCompanion(c);
+      const companionThemeTint = !companionSrcDark && invertInDarkMode;
       const companionBase = imgClassList(
         companionPillWide,
-        companionSrcDark ? false : invertInDarkMode,
+        companionThemeTint ? false : (companionSrcDark ? false : invertInDarkMode),
         companionWideTall,
+        companionThemeTint,
+        false,
       );
       const sm = companionSmaller ? " resume-exp-logo-img--companion-sm" : "";
       if (companionSrcDark) {
@@ -260,6 +296,7 @@ const decoration = computed(() => {
           srcDark: companionSrcDark,
           wide: companionPillWide,
           companionSm: companionSmaller,
+          themeTint: false,
           imgClass: "",
           imgClassLight: `${companionBase}${sm} resume-exp-logo-img--theme-light`,
           imgClassDark: `${companionBase}${sm} resume-exp-logo-img--theme-dark`,
@@ -269,6 +306,7 @@ const decoration = computed(() => {
           src,
           wide: companionPillWide,
           companionSm: companionSmaller,
+          themeTint: companionThemeTint,
           imgClass: `${companionBase}${sm}`,
         });
       }
@@ -287,6 +325,7 @@ const decoration = computed(() => {
         kind: "single" as const,
         sig,
         primary: cfg,
+        themeTint: false,
         imgClass: "",
         imgClassLight: `${primaryBaseClass} resume-exp-logo-img--theme-light`,
         imgClassDark: `${primaryBaseClass} resume-exp-logo-img--theme-dark`,
@@ -295,6 +334,7 @@ const decoration = computed(() => {
         kind: "single" as const,
         sig,
         primary: cfg,
+        themeTint: primaryThemeTint,
         imgClass: primaryBaseClass,
       };
 });

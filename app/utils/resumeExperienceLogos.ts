@@ -59,6 +59,11 @@ export type ResumeExperienceLogo = {
    * max-width for very horizontal marks (UNH is width-limited before height).
    */
   wideTall?: boolean | "xl";
+  /**
+   * Theme-tint masks: use `mask-mode: alpha` so dark-gray SVG fills stay fully opaque.
+   * Luminance mode fades #111827 / #262626 / slate fills (looks faint vs Turo’s black+white).
+   */
+  maskAlpha?: boolean;
 };
 
 const LOGO_BY_COMPANY: Partial<
@@ -103,11 +108,17 @@ const LOGO_BY_COMPANY: Partial<
   "Frog Design": {
     src: "/resume-logos/frog-design.svg",
     invertInDarkMode: true,
+    maskAlpha: true,
   },
-  Yahoo: { src: "/resume-logos/earlier-yahoo.svg", invertInDarkMode: true },
+  Yahoo: {
+    src: "/resume-logos/earlier-yahoo.svg",
+    invertInDarkMode: true,
+    maskAlpha: true,
+  },
   "Monster.com": {
     src: "/resume-logos/earlier-monster.svg",
     invertInDarkMode: true,
+    maskAlpha: true,
   },
   "GE Fanuc / Intellution": {
     src: "/resume-logos/earlier-ge.svg",
@@ -122,6 +133,7 @@ const LOGO_BY_COMPANY: Partial<
   "University of New Hampshire": {
     src: "/resume-logos/unh-icon.svg?v=2",
     invertInDarkMode: true,
+    maskAlpha: true,
   },
 };
 
@@ -134,6 +146,28 @@ function normalizeCompanySegment(raw: string): string {
     .trim();
 }
 
+/** Resolve a string against `LOGO_BY_COMPANY` keys (exact or case-insensitive). */
+function matchKnownCompany(normalized: string): ResumeCompanyName | null {
+  if (!normalized) {
+    return null;
+  }
+  if (normalized in LOGO_BY_COMPANY) {
+    return normalized as ResumeCompanyName;
+  }
+  const lower = normalized.toLowerCase();
+  for (const key of Object.keys(LOGO_BY_COMPANY) as ResumeCompanyName[]) {
+    if (key.toLowerCase() === lower) {
+      return key;
+    }
+  }
+  return null;
+}
+
+/**
+ * Headings are either company-first (Education: `**UNH**, degree · place`) or
+ * role-first (Experience: `**Role**, Company · place`). Match the segment that
+ * corresponds to a known logo name.
+ */
 export function parseCompanyFromExperienceHeading(
   text: string,
 ): ResumeCompanyName | null {
@@ -146,17 +180,19 @@ export function parseCompanyFromExperienceHeading(
   if (comma <= 0) {
     return null;
   }
-  const name = normalizeCompanySegment(t.slice(0, comma));
-  if (name in LOGO_BY_COMPANY) {
-    return name as ResumeCompanyName;
+  const beforeComma = normalizeCompanySegment(t.slice(0, comma));
+  const fromBefore = matchKnownCompany(beforeComma);
+  if (fromBefore) {
+    return fromBefore;
   }
-  const lower = name.toLowerCase();
-  for (const key of Object.keys(LOGO_BY_COMPANY) as ResumeCompanyName[]) {
-    if (key.toLowerCase() === lower) {
-      return key;
-    }
-  }
-  return null;
+
+  const afterComma = t.slice(comma + 1).trim();
+  const dotMatch = afterComma.match(/[\u00B7·]/);
+  const companySegment =
+    dotMatch && dotMatch.index !== undefined && dotMatch.index > 0
+      ? afterComma.slice(0, dotMatch.index).trim()
+      : afterComma.split(/,/)[0]?.trim() ?? "";
+  return matchKnownCompany(normalizeCompanySegment(companySegment));
 }
 
 export function logoForResumeCompany(
@@ -192,6 +228,7 @@ export function resumeExperienceLogoSignature(logo: ResumeExperienceLogo): strin
     logo.companionWide === undefined ? "" : logo.companionWide ? "cw1" : "cw0",
     logo.lightForeground ? "l" : "",
     logo.invertInDarkMode ? "i" : "",
+    logo.maskAlpha ? "ma" : "",
   ]
     .filter((segment) => segment !== "")
     .join("|");

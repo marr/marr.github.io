@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Render CV YAML to public/resume.pdf and content/resume.md (RenderCV CLI).
+# Render CV YAML to public/resume.pdf, public/resume-ats.pdf, and content/resume.md.
 # Optional: CV_PHONE="+14155551234" (E.164) to include a phone in the PDF
 # without committing it (see cv/david_marr_rendercv.yaml).
 set -euo pipefail
@@ -11,7 +11,8 @@ if ! python3 -c "import rendercv" 2>/dev/null; then
 fi
 
 GEN="$(mktemp)"
-trap 'rm -f "$GEN"' EXIT
+GEN_ATS="$(mktemp)"
+trap 'rm -f "$GEN" "$GEN_ATS"' EXIT
 
 # Build argv in one array so `set -u` never expands an empty/unset optional array
 # (some Bash versions error on "${optional[@]}" when optional was never appended to).
@@ -27,6 +28,22 @@ if [ -n "${CV_PHONE:-}" ]; then
   cmd+=(--cv.phone "$CV_PHONE")
 fi
 "${cmd[@]}"
+
+# ATS-friendly PDF variant: plain contact line (no icon glyphs) for parsers.
+cmd_ats=(
+  python3 -m rendercv render "$ROOT/cv/david_marr_rendercv.yaml"
+  -o "$ROOT/.rendercv-output"
+  -pdf ../public/resume-ats.pdf
+  -md "$GEN_ATS"
+  -nohtml -nopng
+  -q
+  --design.header.connections.show_icons false
+  --design.header.connections.separator " | "
+)
+if [ -n "${CV_PHONE:-}" ]; then
+  cmd_ats+=(--cv.phone "$CV_PHONE")
+fi
+"${cmd_ats[@]}"
 
 python3 "$ROOT/scripts/harmonize_resume_headings.py" < "$GEN" > "${GEN}.harmonized"
 mv "${GEN}.harmonized" "$GEN"
