@@ -19,14 +19,12 @@ cv:
   email: "dave.marr@gmail.com"
   sections:
     summary:
-      - "Twenty-five years building demanding web products and the data behind them:
-        marketplaces, business software, and energy and climate tools. I stay hands
-        on while growing teams, raising quality, and shipping faster. I own the path
-        from browser through APIs and work closely with data and machine learning
-        partners."
+      - "Twenty-five years of experience building demanding web products and the data behind them:
+        marketplaces, business software, and energy and climate tools. Owning the path
+        from browser through APIs and working closely with data and machine learning
+        partners, allows me to stay hands on while also growing teams, raising quality, and shipping faster."
       - "My current focus is AI-assisted development: tools and custom automation that
-        turn specs into shippable features with tight spec-and-build loops (including
-        ralph-loop style runs) so teams spend less time on glue work and more on the
+        turn specs into shippable features with tight spec-and-build loops, allowing teams to spend more time on the
         product."
     experience:
       - company: "Context Labs"
@@ -34,42 +32,36 @@ cv:
         start_date: 2022-06
         end_date: 2026-03
         location: "Cambridge, MA"
-        summary: "Live analytics for global energy and sustainability teams (Vue, Nuxt).
-          Owned customer-facing web apps, APIs, and authentication and access control,
-          plus hands-on work on data-heavy screens; set quarterly goals and kept teams
+        summary:
+          "Created and managed data software (Vue/Nuxt) for global energy and sustainability teams.
+          Integrated graph database with ontological classification system to support OGMP reporting standards. Defined OKRs for engineering to keep teams
           aligned across the company."
         highlights:
-          - "Managed nine engineers across three continents; mentored engineers and team leads; set goals and ran reviews focused on speed and ownership."
-          - "Designed and shipped decarbonization reporting: greenhouse gas inventories,
-            charts, and compliance-style reporting for large energy programs (CO₂e)."
+          - "Managed nine engineers across three continents and mentored engineers and team leads."
+          - "Developed pathway optimization tools for routing and delivery of NextGen energy products."
           - "Delivered multi-tenant enterprise features for customer organizations:
             single sign-on, role-based access, and localized UI in one codebase."
-          - "Built a component library using Vue, Tailwind, and Nuxt with charts and
-            maps, shared across multiple apps."
-          - "Shipped document-grounded AI (RAG): retrieval, context assembly, and
-            evaluation checks before release; spec-driven delivery and iteration."
-          - "Drove adoption of AI coding assistants and tightened CI/CD for the web
-            stack: faster incident recovery and more frequent deploys."
+          - "Built a shared component library for visualization of complex charts, maps, and data using Vue, Tailwind, and Nuxt."
+          - "Designed formal spec-driven delivery and iteration tools using AI and shell scripting."
+          - "Utilized DORA metrics (MTTR) leading to faster incident recovery and more frequent deploys."
       - company: "Filtered.ai"
         position: "Lead Engineer"
         start_date: 2020-02
         end_date: 2022-02
         location: "Boston, MA"
-        summary: "Hiring software for large employers in finance and tech: high volume
-          from application through interview, with automatic scoring and fraud checks."
+        summary: "Hiring software for large employers in finance and tech. Owned scheduling, candidate flows, assessment sites, and live video interviews for technical hiring at scale."
         highlights:
-          - "Owned scheduling, candidate flows, assessment sites, and live video
-            interviews for technical hiring at scale."
-          - "Built automatic scoring, instant feedback to candidates, and fraud
-            detection; defined success metrics with product and data science and
-            tracked model and funnel health in production."
+          - "Built automatic scoring, instant candidate feedback, and fraud
+            detection for technical assessment platform."
+          - "Used site data and product metrics to identify and fix bottlenecks in candidate experience, improving
+            completion rates and time to hire."
       - company: "Turo"
         position: "Staff Software Engineer"
         start_date: 2018-04
         end_date: "2019-12"
         location: "San Francisco, CA & Cambridge, MA"
-        summary: "Product for people who list their cars while the marketplace grew
-          fast. Owned work that helped hosts stay active, keep listings in good shape,
+        summary:
+          "Owned work that helped hosts stay active, keep listings in good shape,
           and earn more; worked with analytics to see what moved the numbers and what
           to ship next."
         highlights:
@@ -77,100 +69,106 @@ cv:
             pricing for the full host base, raising utilization and host-side revenue;
             partnered with analytics to quantify lift and iterate releases."
           - "Ran the All-star host program end to end, linking rewards to quality
-            and whether hosts stuck around."
+            and host retention."
       - company: "OneMarket / Westfield Labs"
         position: "Senior Software Architect"
         start_date: "2016-01"
         end_date: 2018-05
         location: "San Francisco, CA & London, UK"
-        summary: "Built retail software that spans the web and the physical mall: parking, payments, and finding your way inside busy shopping centers."
+        summary: "Built omnichannel software for retailers including parking, payments, and finding your way inside busy shopping centers."
         highlights:
-          - "Designed parking and payment products: recognition at the gate,
-            subscriptions, and automated gates; rolled out across Westfield malls in
-            production."
-          - "Built indoor maps and turn by turn directions using beacons in malls
+          - "Designed smart parking product which included subscription based payments and automated entry using facial recognition at the gate."
+          - "Crafted indoor maps and turn-by-turn directions using beacons in malls
             for partners to confirm store footprints."
           - "Designed APIs and customer facing apps for Westfield locations
-            worldwide; React, Node, PostgreSQL."
+            worldwide using React, Node.js, and PostgreSQL."
       - company: "Tilt.com"
         position: "Senior Systems Engineer"
         start_date: 2013-07
         end_date: 2015-12
         location: "San Francisco, CA"
-        summary: "Responsible for signup and core product flows. Focused on conversion, uptime, and handling spikes when demand peaked."
-        highlights:
-          - "Redesigned signup and onboarding flows (~15% lift in conversions and
-            revenue)."
-      - company: "Say Media"
+        summary:
+          "Responsible for signup and core product flows. Focused on conversion, uptime, and handling spikes
+          when demand peaked. Redesigned signup and onboarding flows (~15% lift in conversions and revenue)."
+      - company: "Say Media (formerly VideoEgg)"
         position: "Senior Software Engineer"
         start_date: 2012-03
         end_date: 2013-04
         location: "San Francisco, CA"
-        summary: "Publisher network (VideoEgg / Six Apart); Django for editorial and
-          publishing tools."
-        highlights:
-          - "Improved engaged time across sites: in-article user reactions, editorial
-            tooling, and modules for recirculation and related content (headlines owned
-            by editorial)."
+        summary:
+          "Improved engaged time across sites through features like in-article user reactions, editorial
+          tooling, and modules for recirculation and related content."
       - company: "CBS Interactive"
         position: "Senior Front End Web Developer"
         start_date: 2011-06
         end_date: 2011-12
         location: "San Francisco, CA"
-        summary: "Built features for tv.com with Python and JavaScript; A/B tested
+        summary:
+          "Built features for tv.com with Python and JavaScript; A/B tested
           variants on core flows to improve engagement and conversion."
       - company: "Secret Feature"
         position: "Technical Co-Founder / CTO"
         start_date: 2010-01
         end_date: 2011-05
         location: "San Francisco, CA"
-        summary: "The company split time between client agency work and internal
-          creative experiments (social, video, exploratory product)."
+        summary: "Developed creative social media applications using JavaScript and Python; built a team and raised funding to launch products."
       - company: "Frog Design"
         position: "Design Technologist"
         start_date: 2009-01
         end_date: 2010-03
         location: "San Francisco, CA"
-        summary: "Built web applications for MagicBand wristband at Disney World, and other prototypes and code on small devices in hardware."
+        summary: "Built web application for MagicBand wristband at Disney World. Integrated cellular video into portable hardware device. Developed software prototypes for mobile devices."
       - company: "Yahoo"
         position: "Senior Frontend Engineer"
         start_date: 2006-09
         end_date: 2008-12
         location: "Sunnyvale / San Francisco, CA"
-        highlights:
-          - "Built Yahoo! Answers integration for the Small Business product (PHP,
-            MySQL, high traffic)."
-          - "Shipped Yahoo! Live live streaming at Brickhouse (frontend and playback
-            UX); the product reached 60+ minute average time on site and ~2M signups
-            in nine months."
+        summary:
+          "Built Yahoo! Answers integration for the high traffic Small Business product using PHP and MySQL.
+          Shipped Yahoo! Live live streaming at Brickhouse, reaching 60+ minute average time on site and ~2M signups in nine months."
       - company: "Monster.com"
         position: "Senior Web Developer"
         start_date: 2004-03
         end_date: 2006-08
         location: "Maynard, MA"
-        highlights:
-          - "careers.monster.com (Webby-recognized career advice): CMS, information
-            architecture, and front-end work on career content."
-          - "Migrated the content system from classic ASP to ASP.NET."
+        summary:
+          "Built and maintained Webby-recognized careers.monster.com; worked with editorial
+          and content teams to design and implement features for career advice and job search."
+      - company: "SoftArtisans"
+        position: "Web Applications Developer"
+        start_date: 2003-03
+        end_date: 2004-04
+        location: "Brookline, MA"
+        summary: "Developed enterprise file upload software (SAFileUp) using Microsoft technologies."
+      - company: "GE Fanuc / Intellution"
+        position: "Web Developer"
+        start_date: 2000-09
+        end_date: 2003-12
+        location: "Foxborough, MA"
+        summary: "Built web interfaces for industrial automation and control system software using SQL Server, classic ASP, and IIS."
     education:
       - institution: "University of New Hampshire"
         area: "Management of Information Systems"
         degree: "BS, Business Administration"
         start_date: "1996-09"
         end_date: 2000-05
-        location: "Durham, NH"
-        summary: "Dean's List"
+        summary: "Focus: Management of Information Systems. Dean's List."
     skills:
       - label: "Languages"
         details: "JavaScript, TypeScript, Go, Python, HTML, CSS"
       - label: "Infrastructure & data"
-        details: "Docker, Kubernetes, Amazon Web Services, Google Cloud Platform, OpenAPI, PostgreSQL, MongoDB, Trino, ArcadeDB, OrientDB"
-      - label: "UI Frameworks and libraries"
+        details: "Docker, Kubernetes, Amazon Web Services, Google Cloud Platform, OpenAPI, PostgreSQL, MongoDB, Trino, ArcadeDB, OrientDB, GraphQL"
+      - label: "Frameworks & libraries"
         details: "Vue, React, Tailwind, TanStack, Vega Lite, WebGL, Mapbox,
           Maplibre, Deck.gl, Nuxt, Vite, Vitest"
       - label: "AI"
-        details: "Azure Foundry, RAG, OpenAI, Anthropic, Google Gemini, Claude"
+        details: "Azure AI Foundry, OpenAI, Anthropic Claude, Google Gemini, RAG, LangChain, MCP"
   website: https://marr.github.io
+
+locale:
+  language: english
+  phrases:
+    degree_with_area: "DEGREE"
 
 design:
   theme: moderncv
@@ -235,7 +233,7 @@ design:
       hyperlink: true
       show_icons: true
       display_urls_instead_of_usernames: false
-      separator: ''
+      separator: ""
       space_between_connections: 0.5cm
   section_titles:
     type: moderncv
@@ -265,16 +263,17 @@ design:
       space_between_items: 0.09cm
       space_between_bullet_and_text: 0.3em
   templates:
-    footer: '*NAME -- PAGE_NUMBER/TOTAL_PAGES*'
-    top_note: '*LAST_UPDATED CURRENT_DATE*'
+    footer: "*NAME -- PAGE_NUMBER/TOTAL_PAGES*"
+    top_note: "*LAST_UPDATED CURRENT_DATE*"
     single_date: MONTH_ABBREVIATION YEAR
     date_range: START_DATE – END_DATE
     time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
     one_line_entry:
-      main_column: '**LABEL:** DETAILS'
+      main_column: "**LABEL:** DETAILS"
     education_entry:
       main_column: |-
-        **INSTITUTION**, DEGREE_WITH_AREA -- LOCATION
+        **INSTITUTION**
+        DEGREE_WITH_AREA -- LOCATION
         SUMMARY
         HIGHLIGHTS
       degree_column:
