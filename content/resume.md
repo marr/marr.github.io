@@ -148,7 +148,7 @@ Developed enterprise file upload software (SAFileUp) using Microsoft technologie
 
 ### **Web Developer**, GE Fanuc / Intellution · Foxborough, MA
 
-Sept 2000 – Dec 2003
+Sept 2000 – Jan 2003
 
 Built web interfaces for industrial automation and control system software using SQL Server, classic ASP, and IIS.
 
