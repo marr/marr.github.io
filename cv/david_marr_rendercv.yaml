@@ -143,7 +143,7 @@ cv:
       - company: "GE Fanuc / Intellution"
         position: "Web Developer"
         start_date: 2000-09
-        end_date: 2003-12
+        end_date: 2003-01
         location: "Foxborough, MA"
         summary: "Built web interfaces for industrial automation and control system software using SQL Server, classic ASP, and IIS."
     education:
