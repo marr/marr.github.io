@@ -123,6 +123,7 @@ const LOGO_BY_COMPANY: Partial<
   "GE Fanuc / Intellution": {
     src: "/resume-logos/earlier-ge.svg",
     invertInDarkMode: true,
+    maskAlpha: true,
   },
   /* Navy/grey on white — works on light UI; invert on dark */
   SoftArtisans: {
@@ -132,6 +133,8 @@ const LOGO_BY_COMPANY: Partial<
   },
   "University of New Hampshire": {
     src: "/resume-logos/unh-icon.svg?v=2",
+    wide: true,
+    wideTall: true,
     invertInDarkMode: true,
     maskAlpha: true,
   },
@@ -144,6 +147,11 @@ function normalizeCompanySegment(raw: string): string {
     .replace(/\s+/g, " ")
     .replace(/\*\*/g, "")
     .trim();
+}
+
+/** Strip trailing ` (formerly …)`, ` (acquired by …)`, etc. — keys use the short name only. */
+function stripTrailingParentheticals(s: string): string {
+  return s.replace(/\s*\([^)]*\)\s*$/u, "").trim();
 }
 
 /** Resolve a string against `LOGO_BY_COMPANY` keys (exact or case-insensitive). */
@@ -159,6 +167,10 @@ function matchKnownCompany(normalized: string): ResumeCompanyName | null {
     if (key.toLowerCase() === lower) {
       return key;
     }
+  }
+  const stripped = stripTrailingParentheticals(normalized);
+  if (stripped && stripped !== normalized) {
+    return matchKnownCompany(stripped);
   }
   return null;
 }
@@ -178,7 +190,8 @@ export function parseCompanyFromExperienceHeading(
   const commaMatch = t.match(/[,\uFF0C]/);
   const comma = commaMatch?.index ?? -1;
   if (comma <= 0) {
-    return null;
+    /* Education etc.: `### **University of New Hampshire**` — no comma, whole line is the school name. */
+    return matchKnownCompany(normalizeCompanySegment(t));
   }
   const beforeComma = normalizeCompanySegment(t.slice(0, comma));
   const fromBefore = matchKnownCompany(beforeComma);

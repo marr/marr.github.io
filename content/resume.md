@@ -12,7 +12,6 @@ Also available as [**PDF**](/resume.pdf){external}.
 
 # David Marr's CV
 
-- Phone: +1 415 248 6633
 - Email: [dave.marr@gmail.com](mailto:dave.marr@gmail.com)
 - Location: Boston, MA
 - Website: [marr.github.io](https://marr.github.io/)
@@ -148,7 +147,7 @@ Developed enterprise file upload software (SAFileUp) using Microsoft technologie
 
 ### **Web Developer**, GE Fanuc / Intellution · Foxborough, MA
 
-Sept 2000 – Jan 2003
+Sept 2000 – Feb 2003
 
 Built web interfaces for industrial automation and control system software using SQL Server, classic ASP, and IIS.
 

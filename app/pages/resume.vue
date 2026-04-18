@@ -318,8 +318,7 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
 }
 
 /*
- * invertInDarkMode assets: mask from the same URL, fill with Nuxt UI primary (teal).
- * A 90/10 text/primary mix was effectively identical to --ui-text (computed ~L 0.92); use primary directly.
+ * invertInDarkMode + theme-tint: mask from asset URL; fill matches the role heading line (not section-label primary).
  */
 .resume-content :deep(.resume-exp-logo-img--theme-tint) {
   flex-shrink: 0;
@@ -328,7 +327,7 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   max-height: 2.75rem;
   object-fit: none;
   opacity: 1;
-  background-color: var(--ui-primary);
+  background-color: var(--ui-text-highlighted);
   -webkit-mask-image: var(--resume-logo-src);
   mask-image: var(--resume-logo-src);
   -webkit-mask-size: contain;
