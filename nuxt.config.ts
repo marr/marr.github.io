@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     "components:extend": (components) => {
       // Mark all content directory components as global for synchronous loading
       const contentComponents = components.filter((c) =>
-        c.filePath?.includes("/components/content/")
+        c.filePath?.includes("/components/content/"),
       );
       contentComponents.forEach((c) => (c.global = true));
     },
@@ -87,5 +87,11 @@ export default defineNuxtConfig({
   routeRules: {
     "/nuxt-maplibre": { prerender: false },
     "/vue-squircle": { prerender: false },
+    "/resume.pdf": {
+      headers: {
+        "Content-Type": "application/pdf",
+        "Cache-Control": "public, max-age=31536000",
+      },
+    },
   },
 });
