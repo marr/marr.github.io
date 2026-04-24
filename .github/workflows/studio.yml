@@ -73,9 +73,6 @@ jobs:
 
       - name: Generate
         run: npx nuxi build --preset github_pages
-        env:
-          NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
-          
 
       # Deployment job
       - name: Deploy 🚀
