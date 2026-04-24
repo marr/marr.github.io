@@ -202,6 +202,18 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   :::project-card
   ---
   tags:
+    - 3D
+    - SVG
+  description: Tiny engine for 3D voxel scenes rendered to SVG—boolean ops, oblique and perspective cams, zero dependencies.
+  icon: i-mdi-cube-outline
+  title: heerich
+  url: https://github.com/meodai/heerich
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
     - React
     - Full‑stack
   description: The next generation of full-stack web applications.
@@ -287,4 +299,24 @@ description: Older demos and experiments—still here for reference, not the mai
   url: https://claytonfarr.github.io/ralph-playbook/
   ---
   :::
+::
+
+::ai-skills-section
+---
+title: AI & taste
+description: Resources I reach for when steering agents and UIs—separate from the product stack list above.
+items:
+  - label: Impeccable
+    url: https://impeccable.style
+    hint: Design guidance for “good taste” in AI UIs
+  - label: Agents with taste
+    url: https://emilkowal.ski/ui/agents-with-taste
+    hint: Emil Kowalski on high-agency, detail-led interfaces
+  - label: Interface details
+    url: https://jakub.kr/writing/details-that-make-interfaces-feel-better
+    hint: Jakub Krośniak on micro-interactions and polish
+  - label: compound-engineering (Cursor plugin)
+    url: https://github.com/EveryInc/compound-engineering-plugin
+    hint: Workflow patterns in the editor
+---
 ::
