@@ -10,10 +10,16 @@
           aria-hidden="true"
         />
         <img
-          :key="avatarSrc"
-          :src="avatarSrc"
+          :src="avatar"
           :alt="title"
-          class="relative z-10 size-32 md:size-40 rounded-full ring-2 ring-default object-cover shadow-sm"
+          class="relative z-10 size-32 md:size-40 rounded-full ring-2 ring-default object-cover shadow-sm dark:hidden"
+          width="160"
+          height="160"
+        />
+        <img
+          :src="avatarDark"
+          :alt="title"
+          class="relative z-10 size-32 md:size-40 rounded-full ring-2 ring-default object-cover shadow-sm hidden dark:block"
           width="160"
           height="160"
         />
@@ -52,8 +58,6 @@
 </template>
 
 <script setup lang="ts">
-import { usePreferredColorScheme } from '@vueuse/core'
-
 interface Social {
   icon: string
   url: string
@@ -71,7 +75,7 @@ interface Props {
   socials?: Social[]
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   title: '',
   description: '',
   avatar: '',
@@ -83,18 +87,4 @@ const props = withDefaults(defineProps<Props>(), {
   ],
   socials: () => [],
 })
-
-const colorMode = useColorMode()
-const preferredScheme = usePreferredColorScheme()
-
-const isDark = computed(() => {
-  const v = colorMode.value
-  if (v === 'dark') return true
-  if (v === 'light') return false
-  return preferredScheme.value === 'dark'
-})
-
-const avatarSrc = computed(() =>
-  isDark.value ? props.avatarDark : props.avatar,
-)
 </script>
