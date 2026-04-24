@@ -1,8 +1,10 @@
 <script setup lang="ts">
-const route = useRoute();
-const { data: page } = await useAsyncData("page-" + route.path, () => {
-  return queryCollection("content").path(route.path).first();
-});
+const contentPath = useContentPath();
+const { data: page } = await useAsyncData(
+  () => `page-${contentPath.value}`,
+  () => queryCollection("content").path(contentPath.value).first(),
+  { watch: [contentPath] },
+);
 
 if (!page.value) {
   throw createError({
