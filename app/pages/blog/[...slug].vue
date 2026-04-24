@@ -3,10 +3,12 @@ definePageMeta({
   layout: "blog",
 });
 
-const route = useRoute();
-const { data: page } = await useAsyncData("blog-" + route.path, () => {
-  return queryCollection("blog").path(route.path).first();
-});
+const contentPath = useContentPath();
+const { data: page } = await useAsyncData(
+  () => `blog-${contentPath.value}`,
+  () => queryCollection("blog").path(contentPath.value).first(),
+  { watch: [contentPath] },
+);
 
 if (!page.value) {
   throw createError({
