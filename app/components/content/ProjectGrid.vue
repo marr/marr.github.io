@@ -17,7 +17,7 @@
         {{ description }}
       </p>
     </header>
-    <div class="grid gap-4 sm:grid-cols-2">
+    <div class="home-stagger-grid grid gap-4 sm:grid-cols-2">
       <slot />
     </div>
   </section>

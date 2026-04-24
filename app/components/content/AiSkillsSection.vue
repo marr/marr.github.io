@@ -17,7 +17,7 @@
         {{ description }}
       </p>
     </header>
-    <ul class="space-y-3 max-w-prose">
+    <ul class="home-stagger-list space-y-3 max-w-prose">
       <li
         v-for="(item, i) in items"
         :key="i"

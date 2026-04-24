@@ -1,14 +1,14 @@
 <template>
   <UCard
     :ui="{
-      root: 'group ring-1 ring-inset ring-default/40 transition-all duration-300 hover:-translate-y-0.5 hover:ring-primary/50 hover:shadow-md hover:shadow-primary/5',
+      root: 'group ring-1 ring-inset ring-default/40 transition-[transform,box-shadow,ring-color] duration-200 [transition-timing-function:cubic-bezier(0.23,1,0.32,1)] motion-safe:hover:-translate-y-0.5 hover:ring-primary/50 hover:shadow-md hover:shadow-primary/5',
     }"
   >
     <div class="flex items-start gap-4">
       <!-- Icon or custom image (e.g. project logo from public/) -->
       <div
         v-if="image || icon"
-        class="flex items-center justify-center rounded-lg bg-elevated/80 p-2.5 ring-1 ring-inset ring-default/30 group-hover:bg-primary/10 group-hover:ring-primary/25 transition-all duration-300 shrink-0"
+        class="flex items-center justify-center rounded-lg bg-elevated/80 p-2.5 ring-1 ring-inset ring-default/30 group-hover:bg-primary/10 group-hover:ring-primary/25 transition-[background-color,ring-color,opacity] duration-200 [transition-timing-function:cubic-bezier(0.23,1,0.32,1)] shrink-0"
       >
         <img
           v-if="image"
