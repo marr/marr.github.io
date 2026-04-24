@@ -2,8 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // @nuxt/content ~3.11.x until https://github.com/nuxt/content/issues/3742 (broken import in 3.12.0)
 export default defineNuxtConfig({
-  modules: ["@nuxt/ui", "@nuxt/content", "nuxt-studio"],
-  $production: { studio: false },
+  modules: ["@nuxt/ui", "@nuxt/content"],
   devtools: { enabled: true },
   app: {
     head: {
@@ -75,18 +74,6 @@ export default defineNuxtConfig({
       alias: {
         button: "UButton",
       },
-    },
-  },
-  studio: {
-    // Studio admin route (default: '/_studio')
-    route: "/_studio",
-
-    // Git repository configuration (owner and repo are required)
-    repository: {
-      provider: "github", // 'github' or 'gitlab'
-      owner: "marr", // your GitHub/GitLab username or organization
-      repo: "marr.github.io", // your repository name
-      branch: "main", // the branch to commit to (default: main)
     },
   },
   routeRules: {
