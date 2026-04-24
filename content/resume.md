@@ -33,7 +33,7 @@ Created and managed data software (Vue/Nuxt) for global energy and sustainabilit
 
 - Developed pathway optimization tools for routing and delivery of NextGen energy products.
 
-- Delivered multi-tenant enterprise features for customer organizations: single sign-on, role-based access, and localized UI in one codebase.
+- Delivered multi-tenant enterprise features for customer organizations: single sign-on, role‑based access, and localized UI in one codebase.
 
 - Built a shared component library for visualization of complex charts, maps, and data using Vue, Tailwind, and Nuxt.
 
