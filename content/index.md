@@ -194,12 +194,12 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   :::project-card
   ---
   tags:
-    - GLSL
+    - WebGPU
     - Tools
-  description: GLSL tools and a shader playground in the browser.
+  description: WebGPU component library for creative effects in Vue, React, Svelte, Solid, and vanilla JS.
   icon: i-mdi-gradient-horizontal
-  title: shaders.io
-  url: https://shaders.io
+  title: shaders.com
+  url: https://shaders.com
   ---
   :::
 
