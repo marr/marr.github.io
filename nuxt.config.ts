@@ -36,6 +36,11 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include: ["clsx", "tailwind-merge"],
     },
+    // Cloud / port-forward hostnames are not localhost; allow them so the app loads
+    // in Cursor’s Simple Browser and in the browser tab that uses the forwarded URL.
+    server: {
+      allowedHosts: true,
+    },
   },
   css: ["~/assets/css/main.css"],
   compatibilityDate: "2026-03-03",

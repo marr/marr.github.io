@@ -19,13 +19,13 @@ cv:
   email: "dave.marr@gmail.com"
   sections:
     summary:
-      - "Twenty-five years of experience building demanding web products and the data behind them:
-        marketplaces, business software, and energy and climate tools. Owning the path
-        from browser through APIs and working closely with data and machine learning
-        partners, allows me to stay hands on while also growing teams, raising quality, and shipping faster."
-      - "My current focus is AI-assisted development: tools and custom automation that
-        turn specs into shippable features with tight spec-and-build loops, allowing teams to spend more time on the
-        product."
+      - "I work hands-on in production with product and customer organizations, shipping across the browser, APIs, and
+        data for large multi-tenant enterprise software. Most recently that work has been with global energy and
+        sustainability teams: graph-structured and ontology-rich data, plus reporting with strong compliance
+        and standards requirements (e.g. OGMP), with the same skills applying in other complex, regulated
+        product settings."
+      - "I also use spec-driven and AI-assisted build loops to turn written specs into shippable features with tight
+        feedback, so teams spend less time on throwaway work and more on the product."
     experience:
       - company: "Context Labs"
         position: "Engineering Lead (UI)"
@@ -40,7 +40,7 @@ cv:
           - "Managed nine engineers across three continents and mentored engineers and team leads."
           - "Developed pathway optimization tools for routing and delivery of NextGen energy products."
           - "Delivered multi-tenant enterprise features for customer organizations:
-            single sign-on, role-based access, and localized UI in one codebase."
+            single sign-on, role\u2011based access, and localized UI in one codebase."
           - "Built a shared component library for visualization of complex charts, maps, and data using Vue, Tailwind, and Nuxt."
           - "Designed formal spec-driven delivery and iteration tools using AI and shell scripting."
           - "Utilized DORA metrics (MTTR) leading to faster incident recovery and more frequent deploys."
@@ -192,7 +192,9 @@ design:
     top_note: rgb(0, 0, 0)
   typography:
     line_spacing: 0.54em
-    alignment: justified
+    # Avoid TeX/typst hyphenation at line breaks; plain hyphens in words (e.g. e-mail) stay.
+    # Improves ATS text extraction (no "role-" / "based" splits on separate lines).
+    alignment: justified-with-no-hyphenation
     date_and_location_column_alignment: right
     font_family:
       body: Raleway
