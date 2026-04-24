@@ -18,9 +18,9 @@ Also available as [**PDF**](/resume.pdf){external}.
 
 
 ## Summary
-Twenty-five years of experience building demanding web products and the data behind them: marketplaces, business software, and energy and climate tools. Owning the path from browser through APIs and working closely with data and machine learning partners, allows me to stay hands on while also growing teams, raising quality, and shipping faster.
+I work hands-on in production with product and customer organizations, shipping across the browser, APIs, and data for large multi-tenant enterprise software. Most recently that work has been with global energy and sustainability teams: graph-structured and ontology-rich data, plus compliance- and standards-heavy reporting (e.g. OGMP), with the same skills applying in other complex, regulated product settings.
 
-My current focus is AI-assisted development: tools and custom automation that turn specs into shippable features with tight spec-and-build loops, allowing teams to spend more time on the product.
+I also use spec-driven and AI-assisted build loops to turn written specs into shippable features with tight feedback, so teams spend less time on throwaway work and more on the product.
 
 ## Experience
 ### **Engineering Lead (UI)**, Context Labs · Cambridge, MA
