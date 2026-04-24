@@ -1,6 +1,6 @@
 ---
 title: A simple publishing platform
-description: How I built this site with Nuxt Studio and Nuxt UI
+description: How I built this site with Nuxt Content and Nuxt UI
 date: 2026-01-18T00:00:00.000Z
 ---
 
@@ -8,12 +8,11 @@ I've been through the cycle of over-engineering personal sites more times than I
 
 ## The stack
 
-With [Nuxt Studio](https://nuxt.studio) and [Nuxt UI](https://ui.nuxt.com), I can publish and host my site for free. Here's what powers it:
+With [Nuxt UI](https://ui.nuxt.com) and a Git-based content workflow, I can publish and host my site for free. Here's what powers it:
 
 - **Nuxt 4** – The Vue framework for the modern web
 - **Nuxt Content** – File-based CMS with MDC support
 - **Nuxt UI** – Beautiful components out of the box
-- **Nuxt Studio** – Visual editing and Git-based publishing
 
 ## Why this approach
 
@@ -21,9 +20,9 @@ There's no database to manage, no CMS admin panel to secure, and no monthly host
 
 The real magic is [MDC (Markdown Components)](https://content.nuxt.com/docs/files/markdown#mdc-syntax). It lets me drop Vue components directly into Markdown, which means I can build custom layouts and interactive elements without leaving the content files. The home page project cards? Those are MDC components.
 
-## Nuxt Studio for editing
+## Editing in the repo
 
-While I typically write in my editor, Nuxt Studio provides a visual interface for content editing. It connects directly to the Git repository, so changes still go through version control. This is useful for quick edits or when I want to preview changes before committing.
+I write in my editor; commits go through Git as usual. Local `pnpm dev` shows the same setup the static site uses after CI builds.
 
 ## Keeping it simple
 
