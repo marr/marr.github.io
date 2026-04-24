@@ -59,7 +59,7 @@ description: Repos I maintain—shipping work you can inspect and reuse.
 ::project-grid
 ---
 title: Staples
-description: Tools I keep coming back to—data viz, docs, and platforms that stay in rotation.
+description: Tools I keep coming back to—data viz, docs, app shell, and UI patterns that stay in rotation.
 ---
   :::project-card
   ---
@@ -84,6 +84,42 @@ description: Tools I keep coming back to—data viz, docs, and platforms that st
   url: https://rendercv.com
   ---
   :::
+
+  :::project-card
+  ---
+  tags:
+    - Framework
+    - Vue
+  description: The intuitive Vue framework for production—SSR, file routing, and modules.
+  icon: i-mdi-nuxt
+  title: Nuxt
+  url: https://nuxt.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Notes
+    - PKM
+  description: A powerful knowledge base that works on local Markdown files.
+  icon: i-logos-obsidian-icon
+  title: Obsidian
+  url: https://obsidian.md
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - React
+    - Design System
+  description: Copy-paste components built on Radix and Tailwind.
+  icon: i-mdi-palette-swatch
+  title: shadcn/ui
+  url: https://ui.shadcn.com
+  ---
+  :::
 ::
 
 ::project-grid
@@ -99,18 +135,6 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   icon: i-mdi-file-tree
   title: comark
   url: https://comark.dev
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - React
-    - Design System
-  description: Copy-paste components built on Radix and Tailwind.
-  icon: i-mdi-palette-swatch
-  title: shadcn/ui
-  url: https://ui.shadcn.com
   ---
   :::
 
@@ -165,18 +189,6 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   :::project-card
   ---
   tags:
-    - Framework
-    - Vue
-  description: The intuitive Vue framework for production—SSR, file routing, and modules.
-  icon: i-mdi-nuxt
-  title: Nuxt
-  url: https://nuxt.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
     - React
     - Full‑stack
   description: The next generation of full-stack web applications.
@@ -218,18 +230,6 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   image: /pi-logo.svg
   title: pi-mono
   url: https://github.com/badlogic/pi-mono
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - Notes
-    - PKM
-  description: A powerful knowledge base that works on local Markdown files.
-  icon: i-logos-obsidian-icon
-  title: Obsidian
-  url: https://obsidian.md
   ---
   :::
 ::
