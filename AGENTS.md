@@ -11,13 +11,14 @@ This is a Nuxt 4 personal portfolio/blog site (`@dmarr/cv`). It is a single appl
 | Action | Command |
 |--------|---------|
 | Install deps | `pnpm install` |
-| Dev server | `pnpm dev` (serves at `http://localhost:3000`) — if file watchers miss changes (e.g. Docker bind mounts), set **`DEV_USE_POLLING=1`** to enable chokidar + Vite polling. **404 on `/` after HMR** was a `route.path` / content path mismatch: catch-all pages use `useContentPath()` (`ufo`’s `withoutTrailingSlash`, same as `@nuxt/content`) so the index always queries `"/"`. |
+| Dev server | `pnpm dev` (serves at `http://localhost:3000`) |
 | Build | `pnpm build` |
 | Typecheck | `npx nuxi typecheck` |
 | Generate types | `npx nuxi prepare` |
 
 ### Notes
 
+- **Content routes:** `app/pages/[...slug].vue` and `blog/[...slug].vue` use `useContentPath()` so the index route always queries path `"/"` in `@nuxt/content` (router can surface `""`).
 - **Cursor skills:** Skills such as `/last30days` may appear in Cursor’s skills list and are invoked in the IDE; autonomous cloud agents do not necessarily run them unless you trigger them or wire equivalent tooling.
 - **No ESLint or linter** is configured in this project. Typecheck via `npx nuxi typecheck`.
 - **No automated tests** exist in this project.
