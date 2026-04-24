@@ -14,12 +14,16 @@ roles:
   - AI Tooling Builder
 socials:
   - icon: i-mdi-github
+    label: David Marr on GitHub
     url: https://github.com/marr
   - icon: i-mdi-twitter
+    label: David Marr on X
     url: https://x.com/dmarr
   - icon: i-mdi-linkedin
+    label: David Marr on LinkedIn
     url: https://linkedin.com/in/davidmarr
-avatar: /avatar.png
+avatar: /avatar.jpg
+avatarDark: /avatar.png
 description: Building AI tooling, developer productivity systems, and modern frontend frameworks.
 title: David Marr
 ---

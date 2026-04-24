@@ -49,8 +49,8 @@ interface Props {
   coolDownTime?: number;
 }
 const props = withDefaults(defineProps<Props>(), {
-  morphTime: 1.5,
-  coolDownTime: 0.5,
+  morphTime: 2.4,
+  coolDownTime: 0.85,
 });
 
 const textIndex = ref(0);
@@ -123,7 +123,10 @@ function animate() {
 }
 
 onMounted(() => {
-  animate();
+  nextTick(() => {
+    time.value = new Date();
+    animate();
+  });
 });
 
 onUnmounted(() => {
