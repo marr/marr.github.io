@@ -54,6 +54,19 @@ description: Repos I maintain—shipping work you can inspect and reuse.
   url: https://github.com/marr/flux-homelab-skill
   ---
   :::
+
+  :::project-card
+  ---
+  tags:
+    - Vue
+    - UI
+    - Deprecated
+  description: 'Vue squircle masks are largely superseded by native CSS `corner-shape: squircle`; demo kept for reference.'
+  icon: i-logos-vue
+  title: vue-squircle
+  url: https://marr.github.io/vue-squircle
+  ---
+  :::
 ::
 
 ::project-grid
@@ -239,19 +252,6 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
 title: Archive
 description: Older demos and experiments—still here for reference, not the main story.
 ---
-  :::project-card
-  ---
-  tags:
-    - Vue
-    - UI
-    - Deprecated
-  description: 'Vue squircle masks are largely superseded by native CSS `corner-shape: squircle`; demo kept for reference.'
-  icon: i-logos-vue
-  title: vue-squircle
-  url: https://marr.github.io/vue-squircle
-  ---
-  :::
-
   :::project-card
   ---
   tags:
