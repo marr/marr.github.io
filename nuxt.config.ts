@@ -1,5 +1,26 @@
 import tailwindcss from "@tailwindcss/vite";
 
+// Remote dev VMs (e.g. Cursor cloud under `/workspace`, Codespaces) often do not deliver reliable
+// native `fs.watch` events. @nuxt/content uses chokidar; without polling, markdown edits may not
+// update the local SQLite DB or trigger `nuxt-content:update` HMR without a full dev restart.
+// Set DEV_USE_POLLING=1 in dev to opt in; we also enable when the env looks like a cloud workspace.
+const cwd = process.cwd();
+const isLikelyCloudDevFs =
+  process.env.DEV_USE_POLLING === "1" ||
+  process.env.CODESPACES === "true" ||
+  process.env.REMOTE_CONTAINERS === "true" ||
+  process.env.GITPOD_WORKSPACE_ID !== undefined ||
+  cwd === "/workspace" ||
+  cwd.startsWith("/workspaces/");
+if (isLikelyCloudDevFs) {
+  if (!process.env.CHOKIDAR_USEPOLLING) {
+    process.env.CHOKIDAR_USEPOLLING = "true";
+  }
+  if (!process.env.CHOKIDAR_INTERVAL) {
+    process.env.CHOKIDAR_INTERVAL = "300";
+  }
+}
+
 // @nuxt/content ~3.11.x until https://github.com/nuxt/content/issues/3742 (broken import in 3.12.0)
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/content", "nuxt-studio"],
@@ -40,6 +61,14 @@ export default defineNuxtConfig({
     // in Cursor’s Simple Browser and in the browser tab that uses the forwarded URL.
     server: {
       allowedHosts: true,
+      ...(isLikelyCloudDevFs
+        ? {
+            watch: {
+              usePolling: true,
+              interval: 300,
+            },
+          }
+        : {}),
     },
   },
   css: ["~/assets/css/main.css"],
