@@ -25,7 +25,11 @@ title: David Marr
 ---
 ::
 
-::project-grid{title="Open source & evergreen"}
+::project-grid
+---
+title: Open source
+description: Repos I maintain—shipping work you can inspect and reuse.
+---
   :::project-card
   ---
   tags:
@@ -50,7 +54,13 @@ title: David Marr
   url: https://github.com/marr/flux-homelab-skill
   ---
   :::
+::
 
+::project-grid
+---
+title: Staples
+description: Tools I keep coming back to—data viz, docs, and platforms that stay in rotation.
+---
   :::project-card
   ---
   tags:
@@ -62,9 +72,25 @@ title: David Marr
   url: https://vega.github.io/vega-lite
   ---
   :::
+
+  :::project-card
+  ---
+  tags:
+    - LaTeX
+    - PDF
+  description: Version-controllable CVs from YAML; powers this site’s PDF pipeline.
+  icon: i-mdi-file-document-outline
+  title: RenderCV
+  url: https://rendercv.com
+  ---
+  :::
 ::
 
-::project-grid{title="Currently Exploring"}
+::project-grid
+---
+title: Exploring
+description: On the workbench right now—frameworks, infra, and ideas worth trying in depth.
+---
   :::project-card
   ---
   tags:
@@ -109,18 +135,6 @@ title: David Marr
   icon: i-mdi-shield-key
   title: VoidAuth
   url: https://voidauth.app
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - LaTeX
-    - PDF
-  description: Version-controllable CVs from YAML; powers this site’s PDF pipeline.
-  icon: i-mdi-file-document-outline
-  title: RenderCV
-  url: https://rendercv.com
   ---
   :::
 
@@ -220,7 +234,11 @@ title: David Marr
   :::
 ::
 
-::project-grid{title="Previously"}
+::project-grid
+---
+title: Archive
+description: Older demos and experiments—still here for reference, not the main story.
+---
   :::project-card
   ---
   tags:
