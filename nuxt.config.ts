@@ -1,17 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
 
-// Optional: unusable native `fs.watch` on some Docker bind mounts or network FS.
-// Set `DEV_USE_POLLING=1` when @nuxt/content / Vite miss file changes in dev.
-const devUsePolling = process.env.DEV_USE_POLLING === "1";
-if (devUsePolling) {
-  if (!process.env.CHOKIDAR_USEPOLLING) {
-    process.env.CHOKIDAR_USEPOLLING = "true";
-  }
-  if (!process.env.CHOKIDAR_INTERVAL) {
-    process.env.CHOKIDAR_INTERVAL = "300";
-  }
-}
-
 // @nuxt/content ~3.11.x until https://github.com/nuxt/content/issues/3742 (broken import in 3.12.0)
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/content", "nuxt-studio"],
@@ -52,14 +40,6 @@ export default defineNuxtConfig({
     // in Cursor’s Simple Browser and in the browser tab that uses the forwarded URL.
     server: {
       allowedHosts: true,
-      ...(devUsePolling
-        ? {
-            watch: {
-              usePolling: true,
-              interval: 300,
-            },
-          }
-        : {}),
     },
   },
   css: ["~/assets/css/main.css"],
