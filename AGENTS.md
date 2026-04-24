@@ -11,7 +11,7 @@ This is a Nuxt 4 personal portfolio/blog site (`@dmarr/cv`). It is a single appl
 | Action | Command |
 |--------|---------|
 | Install deps | `pnpm install` |
-| Dev server | `pnpm dev` (serves at `http://localhost:3000`) |
+| Dev server | `pnpm dev` (serves at `http://localhost:3000`) — in remote/VM dev sandboxes, file watchers may be unreliable; `nuxt.config` enables chokidar + Vite **polling** when the cwd is `/workspace` (etc.) or `DEV_USE_POLLING=1` is set, so @nuxt/content and `.vue` edits hot-reload without restarting. |
 | Build | `pnpm build` |
 | Typecheck | `npx nuxi typecheck` |
 | Generate types | `npx nuxi prepare` |
