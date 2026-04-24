@@ -25,7 +25,7 @@ title: David Marr
 ---
 ::
 
-::project-grid{title="Open Source"}
+::project-grid{title="Open source & evergreen"}
   :::project-card
   ---
   tags:
@@ -50,9 +50,7 @@ title: David Marr
   url: https://github.com/marr/flux-homelab-skill
   ---
   :::
-::
 
-::project-grid{title="Evergreen"}
   :::project-card
   ---
   tags:
