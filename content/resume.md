@@ -18,7 +18,7 @@ Also available as [**PDF**](/resume.pdf){external}.
 
 
 ## Summary
-I work hands-on in production with product and customer organizations, shipping across the browser, APIs, and data for large multi-tenant enterprise software. Most recently that work has been with global energy and sustainability teams: graph-structured and ontology-rich data, plus compliance- and standards-heavy reporting (e.g. OGMP), with the same skills applying in other complex, regulated product settings.
+I work hands-on in production with product and customer organizations, shipping across the browser, APIs, and data for large multi-tenant enterprise software. Most recently that work has been with global energy and sustainability teams: graph-structured and ontology-rich data, plus reporting with strong compliance and standards requirements (e.g. OGMP), with the same skills applying in other complex, regulated product settings.
 
 I also use spec-driven and AI-assisted build loops to turn written specs into shippable features with tight feedback, so teams spend less time on throwaway work and more on the product.
 
