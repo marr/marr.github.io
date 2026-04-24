@@ -52,7 +52,128 @@ title: David Marr
   :::
 ::
 
+::project-grid{title="Evergreen"}
+  :::project-card
+  ---
+  tags:
+    - Data Viz
+    - Grammar of Graphics
+  description: A high-level grammar of interactive graphics, built on Vega.
+  icon: i-mdi-chart-box-outline
+  title: Vega Lite
+  url: https://vega.github.io/vega-lite
+  ---
+  :::
+::
+
 ::project-grid{title="Currently Exploring"}
+  :::project-card
+  ---
+  tags:
+    - Editor
+  description: Local, collaborative, structured Markdown in the file tree.
+  icon: i-mdi-file-tree
+  title: comark
+  url: https://comark.dev
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - React
+    - Design System
+  description: Copy-paste components built on Radix and Tailwind.
+  icon: i-mdi-palette-swatch
+  title: shadcn/ui
+  url: https://ui.shadcn.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Git
+    - Self‑hosted
+  description: A painless self-hosted Git service.
+  icon: i-mdi-git
+  title: Gitea
+  url: https://gitea.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Security
+    - SSO
+  description: Open-source OIDC SSO and user management for self-hosted apps.
+  icon: i-mdi-shield-key
+  title: VoidAuth
+  url: https://voidauth.app
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - LaTeX
+    - PDF
+  description: Version-controllable CVs from YAML; powers this site’s PDF pipeline.
+  icon: i-mdi-file-document-outline
+  title: RenderCV
+  url: https://rendercv.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - macOS
+    - Boot
+  description: Post-install patches for running newer macOS on unsupported Macs.
+  icon: i-mdi-apple
+  title: OpenCore Legacy Patcher
+  url: https://dortania.github.io/OpenCore-Legacy-Patcher
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - GLSL
+    - Tools
+  description: GLSL tools and a shader playground in the browser.
+  icon: i-mdi-gradient-horizontal
+  title: shaders.io
+  url: https://shaders.io
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Framework
+    - Vue
+  description: The intuitive Vue framework for production—SSR, file routing, and modules.
+  icon: i-mdi-nuxt
+  title: Nuxt
+  url: https://nuxt.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - React
+    - Full‑stack
+  description: The next generation of full-stack web applications.
+  icon: i-mdi-rocket-launch
+  title: TanStack Start
+  url: https://tanstack.com/start
+  ---
+  :::
+
   :::project-card
   ---
   tags:
@@ -79,36 +200,12 @@ title: David Marr
   :::project-card
   ---
   tags:
-    - JavaScript
-    - UI
-  description: A tiny reactive JavaScript library for building user interfaces.
-  icon: i-simple-icons-javascript
-  title: arrow-js
-  url: https://www.arrow-js.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
     - AI
     - Developer Tools
   description: AI agent toolkit with coding CLI, unified LLM API, and UI libraries.
   image: /pi-logo.svg
   title: pi-mono
   url: https://github.com/badlogic/pi-mono
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - React
-    - Vue
-  description: The next generation of full-stack web applications.
-  icon: i-mdi-rocket-launch
-  title: TanStack Start
-  url: https://tanstack.com/start
   ---
   :::
 
@@ -160,6 +257,18 @@ title: David Marr
   icon: i-logos-vue
   title: vue-squircle
   url: https://marr.github.io/vue-squircle
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - JavaScript
+    - UI
+  description: A tiny reactive JavaScript library for building user interfaces.
+  icon: i-simple-icons-javascript
+  title: arrow-js
+  url: https://www.arrow-js.com
   ---
   :::
 ::
