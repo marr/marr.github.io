@@ -212,30 +212,6 @@ title: David Marr
   :::project-card
   ---
   tags:
-    - AI
-    - SDK
-  description: Build integrations between model providers and web frameworks.
-  icon: i-logos-vercel-icon
-  title: Vercel AI SDK
-  url: https://ai-sdk.dev
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - AI
-    - Developer Tools
-  description: A novel method for autonomous AI-driven software development.
-  icon: i-logos-claude-icon
-  title: Ralph Loop
-  url: https://claytonfarr.github.io/ralph-playbook/
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
     - Notes
     - PKM
   description: A powerful knowledge base that works on local Markdown files.
@@ -269,6 +245,30 @@ title: David Marr
   icon: i-simple-icons-javascript
   title: arrow-js
   url: https://www.arrow-js.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - AI
+    - SDK
+  description: Build integrations between model providers and web frameworks.
+  icon: i-logos-vercel-icon
+  title: Vercel AI SDK
+  url: https://ai-sdk.dev
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - AI
+    - Developer Tools
+  description: A novel method for autonomous AI-driven software development.
+  icon: i-logos-claude-icon
+  title: Ralph Loop
+  url: https://claytonfarr.github.io/ralph-playbook/
   ---
   :::
 ::
