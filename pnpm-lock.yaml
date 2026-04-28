@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@arrow-js/core':
-        specifier: ^1.0.6
-        version: 1.0.6
       '@iconify-json/mdi':
         specifier: ^1.2.3
         version: 1.2.3
@@ -78,10 +75,6 @@ packages:
     engines: {node: '>= 20'}
     peerDependencies:
       '@types/json-schema': ^7.0.15
-
-  '@arrow-js/core@1.0.6':
-    resolution: {integrity: sha512-75f4N0iHtHTwgxf9XS8a1vtfGZZmCvqT0Ix+ScDLclNuR9Fqp2yOIK1u8vmN1BPsS4aRfMVTdSFSmgGCqkJSCg==}
-    engines: {node: '>=20.19.0 || >=22.12.0'}
 
   '@babel/code-frame@7.29.0':
     resolution: {integrity: sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw==}
@@ -5060,8 +5053,6 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
       js-yaml: 4.1.1
-
-  '@arrow-js/core@1.0.6': {}
 
   '@babel/code-frame@7.29.0':
     dependencies:

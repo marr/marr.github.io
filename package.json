@@ -11,7 +11,6 @@
     "cv:render": "bash scripts/render-cv.sh"
   },
   "dependencies": {
-    "@arrow-js/core": "^1.0.6",
     "@iconify-json/mdi": "^1.2.3",
     "@nuxt/content": "3.13.0",
     "@nuxt/ui": "^4.7.0",
