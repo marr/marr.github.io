@@ -4,8 +4,6 @@ description: How to turn your Obsidian vault into a queryable knowledge graph th
 date: 2026-04-04T00:00:00.000Z
 ---
 
-# Building a Knowledge Graph with Obsidian and MCP
-
 Obsidian vaults are just folders of Markdown files. But when you connect them to an AI assistant through MCP, they become something more: a knowledge graph that your tools can navigate, search, and reason about.
 
 ## The Problem: Notes Without Structure
