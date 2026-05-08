@@ -79,11 +79,5 @@ export default defineNuxtConfig({
   routeRules: {
     "/nuxt-maplibre": { prerender: false },
     "/vue-squircle": { prerender: false },
-    "/resume.pdf": {
-      headers: {
-        "Content-Type": "application/pdf",
-        "Cache-Control": "public, max-age=31536000",
-      },
-    },
   },
 });

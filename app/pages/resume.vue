@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ResumeProseExperienceH3 from "~/components/resume/ResumeProseExperienceH3.vue";
+import ResumeProseA from "~/components/resume/ResumeProseA.vue";
 
 const { data: page } = await useAsyncData("resume-page", () =>
   queryCollection("content").path("/resume").first(),
@@ -19,7 +20,10 @@ useSeoMeta({
 });
 
 /** Maps markdown `h3` to SSR logo + heading (see components/resume/ResumeProseExperienceH3.vue). */
-const resumeContentComponents = { h3: ResumeProseExperienceH3 };
+const resumeContentComponents = {
+  h3: ResumeProseExperienceH3,
+  a: ResumeProseA,
+};
 </script>
 
 <template>
@@ -107,6 +111,21 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   color: var(--ui-text-muted);
 }
 
+/* Icon-only social links should not have bullet markers */
+.resume-content :deep(h1 + ul li:has(a.inline-flex)) {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  min-width: 2rem;
+}
+
+/* Social links with icons - need to override default flex item spacing */
+.resume-content :deep(h1 + ul li > span.inline-flex) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 .resume-content :deep(h1 + ul li) {
   position: relative;
   padding-left: 0;
@@ -116,11 +135,44 @@ const resumeContentComponents = { h3: ResumeProseExperienceH3 };
   display: none;
 }
 
+/* Style icon-only social links to show only icons */
+.resume-content :deep(h1 + ul li a.inline-flex) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.resume-content :deep(h1 + ul li a.inline-flex:hover) {
+  background-color: color-mix(in oklab, var(--ui-bg-elevated) 50%, transparent);
+}
+
+/* Hide any text that might appear in icon-only links */
+.resume-content :deep(h1 + ul li:has(a.inline-flex)) {
+  min-width: 2rem;
+  text-align: center;
+}
+
 .resume-content :deep(h1 + ul a) {
   color: var(--ui-text);
   text-decoration: underline;
   text-decoration-color: color-mix(in oklab, var(--ui-primary) 45%, transparent);
   text-underline-offset: 3px;
+}
+
+/* Ensure icons in social links inherit the text color */
+.resume-content :deep(h1 + ul .inline-flex > .iconify) {
+  color: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Make sure the inline-flex container works correctly with the flex list */
+.resume-content :deep(h1 + ul li > span.inline-flex) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .resume-content :deep(h1 + ul a:hover) {
