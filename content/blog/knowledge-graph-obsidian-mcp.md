@@ -69,6 +69,27 @@ If you want to run MCP servers in containers, the Docker MCP toolkit makes it ea
 
 The gateway handles authentication, tool routing, and secret management. You describe the outcome; the client and tools do the rest.
 
+## Alternative: Using the Obsidian Pi Extension
+
+If you're already using [Pi](https://pi) as your AI coding agent, you can connect to Obsidian through the [`@haispeed/pi-obsidian`](https://github.com/haispeed/pi-obsidian) package. This provides an `obsidian_cli` tool that lets Pi interact with your vault directly.
+
+```bash
+pi install npm:@haispeed/pi-obsidian
+```
+
+Once installed, Pi gains access to Obsidian operations:
+- **Search** — Find notes across your vault
+- **Create** — Generate new notes with templates
+- **Tasks** — Query and manage Obsidian tasks
+- **Properties** — Read and update frontmatter
+- **Plugins** — Manage Obsidian plugins from the command line
+
+Unlike MCP, which exposes a generic HTTP interface, the Pi extension is deeply integrated into Pi's tool system. This means Pi can seamlessly read, write, and query your vault while maintaining context across conversations.
+
+The extension also includes skills for Obsidian Flavored Markdown authoring, so Pi can help you write with wikilinks, embeds, callouts, and frontmatter properties using native Obsidian syntax.
+
+If you're using Pi for development and want your notes to be part of your AI workflow, this is the natural choice.
+
 ## What This Looks Like in Practice
 
 Here's a typical workflow:
