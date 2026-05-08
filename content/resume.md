@@ -12,34 +12,33 @@ Also available as [**PDF**](/resume.pdf){external}.
 
 # David Marr's CV
 
-- Email: [dave.marr@gmail.com](mailto:dave.marr@gmail.com)
-- Location: Boston, MA
-- Website: [marr.github.io](https://marr.github.io/)
+- [dave.marr@gmail.com](mailto:dave.marr@gmail.com)
+- Boston, MA
+- [marr.github.io](https://marr.github.io/)
+- [marr](https://github.com/marr)
+- [davidmarr](https://linkedin.com/in/davidmarr)
+- [dmarr](https://x.com/dmarr)
 
 
 ## Summary
-I work hands-on in production with product and customer organizations, shipping across the browser, APIs, and data for large multi-tenant enterprise software. Most recently that work has been with global energy and sustainability teams: graph-structured and ontology-rich data, plus reporting with strong compliance and standards requirements (e.g. OGMP), with the same skills applying in other complex, regulated product settings.
-
-I also use spec-driven and AI-assisted build loops to turn written specs into shippable features with tight feedback, so teams spend less time on throwaway work and more on the product.
+Engineering leader with 25 years of experience building production software in startup and small enterprise environments. Over the past few years, building better agentic coding and delivery workflows have been my primary focus.
 
 ## Experience
-### **Engineering Lead (UI)**, Context Labs · Cambridge, MA
+### **Principal UI Engineer / Engineering Manager**, Context Labs · Boston, MA
 
 June 2022 – Mar 2026
 
-Created and managed data software (Vue/Nuxt) for global energy and sustainability teams. Integrated graph database with ontological classification system to support OGMP reporting standards. Defined OKRs for engineering to keep teams aligned across the company.
+Led a distributed UI/UX engineering organization to deliver a multi-tenant, production-grade analytics platform using Nuxt and Vue. Combined hands-on frontend development with people management, OKR-driven delivery, and platform-thinking to reduce time-to-market and improve product quality.
 
-- Managed nine engineers across three continents and mentored engineers and team leads.
+- Managed and grew a team of UI/UX engineers across three continents; introduced OKRs and regular reviews to increase velocity, accountability, and MTTR by 50%.
 
-- Developed pathway optimization tools for routing and delivery of NextGen energy products.
+- Fostered AI tool adoption across the engineering organization, adding MCP capabilities to our web framework, coaching teams on modern software development strategies.
 
-- Delivered multi-tenant enterprise features for customer organizations: single sign-on, role‑based access, and localized UI in one codebase.
+- Designed and launched Decarbonization-as-a-Service (DaaS) for major global energy companies, allowing for NextGen energy products to be sold as premium offerings.
 
-- Built a shared component library for visualization of complex charts, maps, and data using Vue, Tailwind, and Nuxt.
+- Built a production BFF platform integrating GraphQL and Java backed services, multi-tenancy, SSO authentication, RBAC, and internationalization using Nuxt and Nitro.
 
-- Designed formal spec-driven delivery and iteration tools using AI and shell scripting.
-
-- Utilized DORA metrics (MTTR) leading to faster incident recovery and more frequent deploys.
+- Developed a shared UI component library with data visualizations using Vega Lite, interactive maps with MapBox, and accessible controls (TypeScript/Vue) to ensure performance, stability, and consistent UX across suite of customer-facing products.
 
 
 
@@ -47,37 +46,41 @@ Created and managed data software (Vue/Nuxt) for global energy and sustainabilit
 
 Feb 2020 – Feb 2022
 
-Hiring software for large employers in finance and tech. Owned scheduling, candidate flows, assessment sites, and live video interviews for technical hiring at scale.
+Engineered the scalable SaaS platform for employers managing high-volume technical hiring processes. Automated grading and fraud detection for job applications.
 
-- Built automatic scoring, instant candidate feedback, and fraud detection for technical assessment platform.
+- Directed development of recruitment workflows including interview scheduling, candidate pipelines, and assessment portals using React, TypeScript, and Node.js.
 
-- Used site data and product metrics to identify and fix bottlenecks in candidate experience, improving completion rates and time to hire.
+- Implemented AI-driven grading, automated feedback, and fraud-detection systems to scale technical evaluations using Connect (WebRTC) and Mechanical Turk from AWS.
+
+- Shipped features informed by funnel analytics and product metrics that identified drop-offs, drastically improving completion rates and time-to-hire conversion metrics.
 
 
 
-### **Staff Software Engineer**, Turo · San Francisco, CA & Cambridge, MA
+### **Staff Software Engineer**, Turo · California & Massachusetts
 
 Apr 2018 – Dec 2019
 
-Owned work that helped hosts stay active, keep listings in good shape, and earn more; worked with analytics to see what moved the numbers and what to ship next.
+Implemented and supported customer-facing features focusing on engagement and revenue for high-performing hosts.
 
-- Shipped availability calendar, trip lifecycle management, and dynamic pricing for the full host base, raising utilization and host-side revenue; partnered with analytics to quantify lift and iterate releases.
+- Owned and evolved trip management tools with dynamic pricing controls, improving host experience and utilization.
 
-- Ran the All-star host program end to end, linking rewards to quality and host retention.
+- Helped to implement the 'All-star' program initiative to recognize and incentivize top hosts, contributing to retention and higher-quality listings.
+
+- Partnered with analytics to measure feature impact and iterate based on user behavior and revenue metrics.
 
 
 
-### **Senior Software Architect**, OneMarket / Westfield Labs · San Francisco, CA & London, UK
+### **Senior Software Architect**, OneMarket / Westfield Labs · San Francisco, CA
 
 Jan 2016 – May 2018
 
-Built omnichannel software for retailers including parking, payments, and finding your way inside busy shopping centers.
+Architected physical and online payment products, producing £2m per-month of income. Led development on customer management tools using JavaScript and React.
 
-- Designed smart parking product which included subscription based payments and automated entry using facial recognition at the gate.
+- Developed smart parking solutions leveraging facial recognition, subscription billing, and automated gates to streamline access and payments using React and Stripe APIs.
 
-- Crafted indoor maps and turn-by-turn directions using beacons in malls for partners to confirm store footprints.
+- Built indoor mapping, directory kiosks, and wayfinding systems to enhance navigation in complex retail environments using Mapbox, Node.js and C.
 
-- Designed APIs and customer facing apps for Westfield locations worldwide using React, Node.js, and PostgreSQL.
+- Integrated edge devices using Google Cloud Platform (GCP) for reliable, low-latency user interactions and centralized identity management with PostgreSQL and ORY Hydra.
 
 
 
@@ -85,89 +88,47 @@ Built omnichannel software for retailers including parking, payments, and findin
 
 July 2013 – Dec 2015
 
-Responsible for signup and core product flows. Focused on conversion, uptime, and handling spikes when demand peaked. Redesigned signup and onboarding flows (~15% lift in conversions and revenue).
+Optimized core user flows and backend systems to increase conversion and streamline operations during high-growth phases.
+
+- Guided new and existing users through a monetary contributions flow leading to a 15% lift in conversions for first-party user signups.
+
+- Engineered early React SSR solutions using Perl and JavaScript.
 
 
 
-### **Senior Software Engineer**, Say Media (formerly VideoEgg) · San Francisco, CA
-
-Mar 2012 – Apr 2013
-
-Improved engaged time across sites through features like in-article user reactions, editorial tooling, and modules for recirculation and related content.
-
-
-
-### **Senior Front End Web Developer**, CBS Interactive · San Francisco, CA
-
-June 2011 – Dec 2011
-
-Built features for tv.com with Python and JavaScript; A/B tested variants on core flows to improve engagement and conversion.
-
-
-
-### **Technical Co-Founder / CTO**, Secret Feature · San Francisco, CA
-
-Jan 2010 – May 2011
-
-Developed creative social media applications using JavaScript and Python; built a team and raised funding to launch products.
-
-
-
-### **Design Technologist**, Frog Design · San Francisco, CA
+### **Design Technologist**, Frog Design · San Francisco/Orlando/Austin
 
 Jan 2009 – Mar 2010
 
-Built web application for MagicBand wristband at Disney World. Integrated cellular video into portable hardware device. Developed software prototypes for mobile devices.
+Engineered digital and physical technical innovations including:
+
+- MagicBand wristband at Disney World onsite in Orlando, FL.
+
+- Cellular television at Qualcomm campus in Austin, TX.
+
+- Smartphone UI for AT&T/Facebook prototype in San Francisco, CA.
 
 
 
-### **Senior Frontend Engineer**, Yahoo · Sunnyvale / San Francisco, CA
+### **Previous Leadership & Technical Roles**, Various · Massachusetts & California
 
-Sept 2006 – Dec 2008
+2000-2013
 
-Built Yahoo! Answers integration for the high traffic Small Business product using PHP and MySQL. Shipped Yahoo! Live live streaming at Brickhouse, reaching 60+ minute average time on site and ~2M signups in nine months.
-
-
-
-### **Senior Web Developer**, Monster.com · Maynard, MA
-
-Mar 2004 – Aug 2006
-
-Built and maintained Webby-recognized careers.monster.com; worked with editorial and content teams to design and implement features for career advice and job search.
-
-
-
-### **Web Applications Developer**, SoftArtisans · Brookline, MA
-
-Mar 2003 – Apr 2004
-
-Developed enterprise file upload software (SAFileUp) using Microsoft technologies.
-
-
-
-### **Web Developer**, GE Fanuc / Intellution · Foxborough, MA
-
-Sept 2000 – Feb 2003
-
-Built web interfaces for industrial automation and control system software using SQL Server, classic ASP, and IIS.
+Industrial automation web interfaces and dashboards (GE Fanuc / Intellution); enterprise web integrations (SoftArtisans); user-facing features and a Webby-recognized career advice site (Monster.com); scalable frontend architecture for high-traffic Yahoo properties; design-to-production prototyping (Frog Design); co-founder/CTO for an early social product (Secret Feature); publishing and ad-tech at Say Media.
 
 
 
 ## Education
-### **University of New Hampshire**
+### **University of New Hampshire**, BS · Durham, NH
 Sept 1996 – May 2000
 
-BS, Business Administration
+Focus on Management of Information Systems (MIS)
 
-Focus: Management of Information Systems. Dean's List.
+- Dean's list.
 
 
 
 ## Skills
-**Languages:** JavaScript, TypeScript, Go, Python, HTML, CSS
+**Languages/Frameworks/Web:** TypeScript, JavaScript, Python, Go, React, Vue, HTML, CSS, Tailwind, Nuxt, Tanstack Start, Vega Lite, Mapbox, D3, Zod, React Hook Form, Vee-Validate, WebGL, WebGPU, WebRTC
 
-**Infrastructure & data:** Docker, Kubernetes, Amazon Web Services, Google Cloud Platform, OpenAPI, PostgreSQL, MongoDB, Trino, ArcadeDB, OrientDB, GraphQL
-
-**Frameworks & libraries:** Vue, React, Tailwind, TanStack, Vega Lite, WebGL, Mapbox, Maplibre, Deck.gl, Nuxt, Vite, Vitest
-
-**AI:** Azure AI Foundry, OpenAI, Anthropic Claude, Google Gemini, RAG, LangChain, MCP
+**AI Tools/Infrastructure:** Kubernetes, AWS, PostgreSQL, Docker, Git, MongoDB, Bash, Trino, ArcadeDB, Vite, Vitest, Vercel AI SDK, Pi, Cursor, Opencode, Cloudflare Workers, Cloudflare Durable Objects, Agent Skills, Turborepo, Lerna/NX
