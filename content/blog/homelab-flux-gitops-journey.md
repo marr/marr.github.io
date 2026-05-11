@@ -13,7 +13,7 @@ Here's what I built, what broke, and how I'll do it again.
 ## The Stack
 
 - **Talos Linux** — Immutable, API-driven Kubernetes. No SSH, no shell, no apt-get. Sounds limiting until you realize you never need to debug "what changed on the node."
-- **Flux** — GitOps controller. Everything lives in a git repo, Flux reconciles it to the cluster. Push a change, it lands. Revert a change, it's gone.
+- **Flux** — GitOps via the **Flux Operator**: a `FluxInstance` CR installs controllers and points **sync** at your Git (or OCI) path. Everything still lives in git; push a change, it lands. Revert, it's gone.
 - **SOPS + Age** — Encrypted secrets in git. No plaintext, no sealed-secrets complexity. Decrypt with your age key, apply, done.
 - **Homepage** — Dashboard with widgets for every service. Internal URLs, API tokens, done.
 - **Traefik** — Ingress with ACME DNS challenges for `*.example.com` certs.
@@ -163,8 +163,8 @@ The workflow is muscle memory now:
 # Commit and push
 git add -A && git commit -m "feat: add thing" && git push
 
-# Reconcile
-flux reconcile kustomization apps --with-source
+# Reconcile (namespace matches where your Kustomization lives, often flux-system)
+flux reconcile kustomization apps -n flux-system --with-source
 
 # Verify
 kubectl get helmrelease -A
@@ -258,24 +258,51 @@ If you want to try this yourself:
 - A git repo for your Flux configuration
 - Time to break things
 
-### 2. Bootstrap Flux
+### 2. Install Flux with the Flux Operator
 
-Follow the [official Flux getting started guide](https://fluxcd.io/flux/get-started/) to install Flux on your cluster, then bootstrap your GitOps repository:
+The maintained install path is the **Flux Operator**: it owns controller upgrades, wiring, and the **Flux Web UI** knobs you enable on `FluxInstance`. You apply one **`FluxInstance`** named `flux` in `flux-system`; its **`.spec.sync`** is the root Git (or OCI) path for your fleet layout — the same `clusters/my-cluster` idea as before, without `flux bootstrap`.
+
+1. **Install the operator** (Helm is typical; see [Flux Operator installation](https://fluxoperator.dev/docs/installation/) for current commands):
 
 ```bash
-flux bootstrap github \
-  --owner=your-username \
-  --repository=homelab-infra \
-  --branch=main \
-  --path=clusters/my-cluster
+helm install flux-operator oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator \
+  --namespace flux-system --create-namespace
 ```
 
-This creates the bootstrap kustomization that points to your `infrastructure/` and `apps/` directories.
+2. **Apply a `FluxInstance`** with Git sync pointing at your repo (private repos need a `git-credentials` secret and `pullSecret`). The operator will create the root source and Kustomization for that path:
 
-**Flux v2 Gotchas:**
-- **Namespace changes** — In v2, Flux components run in `flux-system` by default. Some older guides reference `flux` namespace.
-- **Kustomize controller** — The controller now handles kustomizations natively; you don't need separate `kustomize` CLI workflows.
-- **GitHub token scope** — The bootstrap command needs a token with `repo` and `workflow` permissions. Personal Access Tokens work, but GitHub Apps are recommended for production.
+```yaml
+apiVersion: fluxcd.controlplane.io/v1
+kind: FluxInstance
+metadata:
+  name: flux
+  namespace: flux-system
+spec:
+  distribution:
+    version: "2.x"
+    registry: ghcr.io/fluxcd
+  components:
+    - source-controller
+    - kustomize-controller
+    - helm-controller
+    - notification-controller
+  cluster:
+    type: kubernetes
+    size: small
+  sync:
+    kind: GitRepository
+    url: https://github.com/your-username/homelab-infra.git
+    ref: refs/heads/main
+    path: clusters/my-cluster
+    # pullSecret: git-credentials  # if the repo is private
+```
+
+If you already have an older **CLI bootstrap** install, you do **not** need to rebuild the cluster — use the [migration guide](https://fluxoperator.dev/docs/guides/migration/) to move to `FluxInstance`.
+
+**Flux / GitOps gotchas:**
+- **Namespace** — Flux components and the root objects the operator creates live in `flux-system` by default. Some older posts use a `flux` namespace; match your manifests to what the operator actually created.
+- **Kustomize** — Reconciliation is controller-side; you do not need a separate `kustomize` CLI loop for Flux to apply.
+- **Git credentials** — Use a Kubernetes Secret referenced by `pullSecret` for private Git; prefer narrow-scoped credentials and [Flux docs on Git auth](https://fluxcd.io/flux/components/source/gitrepositories/) for provider-specific options.
 - **Path separators** — Use forward slashes even on Windows; Flux paths are Git repository paths, not filesystem paths.
 - **OCI chart sources** — Flux 2.8+ uses `source.toolkit.fluxcd.io/v1` for GitRepository/HelmRepository/OCIRepository, but `helm.toolkit.fluxcd.io/v2` for HelmRelease. OCI-backed charts have two valid patterns: `HelmRepository` with `type: oci`, or `OCIRepository` directly. If one pattern fails, try the other.
 - **HelmRelease serverSideApply** — The `install.serverSideApply` field is a boolean, but `upgrade.serverSideApply` is an enum string (`"disabled"`). Mixing them incorrectly causes validation errors. Use:
@@ -292,7 +319,7 @@ This creates the bootstrap kustomization that points to your `infrastructure/` a
 
 ```
 homelab-infra/
-├── clusters/           # Flux bootstrap
+├── clusters/           # Cluster root (path referenced by FluxInstance .spec.sync)
 ├── infrastructure/
 │   ├── controllers/    # Traefik, Prometheus, etc.
 │   └── configs/        # Routes, monitoring, alerts
