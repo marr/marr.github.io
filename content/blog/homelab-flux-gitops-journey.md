@@ -45,28 +45,42 @@ The cluster went through four scheduling strategies:
 
 **Current rule**: Apps on workers. Monitoring on control plane. Documented exceptions in HelmRelease comments.
 
-### Helm Upgrades: The SSA Trap
+### Helm upgrades when charts drop resources
 
-Flux HelmRelease upgrades failed with:
+A concrete example: the OpenTelemetry operator chart upgrade (0.109 → 0.110) removed `kube-rbac-proxy`, which changed Service port layouts. Helm left stale listening paths behind, and reconciling produced confusing failures until the rendered chart and cluster state agreed.
 
-```
-invalid operation: cannot use force conflicts and force replace together
-```
-
-Turns out `install.serverSideApply` is a boolean (`false`), but `upgrade.serverSideApply` is an enum string (`"disabled"`). Same field name, different types.
+**What fixed it:** Read the chart changelog before bumping versions; pin if you are unsure. For day-to-day HelmReleases, use **`spec.install.strategy`** and **`spec.upgrade.strategy`** with **`name: RetryOnFailure`** (and a **`retryInterval`**) so failed applies retry without uninstalling the release. When a chart **stops owning** objects it used to manage (sidecars, old Services), set **`spec.upgrade.force: true`** on that upgrade so Helm can replace conflicting resources — then drop `force` again once the release is healthy.
 
 ```yaml
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: example-operator
+  namespace: observability
 spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: opentelemetry-operator
+      version: "0.109.x"
+      sourceRef:
+        kind: HelmRepository
+        name: open-telemetry
+      interval: 10m
   install:
-    serverSideApply: false   # boolean
+    timeout: 10m
+    strategy:
+      name: RetryOnFailure
+      retryInterval: 5m
   upgrade:
-    serverSideApply: disabled  # enum string
+    timeout: 10m
     force: true
+    strategy:
+      name: RetryOnFailure
+      retryInterval: 5m
 ```
 
-The OpenTelemetry operator upgrade (0.109 → 0.110) removed `kube-rbac-proxy`, changing Service port layouts. Three-way merge created duplicate `metrics` ports. Fixed by pinning the version and using `force: true` + `serverSideApply: disabled`.
-
-**Lesson**: Check chart changelogs for breaking infrastructure changes. Stay one version behind if unsure.
+**Lesson:** Treat chart upgrades that remove workloads or change discovery ports as infrastructure changes, not just a semver bump.
 
 ### Synology + Traefik = Special Handling
 
@@ -179,10 +193,18 @@ Flux has a built-in web UI (provided by the flux-operator) that shows the status
 - **Error visibility** — Quickly spot what's failing and why
 - **History & events** — See recent reconciliation attempts and outcomes
 
-**The enabling change:** Add these values to your `flux-instance` HelmRelease:
+**The enabling change:** On the `helm.toolkit.fluxcd.io/v2` HelmRelease that installs the flux-instance chart, use **`RetryOnFailure`** for install and upgrade, then set Web UI values:
 
 ```yaml
 spec:
+  install:
+    strategy:
+      name: RetryOnFailure
+      retryInterval: 5m
+  upgrade:
+    strategy:
+      name: RetryOnFailure
+      retryInterval: 5m
   values:
     instance:
       web:
@@ -241,7 +263,7 @@ When I ask "why is Immich down," it knows to check storage class first, then nod
 **Skill contents include:**
 - **Cluster hygiene** — Detecting mixed Endpoints + EndpointSlice issues, orphaned services, hardcoded LAN IPs
 - **Flux reconciliation** — Proper sequence for GitRepository → Kustomization → HelmRelease
-- **HelmRelease patterns** — `upgrade.force` + `serverSideApply` interactions, stuck kustomization recovery
+- **HelmRelease patterns** — `RetryOnFailure` install/upgrade strategies, narrow use of `upgrade.force` when charts drop resources, stuck kustomization recovery
 - **Secret management** — SOPS file structure, secret synchronization, validation workflows
 
 The **ce:compound** pattern (referenced from [Compound Engineering](https://every.to/guides/compound-engineering)) is a structured approach to documentation — researching problems, assembling solutions, writing them down, and validating that they work. Each documented solution makes the next one faster. This pattern applies to any project, not just homelabs.
@@ -304,15 +326,8 @@ If you already have an older **CLI bootstrap** install, you do **not** need to r
 - **Kustomize** — Reconciliation is controller-side; you do not need a separate `kustomize` CLI loop for Flux to apply.
 - **Git credentials** — Use a Kubernetes Secret referenced by `pullSecret` for private Git; prefer narrow-scoped credentials and [Flux docs on Git auth](https://fluxcd.io/flux/components/source/gitrepositories/) for provider-specific options.
 - **Path separators** — Use forward slashes even on Windows; Flux paths are Git repository paths, not filesystem paths.
-- **OCI chart sources** — Flux 2.8+ uses `source.toolkit.fluxcd.io/v1` for GitRepository/HelmRepository/OCIRepository, but `helm.toolkit.fluxcd.io/v2` for HelmRelease. OCI-backed charts have two valid patterns: `HelmRepository` with `type: oci`, or `OCIRepository` directly. If one pattern fails, try the other.
-- **HelmRelease serverSideApply** — The `install.serverSideApply` field is a boolean, but `upgrade.serverSideApply` is an enum string (`"disabled"`). Mixing them incorrectly causes validation errors. Use:
-  ```yaml
-  install:
-    serverSideApply: false
-  upgrade:
-    serverSideApply: disabled
-    force: true
-  ```
+- **OCI chart sources** — Flux uses `source.toolkit.fluxcd.io/v1` for GitRepository/HelmRepository/OCIRepository and `helm.toolkit.fluxcd.io/v2` for HelmRelease. OCI-backed charts have two valid patterns: `HelmRepository` with `type: oci`, or `OCIRepository` directly. If one pattern fails, try the other.
+- **HelmRelease strategies** — Prefer **`spec.install.strategy`** and **`spec.upgrade.strategy`** with **`name: RetryOnFailure`** (and **`retryInterval`**). Use **`spec.upgrade.force: true`** only when a chart stops owning objects it previously created, then remove it once the release is clean.
 - **Stuck kustomizations** — If a `HelmRelease` health check fails, downstream kustomizations with `spec.dependsOn` will wait indefinitely. Check `kubectl describe kustomization <name> -n flux-system` for `HealthCheckFailed`. High `helm-controller` CPU often indicates a failing Helm release in a retry loop.
 
 ### 3. Structure Your Repo
