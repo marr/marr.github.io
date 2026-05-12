@@ -21,7 +21,7 @@ Also available as [**PDF**](/resume.pdf){external}.
 
 
 ## Summary
-Engineering leader with 25 years of experience building production software in startup and small enterprise environments. Over the past few years, building better agentic coding and delivery workflows have been my primary focus.
+Engineering leader with 25 years of experience building production software in startup and small enterprise environments. Over the past few years, building better agentic coding and delivery workflows has been my primary focus.
 
 ## Experience
 ### **Principal UI Engineer / Engineering Manager**, Context Labs · Boston, MA
@@ -90,7 +90,7 @@ July 2013 – Dec 2015
 
 Optimized core user flows and backend systems to increase conversion and streamline operations during high-growth phases.
 
-- Guided new and existing users through a monetary contributions flow leading to a 15% lift in conversions for first-party user signups.
+- Simplified the monetary contribution flow and owned first-party signup code, yielding a 15% lift in first-party signup conversions.
 
 - Engineered early React SSR solutions using Perl and JavaScript.
 
@@ -114,7 +114,19 @@ Engineered digital and physical technical innovations including:
 
 2000-2013
 
-Industrial automation web interfaces and dashboards (GE Fanuc / Intellution); enterprise web integrations (SoftArtisans); user-facing features and a Webby-recognized career advice site (Monster.com); scalable frontend architecture for high-traffic Yahoo properties; design-to-production prototyping (Frog Design); co-founder/CTO for an early social product (Secret Feature); publishing and ad-tech at Say Media.
+- Industrial automation web interfaces and dashboards (GE Fanuc / Intellution)
+
+- Enterprise web integrations (SoftArtisans)
+
+- User-facing features and a Webby-recognized career advice site (Monster.com)
+
+- Scalable frontend architecture for high-traffic Yahoo properties
+
+- Design-to-production prototyping (Frog Design)
+
+- Co-founder/CTO for an early social product (Secret Feature)
+
+- Publishing and ad-tech at Say Media
 
 
 
