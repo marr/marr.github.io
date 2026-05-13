@@ -71,7 +71,7 @@ The gateway handles authentication, tool routing, and secret management. You des
 
 ## Alternative: Using the Obsidian Pi Extension
 
-If you're already using [Pi](https://pi) as your AI coding agent, you can connect to Obsidian through the [`@haispeed/pi-obsidian`](https://github.com/haispeed/pi-obsidian) package. This provides an `obsidian_cli` tool that lets Pi interact with your vault directly.
+If you're already using [Pi](https://pi.dev) as your AI coding agent, you can connect to Obsidian through the [`@haispeed/pi-obsidian`](https://github.com/haispeed/pi-obsidian) package. This provides an `obsidian_cli` tool that lets Pi interact with your vault directly.
 
 ```bash
 pi install npm:@haispeed/pi-obsidian
