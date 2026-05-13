@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, watch } from 'vue'
+const route = useRoute()
 
 const items = ref([
   {
@@ -16,10 +17,20 @@ const items = ref([
     label: "Blog",
     to: "/blog",
     icon: "i-mdi-book-open-page-variant",
-    // Explicit active class so NuxtLink / RouterLink applies it when route is /blog or any child
-    activeClass: "text-primary before:bg-elevated",
   },
 ])
+
+function updateActive() {
+  const p = (route.path || '').replace(/\/+$/, '')
+  items.value = items.value.map((i) => ({
+    ...i,
+    // set active on client only
+    active: i.to === '/blog' ? p.startsWith('/blog') : undefined,
+  }))
+}
+
+onMounted(() => updateActive())
+watch(() => route.path, () => updateActive())
 </script>
 
 <template>
