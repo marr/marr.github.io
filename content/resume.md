@@ -13,7 +13,7 @@ Also available as [**PDF**](/resume.pdf){external}.
 # David Marr's CV
 
 - [dave.marr@gmail.com](mailto:dave.marr@gmail.com)
-- Boston, MA
+- [Boston, MA](https://marr.github.io/nuxt-maplibre/demo/map/markers/#marker=42.35900,-71.05789){external}
 - [marr.github.io](https://marr.github.io/)
 - [marr](https://github.com/marr)
 - [davidmarr](https://linkedin.com/in/davidmarr)

@@ -17,6 +17,7 @@ const socialIconMap: Record<string, string> = {
   'mailto:': 'i-mdi-email',
   'geo:': 'i-mdi-map-marker',
   'maps.google.com': 'i-mdi-map-marker',
+  'nuxt-maplibre/demo/map/markers': 'i-mdi-map-marker',
   'marr.github.io': 'i-mdi-web',
 }
 
