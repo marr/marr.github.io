@@ -17,6 +17,8 @@ from __future__ import annotations
 import re
 import sys
 
+BOSTON_MAP_URL = "https://marr.github.io/nuxt-maplibre/demo/map/markers/#marker=42.35900,-71.05789"
+
 
 def harmonize(md: str) -> str:
     lines = md.splitlines()
@@ -32,6 +34,8 @@ def harmonize(md: str) -> str:
             out.append("## Skills")
         elif line.startswith("## **"):
             out.append("#" + line)
+        elif line == "- Boston, MA":
+            out.append(f"- [Boston, MA]({BOSTON_MAP_URL}){{external}}")
         else:
             out.append(line)
     trailing = md.endswith("\n")
