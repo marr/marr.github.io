@@ -22,6 +22,8 @@ const items = ref([
 
 function updateActive() {
   const p = (route.path || '').replace(/\/+$/, '')
+  // Debug: log route path and computed active
+  try { console.debug('[SiteHeader] updateActive route.path=', route.path, 'normalized=', p) } catch (e) {}
   items.value = items.value.map((i) => ({
     ...i,
     // Only set active on client to avoid SSR mismatches
@@ -30,10 +32,14 @@ function updateActive() {
 }
 
 onMounted(() => {
+  try { console.debug('[SiteHeader] mounted, route.path=', route.path) } catch (e) {}
   updateActive()
 })
 
-watch(() => route.path, () => updateActive())
+watch(() => route.path, () => {
+  try { console.debug('[SiteHeader] route.path changed ->', route.path) } catch (e) {}
+  updateActive()
+})
 </script>
 
 <template>
