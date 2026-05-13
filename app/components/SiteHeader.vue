@@ -1,36 +1,27 @@
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
+
+// Client-only: ensure Blog nav is highlighted for /blog and any nested post routes
 const route = useRoute()
 
 const items = ref([
-  {
-    label: "Home",
-    to: "/",
-    icon: "i-mdi-home",
-  },
-  {
-    label: "Résumé",
-    to: "/resume",
-    icon: "i-mdi-file-document-outline",
-  },
-  {
-    label: "Blog",
-    to: "/blog",
-    icon: "i-mdi-book-open-page-variant",
-  },
+  { label: "Home", to: "/", icon: "i-mdi-home" },
+  { label: "Résumé", to: "/resume", icon: "i-mdi-file-document-outline" },
+  { label: "Blog", to: "/blog", icon: "i-mdi-book-open-page-variant" },
 ])
 
 function updateActive() {
   const p = (route.path || '').replace(/\/+$/, '')
   items.value = items.value.map((i) => ({
     ...i,
-    // set active on client only
+    // mark Blog active client-side to avoid SSR/hydration mismatches
     active: i.to === '/blog' ? p.startsWith('/blog') : undefined,
   }))
 }
 
-onMounted(() => updateActive())
-watch(() => route.path, () => updateActive())
+onMounted(updateActive)
+watch(() => route.path, updateActive)
+
 </script>
 
 <template>
