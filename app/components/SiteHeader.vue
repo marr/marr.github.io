@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const items = computed(() => [
+import { ref, onMounted, watch } from 'vue'
+const route = useRoute()
+
+const items = ref([
   {
     label: "Home",
     to: "/",
@@ -15,7 +18,22 @@ const items = computed(() => [
     to: "/blog",
     icon: "i-mdi-book-open-page-variant",
   },
-]);
+])
+
+function updateActive() {
+  const p = (route.path || '').replace(/\/+$/, '')
+  items.value = items.value.map((i) => ({
+    ...i,
+    // Only set active on client to avoid SSR mismatches
+    active: i.to === '/blog' ? p.startsWith('/blog') : undefined,
+  }))
+}
+
+onMounted(() => {
+  updateActive()
+})
+
+watch(() => route.path, () => updateActive())
 </script>
 
 <template>
