@@ -30,9 +30,9 @@ Sept 2025 – Mar 2026
 
 Led distributed UI/UX engineering organization delivering multi-tenant analytics platform using Nuxt and Vue.
 
-- Managed and grew UI/UX team across three continents; introduced OKRs and reviews improving velocity and reducing MTTR by 50%.
+- Managed and grew UI/UX team across three continents; introduced OKRs and reviews improving velocity and reducing incident MTTR (time to restore service) by 50%.
 
-- Drove adoption of AI coding assistants and MCP extensions in Nuxt stack, pairing workshops with review and testing guardrails.
+- Drove adoption of AI coding assistants and MCP extensions in our Nuxt stack, pairing hands-on workshops with clear review and testing guardrails so teams shipped safely at higher cadence.
 
 
 
@@ -56,7 +56,7 @@ Engineered the scalable SaaS platform for employers managing high-volume technic
 
 - Directed recruitment workflows (interview scheduling, candidate pipelines, assessments) using React, TypeScript, and Node.js.
 
-- Shipped features informed by funnel analytics that improved time-to-hire conversion metrics.
+- Shipped features informed by funnel analytics and product metrics that identified drop-offs, raising funnel completion and improving time-to-hire conversion metrics.
 
 
 
@@ -68,7 +68,7 @@ Promoted from Staff to Lead (Apr 2019) to drive customer-facing features for hos
 
 - Owned trip management tools with dynamic pricing, improving host experience and utilization.
 
-- Shipped All-star host program updates to recognize and incentivize top hosts, supporting retention and higher-quality listings.
+- Shipped UI and workflow updates for the All-star host program to recognize and incentivize top hosts, supporting retention and higher-quality listings.
 
 
 
