@@ -18,71 +18,63 @@ cv:
   email: "dave.marr@gmail.com"
   sections:
     summary:
-      - Engineering leader with 25 years of experience building production
-        software in startup and small enterprise environments. Over the past few
-        years, building better agentic coding and delivery workflows has been
-        my primary focus.
+      - Engineering leader with 25 years building production software.
+        Expertise in TypeScript, NodeJS, React, Vue, and AI-assisted development.
+        Passionate about delivering enjoyable experiences and leading teams to
+        faster, higher-quality delivery.
     experience:
       - company: "Context Labs"
-        position: "Principal UI Engineer / Engineering Manager"
-        start_date: 2022-06
+        position: "Engineering Manager"
+        start_date: 2025-09
         end_date: 2026-03
-        location: "Boston, MA"
-        summary: "Led a distributed UI/UX engineering organization to deliver a
-          multi-tenant, production-grade analytics platform using Nuxt and Vue.
-          Combined hands-on frontend development with people management,
-          OKR-driven delivery, and platform-thinking to reduce time-to-market
-          and improve product quality."
+        location: "Cambridge, MA"
+        summary: "Led distributed UI/UX engineering organization delivering
+          multi-tenant analytics platform using Nuxt and Vue."
         highlights:
-          - Managed and grew a team of UI/UX engineers across three continents;
-            introduced OKRs and regular reviews to increase velocity,
-            accountability, and MTTR by 50%.
-          - Fostered AI tool adoption across the engineering organization,
-            adding MCP capabilities to our web framework, coaching teams on
-            modern software development strategies.
-          - Designed and launched Decarbonization-as-a-Service (DaaS) for major
-            global energy companies, allowing for NextGen energy products to be
-            sold as premium offerings.
-          - Built a production BFF platform integrating GraphQL and Java backed
-            services, multi-tenancy, SSO authentication, RBAC, and
-            internationalization using Nuxt and Nitro.
-          - Developed a shared UI component library with data visualizations
-            using Vega Lite, interactive maps with MapBox, and accessible
-            controls (TypeScript/Vue) to ensure performance, stability, and
-            consistent UX across suite of customer-facing products.
+          - Managed and grew UI/UX team across three continents; introduced
+            OKRs and reviews improving velocity and reducing MTTR by 50%.
+          - Drove adoption of AI coding assistants and MCP extensions in Nuxt
+            stack, pairing workshops with review and testing guardrails.
+      - company: "Context Labs"
+        position: "Principal Software Engineer"
+        start_date: 2022-06
+        end_date: 2025-09
+        location: "Cambridge, MA"
+        summary: "Led technical delivery of a multi-tenant, production-grade
+          analytics platform using Nuxt and Vue; established engineering
+          practices to reduce time-to-market and improve product quality."
+        highlights:
+          - Built production BFF platform with GraphQL/Java, multi-tenancy, SSO,
+            RBAC, and internationalization using Nuxt and Nitro.
+          - Developed shared UI component library with Vega Lite, MapBox, and
+            accessible controls (TypeScript/Vue).
+
       - company: "Filtered.ai"
         position: "Lead Engineer"
         start_date: 2020-02
         end_date: 2022-02
         location: "Boston, MA"
         summary: Engineered the scalable SaaS platform for employers managing
-          high-volume technical hiring processes. Automated grading and fraud
-          detection for job applications.
+          high-volume technical hiring processes with AI-driven grading,
+          fraud detection, and React/TypeScript/Node.js tech stack.
         highlights:
-          - "Directed development of recruitment workflows including interview
-            scheduling, candidate pipelines, and assessment portals using React,
-            TypeScript, and Node.js."
-          - "Implemented AI-driven grading, automated feedback, and
-            fraud-detection systems to scale technical evaluations using Connect
-            (WebRTC) and Mechanical Turk from AWS."
-          - "Shipped features informed by funnel analytics and product metrics
-            that identified drop-offs, drastically improving completion rates
-            and time-to-hire conversion metrics."
+          - "Directed recruitment workflows (interview scheduling, candidate
+            pipelines, assessments) using React, TypeScript, and Node.js."
+          - "Shipped features informed by funnel analytics that improved
+            time-to-hire conversion metrics."
       - company: "Turo"
-        position: "Staff Software Engineer"
+        position: "Lead / Staff Software Engineer"
         start_date: 2018-04
         end_date: "2019-12"
-        location: "California & Massachusetts"
-        summary: "Implemented and supported customer-facing features focusing on
-          engagement and revenue for high-performing hosts."
+        location: "Cambridge, MA"
+        summary: "Promoted from Staff to Lead (Apr 2019) to drive customer-facing
+          features for host engagement and revenue. Leveraged React and Redux;
+          added error management with stack traces; integrated in-car hardware."
         highlights:
-          - "Owned and evolved trip management tools with dynamic pricing
-            controls, improving host experience and utilization."
-          - "Helped to implement the 'All-star' program initiative to recognize
-            and incentivize top hosts, contributing to retention and
-            higher-quality listings."
-          - "Partnered with analytics to measure feature impact and iterate
-            based on user behavior and revenue metrics."
+          - "Owned trip management tools with dynamic pricing, improving host
+            experience and utilization."
+          - "Shipped All-star host program updates to recognize and incentivize
+            top hosts, supporting retention and higher-quality listings."
       - company: "OneMarket / Westfield Labs"
         position: "Senior Software Architect"
         start_date: "2016-01"
@@ -90,18 +82,13 @@ cv:
         location: "San Francisco, CA"
         summary:
           "Architected physical and online payment products, producing £2m
-          per-month of income. Led development on customer management tools
-          using JavaScript and React."
+          per-month of income. Led customer management tools using JavaScript
+          and React. Resided in London for flagship shopping center project."
         highlights:
-          - "Developed smart parking solutions leveraging facial recognition,
-            subscription billing, and automated gates to streamline access and
-            payments using React and Stripe APIs."
-          - "Built indoor mapping, directory kiosks, and wayfinding systems to
-            enhance navigation in complex retail environments using Mapbox,
-            Node.js and C."
-          - "Integrated edge devices using Google Cloud Platform (GCP) for
-            reliable, low-latency user interactions and centralized identity
-            management with PostgreSQL and ORY Hydra."
+          - "Developed smart parking with facial recognition, subscription
+            billing, and automated gates using React and Stripe APIs."
+          - "Built indoor mapping, directory kiosks, and wayfinding systems
+            with Mapbox, Node.js, and C."
       - company: "Tilt.com"
         position: "Senior Systems Engineer"
         start_date: 2013-07
@@ -109,11 +96,9 @@ cv:
         location: "San Francisco, CA"
         summary:
           "Optimized core user flows and backend systems to increase conversion
-          and streamline operations during high-growth phases."
-        highlights:
-          - "Simplified the monetary contribution flow and owned first-party
-            signup code, yielding a 15% lift in first-party signup conversions."
-          - "Engineered early React SSR solutions using Perl and JavaScript."
+          and streamline operations. Simplified contribution flow yielding 15%
+          lift in signups; engineered early React SSR with Perl/JavaScript."
+        highlights: []
       - company: Frog Design
         position: Design Technologist
         start_date: 2009-01
@@ -129,14 +114,8 @@ cv:
         start_date: 2000-09
         end_date: 2013-04
         location: "Massachusetts & California"
-        highlights:
-          - Industrial automation web interfaces and dashboards (GE Fanuc / Intellution)
-          - Enterprise web integrations (SoftArtisans)
-          - User-facing features and a Webby-recognized career advice site (Monster.com)
-          - Scalable frontend architecture for high-traffic Yahoo properties
-          - Design-to-production prototyping (Frog Design)
-          - Co-founder/CTO for an early social product (Secret Feature)
-          - Publishing and ad-tech at Say Media
+        summary:
+          "Industrial automation web interfaces and dashboards (GE Fanuc / Intellution); enterprise web integrations (SoftArtisans); user-facing features and a Webby-recognized career advice site (Monster.com); scalable frontend architecture for high-traffic Yahoo properties; design-to-production prototyping (Frog Design); co-founder/CTO for an early social product (Secret Feature); publishing and ad-tech at Say Media."
         date: 2000-2013
     education:
       - institution: "University of New Hampshire"
@@ -146,8 +125,6 @@ cv:
         start_date: "1996-09"
         end_date: 2000-05
         location: "Durham, NH"
-        highlights:
-          - Dean's list.
         summary: Focus on Management of Information Systems (MIS)
     skills:
       - label: Languages/Frameworks/Web

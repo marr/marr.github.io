@@ -21,24 +21,30 @@ Also available as [**PDF**](/resume.pdf){external}.
 
 
 ## Summary
-Engineering leader with 25 years of experience building production software in startup and small enterprise environments. Over the past few years, building better agentic coding and delivery workflows has been my primary focus.
+Engineering leader with 25 years building production software. Expertise in TypeScript, NodeJS, React, Vue, and AI-assisted development. Passionate about delivering enjoyable experiences and leading teams to faster, higher-quality delivery.
 
 ## Experience
-### **Principal UI Engineer / Engineering Manager**, Context Labs · Boston, MA
+### **Engineering Manager**, Context Labs · Cambridge, MA
 
-June 2022 – Mar 2026
+Sept 2025 – Mar 2026
 
-Led a distributed UI/UX engineering organization to deliver a multi-tenant, production-grade analytics platform using Nuxt and Vue. Combined hands-on frontend development with people management, OKR-driven delivery, and platform-thinking to reduce time-to-market and improve product quality.
+Led distributed UI/UX engineering organization delivering multi-tenant analytics platform using Nuxt and Vue.
 
-- Managed and grew a team of UI/UX engineers across three continents; introduced OKRs and regular reviews to increase velocity, accountability, and MTTR by 50%.
+- Managed and grew UI/UX team across three continents; introduced OKRs and reviews improving velocity and reducing MTTR by 50%.
 
-- Fostered AI tool adoption across the engineering organization, adding MCP capabilities to our web framework, coaching teams on modern software development strategies.
+- Drove adoption of AI coding assistants and MCP extensions in Nuxt stack, pairing workshops with review and testing guardrails.
 
-- Designed and launched Decarbonization-as-a-Service (DaaS) for major global energy companies, allowing for NextGen energy products to be sold as premium offerings.
 
-- Built a production BFF platform integrating GraphQL and Java backed services, multi-tenancy, SSO authentication, RBAC, and internationalization using Nuxt and Nitro.
 
-- Developed a shared UI component library with data visualizations using Vega Lite, interactive maps with MapBox, and accessible controls (TypeScript/Vue) to ensure performance, stability, and consistent UX across suite of customer-facing products.
+### **Principal Software Engineer**, Context Labs · Cambridge, MA
+
+June 2022 – Sept 2025
+
+Led technical delivery of a multi-tenant, production-grade analytics platform using Nuxt and Vue; established engineering practices to reduce time-to-market and improve product quality.
+
+- Built production BFF platform with GraphQL/Java, multi-tenancy, SSO, RBAC, and internationalization using Nuxt and Nitro.
+
+- Developed shared UI component library with Vega Lite, MapBox, and accessible controls (TypeScript/Vue).
 
 
 
@@ -46,27 +52,23 @@ Led a distributed UI/UX engineering organization to deliver a multi-tenant, prod
 
 Feb 2020 – Feb 2022
 
-Engineered the scalable SaaS platform for employers managing high-volume technical hiring processes. Automated grading and fraud detection for job applications.
+Engineered the scalable SaaS platform for employers managing high-volume technical hiring processes with AI-driven grading, fraud detection, and React/TypeScript/Node.js tech stack.
 
-- Directed development of recruitment workflows including interview scheduling, candidate pipelines, and assessment portals using React, TypeScript, and Node.js.
+- Directed recruitment workflows (interview scheduling, candidate pipelines, assessments) using React, TypeScript, and Node.js.
 
-- Implemented AI-driven grading, automated feedback, and fraud-detection systems to scale technical evaluations using Connect (WebRTC) and Mechanical Turk from AWS.
-
-- Shipped features informed by funnel analytics and product metrics that identified drop-offs, drastically improving completion rates and time-to-hire conversion metrics.
+- Shipped features informed by funnel analytics that improved time-to-hire conversion metrics.
 
 
 
-### **Staff Software Engineer**, Turo · California & Massachusetts
+### **Lead / Staff Software Engineer**, Turo · Cambridge, MA
 
 Apr 2018 – Dec 2019
 
-Implemented and supported customer-facing features focusing on engagement and revenue for high-performing hosts.
+Promoted from Staff to Lead (Apr 2019) to drive customer-facing features for host engagement and revenue. Leveraged React and Redux; added error management with stack traces; integrated in-car hardware.
 
-- Owned and evolved trip management tools with dynamic pricing controls, improving host experience and utilization.
+- Owned trip management tools with dynamic pricing, improving host experience and utilization.
 
-- Helped to implement the 'All-star' program initiative to recognize and incentivize top hosts, contributing to retention and higher-quality listings.
-
-- Partnered with analytics to measure feature impact and iterate based on user behavior and revenue metrics.
+- Shipped All-star host program updates to recognize and incentivize top hosts, supporting retention and higher-quality listings.
 
 
 
@@ -74,13 +76,11 @@ Implemented and supported customer-facing features focusing on engagement and re
 
 Jan 2016 – May 2018
 
-Architected physical and online payment products, producing £2m per-month of income. Led development on customer management tools using JavaScript and React.
+Architected physical and online payment products, producing £2m per-month of income. Led customer management tools using JavaScript and React. Resided in London for flagship shopping center project.
 
-- Developed smart parking solutions leveraging facial recognition, subscription billing, and automated gates to streamline access and payments using React and Stripe APIs.
+- Developed smart parking with facial recognition, subscription billing, and automated gates using React and Stripe APIs.
 
-- Built indoor mapping, directory kiosks, and wayfinding systems to enhance navigation in complex retail environments using Mapbox, Node.js and C.
-
-- Integrated edge devices using Google Cloud Platform (GCP) for reliable, low-latency user interactions and centralized identity management with PostgreSQL and ORY Hydra.
+- Built indoor mapping, directory kiosks, and wayfinding systems with Mapbox, Node.js, and C.
 
 
 
@@ -88,11 +88,7 @@ Architected physical and online payment products, producing £2m per-month of in
 
 July 2013 – Dec 2015
 
-Optimized core user flows and backend systems to increase conversion and streamline operations during high-growth phases.
-
-- Simplified the monetary contribution flow and owned first-party signup code, yielding a 15% lift in first-party signup conversions.
-
-- Engineered early React SSR solutions using Perl and JavaScript.
+Optimized core user flows and backend systems to increase conversion and streamline operations. Simplified contribution flow yielding 15% lift in signups; engineered early React SSR with Perl/JavaScript.
 
 
 
@@ -114,19 +110,7 @@ Engineered digital and physical technical innovations including:
 
 2000-2013
 
-- Industrial automation web interfaces and dashboards (GE Fanuc / Intellution)
-
-- Enterprise web integrations (SoftArtisans)
-
-- User-facing features and a Webby-recognized career advice site (Monster.com)
-
-- Scalable frontend architecture for high-traffic Yahoo properties
-
-- Design-to-production prototyping (Frog Design)
-
-- Co-founder/CTO for an early social product (Secret Feature)
-
-- Publishing and ad-tech at Say Media
+Industrial automation web interfaces and dashboards (GE Fanuc / Intellution); enterprise web integrations (SoftArtisans); user-facing features and a Webby-recognized career advice site (Monster.com); scalable frontend architecture for high-traffic Yahoo properties; design-to-production prototyping (Frog Design); co-founder/CTO for an early social product (Secret Feature); publishing and ad-tech at Say Media.
 
 
 
@@ -135,8 +119,6 @@ Engineered digital and physical technical innovations including:
 Sept 1996 – May 2000
 
 Focus on Management of Information Systems (MIS)
-
-- Dean's list.
 
 
 
