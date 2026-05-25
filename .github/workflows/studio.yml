@@ -72,6 +72,10 @@ jobs:
           bash scripts/render-cv.sh
 
       - name: Generate
+        env:
+          MCP_AGENT_KEY: ${{ secrets.MCP_AGENT_KEY }}
+          IRIS_WATCHED_REPOS_TOOL: ${{ secrets.IRIS_WATCHED_REPOS_TOOL }}
+          CTX_MCP_URL: ${{ secrets.CTX_MCP_URL }}
         run: npx nuxi build --preset github_pages
 
       # Deployment job
