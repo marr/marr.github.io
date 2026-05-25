@@ -5,12 +5,10 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/content"],
   devtools: { enabled: true },
   runtimeConfig: {
-    /** Redis Iris Context Surfaces agent key (server-only). */
-    mcpAgentKey: process.env.MCP_AGENT_KEY || "",
-    /** Optional override for Context Surfaces MCP endpoint. */
-    ctxMcpUrl: process.env.CTX_MCP_URL || "",
-    /** Optional explicit MCP tool name for watched repositories. */
-    irisWatchedReposTool: process.env.IRIS_WATCHED_REPOS_TOOL || "",
+    /** Redis Iris Context Surfaces agent key (server-only). Also reads MCP_AGENT_KEY at runtime. */
+    mcpAgentKey: "",
+    ctxMcpUrl: "",
+    irisWatchedReposTool: "",
   },
   app: {
     head: {

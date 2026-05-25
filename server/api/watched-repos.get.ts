@@ -4,6 +4,13 @@ import {
   type WatchedRepo,
 } from '../utils/iris'
 
+function env(name: string): string {
+  const envRecord = (globalThis as { process?: { env?: Record<string, string | undefined> } })
+    .process?.env
+  const value = envRecord?.[name]
+  return typeof value === 'string' ? value : ''
+}
+
 export default defineEventHandler(async (event): Promise<{
   enabled: boolean
   repos: WatchedRepo[]
@@ -12,9 +19,9 @@ export default defineEventHandler(async (event): Promise<{
 }> => {
   const config = useRuntimeConfig(event)
   const irisConfig = {
-    mcpAgentKey: config.mcpAgentKey,
-    ctxMcpUrl: config.ctxMcpUrl,
-    irisWatchedReposTool: config.irisWatchedReposTool,
+    mcpAgentKey: config.mcpAgentKey || env('MCP_AGENT_KEY'),
+    ctxMcpUrl: config.ctxMcpUrl || env('CTX_MCP_URL'),
+    irisWatchedReposTool: config.irisWatchedReposTool || env('IRIS_WATCHED_REPOS_TOOL'),
   }
 
   if (!isIrisConfigured(irisConfig)) {
