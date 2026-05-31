@@ -8,13 +8,23 @@ This is a Nuxt 4 personal portfolio/blog site (`@dmarr/cv`). It is a single appl
 
 ### Quick reference
 
-| Action | Command |
-|--------|---------|
-| Install deps | `pnpm install` |
-| Dev server | `pnpm dev` (serves at `http://localhost:3000`) |
-| Build | `pnpm build` |
-| Typecheck | `npx nuxi typecheck` |
-| Generate types | `npx nuxi prepare` |
+- **Install deps:** `pnpm install`
+- **Dev server:** `pnpm dev` (serves at `http://localhost:3000`)
+- **Build:** `pnpm build`
+- **Typecheck:** `npx nuxi typecheck`
+- **Generate types:** `npx nuxi prepare`
+
+### Slack communication
+
+When replying in Slack (including Cloud Agent updates mirrored to a channel), **do not use pipe-style markdown tables** (`| col | col |`). Slack mrkdwn renders them as plain text with literal pipes.
+
+For tabular data in Slack, use one of:
+
+1. **Structured bullets** — bold row labels, values inline (best for 2–4 columns).
+2. **Monospace code block** — ASCII-aligned columns inside a fenced block (best for wider grids).
+3. **GitHub / site links** — point to content where GFM tables render (blog posts, PRs).
+
+Blog and resume markdown tables on the site are fine; this rule applies only to Slack-delivered agent text.
 
 ### Notes
 

@@ -59,6 +59,8 @@ After: scale(0.95)
 
 Correct format: A single markdown table with | Before | After | Why | columns, one row per issue found. The "Why" column briefly explains the reasoning.
 
+**Slack exception:** When the review will be read in Slack (Cloud Agent channel updates, pasted summaries), pipe tables will not render. Use structured bullets instead — one issue per bullet, `Before → After` inline, reason in parentheses — or an ASCII table inside a monospace code block. Keep the same Before/After/Why content; only change the wrapper format.
+
 ## The Animation Decision Framework
 
 Before writing any animation code, answer these questions in order:
