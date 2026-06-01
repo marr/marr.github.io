@@ -49,7 +49,7 @@ const resumeContentComponents = {
  * - Education: h3 may include degree in the heading; following lines are p (dates), p (e.g. Dean's List).
  * - Section h2 headings are plain text; role h3 lines use <strong> for the company name (logo match).
  * - MDC auto-ids: #summary, #experience, #education, #skills — keep section titles or update selectors.
- * - PDF link line: any p containing a link to resume.pdf (not necessarily first node).
+ * - PDF link line: any p containing a link to david-marr-resume.pdf (not necessarily first node).
  */
 
 .resume-content {
@@ -58,7 +58,7 @@ const resumeContentComponents = {
   color: var(--ui-text);
 }
 
-.resume-content :deep(p:has(a[href$="resume.pdf"])) {
+.resume-content :deep(p:has(a[href$="david-marr-resume.pdf"])) {
   margin: 0 0 1.75rem;
   padding: 0.65rem 1rem;
   border-radius: var(--ui-radius);
@@ -67,7 +67,7 @@ const resumeContentComponents = {
   font-size: 0.875rem;
 }
 
-.resume-content :deep(p:has(a[href$="resume.pdf"]) a) {
+.resume-content :deep(p:has(a[href$="david-marr-resume.pdf"]) a) {
   font-weight: 600;
 }
 
