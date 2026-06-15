@@ -1,9 +1,10 @@
 <script setup lang="ts">
-const route = useRoute();
-const { data: page } = await useAsyncData("blog-layout-" + route.path, () => {
-  return queryCollection("blog").path(route.path).first();
-});
-
+const contentPath = useContentPath();
+const { data: page } = await useAsyncData(
+  () => `blog-layout-${contentPath.value}`,
+  () => queryCollection("blog").path(contentPath.value).first(),
+  { watch: [contentPath] },
+);
 </script>
 
 <template>
