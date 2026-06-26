@@ -11,7 +11,6 @@
     "cv:render": "bash scripts/render-cv.sh"
   },
   "dependencies": {
-    "@iconify-json/mdi": "^1.2.3",
     "@nuxt/content": "3.14.0",
     "@nuxt/ui": "^4.9.0",
     "@tailwindcss/vite": "^4.3.1",
@@ -27,6 +26,7 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.114",
+    "@iconify-json/simple-icons": "^1.2.87",
     "@nuxtjs/mdc": "^0.22.0",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.6.0"

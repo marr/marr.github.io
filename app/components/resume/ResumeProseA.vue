@@ -9,30 +9,30 @@ const slots = useSlots()
 
 // Map social URLs and labels to Iconify icons
 const socialIconMap: Record<string, string> = {
-  'github.com': 'i-mdi-github',
-  'linkedin.com': 'i-mdi-linkedin',
-  'x.com': 'i-mdi-twitter',
-  'twitter.com': 'i-mdi-twitter',
-  'tel:': 'i-mdi-phone',
-  'mailto:': 'i-mdi-email',
-  'geo:': 'i-mdi-map-marker',
-  'maps.google.com': 'i-mdi-map-marker',
-  'nuxt-maplibre/demo/map/markers': 'i-mdi-map-marker',
-  'marr.github.io': 'i-mdi-web',
+  'github.com': 'i-simple-icons-github',
+  'linkedin.com': 'i-simple-icons-linkedin',
+  'x.com': 'i-simple-icons-x',
+  'twitter.com': 'i-simple-icons-x',
+  'tel:': 'i-lucide-phone',
+  'mailto:': 'i-lucide-mail',
+  'geo:': 'i-lucide-map-pin',
+  'maps.google.com': 'i-lucide-map-pin',
+  'nuxt-maplibre/demo/map/markers': 'i-lucide-map-pin',
+  'marr.github.io': 'i-lucide-globe',
 }
 
 // Map text labels to icons (handles both "Website:" and "Website" formats)
 const textLabelMap: Record<string, string> = {
-  'github': 'i-mdi-github',
-  'linkedin': 'i-mdi-linkedin',
-  'x': 'i-mdi-twitter',
-  'twitter': 'i-mdi-twitter',
-  'tel': 'i-mdi-phone',
-  'phone': 'i-mdi-phone',
-  'email': 'i-mdi-email',
-  'location': 'i-mdi-map-marker',
-  'website': 'i-mdi-web',
-  'web': 'i-mdi-web',
+  'github': 'i-simple-icons-github',
+  'linkedin': 'i-simple-icons-linkedin',
+  'x': 'i-simple-icons-x',
+  'twitter': 'i-simple-icons-x',
+  'tel': 'i-lucide-phone',
+  'phone': 'i-lucide-phone',
+  'email': 'i-lucide-mail',
+  'location': 'i-lucide-map-pin',
+  'website': 'i-lucide-globe',
+  'web': 'i-lucide-globe',
 }
 
 // Determine if this is a social link and get the appropriate icon

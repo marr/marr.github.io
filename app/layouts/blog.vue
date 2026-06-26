@@ -25,7 +25,7 @@ const { data: page } = await useAsyncData(
               v-if="page.date"
               class="flex items-center gap-1 text-sm text-muted"
             >
-              <UIcon name="i-mdi-calendar" class="w-4 h-4" />
+              <UIcon name="i-lucide-calendar" class="w-4 h-4" />
               <NuxtTime
                 :datetime="page.date"
                 locale="en-US"

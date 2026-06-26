@@ -52,7 +52,7 @@ export default defineNuxtConfig({
     },
     // Ensure collections are available on server
     serverBundle: {
-      collections: ["lucide", "mdi"],
+      collections: ["lucide", "simple-icons"],
     },
   },
   content: {
@@ -79,5 +79,6 @@ export default defineNuxtConfig({
   routeRules: {
     "/nuxt-maplibre": { prerender: false },
     "/vue-squircle": { prerender: false },
+    "/about": { redirect: { to: "/#career", statusCode: 301 } },
   },
 });
