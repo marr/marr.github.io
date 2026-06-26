@@ -252,6 +252,13 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   :::
 ::
 
+::watched-repos-grid
+---
+title: Watching
+description: GitHub repos I follow—loaded from Redis Iris (Context Retriever) when MCP credentials are configured at build time.
+---
+::
+
 ::project-grid
 ---
 title: Archive

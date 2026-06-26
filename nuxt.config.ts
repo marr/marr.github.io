@@ -4,6 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/content"],
   devtools: { enabled: true },
+  runtimeConfig: {
+    /** Redis Iris Context Surfaces agent key (server-only). Also reads MCP_AGENT_KEY at runtime. */
+    mcpAgentKey: "",
+    ctxMcpUrl: "",
+    irisWatchedReposTool: "",
+  },
   app: {
     head: {
       link: [
