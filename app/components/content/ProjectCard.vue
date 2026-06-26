@@ -56,7 +56,7 @@
 interface Props {
   title: string
   url: string
-  /** Nuxt Icon collection name (e.g. i-mdi-github) */
+  /** Nuxt Icon collection name (e.g. i-simple-icons-github) */
   icon?: string
   /** Path under public/ or absolute URL for project logo */
   image?: string

@@ -3,9 +3,9 @@
 const copyrightNow = new Date()
 
 const socialLinks = [
-  { icon: 'i-mdi-github', url: 'https://github.com/marr', label: 'GitHub' },
-  { icon: 'i-mdi-twitter', url: 'https://x.com/dmarr', label: 'Twitter' },
-  { icon: 'i-mdi-linkedin', url: 'https://linkedin.com/in/davidmarr', label: 'LinkedIn' },
+  { icon: 'i-simple-icons-github', url: 'https://github.com/marr', label: 'GitHub' },
+  { icon: 'i-simple-icons-x', url: 'https://x.com/dmarr', label: 'X' },
+  { icon: 'i-simple-icons-linkedin', url: 'https://linkedin.com/in/davidmarr', label: 'LinkedIn' },
 ]
 </script>
 

@@ -5,10 +5,9 @@ import { ref, onMounted, watch } from 'vue'
 const route = useRoute()
 
 const items = ref([
-  { label: "Home", to: "/", icon: "i-mdi-home" },
-  { label: "About", to: "/about", icon: "i-mdi-account-circle-outline" },
-  { label: "Résumé", to: "/resume", icon: "i-mdi-file-document-outline" },
-  { label: "Blog", to: "/blog", icon: "i-mdi-book-open-page-variant" },
+  { label: "Home", to: "/", icon: "i-lucide-house" },
+  { label: "Blog", to: "/blog", icon: "i-lucide-rss" },
+  { label: "CV", to: "/resume", icon: "i-lucide-file-user" },
 ])
 
 function updateActive() {

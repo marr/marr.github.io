@@ -13,13 +13,13 @@ roles:
   - Open Source Creator
   - AI Tooling Builder
 socials:
-  - icon: i-mdi-github
+  - icon: i-simple-icons-github
     label: David Marr on GitHub
     url: https://github.com/marr
-  - icon: i-mdi-twitter
+  - icon: i-simple-icons-x
     label: David Marr on X
     url: https://x.com/dmarr
-  - icon: i-mdi-linkedin
+  - icon: i-simple-icons-linkedin
     label: David Marr on LinkedIn
     url: https://linkedin.com/in/davidmarr
 avatar: /avatar.jpg
@@ -27,6 +27,15 @@ avatarDark: /avatar.png
 description: Building AI tooling, developer productivity systems, and modern frontend frameworks.
 title: David Marr
 ---
+::
+
+::home-story
+::
+
+::career-timeline
+::
+
+::home-ai-approach
 ::
 
 ::project-grid
@@ -40,7 +49,7 @@ description: Repos I maintain—shipping work you can inspect and reuse.
     - Nuxt
     - Maps
   description: A Nuxt module for swapping map providers in a declarative way.
-  icon: i-logos-nuxt-icon
+  icon: i-simple-icons-nuxt
   title: nuxt-maplibre
   url: https://marr.github.io/nuxt-maplibre
   ---
@@ -66,7 +75,7 @@ description: Repos I maintain—shipping work you can inspect and reuse.
     - UI
     - Deprecated
   description: 'Vue squircle masks are largely superseded by native CSS `corner-shape: squircle`; demo kept for reference.'
-  icon: i-logos-vue
+  icon: i-simple-icons-vuedotjs
   title: vue-squircle
   url: https://marr.github.io/vue-squircle
   ---
@@ -84,21 +93,9 @@ description: Tools I keep coming back to—data viz, docs, app shell, and UI pat
     - Data Viz
     - Grammar of Graphics
   description: A high-level grammar of interactive graphics, built on Vega.
-  icon: i-mdi-chart-box-outline
+  icon: i-simple-icons-vega
   title: Vega Lite
   url: https://vega.github.io/vega-lite
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - LaTeX
-    - PDF
-  description: Version-controllable CVs from YAML; powers this site’s PDF pipeline.
-  icon: i-mdi-file-document-outline
-  title: RenderCV
-  url: https://rendercv.com
   ---
   :::
 
@@ -108,7 +105,7 @@ description: Tools I keep coming back to—data viz, docs, app shell, and UI pat
     - Framework
     - Vue
   description: The intuitive Vue framework for production—SSR, file routing, and modules.
-  icon: i-mdi-nuxt
+  icon: i-simple-icons-nuxt
   title: Nuxt
   url: https://nuxt.com
   ---
@@ -120,7 +117,7 @@ description: Tools I keep coming back to—data viz, docs, app shell, and UI pat
     - Notes
     - PKM
   description: A powerful knowledge base that works on local Markdown files.
-  icon: i-logos-obsidian-icon
+  icon: i-simple-icons-obsidian
   title: Obsidian
   url: https://obsidian.md
   ---
@@ -132,38 +129,21 @@ description: Tools I keep coming back to—data viz, docs, app shell, and UI pat
     - React
     - Design System
   description: Copy-paste components built on Radix and Tailwind.
-  icon: i-mdi-palette-swatch
+  icon: i-simple-icons-shadcnui
   title: shadcn/ui
   url: https://ui.shadcn.com
   ---
   :::
-::
-
-::project-grid
----
-title: Exploring
-description: On the workbench right now—frameworks, infra, and ideas worth trying in depth.
----
-  :::project-card
-  ---
-  tags:
-    - Editor
-  description: Local, collaborative, structured Markdown in the file tree.
-  icon: i-mdi-file-tree
-  title: comark
-  url: https://comark.dev
-  ---
-  :::
 
   :::project-card
   ---
   tags:
-    - Git
-    - Self‑hosted
-  description: A painless self-hosted Git service.
-  icon: i-mdi-git
-  title: Gitea
-  url: https://gitea.com
+    - AI
+    - Developer Tools
+  description: A novel method for autonomous AI-driven software development.
+  icon: i-simple-icons-claude
+  title: Ralph Loop
+  url: https://claytonfarr.github.io/ralph-playbook/
   ---
   :::
 
@@ -173,33 +153,10 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
     - Security
     - SSO
   description: Open-source OIDC SSO and user management for self-hosted apps.
-  icon: i-mdi-shield-key
+  image: /voidauth-logo.svg
+  imageInvert: false
   title: VoidAuth
   url: https://voidauth.app
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - WebGPU
-    - Tools
-  description: WebGPU component library for creative effects in Vue, React, Svelte, Solid, and vanilla JS.
-  icon: i-mdi-gradient-horizontal
-  title: shaders.com
-  url: https://shaders.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - 3D
-    - SVG
-  description: Tiny engine for 3D voxel scenes rendered to SVG—boolean ops, oblique and perspective cams, zero dependencies.
-  icon: i-mdi-cube-outline
-  title: heerich
-  url: https://github.com/meodai/heerich
   ---
   :::
 
@@ -209,7 +166,7 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
     - React
     - Full‑stack
   description: The next generation of full-stack web applications.
-  icon: i-mdi-rocket-launch
+  icon: i-simple-icons-tanstack
   title: TanStack Start
   url: https://tanstack.com/start
   ---
@@ -220,7 +177,7 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   tags:
     - Infrastructure
   description: Secure, immutable Linux for Kubernetes.
-  icon: i-logos-kubernetes
+  icon: i-simple-icons-talos
   title: Talos
   url: https://talos.dev
   ---
@@ -232,8 +189,7 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
     - Build Tools
     - Frontend
   description: A unified web toolchain from VoidZero built around Vite.
-  image: /vite-plus-favicon.svg
-  imageInvert: false
+  icon: i-simple-icons-vite
   title: Vite+
   url: https://viteplus.dev
   ---
@@ -248,6 +204,73 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   image: /pi-logo.svg
   title: pi-mono
   url: https://github.com/badlogic/pi-mono
+  ---
+  :::
+::
+
+::project-grid
+---
+title: Exploring
+description: On the workbench right now—frameworks, infra, and ideas worth trying in depth.
+---
+  :::project-card
+  ---
+  tags:
+    - Knowledge
+    - Markdown
+    - AI
+  description: Google’s vendor-neutral spec for knowledge bundles—Markdown files with YAML frontmatter, readable by people and agents.
+  icon: i-simple-icons-markdown
+  title: Open Knowledge Format
+  url: https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Git
+    - Self‑hosted
+  description: A painless self-hosted Git service.
+  icon: i-simple-icons-gitea
+  title: Gitea
+  url: https://gitea.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - WebGPU
+    - Tools
+  description: WebGPU component library for creative effects in Vue, React, Svelte, Solid, and vanilla JS.
+  icon: i-simple-icons-webgpu
+  title: shaders.com
+  url: https://shaders.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - 3D
+    - SVG
+  description: Tiny engine for 3D voxel scenes rendered to SVG—boolean ops, oblique and perspective cams, zero dependencies.
+  icon: i-lucide-box
+  title: heerich
+  url: https://github.com/meodai/heerich
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - AI
+    - SDK
+  description: Build integrations between model providers and web frameworks.
+  icon: i-simple-icons-vercel
+  title: Vercel AI SDK
+  url: https://ai-sdk.dev
   ---
   :::
 ::
@@ -272,56 +295,13 @@ description: Older demos and experiments—still here for reference, not the mai
   :::project-card
   ---
   tags:
-    - AI
-    - SDK
-  description: Build integrations between model providers and web frameworks.
-  icon: i-logos-vercel-icon
-  title: Vercel AI SDK
-  url: https://ai-sdk.dev
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - AI
-    - Developer Tools
-  description: A novel method for autonomous AI-driven software development.
-  icon: i-logos-claude-icon
-  title: Ralph Loop
-  url: https://claytonfarr.github.io/ralph-playbook/
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
     - macOS
     - Boot
   description: Post-install patches for running newer macOS on unsupported Macs.
-  icon: i-mdi-apple
+  icon: i-simple-icons-apple
   title: OpenCore Legacy Patcher
   url: https://dortania.github.io/OpenCore-Legacy-Patcher
   ---
   :::
 ::
 
-::ai-skills-section
----
-title: AI & taste
-description: Resources I reach for when steering agents and UIs—separate from the product stack list above.
-items:
-  - label: Impeccable
-    url: https://impeccable.style
-    hint: Design guidance for “good taste” in AI UIs
-  - label: Agents with taste
-    url: https://emilkowal.ski/ui/agents-with-taste
-    hint: Emil Kowalski on high-agency, detail-led interfaces
-  - label: Interface details
-    url: https://jakub.kr/writing/details-that-make-interfaces-feel-better
-    hint: Jakub Krośniak on micro-interactions and polish
-  - label: compound-engineering (Cursor plugin)
-    url: https://github.com/EveryInc/compound-engineering-plugin
-    hint: Workflow patterns in the editor
----
-::
