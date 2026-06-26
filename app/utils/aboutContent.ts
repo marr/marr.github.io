@@ -93,7 +93,7 @@ export const eras: Era[] = [
     title: "AI leadership and design teams",
     icon: "i-mdi-robot-outline",
     narrative:
-      "Principal engineer to engineering manager at Context Labs, leading a distributed design and frontend team on a decarbonization-as-a-Service (DaaS) SaaS platform. Cut incident recovery time 50% while rolling out AI coding tools and editor integrations—workshops plus review standards so teams shipped faster without cutting corners.",
+      "Principal engineer to engineering manager at Context Labs, leading a distributed design and frontend team on a decarbonization-as-a-Service (DaaS) platform. Cut incident recovery time 50% while rolling out AI coding tools and editor integrations—workshops plus review standards so teams shipped faster without cutting corners.",
   },
 ];
 
@@ -355,7 +355,7 @@ export const journeyGraphicFixes = [
 ];
 
 export const journeyAlt =
-  "David Marr: 25 years in engineering leadership. Highlights include signup growth at Tilt, Yahoo and Monster.com, startup CTO work, DaaS SaaS at Context Labs, hiring automation at Filtered.ai, and consumer products at Turo and OneMarket.";
+  "David Marr: 25 years in engineering leadership. Highlights include signup growth at Tilt, Yahoo and Monster.com, startup CTO work, decarbonization platform (DaaS) at Context Labs, hiring automation at Filtered.ai, and consumer products at Turo and OneMarket.";
 
 export const timelineGraphicStack = {
   staples: ["React", "Vega Lite", "Tailwind (shadcn/ui)", "Obsidian"],
