@@ -80,6 +80,19 @@ description: Repos I maintain—shipping work you can inspect and reuse.
   url: https://marr.github.io/vue-squircle
   ---
   :::
+
+  :::project-card
+  ---
+  tags:
+    - Vue
+    - Canvas
+    - Animation
+  description: Interactive logo rendered with Floyd–Steinberg dithering, cursor repulsion, and click ripples.
+  icon: i-simple-icons-vuedotjs
+  title: dithered-logo-vue
+  url: https://marr.github.io/dithered-logo-vue
+  ---
+  :::
 ::
 
 ::project-grid

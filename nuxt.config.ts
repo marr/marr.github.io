@@ -79,6 +79,7 @@ export default defineNuxtConfig({
   routeRules: {
     "/nuxt-maplibre": { prerender: false },
     "/vue-squircle": { prerender: false },
+    "/dithered-logo-vue": { prerender: false },
     "/about": { redirect: { to: "/#career", statusCode: 301 } },
   },
 });
