@@ -182,18 +182,6 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   :::project-card
   ---
   tags:
-    - macOS
-    - Boot
-  description: Post-install patches for running newer macOS on unsupported Macs.
-  icon: i-mdi-apple
-  title: OpenCore Legacy Patcher
-  url: https://dortania.github.io/OpenCore-Legacy-Patcher
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
     - WebGPU
     - Tools
   description: WebGPU component library for creative effects in Vue, React, Svelte, Solid, and vanilla JS.
@@ -244,7 +232,8 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
     - Build Tools
     - Frontend
   description: A unified web toolchain from VoidZero built around Vite.
-  icon: i-logos-vitejs
+  image: /vite-plus-favicon.svg
+  imageInvert: false
   title: Vite+
   url: https://viteplus.dev
   ---
@@ -301,6 +290,18 @@ description: Older demos and experiments—still here for reference, not the mai
   icon: i-logos-claude-icon
   title: Ralph Loop
   url: https://claytonfarr.github.io/ralph-playbook/
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - macOS
+    - Boot
+  description: Post-install patches for running newer macOS on unsupported Macs.
+  icon: i-mdi-apple
+  title: OpenCore Legacy Patcher
+  url: https://dortania.github.io/OpenCore-Legacy-Patcher
   ---
   :::
 ::

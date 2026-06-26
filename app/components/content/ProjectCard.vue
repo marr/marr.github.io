@@ -14,7 +14,10 @@
           v-if="image"
           :src="image"
           :alt="title"
-          class="size-5 object-contain invert dark:invert-0 group-hover:opacity-90 transition-opacity"
+          :class="[
+            'size-5 object-contain group-hover:opacity-90 transition-opacity',
+            imageInvert ? 'invert dark:invert-0' : '',
+          ]"
         />
         <UIcon
           v-else
@@ -57,6 +60,8 @@ interface Props {
   icon?: string
   /** Path under public/ or absolute URL for project logo */
   image?: string
+  /** Invert logo in light mode (for monochrome white SVGs) */
+  imageInvert?: boolean
   description?: string
   tags?: string[]
 }
@@ -66,6 +71,7 @@ const {
   url,
   icon = '',
   image = '',
+  imageInvert = true,
   description = '',
   tags = [],
 } = defineProps<Props>()

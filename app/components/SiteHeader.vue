@@ -6,6 +6,7 @@ const route = useRoute()
 
 const items = ref([
   { label: "Home", to: "/", icon: "i-mdi-home" },
+  { label: "About", to: "/about", icon: "i-mdi-account-circle-outline" },
   { label: "Résumé", to: "/resume", icon: "i-mdi-file-document-outline" },
   { label: "Blog", to: "/blog", icon: "i-mdi-book-open-page-variant" },
 ])
