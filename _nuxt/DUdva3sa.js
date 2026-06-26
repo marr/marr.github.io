@@ -1,0 +1,1 @@
+import{Q as c,c as _,z as a,p as e,g as o,r,bH as l,bI as d}from"./CTpNZYwY.js";const i={},m={class:"min-h-screen flex flex-col"},f={class:"flex-1"},x={class:"max-w-4xl mx-auto px-4"};function p(t,u){const s=l,n=d;return _(),a("div",m,[e(s),o("main",f,[o("div",x,[r(t.$slots,"default")])]),e(n)])}const B=c(i,[["render",p]]);export{B as default};
