@@ -46,6 +46,18 @@ description: Repos I maintain—shipping work you can inspect and reuse.
   :::project-card
   ---
   tags:
+    - JavaScript
+    - IndexedDB
+  description: Job search dashboard—track companies, roles, and pipeline stages from networking through offer, with weekly outreach goals.
+  icon: i-lucide-briefcase
+  title: job-search-tracker
+  url: https://marr.github.io/job-search-tracker
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
     - Nuxt
     - Maps
   description: A Nuxt module for swapping map providers in a declarative way.
