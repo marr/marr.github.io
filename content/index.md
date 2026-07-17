@@ -48,7 +48,7 @@ description: Repos I maintain—shipping work you can inspect and reuse.
   tags:
     - JavaScript
     - IndexedDB
-  description: Self-contained browser app for tracking applications, stages, and weekly progress—no server required.
+  description: Job search dashboard—track companies, roles, and pipeline stages from networking through offer, with weekly outreach goals.
   icon: i-lucide-briefcase
   title: job-search-tracker
   url: https://marr.github.io/job-search-tracker
