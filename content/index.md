@@ -46,6 +46,18 @@ description: Repos I maintain—shipping work you can inspect and reuse.
   :::project-card
   ---
   tags:
+    - JavaScript
+    - IndexedDB
+  description: Self-contained browser app for tracking applications, stages, and weekly progress—no server required.
+  icon: i-lucide-briefcase
+  title: job-search-tracker
+  url: https://marr.github.io/job-search-tracker
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
     - Nuxt
     - Maps
   description: A Nuxt module for swapping map providers in a declarative way.
