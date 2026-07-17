@@ -27,3 +27,4 @@ This is a Nuxt 4 personal portfolio/blog site (`@dmarr/cv`). It is a single appl
 - The CV/resume rendering (`pnpm cv:render`) requires Python 3 + `rendercv[full]==2.8` but pre-built artifacts (`public/david-marr-resume.pdf`, `content/resume.md`) are already committed, so this is only needed when editing the CV YAML.
 - `@nuxt/content` v3 uses an embedded SQLite database (`better-sqlite3`) — no external database setup is needed.
 - No Docker, external APIs, or microservices are required.
+- **Redis Iris (optional):** Set `MCP_AGENT_KEY` (and optionally `IRIS_WATCHED_REPOS_TOOL`, `CTX_MCP_URL`) to populate the homepage **Watching** section from [Redis Iris](https://redis.io/iris/) Context Retriever MCP tools at build/SSR time. Without credentials the section is omitted. See `.env.example`.

@@ -233,6 +233,13 @@ description: Tools I keep coming back to—data viz, docs, app shell, and UI pat
   :::
 ::
 
+::watched-repos-grid
+---
+title: Watching
+description: GitHub repos I follow—loaded from Redis Iris (Context Retriever) when MCP credentials are configured at build time.
+---
+::
+
 ::project-grid
 ---
 title: Exploring
