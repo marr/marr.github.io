@@ -1,5 +1,5 @@
 ---
-title: "Building a Homelab with Flux GitOps: Lessons from Three Months"
+title: "Building a Homelab with Flux GitOps: Some lessons, three months in"
 description: How I built a home Kubernetes cluster with Flux, SOPS secrets, and a dashboard that actually works — plus the skills that helped document everything along the way.
 date: 2026-04-29T00:00:00.000Z
 ---

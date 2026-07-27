@@ -119,4 +119,4 @@ Three months in, I thought the cluster was the project. Six months in, the clust
 
 ---
 
-*Starts here: [Building a Homelab with Flux GitOps: Lessons from Three Months](/blog/homelab-flux-gitops-journey). For the AI-assisted side, see [Building a Knowledge Graph with Obsidian and MCP](/blog/knowledge-graph-obsidian-mcp).*
+*Starts here: [Building a Homelab with Flux GitOps: Some lessons, three months in](/blog/homelab-flux-gitops-journey). For the AI-assisted side, see [Building a Knowledge Graph with Obsidian and MCP](/blog/knowledge-graph-obsidian-mcp).*
