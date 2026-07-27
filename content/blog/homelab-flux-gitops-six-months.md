@@ -105,7 +105,7 @@ One thread tied back to the ffmpeg saga: Immich's `FFMPEG_*` environment variabl
 
 The original post had a "What's Next" list. Let me be honest about it:
 
-- **Gitea Actions CI with in-cluster runners** — actually shipped. Quietly. An `act_runner` deployment with DinD, living in the cluster it tests. It now publishes this very blog, which is a recursion I try not to think about too hard.
+- **Gitea Actions CI with in-cluster runners** — actually shipped. Quietly. An `act_runner` deployment with DinD, living in the cluster it tests. It builds and pushes the images for the self-hosted apps (the playlist generator, the job-search tracker) through the same reconciliation loop as everything else. The blog itself publishes separately via GitHub Actions.
 - **Second node for HA** — not shipped. The Mac Mini hasn't died, so the urgency is theoretical.
 - **Better Alertmanager rules** — I'll get to it. Probably. Eventually.
 
