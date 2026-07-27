@@ -1,6 +1,8 @@
 ---
-
-## title: "Homelab GitOps, Six Months In: Progress is progress" description: Six months into the Flux/Talos homelab. Self-hosted apps are now just a prompt away. date: 2026-07-27T00:00:00.000Z
+title: "Homelab GitOps, Six Months In: Progress is progress"
+description: Six months into the Flux/Talos homelab. Self-hosted apps are now just a prompt away.
+date: 2026-07-27T00:00:00.000Z
+---
 
 Three months in, I wrote about getting a homelab cluster running — Talos Linux, Flux GitOps, SOPS secrets, a homepage dashboard that mostly worked. The honest pitch was "things that broke, and how I'll do it again."
 
