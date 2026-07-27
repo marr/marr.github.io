@@ -1,6 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
 
-// @nuxt/content ~3.11.x until https://github.com/nuxt/content/issues/3742 (broken import in 3.12.0)
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/content"],
   devtools: { enabled: true },
