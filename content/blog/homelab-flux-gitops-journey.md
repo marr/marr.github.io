@@ -17,7 +17,7 @@ Here's what I built, what broke, and how I'll do it again.
 - **SOPS + Age** — Encrypted secrets in git. No plaintext, no sealed-secrets complexity. Decrypt with your age key, apply, done.
 - **Homepage** — Dashboard with widgets for every service. Internal URLs, API tokens, done.
 - **Traefik** — Ingress with ACME DNS challenges for `*.example.com` certs.
-- **CrowdSec** — Bouncer + LAPI for intrusion detection at the edge.
+- **CrowdSec** — Bouncer + LAPI for intrusion detection at the edge, plus Talos node log acquisition for cluster-wide visibility.
 
 ## The Journey (aka Things That Broke)
 
@@ -115,6 +115,24 @@ data:
 ```
 
 **Result:** p99 latency reduced from 1.2s → ~300ms (3-4x faster).
+
+### Immich Thumbnails Crashing on Old Hardware
+
+The Mac Mini is an older Ivy Bridge box (3rd-gen Intel, HD Graphics 4000) with no VAAPI, CUDA, or Vulkan support. Immich's `ffmpeg`-driven thumbnail generation started crashing with `SIGSEGV` on H.264 and HEVC iPhone MOV files — always *after* frames were successfully processed, during the cleanup phase.
+
+Root cause: hardware-acceleration incompatibility, not a software bug. An earlier investigation blamed `fluent-ffmpeg` because the segfault surfaced in the Node.js wrapper; that was wrong. The actual cause is FFmpeg trying to initialize hardware acceleration on a CPU that has no usable accel surface, then faulting mid-pipeline.
+
+**Fix:** explicitly disable hardware acceleration in the Immich server env:
+
+```yaml
+env:
+  FFMPEG_HWACCEL: "false"   # software-only encoding on Ivy Bridge
+  FFMPEG_WORKERS: "1"        # secondary mitigation
+```
+
+Full writeup in my infra repo at `docs/solutions/runtime-errors/immich-ffmpeg-sigsegffix.md`; see also the [official Immich hardware transcoding docs](https://docs.immich.app/features/hardware-transcoding/).
+
+**Lesson:** If you're running media workloads on repurposed old hardware, check the CPU's acceleration support *before* enabling hardware transcoding — a missing VAAPI surface doesn't fail cleanly, it segfaults after doing useful work. Haswell (4th gen) and newer are fine; Ivy Bridge and earlier need software-only.
 
 ## What Actually Worked
 
@@ -271,6 +289,8 @@ flux bootstrap github \
 ```
 
 This creates the bootstrap kustomization that points to your `infrastructure/` and `apps/` directories.
+
+> **Update (2026-07):** The homelab has since migrated from CLI bootstrap to the [Flux Operator](https://fluxoperator.dev/) — sync now lives in a `flux-instance` HelmRelease rather than `gotk-sync.yaml`, and the `flux-system/` bootstrap manifests were removed from Git. The `flux bootstrap` flow above still works to get going, but if you'd rather start operator-first, see the [Flux Operator migration guide](https://fluxoperator.dev/docs/guides/migration/). The Flux Web UI section below already reflects the operator-managed approach, which is why it reads slightly ahead of the bootstrap step here.
 
 **Flux v2 Gotchas:**
 - **Namespace changes** — In v2, Flux components run in `flux-system` by default. Some older guides reference `flux` namespace.
