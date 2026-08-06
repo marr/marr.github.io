@@ -11,7 +11,7 @@ seo:
 roles:
   - Engineering Leader
   - Open Source Creator
-  - AI Tooling Builder
+  - AI Mountaineer
 socials:
   - icon: i-simple-icons-github
     label: David Marr on GitHub
@@ -23,8 +23,7 @@ socials:
     label: David Marr on LinkedIn
     url: https://linkedin.com/in/davidmarr
 avatar: /avatar.jpg
-avatarDark: /avatar.png
-description: Building AI tooling, developer productivity systems, and modern frontend frameworks.
+description: Systematically improving developer productivity and modern agentic tooling.
 title: David Marr
 ---
 ::

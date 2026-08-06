@@ -65,6 +65,9 @@
   --destructive-foreground: var(--ui-text-inverted);
 
   --ring: var(--ui-primary);
+
+  /* Matches logo-dither-source.png field — header tint for negative-space cutout. */
+  --logo-dither-field: 72 78 92;
 }
 
 @keyframes spin-slow {

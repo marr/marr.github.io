@@ -3,12 +3,16 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/content"],
   devtools: { enabled: true },
+  build: {
+    transpile: ["dithered-logo-vue"],
+  },
   app: {
     head: {
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+        { rel: "preload", href: "/logo-halftone.png", as: "image" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
@@ -35,7 +39,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
-      include: ["clsx", "tailwind-merge"],
+      include: ["clsx", "tailwind-merge", "dithered-logo-vue"],
     },
     // Cloud / port-forward hostnames are not localhost; allow them so the app loads
     // in Cursor’s Simple Browser and in the browser tab that uses the forwarded URL.

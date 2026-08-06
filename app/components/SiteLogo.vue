@@ -1,25 +1,44 @@
+<script setup lang="ts">
+/** Header logo — h-10 viewport; grid-size tracks inner canvas height (~38px). */
+const LOGO_W = 'calc(2.5rem * 669 / 493)'
+
+/** Finer halftone — ~32 cells across ~38px inner height. */
+const GRID_SIZE = 32
+</script>
+
 <template>
-  <NuxtLink
-    to="/"
-    class="site-logo inline-flex items-center text-default transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-    aria-label="David Marr — home"
+  <div
+    class="site-logo box-border h-10 shrink-0 overflow-hidden rounded-lg"
+    :style="{ width: LOGO_W }"
+    aria-hidden="true"
   >
-    <span
-      class="site-logo__mark inline-block h-7 w-[calc(1.75rem*669/493)] shrink-0 bg-current"
-      aria-hidden="true"
-    />
-  </NuxtLink>
+    <ClientOnly>
+      <SiteDitheredLogo
+        image-src="/logo-dither-source.png"
+        class="site-logo__canvas size-full dark:invert"
+        :grid-size="GRID_SIZE"
+        :scale="1"
+        :dot-scale="0.68"
+        :contrast="35"
+        invert
+        :corner-radius="0.2"
+      />
+      <template #fallback>
+        <img
+          src="/logo-halftone.png"
+          alt=""
+          class="block size-full dark:invert"
+          width="54"
+          height="40"
+          decoding="async"
+        />
+      </template>
+    </ClientOnly>
+  </div>
 </template>
 
 <style scoped>
-.site-logo__mark {
-  -webkit-mask-image: url("/logo-mask.png");
-  mask-image: url("/logo-mask.png");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
+.site-logo__canvas {
+  pointer-events: auto;
 }
 </style>

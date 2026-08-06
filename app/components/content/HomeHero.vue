@@ -1,3 +1,32 @@
+<script setup lang="ts">
+interface Social {
+  icon: string
+  url: string
+  label?: string
+}
+
+interface Props {
+  title?: string
+  description?: string
+  avatar?: string
+  roles?: string[]
+  socials?: Social[]
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  title: '',
+  description: '',
+  avatar: '',
+  roles: () => [
+    'Engineering Leader',
+    'Open Source Creator',
+    'Building for the Future',
+  ],
+  socials: () => [],
+})
+
+</script>
+
 <template>
   <section class="relative py-16 md:py-28">
     <div class="flex flex-col items-center text-center">
@@ -12,30 +41,24 @@
         <img
           :src="avatar"
           :alt="title"
-          class="relative z-10 size-32 md:size-40 rounded-full ring-2 ring-default object-cover shadow-sm dark:hidden"
+          class="relative z-10 size-32 rounded-full object-cover shadow-sm ring-2 ring-default md:size-40"
           width="160"
           height="160"
-        />
-        <img
-          :src="avatarDark"
-          :alt="title"
-          class="relative z-10 size-32 md:size-40 rounded-full ring-2 ring-default object-cover shadow-sm hidden dark:block"
-          width="160"
-          height="160"
+          decoding="async"
         />
       </div>
 
-      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-default mb-3">
+      <h1 class="mb-3 text-4xl font-bold tracking-tight text-default md:text-5xl">
         {{ title }}
       </h1>
 
       <MorphingText
         v-if="roles?.length"
         :texts="roles"
-        class="text-primary mb-6"
+        class="mb-6 text-primary"
       />
 
-      <p v-if="description" class="text-lg text-muted max-w-2xl text-pretty mb-10 leading-relaxed">
+      <p v-if="description" class="mb-10 max-w-2xl text-pretty text-lg leading-relaxed text-muted">
         {{ description }}
       </p>
 
@@ -56,35 +79,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-interface Social {
-  icon: string
-  url: string
-  label?: string
-}
-
-interface Props {
-  title?: string
-  description?: string
-  /** Shown in light mode (and for SSR / unknown theme). */
-  avatar?: string
-  /** Shown in dark mode; defaults to `/avatar.png`. */
-  avatarDark?: string
-  roles?: string[]
-  socials?: Social[]
-}
-
-withDefaults(defineProps<Props>(), {
-  title: '',
-  description: '',
-  avatar: '',
-  avatarDark: '/avatar.png',
-  roles: () => [
-    'Engineering Leader',
-    'Open Source Creator',
-    'Building for the Future',
-  ],
-  socials: () => [],
-})
-</script>

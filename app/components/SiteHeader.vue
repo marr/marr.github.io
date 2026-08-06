@@ -25,11 +25,13 @@ const items = computed(() => {
 
 <template>
   <UHeader
+    title="David Marr — home"
     :ui="{
-      root: 'sticky top-0 z-50 border-b border-default/60 bg-default/75 backdrop-blur-md supports-backdrop-filter:bg-default/65',
+      root: 'sticky top-0 z-50 border-b border-default/40 bg-[rgb(var(--logo-dither-field)/0.06)] backdrop-blur-md supports-backdrop-filter:bg-[rgb(var(--logo-dither-field)/0.04)]',
       container: 'max-w-4xl',
       center: 'hidden md:flex',
       right: 'gap-1.5',
+      title: 'inline-flex h-10 items-center text-default transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
     }"
   >
     <template #title>
