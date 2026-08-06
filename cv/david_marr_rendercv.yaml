@@ -8,28 +8,29 @@ cv:
   # (E.164). Optional GitHub Actions secret CV_PHONE does the same in CI.
   #
   # --- Replace bracket placeholders before publishing (search for [N], [M], etc.) ---
-  # Context Labs: Principal UI Engineer → Eng Lead (UI) when reports; team 9; GenAI/RAG/evals, BFF, auth/ACL.
+  # Context Labs: Senior SE (Jun–Dec 2022) → Principal SE / Eng Lead (UI) (Dec 2022–Mar 2026).
   # Filtered.ai: employer framing set (large employers, financial services + technology).
   # Turo: availability, pricing, All-star; host platform React tooling.
   # Experience list starts at Tilt.com; earlier roles omitted from résumé.
   name: David Marr
-  headline: 25 Years Scaling Modern Software, Global Teams & AI Integration
+  headline: AI Mountaineer
   location: "Boston, MA"
   email: "dave.marr@gmail.com"
   sections:
     summary:
-      - Engineering leader with 25 years building production software.
-        Expertise in TypeScript, NodeJS, React, Vue, and AI-assisted development.
-        Passionate about delivering enjoyable experiences and leading teams to
-        faster, higher-quality delivery.
+      - I enjoy making things work, work well, and repairing them when they don't.
+        Mostly software, but also relationships, bicycles, electronics — anything
+        worth doing right.
+      - Loyal to the craft, hard-working, and considerate, I try to do more with
+        less, and maintain a beginner's curiosity.
     experience:
       - company: "Context Labs"
-        position: "Engineering Manager"
-        start_date: 2025-09
+        position: "Principal Software Engineer / Engineering Lead (UI)"
+        start_date: 2022-12
         end_date: 2026-03
         location: "Cambridge, MA"
         summary: "Led distributed UI/UX engineering organization delivering
-          multi-tenant analytics platform using Nuxt and Vue."
+          multi-tenant analytics platform."
         highlights:
           - Managed and grew UI/UX team across three continents; introduced
             OKRs and reviews improving velocity and reducing incident MTTR (time
@@ -38,41 +39,33 @@ cv:
             stack, pairing hands-on workshops with clear review and testing
             guardrails so teams shipped safely at higher cadence.
       - company: "Context Labs"
-        position: "Principal Software Engineer"
+        position: "Senior Software Engineer"
         start_date: 2022-06
-        end_date: 2025-09
+        end_date: 2022-12
         location: "Cambridge, MA"
-        summary: "Led technical delivery of a multi-tenant, production-grade
-          analytics platform using Nuxt and Vue; established engineering
-          practices to reduce time-to-market and improve product quality."
         highlights:
-          - Built production BFF platform with GraphQL/Java, multi-tenancy, SSO,
-            RBAC, and internationalization using Nuxt and Nitro.
           - Developed shared UI component library with Vega Lite, MapBox, and
-            accessible controls (TypeScript/Vue).
+            accessible controls.
+          - Built production BFF platform with GraphQL/Java, multi-tenancy, SSO,
+            RBAC, and internationalization.
 
       - company: "Filtered.ai"
         position: "Lead Engineer"
         start_date: 2020-02
         end_date: 2022-02
         location: "Boston, MA"
-        summary: Engineered the scalable SaaS platform for employers managing
-          high-volume technical hiring processes with AI-driven grading,
-          fraud detection, and React/TypeScript/Node.js tech stack.
         highlights:
-          - "Directed recruitment workflows (interview scheduling, candidate
-            pipelines, assessments) using React, TypeScript, and Node.js."
-          - "Shipped features informed by funnel analytics and product metrics
-            that identified drop-offs, raising funnel completion and improving
-            time-to-hire conversion metrics."
+          - Built AI tools to automate organization and grading of technical
+            assessments for custom SaaS/ATS.
+          - Implemented fraud and cheat detection using computer vision and AWS
+            Mechanical Turk.
+          - Managed full-stack implementation of hiring tools including
+            scheduling, assessing/grading, interviewing, and workflow management.
       - company: "Turo"
-        position: "Lead / Staff Software Engineer"
+        position: "Staff Software Engineer"
         start_date: 2018-04
         end_date: "2019-12"
         location: "Cambridge, MA"
-        summary: "Promoted from Staff to Lead (Apr 2019) to drive customer-facing
-          features for host engagement and revenue. Leveraged React and Redux;
-          added error management with stack traces; integrated in-car hardware."
         highlights:
           - "Owned trip management tools with dynamic pricing, improving host
             experience and utilization."
@@ -84,42 +77,35 @@ cv:
         start_date: "2016-01"
         end_date: 2018-05
         location: "San Francisco, CA"
-        summary:
-          "Architected physical and online payment products, producing £2m
-          per-month of income. Led customer management tools using JavaScript
-          and React. Resided in London for flagship shopping center project."
         highlights:
-          - "Developed smart parking with facial recognition, subscription
-            billing, and automated gates using React and Stripe APIs."
-          - "Built indoor mapping, directory kiosks, and wayfinding systems
-            with Mapbox, Node.js, and C."
+          - "Architected physical and online payment products, yielding ~$2.7m
+            in MRR."
+          - "Integrated facial recognition, subscription billing, and automated
+            parking gates to produce a smart parking solution."
       - company: "Tilt.com"
         position: "Senior Systems Engineer"
         start_date: 2013-07
         end_date: 2015-12
         location: "San Francisco, CA"
-        summary:
-          "Optimized core user flows and backend systems to increase conversion
-          and streamline operations. Simplified contribution flow yielding 15%
-          lift in signups; engineered early React SSR with Perl/JavaScript."
-        highlights: []
-      - company: Frog Design
-        position: Design Technologist
-        start_date: 2009-01
-        end_date: 2010-03
-        location: San Francisco/Orlando/Austin
-        summary: "Engineered digital and physical technical innovations including:"
         highlights:
-          - MagicBand wristband at Disney World onsite in Orlando, FL.
-          - Cellular television at Qualcomm campus in Austin, TX.
-          - Smartphone UI for AT&T/Facebook prototype in San Francisco, CA.
+          - Implemented and iterated a simplified contribution flow yielding 15%
+            lift in site signups.
+          - Pioneered server rendered React using reification with Perl/Dancer
+            backend.
       - company: Various
         position: Previous Leadership & Technical Roles
         start_date: 2000-09
         end_date: 2013-04
         location: "Massachusetts & California"
-        summary:
-          "Industrial automation web interfaces and dashboards (GE Fanuc / Intellution); enterprise web integrations (SoftArtisans); user-facing features and a Webby-recognized career advice site (Monster.com); scalable frontend architecture for high-traffic Yahoo properties; design-to-production prototyping (Frog Design); co-founder/CTO for an early social product (Secret Feature); publishing and ad-tech at Say Media."
+        highlights:
+          - Publishing and ad-tech at Say Media.
+          - Co-founded an early social product (Secret Feature)
+          - Design-to-production prototyping (Frog Design)
+          - Scaled frontend architecture for high-traffic Yahoo properties
+          - Webby-recognized career advice site (Monster.com)
+          - Enterprise web integrations (SoftArtisans)
+          - Industrial automation web interfaces and dashboards (GE Fanuc /
+            Intellution)
         date: 2000-2013
     education:
       - institution: "University of New Hampshire"
@@ -134,7 +120,8 @@ cv:
       - label: Languages/Frameworks/Web
         details:
           TypeScript, JavaScript, Python, Go, React, Vue, HTML, CSS, Tailwind,
-          Nuxt, Tanstack Start, Vega Lite, Mapbox, D3, Zod, React Hook Form,
+          Nuxt, Tanstack Start, Vega Lite, Mapbox, Maplibre, Deck.gl, D3, Zod,
+          React Hook Form,
           Vee-Validate, WebGL, WebGPU, WebRTC
       - label: AI Tools/Infrastructure
         details: Kubernetes, AWS, PostgreSQL, Docker, Git, MongoDB, Bash, Trino,
