@@ -1,1 +1,0 @@
-import{t as e}from"./5eCA6BG2.js";function t(){let t=e().ui?.prefix;return e=>!t||!e?e:e.split(/\s+/).filter(Boolean).map(e=>`${t}:${e}`).join(` `)}export{t};
