@@ -1,8 +1,8 @@
 <template>
   <section
-    id="career"
+    :id="embedded ? undefined : 'career'"
     aria-labelledby="career-timeline-heading"
-    class="scroll-mt-24 border-t border-default/20 py-10"
+    :class="embedded ? undefined : 'scroll-mt-24 border-t border-default/20 py-10'"
   >
     <header class="mb-8 max-w-prose border-l-2 border-primary/40 pl-4">
       <p class="text-xs font-semibold uppercase tracking-[0.14em] text-primary">
@@ -32,9 +32,12 @@ import { careerTimelineItems } from "~/utils/homeStoryContent";
 
 interface Props {
   items?: TimelineItem[];
+  embedded?: boolean;
 }
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  embedded: false,
+});
 
 const items = computed(() => props.items ?? careerTimelineItems);
 const activeIndex = computed(() => items.value.length - 1);

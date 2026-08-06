@@ -29,15 +29,6 @@ title: David Marr
 ---
 ::
 
-::home-story
-::
-
-::career-timeline
-::
-
-::home-ai-approach
-::
-
 ::project-grid
 ---
 title: Open source

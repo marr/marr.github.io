@@ -1,45 +1,5 @@
-<script setup lang="ts">
-const contentPath = useContentPath();
-const { data: page } = await useAsyncData(
-  () => `blog-layout-${contentPath.value}`,
-  () => queryCollection("blog").path(contentPath.value).first(),
-  { watch: [contentPath] },
-);
-</script>
-
 <template>
-  <div class="min-h-screen flex flex-col">
-    <SiteHeader />
-    <main class="flex-1">
-      <div class="max-w-4xl mx-auto px-4">
-        <article>
-          <header v-if="page" class="py-8 border-b border-default/60 mb-8">
-            <h1 class="text-3xl font-bold tracking-tight text-default mb-4">{{ page.title }}</h1>
-            <p
-              v-if="page.description"
-              class="text-muted text-lg mb-4 text-pretty leading-relaxed"
-            >
-              {{ page.description }}
-            </p>
-            <div
-              v-if="page.date"
-              class="flex items-center gap-1 text-sm text-muted"
-            >
-              <UIcon name="i-lucide-calendar" class="w-4 h-4" />
-              <NuxtTime
-                :datetime="page.date"
-                locale="en-US"
-                year="numeric"
-                month="long"
-                day="numeric"
-                time-zone="UTC"
-              />
-            </div>
-          </header>
-          <slot />
-        </article>
-      </div>
-    </main>
-    <SiteFooter />
+  <div class="mx-auto max-w-6xl px-4">
+    <slot />
   </div>
 </template>

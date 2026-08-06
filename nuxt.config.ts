@@ -6,6 +6,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
+        { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
@@ -57,6 +60,10 @@ export default defineNuxtConfig({
   content: {
     build: {
       markdown: {
+        toc: {
+          depth: 3,
+          searchDepth: 4,
+        },
         highlight: {
           theme: {
             // Default theme (same as single string)
@@ -79,6 +86,6 @@ export default defineNuxtConfig({
     "/nuxt-maplibre": { prerender: false },
     "/vue-squircle": { prerender: false },
     "/dithered-logo-vue": { prerender: false },
-    "/about": { redirect: { to: "/#career", statusCode: 301 } },
+    "/about": { redirect: { to: "/ai#career", statusCode: 301 } },
   },
 });

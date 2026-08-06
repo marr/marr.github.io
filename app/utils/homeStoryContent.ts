@@ -3,6 +3,7 @@ import type { TimelineItem } from "@nuxt/ui";
 export interface Pillar {
   title: string;
   body: string;
+  highlights?: string[];
 }
 
 interface Era {
@@ -17,7 +18,7 @@ export const executiveSummary = {
   pillars: [
     {
       title: "Scalable architecture",
-      body: "Multi-tenant SaaS analytics—including Decarbonization-as-a-Service (DaaS) at Context Labs—plus backend-for-frontend APIs and clear engineering standards. Cut incident recovery time 50% through goals, code review, and AI coding tools.",
+      body: "Multi-tenant SaaS analytics—including Decarbonization-as-a-Service (DaaS) at Context Labs—plus backend-for-frontend APIs and clear engineering standards.",
     },
     {
       title: "Interfaces with intent",
@@ -25,7 +26,12 @@ export const executiveSummary = {
     },
     {
       title: "Breadth across stacks",
-      body: "Industrial automation, payment products at £2m/month, and AI-powered hiring tools—enough range to guide teams through stack changes without breaking what already works.",
+      body: "Industrial automation through consumer web, mobility marketplaces, and AI products—enough range to lead stack changes without breaking what already works.",
+      highlights: [
+        "Webby-recognized career site at Monster.com",
+        "15% signup lift from contribution-flow work at Tilt",
+        "60k+ monthly wayfinding sessions across flagship malls",
+      ],
     },
   ] satisfies Pillar[],
 };

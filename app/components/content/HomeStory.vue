@@ -1,34 +1,9 @@
 <template>
-  <section aria-labelledby="home-story" class="pb-4 pt-2">
-    <div id="home-story" class="mx-auto max-w-4xl">
-      <UCarousel
-        v-slot="{ item }"
-        :items="graphics"
-        arrows
-        dots
-        class="w-full"
-        :ui="{
-          item: 'basis-full min-w-0 ps-0',
-          viewport: 'overflow-hidden rounded-lg ring-1 ring-default/40',
-        }"
-      >
-        <figure>
-          <img
-            :src="item.src"
-            :alt="item.alt"
-            :width="item.width"
-            :height="item.height"
-            class="h-auto w-full"
-            loading="lazy"
-          />
-          <figcaption class="sr-only">
-            {{ item.caption }}
-          </figcaption>
-        </figure>
-      </UCarousel>
-    </div>
-
-    <ul class="mt-10 grid gap-4 md:grid-cols-3">
+  <section id="home-story" aria-labelledby="home-story-heading" class="pb-4 pt-2">
+    <h2 id="home-story-heading" class="sr-only">
+      What I focus on
+    </h2>
+    <ul class="grid gap-4 md:grid-cols-3">
       <li
         v-for="pillar in pillars"
         :key="pillar.title"
@@ -40,25 +15,32 @@
         <p class="mt-2 text-sm leading-relaxed text-muted text-pretty">
           {{ pillar.body }}
         </p>
+        <ul
+          v-if="pillar.highlights?.length"
+          class="mt-3 space-y-1.5 border-t border-default/40 pt-3"
+        >
+          <li
+            v-for="highlight in pillar.highlights"
+            :key="highlight"
+            class="flex gap-2 text-xs leading-relaxed text-muted text-pretty"
+          >
+            <span class="text-primary" aria-hidden="true">·</span>
+            <span>{{ highlight }}</span>
+          </li>
+        </ul>
       </li>
     </ul>
   </section>
 </template>
 
 <script setup lang="ts">
-import {
-  careerGraphics,
-  executiveSummary,
-  type CareerGraphic,
-} from "~/utils/homeStoryContent";
+import { executiveSummary } from "~/utils/homeStoryContent";
 
 interface Props {
-  graphics?: CareerGraphic[];
   pillars?: typeof executiveSummary.pillars;
 }
 
 const props = defineProps<Props>();
 
-const graphics = computed(() => props.graphics ?? careerGraphics);
 const pillars = computed(() => props.pillars ?? executiveSummary.pillars);
 </script>
