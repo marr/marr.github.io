@@ -1,0 +1,1 @@
+import{D as e,_ as t,b as n,mt as r,xt as i}from"./CIxmKYxc.js";import{t as a}from"./BDNMzG2s2.js";import{n as o,t as s}from"./Bicvi2NT2.js";var c={},l={class:`min-h-screen flex flex-col`},u={class:`flex-1 w-full`};function d(a,c){let d=o,f=s;return r(),n(`div`,l,[e(d),t(`main`,u,[i(a.$slots,`default`)]),e(f)])}var f=a(c,[[`render`,d]]);export{f as default};
