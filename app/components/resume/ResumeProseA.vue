@@ -63,9 +63,9 @@ const socialInfo = computed(() => {
 </script>
 
 <template>
-  <!-- Render icon + text for social links -->
+  <!-- Icon + label + value for contact / social links -->
   <span v-if="socialInfo" class="inline-flex items-center gap-1">
-    <UIcon :name="socialInfo.icon" class="w-4 h-4" />
+    <UIcon :name="socialInfo.icon" class="h-4 w-4 shrink-0" />
     <a
       :href="href"
       target="_blank"

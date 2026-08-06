@@ -1,4 +1,4 @@
-/** Company name as it appears before the comma in rendered resume.md h3 role titles. */
+/** Company name as it appears in rendered resume.md h3 titles (bold segment when company-first). */
 export type ResumeCompanyName =
   | "Context Labs"
   | "Filtered.ai"

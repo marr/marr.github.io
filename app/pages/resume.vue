@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import ResumeProseExperienceH3 from "~/components/resume/ResumeProseExperienceH3.vue";
 import ResumeProseA from "~/components/resume/ResumeProseA.vue";
+import ResumeProfileAside from "~/components/resume/ResumeProfileAside.vue";
+import type { ResumeProfile } from "~/types/resume";
+
+definePageMeta({
+  layout: "resume",
+});
 
 const { data: page } = await useAsyncData("resume-page", () =>
   queryCollection("content").path("/resume").first(),
@@ -13,6 +19,17 @@ if (!page.value) {
     fatal: true,
   });
 }
+
+if (!page.value?.resumeProfile) {
+  throw createError({
+    statusCode: 500,
+    statusMessage: "Résumé profile metadata missing — run pnpm cv:render",
+  });
+}
+
+const resumeProfile = computed(
+  () => page.value!.resumeProfile as ResumeProfile,
+);
 
 useSeoMeta({
   title: page.value.seo?.title || page.value.title,
@@ -27,29 +44,32 @@ const resumeContentComponents = {
 </script>
 
 <template>
-  <UPageBody v-if="page" class="pb-16 pt-2 md:pt-4">
-    <div
-      class="resume-shell mx-auto max-w-4xl px-1 py-6 sm:px-8 sm:py-8 md:px-12 md:py-10"
-    >
+  <UPage
+    v-if="page && resumeProfile"
+    class="resume-page mx-auto max-w-6xl px-4 pb-16 pt-2 md:px-8 md:pt-4"
+  >
+    <template #left>
+      <ResumeProfileAside :profile="resumeProfile" />
+    </template>
+
+    <UPageBody class="resume-main min-w-0">
       <ContentRenderer
         :value="page"
-        class="resume-content"
+        class="resume-content resume-content--main"
         :components="resumeContentComponents"
       />
-    </div>
-  </UPageBody>
+    </UPageBody>
+  </UPage>
 </template>
 
 <style scoped>
 /*
  * Web résumé DOM contract (content/resume.md):
- * - scripts/harmonize_resume_headings.py: one h1 (name), section h2 (Summary, Experience, …),
- *   each role/school is h3 (**Company**, title).
- * - Typical role block: h3 → p (location) → p (dates) → p (summary) → ul (bullets).
- * - Education: h3 may include degree in the heading; following lines are p (dates), p (e.g. Dean's List).
- * - Section h2 headings are plain text; role h3 lines use <strong> for the company name (logo match).
- * - MDC auto-ids: #summary, #experience, #education, #skills — keep section titles or update selectors.
- * - PDF link line: any p containing a link to david-marr-resume.pdf (not necessarily first node).
+ * - Sidebar (name, headline, contact, PDF, section nav) from resumeProfile frontmatter.
+ * - Main column starts at ## Summary (harmonize strips RenderCV title + contact list).
+ * - scripts/harmonize_resume_headings.py: section h2, role/school h3 (**Company**, title).
+ * - Typical role block: h3 → p (dates) → p (summary) → ul (bullets) → p.resume-role-skills.
+ * - MDC auto-ids: #summary, #experience, #education, #skills.
  */
 
 .resume-content {
@@ -58,30 +78,8 @@ const resumeContentComponents = {
   color: var(--ui-text);
 }
 
-.resume-content :deep(p:has(a[href$="david-marr-resume.pdf"])) {
-  margin: 0 0 1.75rem;
-  padding: 0.65rem 1rem;
-  border-radius: var(--ui-radius);
-  border: 1px solid var(--ui-border);
-  background: color-mix(in oklab, var(--ui-bg-muted) 65%, transparent);
-  font-size: 0.875rem;
-}
-
-.resume-content :deep(p:has(a[href$="david-marr-resume.pdf"]) a) {
-  font-weight: 600;
-}
-
-.resume-content :deep(h1) {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  color: var(--ui-text-highlighted);
-  scroll-margin-top: 5rem;
-}
-
-.resume-content :deep(h1:first-of-type) {
-  margin: 0 0 0.5rem;
-  font-size: clamp(1.625rem, 4vw, 2.125rem);
+.resume-content :deep(h2#summary) {
+  margin-top: 0;
 }
 
 /* Section labels: Summary, Experience, Education, Skills (no <strong> in the heading) */
@@ -94,89 +92,6 @@ const resumeContentComponents = {
   text-transform: uppercase;
   color: var(--ui-primary);
   border-bottom: 1px solid color-mix(in oklab, var(--ui-border) 80%, transparent);
-}
-
-.resume-content :deep(h2#summary) {
-  margin-top: 1.25rem;
-}
-
-.resume-content :deep(h1 + ul) {
-  margin: 0 0 2rem;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1.25rem;
-  font-size: 0.875rem;
-  color: var(--ui-text-muted);
-}
-
-/* Icon-only social links should not have bullet markers */
-.resume-content :deep(h1 + ul li:has(a.inline-flex)) {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-  min-width: 2rem;
-}
-
-/* Social links with icons - need to override default flex item spacing */
-.resume-content :deep(h1 + ul li > span.inline-flex) {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.resume-content :deep(h1 + ul li) {
-  position: relative;
-  padding-left: 0;
-}
-
-.resume-content :deep(h1 + ul li::before) {
-  display: none;
-}
-
-/* Style icon-only social links to show only icons */
-.resume-content :deep(h1 + ul li a.inline-flex) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.25rem;
-  border-radius: 4px;
-}
-
-.resume-content :deep(h1 + ul li a.inline-flex:hover) {
-  background-color: color-mix(in oklab, var(--ui-bg-elevated) 50%, transparent);
-}
-
-/* Hide any text that might appear in icon-only links */
-.resume-content :deep(h1 + ul li:has(a.inline-flex)) {
-  min-width: 2rem;
-  text-align: center;
-}
-
-.resume-content :deep(h1 + ul a) {
-  color: var(--ui-text);
-  text-decoration: underline;
-  text-decoration-color: color-mix(in oklab, var(--ui-primary) 45%, transparent);
-  text-underline-offset: 3px;
-}
-
-/* Ensure icons in social links inherit the text color */
-.resume-content :deep(h1 + ul .inline-flex > .iconify) {
-  color: inherit;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* Make sure the inline-flex container works correctly with the flex list */
-.resume-content :deep(h1 + ul li > span.inline-flex) {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.resume-content :deep(h1 + ul a:hover) {
-  color: var(--ui-primary);
 }
 
 .resume-content :deep(h2#summary + p),
@@ -332,6 +247,11 @@ const resumeContentComponents = {
   border-left: none;
   min-width: 0;
   flex: 1 1 auto;
+}
+
+.resume-content :deep(.resume-exp-location) {
+  color: var(--ui-text-muted);
+  font-weight: 400;
 }
 
 .resume-content :deep(.resume-exp-logo-wrap) {
@@ -569,6 +489,33 @@ html.light .resume-content :deep(.resume-exp-logo-img--theme-dark) {
 
 .resume-content :deep(h3 ~ ul li::marker) {
   color: color-mix(in oklab, var(--ui-text-muted) 88%, var(--ui-text) 12%);
+}
+
+.resume-content :deep(p.resume-role-skills) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.45rem;
+  margin: 0.85rem 0 1.75rem;
+  padding: 0;
+  max-width: none;
+}
+
+.resume-content :deep(.resume-role-skills__tag) {
+  display: inline-block;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--ui-border) 85%, transparent);
+  background: color-mix(in oklab, var(--ui-bg-muted) 70%, transparent);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+  color: color-mix(in oklab, var(--ui-text-muted) 80%, var(--ui-text) 20%);
+  white-space: nowrap;
+}
+
+.resume-content :deep(h3:not(:has(.resume-exp-logo-wrap)) + p.resume-role-skills) {
+  padding-left: 0.65rem;
 }
 
 .resume-content :deep(a) {

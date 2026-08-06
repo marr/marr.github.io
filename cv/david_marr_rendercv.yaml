@@ -7,13 +7,13 @@ cv:
   # number into the PDF only, run: CV_PHONE="+1…" pnpm run cv:render
   # (E.164). Optional GitHub Actions secret CV_PHONE does the same in CI.
   #
-  # --- Replace bracket placeholders before publishing (search for [N], [M], etc.) ---
-  # Context Labs: Senior SE (Jun–Dec 2022) → Principal SE / Eng Lead (UI) (Dec 2022–Mar 2026).
+  # Per-role `skills` (comma-separated) → skills_block at render (see preprocess_cv_yaml.py).
+  # Context Labs: one entry (Jun 2022–Mar 2026); progression in summary, not split roles.
   # Filtered.ai: employer framing set (large employers, financial services + technology).
   # Turo: availability, pricing, All-star; host platform React tooling.
   # Experience list starts at Tilt.com; earlier roles omitted from résumé.
   name: David Marr
-  headline: AI Mountaineer
+  headline: Engineering Leader — Platforms, Teams & AI Integration
   location: "Boston, MA"
   email: "dave.marr@gmail.com"
   sections:
@@ -26,11 +26,12 @@ cv:
     experience:
       - company: "Context Labs"
         position: "Principal Software Engineer / Engineering Lead (UI)"
-        start_date: 2022-12
+        start_date: 2022-06
         end_date: 2026-03
         location: "Cambridge, MA"
         summary: "Led distributed UI/UX engineering organization delivering
           multi-tenant analytics platform."
+        skills: Vue, Nuxt, TypeScript, Python, GraphQL, Mapbox, PostgreSQL, ArcadeDB
         highlights:
           - Managed and grew UI/UX team across three continents; introduced
             OKRs and reviews improving velocity and reducing incident MTTR (time
@@ -38,25 +39,20 @@ cv:
           - Drove adoption of AI coding assistants and MCP extensions in our Nuxt
             stack, pairing hands-on workshops with clear review and testing
             guardrails so teams shipped safely at higher cadence.
-      - company: "Context Labs"
-        position: "Senior Software Engineer"
-        start_date: 2022-06
-        end_date: 2022-12
-        location: "Cambridge, MA"
-        highlights:
-          - Developed shared UI component library with Vega Lite, MapBox, and
-            accessible controls.
           - Built production BFF platform with GraphQL/Java, multi-tenancy, SSO,
             RBAC, and internationalization.
+          - Developed shared UI component library with Vega Lite, MapBox, and
+            accessible controls.
 
       - company: "Filtered.ai"
         position: "Lead Engineer"
         start_date: 2020-02
         end_date: 2022-02
         location: "Boston, MA"
+        summary: Built AI tools to automate organization and grading of technical
+          assessments for custom SaaS/ATS.
+        skills: React, TypeScript, Node.js, AWS, Python, PostgreSQL
         highlights:
-          - Built AI tools to automate organization and grading of technical
-            assessments for custom SaaS/ATS.
           - Implemented fraud and cheat detection using computer vision and AWS
             Mechanical Turk.
           - Managed full-stack implementation of hiring tools including
@@ -66,27 +62,32 @@ cv:
         start_date: 2018-04
         end_date: "2019-12"
         location: "Cambridge, MA"
+        summary: Owned trip management tools with dynamic pricing, improving host
+          experience and utilization.
+        skills: React, Redux, TypeScript, JavaScript, PostgreSQL
         highlights:
-          - "Owned trip management tools with dynamic pricing, improving host
-            experience and utilization."
-          - "Shipped UI and workflow updates for the All-star host program to
-            recognize and incentivize top hosts, supporting retention and
-            higher-quality listings."
+          - "Maintained the All-star host program to recognize and incentivize
+            top hosts, supporting retention and higher-quality listings."
       - company: "OneMarket / Westfield Labs"
         position: "Senior Software Architect"
         start_date: "2016-01"
         end_date: 2018-05
         location: "San Francisco, CA"
+        summary: Integrated facial recognition, subscription billing, and automated
+          parking gates to produce a smart parking solution.
+        skills: React, JavaScript, Stripe, Node.js, Mapbox, C, PostgreSQL
         highlights:
           - "Architected physical and online payment products, yielding ~$2.7m
             in MRR."
-          - "Integrated facial recognition, subscription billing, and automated
-            parking gates to produce a smart parking solution."
+          - "Built indoor mapping, directory kiosks, and wayfinding systems
+            across 4 flagship shopping centers, averaging 60,000+ monthly
+            sessions."
       - company: "Tilt.com"
         position: "Senior Systems Engineer"
         start_date: 2013-07
         end_date: 2015-12
         location: "San Francisco, CA"
+        skills: React, Perl, JavaScript, PostgreSQL
         highlights:
           - Implemented and iterated a simplified contribution flow yielding 15%
             lift in site signups.
@@ -97,13 +98,15 @@ cv:
         start_date: 2000-09
         end_date: 2013-04
         location: "Massachusetts & California"
+        skills: Node.js, Adobe Flash/Flex/FMS, MySQL, PHP, SQL Server, .NET,
+          ASP Classic, HTML, CSS, JavaScript
         highlights:
-          - Publishing and ad-tech at Say Media.
-          - Co-founded an early social product (Secret Feature)
-          - Design-to-production prototyping (Frog Design)
-          - Scaled frontend architecture for high-traffic Yahoo properties
-          - Webby-recognized career advice site (Monster.com)
-          - Enterprise web integrations (SoftArtisans)
+          - Publishing and ad-tech at Say Media; co-founded early social product
+            (Secret Feature).
+          - Design-to-production prototyping (Frog Design); scaled frontend
+            architecture for high-traffic Yahoo properties.
+          - Webby-recognized career advice site (Monster.com); enterprise web
+            integrations (SoftArtisans).
           - Industrial automation web interfaces and dashboards (GE Fanuc /
             Intellution)
         date: 2000-2013
@@ -141,99 +144,23 @@ cv:
 locale:
   language: english
   phrases:
-    degree_with_area: "DEGREE"
+    degree_with_area: "DEGREE in AREA"
 
 design:
-  theme: moderncv
+  theme: harvard
   page:
     size: us-letter
-    top_margin: 0.7in
-    bottom_margin: 0.7in
-    left_margin: 0.7in
-    right_margin: 0.7in
     show_footer: true
-    show_top_note: true
-  colors:
-    body: rgb(0, 0, 0)
-    name: rgb(0, 79, 144)
-    headline: rgb(0, 79, 144)
-    connections: rgb(0, 79, 144)
-    section_titles: rgb(0, 79, 144)
-    links: rgb(0, 79, 144)
-    footer: rgb(128, 128, 128)
-    top_note: rgb(128, 128, 128)
+    show_top_note: false
   typography:
-    line_spacing: 0.6em
-    alignment: justified
-    date_and_location_column_alignment: right
-    font_family:
-      body: Fontin
-      name: Fontin
-      headline: Fontin
-      connections: Fontin
-      section_titles: Fontin
-    font_size:
-      body: 10pt
-      name: 25pt
-      headline: 10pt
-      connections: 10pt
-      section_titles: 1.4em
-    small_caps:
-      name: false
-      headline: false
-      connections: false
-      section_titles: false
-    bold:
-      name: false
-      headline: false
-      connections: false
-      section_titles: false
-  links:
-    underline: true
-    show_external_link_icon: false
-  header:
     alignment: left
-    photo_width: 4.15cm
-    photo_position: left
-    photo_space_left: 0cm
-    photo_space_right: 0.3cm
-    space_below_name: 0.7cm
-    space_below_headline: 0.7cm
-    space_below_connections: 0.7cm
+  header:
     connections:
       phone_number_format: E164
-      hyperlink: false
+      hyperlink: true
       show_icons: true
-      display_urls_instead_of_usernames: false
-      separator: ""
-      space_between_connections: 0.33cm
-  section_titles:
-    type: moderncv
-    line_thickness: 0.15cm
-    space_above: 0.55cm
-    space_below: 0.3cm
   sections:
-    allow_page_break: true
-    space_between_regular_entries: 1.2em
-    space_between_text_based_entries: 0.3em
     show_time_spans_in: []
-  entries:
-    date_and_location_width: 4.15cm
-    side_space: 0cm
-    space_between_columns: 0.3cm
-    allow_page_break: false
-    short_second_row: false
-    degree_width: 1cm
-    summary:
-      space_above: 0.1cm
-      space_left: 0cm
-    highlights:
-      bullet: •
-      nested_bullet: •
-      space_left: 0cm
-      space_above: 0.15cm
-      space_between_items: 0.1cm
-      space_between_bullet_and_text: 0.3em
   templates:
     footer: "*NAME -- PAGE_NUMBER/TOTAL_PAGES*"
     top_note: "*LAST_UPDATED CURRENT_DATE*"
@@ -247,7 +174,7 @@ design:
         **INSTITUTION**, DEGREE_WITH_AREA -- LOCATION
         SUMMARY
         HIGHLIGHTS
-      degree_column:
+      degree_column: null
       date_and_location_column: DATE
     normal_entry:
       main_column: |-
@@ -257,9 +184,10 @@ design:
       date_and_location_column: DATE
     experience_entry:
       main_column: |-
-        **POSITION**, COMPANY -- LOCATION
+        **COMPANY**, POSITION -- LOCATION
         SUMMARY
         HIGHLIGHTS
+        SKILLS_BLOCK
       date_and_location_column: DATE
     publication_entry:
       main_column: |-
