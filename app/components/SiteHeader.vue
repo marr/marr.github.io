@@ -31,7 +31,7 @@ const items = computed(() => {
       container: 'max-w-4xl',
       center: 'hidden md:flex',
       right: 'gap-1.5',
-      title: 'inline-flex h-10 items-center text-default transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
+      title: 'inline-flex h-10 items-center overflow-visible text-default transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
     }"
   >
     <template #title>

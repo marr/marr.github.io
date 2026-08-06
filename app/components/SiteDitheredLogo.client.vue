@@ -1,8 +1,6 @@
 <script setup lang="ts">
 /**
- * Header-sized dithered logo — scales repulsion forces for small canvases.
- * Sizing follows the package (getBoundingClientRect); always repaints after
- * buffer changes so the canvas never stays blank after resize/HMR.
+ * Dithered logo — negative-space invert (dots on field, letters punched out).
  */
 import {
   computed,
@@ -38,13 +36,29 @@ export interface SiteDitheredLogoProps {
   blur?: number
   diffusionStrength?: number
   serpentine?: boolean
+  dotRgb?: [number, number, number]
+  canvasOpacity?: number
+  contentInset?: number
+  /** Extra layout inset so hover ripples are not clipped at edges. Auto-scaled when omitted. */
+  interactionInset?: number
+  /**
+   * In invert mode: cells with luma >= this stay negative space (letter cutout).
+   * Stops dither dots bleeding into antialiased letter edges.
+   */
+  letterLumaMin?: number
   style?: CSSProperties
   class?: string
 }
 
 const props = withDefaults(defineProps<SiteDitheredLogoProps>(), {
   ...DITHERED_LOGO_DEFAULTS,
-  scale: 0.92,
+  invert: true,
+  scale: 1,
+  blur: 0,
+  contrast: 42,
+  letterLumaMin: 150,
+  diffusionStrength: 0.75,
+  contentInset: 0,
 })
 
 const rootRef = shallowRef<HTMLElement | null>(null)
@@ -64,6 +78,75 @@ let teardownVisible: (() => void) | null = null
 
 function interactionScale(width: number, height: number) {
   return Math.min(width, height) / 200
+}
+
+function buildRoundedMask(w: number, h: number, radiusPct: number): Set<number> {
+  const r = Math.round(radiusPct * Math.min(w, h))
+  const mask = new Set<number>()
+
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      let inside = false
+      if (x >= r && x < w - r) {
+        inside = true
+      } else if (y >= r && y < h - r) {
+        inside = true
+      } else {
+        const cx = x < r ? r : w - r - 1
+        const cy = y < r ? r : h - r - 1
+        const dx = x - cx
+        const dy = y - cy
+        inside = dx * dx + dy * dy <= r * r
+      }
+      if (inside) mask.add(y * w + x)
+    }
+  }
+
+  return mask
+}
+
+/** Invert mask but punch out letter cells by luma cutoff. */
+function applyLetterAwareMaskInversion(
+  positions: Float32Array,
+  gridW: number,
+  gridH: number,
+  radiusPct: number,
+  alpha: Uint8Array,
+  grayscale: Uint8Array,
+  letterLumaMin: number,
+): Float32Array {
+  const mask = buildRoundedMask(gridW, gridH, radiusPct)
+  const filled = new Set<number>()
+  for (let i = 0; i < positions.length; i += 2) {
+    filled.add(Math.round(positions[i + 1]) * gridW + Math.round(positions[i]))
+  }
+
+  const result: number[] = []
+  for (const idx of mask) {
+    if (filled.has(idx)) continue
+    if (alpha[idx] < 128) continue
+    if (grayscale[idx] >= letterLumaMin) continue
+    result.push(idx % gridW, Math.floor(idx / gridW))
+  }
+
+  return new Float32Array(result)
+}
+
+function gridLayout(cssW: number, cssH: number, gw: number, gh: number) {
+  const k = interactionScale(cssW, cssH)
+  const ripplePad = props.interactionInset ?? Math.ceil(10 * k + 4)
+  const inset = (props.contentInset ?? 0) + ripplePad
+  const availW = Math.max(1, cssW - inset * 2)
+  const availH = Math.max(1, cssH - inset * 2)
+  const s = Math.min(
+    (availW * props.scale) / gw,
+    (availH * props.scale) / gh,
+  )
+  return {
+    s,
+    ox: (cssW - gw * s) / 2,
+    oy: (cssH - gh * s) / 2,
+  }
 }
 
 function stepParticlesScaled(
@@ -133,6 +216,14 @@ function stepParticlesScaled(
     if (Math.abs(offsetX[i]) < 0.01) offsetX[i] = 0
     if (Math.abs(offsetY[i]) < 0.01) offsetY[i] = 0
     if (offsetX[i] !== 0 || offsetY[i] !== 0) hasMotion = true
+
+    const margin = sys.size * 1.1
+    const px = baseX[i] + offsetX[i]
+    const py = baseY[i] + offsetY[i]
+    if (px < margin) offsetX[i] = margin - baseX[i]
+    else if (px > canvasW - margin) offsetX[i] = canvasW - margin - baseX[i]
+    if (py < margin) offsetY[i] = margin - baseY[i]
+    else if (py > canvasH - margin) offsetY[i] = canvasH - margin - baseY[i]
   }
 
   return hasMotion || numRipples > 0 || cursorActive
@@ -145,34 +236,14 @@ const containerStyle = computed<CSSProperties>(() => ({
   ...props.style,
 }))
 
-function canvasMetrics(canvas: HTMLCanvasElement) {
-  const dpr = window.devicePixelRatio || 1
-  const rect = canvas.getBoundingClientRect()
-  const cssW = rect.width
-  const cssH = rect.height
-  return { cssW, cssH, dpr }
-}
-
-/** Sync backing store to CSS size; returns null when layout not ready. */
-function syncCanvasBuffer(canvas: HTMLCanvasElement) {
-  const { cssW, cssH, dpr } = canvasMetrics(canvas)
-  if (cssW < 1 || cssH < 1) return null
-  const bufW = Math.round(cssW * dpr)
-  const bufH = Math.round(cssH * dpr)
-  if (canvas.width !== bufW || canvas.height !== bufH) {
-    canvas.width = bufW
-    canvas.height = bufH
-  }
-  return { cssW, cssH, dpr }
-}
-
-const canvasStyle: CSSProperties = {
+const canvasStyle = computed<CSSProperties>(() => ({
   display: 'block',
   width: '100%',
   height: '100%',
   touchAction: 'none',
   cursor: 'default',
-}
+  opacity: props.canvasOpacity ?? 1,
+}))
 
 const configKey = computed(() =>
   JSON.stringify([
@@ -188,22 +259,88 @@ const configKey = computed(() =>
     props.blur,
     props.diffusionStrength,
     props.serpentine,
+    props.dotRgb,
+    props.canvasOpacity,
+    props.contentInset,
+    props.interactionInset,
+    props.letterLumaMin,
   ]),
 )
 
+function drawParticlesWithRgb(
+  ctx: CanvasRenderingContext2D,
+  sys: ParticleSystem,
+  canvasW: number,
+  canvasH: number,
+  dpr: number,
+  rgb: [number, number, number],
+) {
+  ctx.clearRect(0, 0, canvasW * dpr, canvasH * dpr)
+
+  const buckets: number[][] = new Array(126)
+  for (let i = 0; i < 126; i++) buckets[i] = []
+
+  for (let i = 0; i < sys.count; i++) {
+    const bucket =
+      6 * Math.round(20 * sys.brightness[i]) + Math.round(5 * sys.tint[i])
+    buckets[Math.max(0, Math.min(125, bucket))].push(i)
+  }
+
+  const [r, g, b] = rgb
+  const size = sys.size * dpr
+  const pad = 0.25 * dpr
+  const padSize = 0.5 * dpr
+
+  for (let z = 0; z < 126; z++) {
+    const ids = buckets[z]
+    if (ids.length === 0) continue
+    const alpha = Math.floor(z / 6) / 20
+    ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`
+    for (let j = 0; j < ids.length; j++) {
+      const i = ids[j]
+      const rx = (sys.baseX[i] + sys.offsetX[i]) * dpr
+      const ry = (sys.baseY[i] + sys.offsetY[i]) * dpr
+      ctx.fillRect(rx - pad, ry - pad, size + padSize, size + padSize)
+    }
+  }
+}
+
+function renderFrame(
+  ctx: CanvasRenderingContext2D,
+  sys: ParticleSystem,
+  cssW: number,
+  cssH: number,
+  dpr: number,
+) {
+  if (props.dotRgb) {
+    drawParticlesWithRgb(ctx, sys, cssW, cssH, dpr, props.dotRgb)
+    return
+  }
+  drawParticles(ctx, sys, props.invert, cssW, cssH, dpr)
+}
+
 function paintFrame(): boolean {
   const canvas = canvasRef.value
-  if (!canvas) return false
+  const sys = systemRef.value
+  if (!canvas || !sys) return false
 
   const ctx = canvas.getContext('2d')
-  const sys = systemRef.value
-  if (!ctx || !sys) return false
+  if (!ctx) return false
 
-  const size = syncCanvasBuffer(canvas)
-  if (!size) return false
+  const dpr = window.devicePixelRatio || 1
+  const rect = canvas.getBoundingClientRect()
+  const cssW = rect.width
+  const cssH = rect.height
+  if (cssW < 1 || cssH < 1) return false
 
-  const { cssW, cssH, dpr } = size
-  drawParticles(ctx, sys, props.invert, cssW, cssH, dpr)
+  const bufW = Math.round(cssW * dpr)
+  const bufH = Math.round(cssH * dpr)
+  if (canvas.width !== bufW || canvas.height !== bufH) {
+    canvas.width = bufW
+    canvas.height = bufH
+  }
+
+  renderFrame(ctx, sys, cssW, cssH, dpr)
   return true
 }
 
@@ -230,14 +367,16 @@ function startLoop() {
       return
     }
 
-    const size = syncCanvasBuffer(canvas)
-    if (!size) {
+    const dpr = window.devicePixelRatio || 1
+    const rect = canvas.getBoundingClientRect()
+    const cssW = rect.width
+    const cssH = rect.height
+    if (cssW < 1 || cssH < 1) {
       running = false
       requestAnimationFrame(() => startLoop())
       return
     }
 
-    const { cssW, cssH, dpr } = size
     const needsMore = stepParticlesScaled(
       sys,
       cursor.x,
@@ -248,7 +387,7 @@ function startLoop() {
       cssW,
       cssH,
     )
-    drawParticles(ctx, sys, props.invert, cssW, cssH, dpr)
+    renderFrame(ctx, sys, cssW, cssH, dpr)
 
     if (needsMore) animFrame = requestAnimationFrame(tick)
     else running = false
@@ -263,14 +402,13 @@ async function rebuild(src: string, attempt = 0) {
 
   try {
     const img = await fetchImage(src)
-    const size = syncCanvasBuffer(canvas)
-    if (!size) {
-      if (attempt < 12) {
-        requestAnimationFrame(() => void rebuild(src, attempt + 1))
-      }
+    const rect = canvas.getBoundingClientRect()
+    const cssW = rect.width
+    const cssH = rect.height
+    if (cssW < 1 || cssH < 1) {
+      if (attempt < 12) requestAnimationFrame(() => void rebuild(src, attempt + 1))
       return
     }
-    const { cssW, cssH } = size
 
     const processed = toGrayscaleGrid(
       img,
@@ -294,26 +432,28 @@ async function rebuild(src: string, attempt = 0) {
     )
 
     if (props.invert) {
-      positions = applyMaskInversion(
-        positions,
-        gw,
-        gh,
-        props.cornerRadius,
-        processed.alpha,
-      )
+      if (props.letterLumaMin != null) {
+        positions = applyLetterAwareMaskInversion(
+          positions,
+          gw,
+          gh,
+          props.cornerRadius,
+          processed.alpha,
+          processed.grayscale,
+          props.letterLumaMin,
+        )
+      } else {
+        positions = applyMaskInversion(
+          positions,
+          gw,
+          gh,
+          props.cornerRadius,
+          processed.alpha,
+        )
+      }
     }
 
-    const k = interactionScale(cssW, cssH)
-    const margin = 18 * k + 1
-    const availW = Math.max(1, cssW - margin * 2)
-    const availH = Math.max(1, cssH - margin * 2)
-    const s = Math.min(
-      (availW * props.scale) / gw,
-      (availH * props.scale) / gh,
-    )
-    const ox = (cssW - gw * s) / 2
-    const oy = (cssH - gh * s) / 2
-
+    const { s, ox, oy } = gridLayout(cssW, cssH, gw, gh)
     systemRef.value = initParticles(positions, s, props.dotScale, ox, oy)
     paintFrame()
     startLoop()
@@ -328,12 +468,10 @@ function setupCanvas() {
 
   const handleResize = () => {
     paintFrame()
-
-    const { cssW, cssH } = canvasMetrics(canvas)
-    const w = Math.round(cssW)
-    const h = Math.round(cssH)
+    const rect = canvas.getBoundingClientRect()
+    const w = Math.round(rect.width)
+    const h = Math.round(rect.height)
     if (w < 1 || h < 1) return
-
     if (lastW !== 0 && (w !== lastW || h !== lastH)) {
       if (resizeTimer) clearTimeout(resizeTimer)
       resizeTimer = setTimeout(() => void rebuild(props.imageSrc), 200)
@@ -343,7 +481,6 @@ function setupCanvas() {
   }
 
   handleResize()
-
   const ro = new ResizeObserver(handleResize)
   ro.observe(canvas)
 
@@ -354,18 +491,15 @@ function setupCanvas() {
     cursor.active = true
     startLoop()
   }
-
   const onPointerLeave = (e: PointerEvent) => {
     if (e.pointerType !== 'mouse') return
     cursor.active = false
     startLoop()
   }
-
   const onPointerCancel = () => {
     cursor.active = false
     startLoop()
   }
-
   const onPointerUp = (e: PointerEvent) => {
     const rect = canvas.getBoundingClientRect()
     ripples.push({
@@ -442,6 +576,6 @@ defineExpose({ rebuild: () => rebuild(props.imageSrc), paintFrame })
 
 <template>
   <div ref="rootRef" :class="props.class" :style="containerStyle">
-    <canvas ref="canvasRef" :style="canvasStyle" />
+    <canvas ref="canvasRef" :style="canvasStyle" aria-hidden="true" />
   </div>
 </template>

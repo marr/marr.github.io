@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-        { rel: "preload", href: "/logo-halftone.png", as: "image" },
+        { rel: "preload", href: "/logo-david-marr.png", as: "image" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
