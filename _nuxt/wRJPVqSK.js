@@ -1,0 +1,1 @@
+import{On as e,mt as t,qt as n,v as r}from"./CT2H0voX.js";import{t as i}from"./C7hVxUvt.js";import{t as a}from"./a25fNbMR.js";import o from"./z2ojFaGk.js";var s={__name:`ProseCaution`,setup(s){let c=i();return(i,s)=>(t(),r(o,{color:`error`,icon:e(c).ui.icons.caution},{default:n(()=>[a(i.$slots,`default`,{mdcUnwrap:`p`})]),_:3},8,[`icon`]))}};export{s as default};
