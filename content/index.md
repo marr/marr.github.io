@@ -97,6 +97,14 @@ description: Repos I maintain—shipping work you can inspect and reuse.
   :::
 ::
 
+::github-stars
+---
+title: Recently starred
+description: Repos I've bookmarked lately—tools and ideas worth a closer look.
+limit: 8
+---
+::
+
 ::project-grid
 ---
 title: Staples
@@ -221,6 +229,18 @@ description: Tools I keep coming back to—data viz, docs, app shell, and UI pat
   url: https://github.com/badlogic/pi-mono
   ---
   :::
+
+  :::project-card
+  ---
+  tags:
+    - Git
+    - Self‑hosted
+  description: A painless self-hosted Git service.
+  icon: i-simple-icons-gitea
+  title: Gitea
+  url: https://gitea.com
+  ---
+  :::
 ::
 
 ::project-grid
@@ -244,36 +264,12 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   :::project-card
   ---
   tags:
-    - Git
-    - Self‑hosted
-  description: A painless self-hosted Git service.
-  icon: i-simple-icons-gitea
-  title: Gitea
-  url: https://gitea.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
     - WebGPU
     - Tools
   description: WebGPU component library for creative effects in Vue, React, Svelte, Solid, and vanilla JS.
   icon: i-simple-icons-webgpu
   title: shaders.com
   url: https://shaders.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - 3D
-    - SVG
-  description: Tiny engine for 3D voxel scenes rendered to SVG—boolean ops, oblique and perspective cams, zero dependencies.
-  icon: i-lucide-box
-  title: heerich
-  url: https://github.com/meodai/heerich
   ---
   :::
 
@@ -316,6 +312,18 @@ description: Older demos and experiments—still here for reference, not the mai
   icon: i-simple-icons-apple
   title: OpenCore Legacy Patcher
   url: https://dortania.github.io/OpenCore-Legacy-Patcher
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - 3D
+    - SVG
+  description: Tiny engine for 3D voxel scenes rendered to SVG—boolean ops, oblique and perspective cams, zero dependencies.
+  icon: i-lucide-box
+  title: heerich
+  url: https://github.com/meodai/heerich
   ---
   :::
 ::

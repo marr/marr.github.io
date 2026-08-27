@@ -2,6 +2,14 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxt/content"],
+  runtimeConfig: {
+    github: {
+      token: process.env.GITHUB_TOKEN || "",
+    },
+    public: {
+      githubUsername: "marr",
+    },
+  },
   devtools: { enabled: true },
   build: {
     transpile: ["dithered-logo-vue"],
