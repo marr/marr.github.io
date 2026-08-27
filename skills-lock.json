@@ -10,6 +10,18 @@
       "source": "mattpocock/skills",
       "sourceType": "github",
       "computedHash": "784f0dbb7403b0f00324bce9a112f715342777a0daee7bbb7385f9c6f0a170ea"
+    },
+    "nuxt-ui": {
+      "source": "nuxt/ui",
+      "sourceType": "github",
+      "skillPath": "skills/nuxt-ui/SKILL.md",
+      "computedHash": "de41e63eeda35c2bfdd3ed783d3e04361dc85bff28ad71f9c4dbdc01bb8f4e57"
+    },
+    "rendercv": {
+      "source": "rendercv/rendercv-skill",
+      "sourceType": "github",
+      "skillPath": "skills/rendercv/SKILL.md",
+      "computedHash": "67dc790a46f6a5f44fa7a00ffc38096288064913731fda597d090236b70afdfc"
     }
   }
 }
