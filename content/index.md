@@ -251,6 +251,19 @@ description: On the workbench right now—frameworks, infra, and ideas worth try
   :::project-card
   ---
   tags:
+    - Graph
+    - Vector
+    - Database
+  description: Graph-vector OLTP database—traversal, vector search, and full-text in one Rust engine on object storage.
+  icon: i-lucide-waypoints
+  title: HelixDB
+  url: https://helix-db.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
     - Knowledge
     - Markdown
     - AI
