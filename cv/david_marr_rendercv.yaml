@@ -22,9 +22,10 @@ cv:
         turning loosely defined product and analytics requirements into
         well-modeled, scalable systems teams can trust for reporting and
         day-to-day operations.
-      - Twenty-five years shipping production software on Python, Java, AWS, and
-        PostgreSQL. I lead in Agile teams, mentor engineers, and raise the bar
-        on data quality, observability, and predictable delivery.
+      - Twenty-five years shipping production software on Python, TypeScript,
+        Node.js, AWS, and PostgreSQL. I lead in Agile teams, mentor engineers,
+        and raise the bar on data quality, observability, and predictable
+        delivery.
     experience:
       - company: "Context Labs"
         position: "Principal Software Engineer / Engineering Lead (Platform)"
@@ -34,16 +35,16 @@ cv:
         summary: "Led distributed engineering organization delivering a
           multi-tenant analytics platform — owning how data is modeled, accessed,
           and delivered across product, reporting, and geospatial use cases."
-        skills: Python, Java, GraphQL, PostgreSQL, Trino, TypeScript, Vue, Nuxt,
-          Mapbox
+        skills: Python, Node.js, TypeScript, GraphQL, PostgreSQL, Trino, Vue,
+          Nuxt, Mapbox
         highlights:
           - Managed and grew engineering team across three continents in Scrum
             delivery; introduced OKRs and operational reviews that improved
             velocity and cut incident recovery time by 50%.
-          - Architected production data-service layer (GraphQL/Java) with
-            multi-tenancy, single sign-on, role-based access, and
-            internationalization — the integration point for analytics,
-            dashboards, and product features.
+          - Built production data-service layer in Node.js/TypeScript (GraphQL
+            BFF) integrating with Java APIs — multi-tenancy, single sign-on,
+            role-based access, and internationalization; the integration point
+            for analytics, dashboards, and product features.
           - Partnered with product and analytics stakeholders to shape relational
             data models and APIs supporting reporting, charting (Vega Lite), and
             map-based visualization (Mapbox).
@@ -140,8 +141,8 @@ cv:
         summary: Focus on Management of Information Systems (MIS)
     skills:
       - label: Data & Platform
-        details: Python, Java, PostgreSQL, AWS, Trino, GraphQL, Docker,
-          Kubernetes, MongoDB, Bash, Git
+        details: Python, Node.js, TypeScript, PostgreSQL, AWS, Trino, GraphQL,
+          Docker, Kubernetes, MongoDB, Bash, Git
       - label: Languages/Frameworks/Web
         details:
           TypeScript, JavaScript, Go, React, Vue, HTML, CSS, Tailwind, Nuxt,

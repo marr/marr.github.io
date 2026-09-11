@@ -48,7 +48,7 @@ resumeProfile:
 ## Summary
 Engineering leader who builds reliable data platforms and services — turning loosely defined product and analytics requirements into well-modeled, scalable systems teams can trust for reporting and day-to-day operations.
 
-Twenty-five years shipping production software on Python, Java, AWS, and PostgreSQL. I lead in Agile teams, mentor engineers, and raise the bar on data quality, observability, and predictable delivery.
+Twenty-five years shipping production software on Python, TypeScript, Node.js, AWS, and PostgreSQL. I lead in Agile teams, mentor engineers, and raise the bar on data quality, observability, and predictable delivery.
 
 ## Experience
 ### **Context Labs**, Principal Software Engineer / Engineering Lead (Platform) · <span class="resume-exp-location">Cambridge, MA</span>
@@ -59,7 +59,7 @@ Led distributed engineering organization delivering a multi-tenant analytics pla
 
 - Managed and grew engineering team across three continents in Scrum delivery; introduced OKRs and operational reviews that improved velocity and cut incident recovery time by 50%.
 
-- Architected production data-service layer (GraphQL/Java) with multi-tenancy, single sign-on, role-based access, and internationalization — the integration point for analytics, dashboards, and product features.
+- Built production data-service layer in Node.js/TypeScript (GraphQL BFF) integrating with Java APIs — multi-tenancy, single sign-on, role-based access, and internationalization; the integration point for analytics, dashboards, and product features.
 
 - Partnered with product and analytics stakeholders to shape relational data models and APIs supporting reporting, charting (Vega Lite), and map-based visualization (Mapbox).
 
@@ -68,7 +68,7 @@ Led distributed engineering organization delivering a multi-tenant analytics pla
 - Mentored engineers and drove adoption of AI-assisted development workflows with hands-on workshops and clear quality guardrails.
 
 
-<p class="resume-role-skills"><span class="resume-role-skills__tag">Python</span><span class="resume-role-skills__tag">Java</span><span class="resume-role-skills__tag">GraphQL</span><span class="resume-role-skills__tag">PostgreSQL</span><span class="resume-role-skills__tag">Trino</span><span class="resume-role-skills__tag">TypeScript</span><span class="resume-role-skills__tag">Vue</span><span class="resume-role-skills__tag">Nuxt</span><span class="resume-role-skills__tag">Mapbox</span></p>
+<p class="resume-role-skills"><span class="resume-role-skills__tag">Python</span><span class="resume-role-skills__tag">Node.js</span><span class="resume-role-skills__tag">TypeScript</span><span class="resume-role-skills__tag">GraphQL</span><span class="resume-role-skills__tag">PostgreSQL</span><span class="resume-role-skills__tag">Trino</span><span class="resume-role-skills__tag">Vue</span><span class="resume-role-skills__tag">Nuxt</span><span class="resume-role-skills__tag">Mapbox</span></p>
 
 
 
@@ -158,7 +158,7 @@ Focus on Management of Information Systems (MIS)
 
 
 ## Skills
-**Data & Platform:** Python, Java, PostgreSQL, AWS, Trino, GraphQL, Docker, Kubernetes, MongoDB, Bash, Git
+**Data & Platform:** Python, Node.js, TypeScript, PostgreSQL, AWS, Trino, GraphQL, Docker, Kubernetes, MongoDB, Bash, Git
 
 **Languages/Frameworks/Web:** TypeScript, JavaScript, Go, React, Vue, HTML, CSS, Tailwind, Nuxt, Tanstack Start, Vega Lite, Mapbox, Maplibre, Deck.gl, D3, Zod, React Hook Form, Vee-Validate, WebGL, WebGPU, WebRTC
 
