@@ -64,14 +64,14 @@ cv:
         start_date: 2018-04
         end_date: "2019-12"
         location: "Cambridge, MA"
-        summary: Owned backend systems for trip management and dynamic pricing
-          on PostgreSQL — the machinery behind product-facing availability and
-          rate logic.
+        summary: Owned backend systems for trip management and dynamic pricing —
+          the service and data machinery behind availability rules and rate
+          logic.
         skills: PostgreSQL, TypeScript, JavaScript
         highlights:
-          - "Owned backend services for dynamic pricing and trip management on
-            PostgreSQL — availability rules, rate logic, and transactional
-            consistency under load."
+          - "Built and maintained pricing and trip-management services —
+            availability rules, rate logic, and transactional consistency under
+            load."
           - "Maintained host-recognition and incentive systems backed by
             dependable data pipelines and service-level operational behavior."
 
