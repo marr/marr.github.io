@@ -13,75 +13,93 @@ cv:
   # Turo: availability, pricing, All-star; host platform React tooling.
   # Experience list starts at Tilt.com; earlier roles omitted from résumé.
   name: David Marr
-  headline: Engineering Leader — Platforms, Teams & AI Integration
+  headline: Lead Software Engineer — Data Platforms, Analytics & Delivery
   location: "Boston, MA"
   email: "dave.marr@gmail.com"
   sections:
     summary:
-      - I enjoy making things work, work well, and repairing them when they don't.
-        Mostly software, but also relationships, bicycles, electronics — anything
-        worth doing right.
-      - Loyal to the craft, hard-working, and considerate, I try to do more with
-        less, and maintain a beginner's curiosity.
+      - Engineering leader who builds reliable data platforms and services —
+        turning loosely defined product and analytics requirements into
+        well-modeled, scalable systems teams can trust for reporting and
+        day-to-day operations.
+      - Twenty-five years shipping production software on Python, Java, AWS, and
+        PostgreSQL. I lead in Agile teams, mentor engineers, and raise the bar
+        on data quality, observability, and predictable delivery.
     experience:
       - company: "Context Labs"
-        position: "Principal Software Engineer / Engineering Lead (UI)"
+        position: "Principal Software Engineer / Engineering Lead (Platform)"
         start_date: 2022-06
         end_date: 2026-03
         location: "Cambridge, MA"
-        summary: "Led distributed UI/UX engineering organization delivering
-          multi-tenant analytics platform."
-        skills: Vue, Nuxt, TypeScript, Python, GraphQL, Mapbox, PostgreSQL, ArcadeDB
+        summary: "Led distributed engineering organization delivering a
+          multi-tenant analytics platform — owning how data is modeled, accessed,
+          and delivered across product, reporting, and geospatial use cases."
+        skills: Python, Java, GraphQL, PostgreSQL, Trino, TypeScript, Vue, Nuxt,
+          Mapbox
         highlights:
-          - Managed and grew UI/UX team across three continents; introduced
-            OKRs and reviews improving velocity and reducing incident MTTR (time
-            to restore service) by 50%.
-          - Drove adoption of AI coding assistants and MCP extensions in our Nuxt
-            stack, pairing hands-on workshops with clear review and testing
-            guardrails so teams shipped safely at higher cadence.
-          - Built production BFF platform with GraphQL/Java, multi-tenancy, SSO,
-            RBAC, and internationalization.
-          - Developed shared UI component library with Vega Lite, MapBox, and
-            accessible controls.
+          - Managed and grew engineering team across three continents in Scrum
+            delivery; introduced OKRs and operational reviews that improved
+            velocity and cut incident recovery time by 50%.
+          - Architected production data-service layer (GraphQL/Java) with
+            multi-tenancy, single sign-on, role-based access, and
+            internationalization — the integration point for analytics,
+            dashboards, and product features.
+          - Partnered with product and analytics stakeholders to shape relational
+            data models and APIs supporting reporting, charting (Vega Lite), and
+            map-based visualization (Mapbox).
+          - Established engineering standards — code review, testing, and
+            monitoring practices — that improved data trust and reduced
+            operational friction across the platform.
+          - Mentored engineers and drove adoption of AI-assisted development
+            workflows with hands-on workshops and clear quality guardrails.
 
       - company: "Filtered.ai"
         position: "Lead Engineer"
         start_date: 2020-02
         end_date: 2022-02
         location: "Boston, MA"
-        summary: Built AI tools to automate organization and grading of technical
-          assessments for custom SaaS/ATS.
-        skills: React, TypeScript, Node.js, AWS, Python, PostgreSQL
+        summary: "Lead engineer building AWS-backed data and ML workflows for
+          technical hiring assessments — ingestion, validation, scoring, and
+          reporting for enterprise recruiting teams."
+        skills: Python, AWS, PostgreSQL, Node.js, TypeScript, React
         highlights:
-          - Implemented fraud and cheat detection using computer vision and AWS
-            Mechanical Turk.
-          - Managed full-stack implementation of hiring tools including
-            scheduling, assessing/grading, interviewing, and workflow management.
+          - Built fraud and integrity detection pipelines using Python, computer
+            vision, and AWS (including Mechanical Turk for human-in-the-loop
+            validation).
+          - Owned full-stack hiring platform on PostgreSQL — assessment data
+            models, scheduling, grading workflows, and operational reporting.
+          - Collaborated with product and data science on model integration,
+            quality checks, and reliable delivery of automated scoring at scale.
       - company: "Turo"
         position: "Staff Software Engineer"
         start_date: 2018-04
         end_date: "2019-12"
         location: "Cambridge, MA"
-        summary: Owned trip management tools with dynamic pricing, improving host
-          experience and utilization.
-        skills: React, Redux, TypeScript, JavaScript, PostgreSQL
+        summary: Owned trip-management and dynamic pricing systems on
+          PostgreSQL, improving host experience and fleet utilization through
+          data-driven availability and rate logic.
+        skills: PostgreSQL, React, Redux, TypeScript, JavaScript
         highlights:
           - "Maintained the All-star host program to recognize and incentivize
             top hosts, supporting retention and higher-quality listings."
+          - "Partnered with product and operations on pricing and availability
+            rules that depended on reliable transactional and reporting data."
       - company: "OneMarket / Westfield Labs"
         position: "Senior Software Architect"
         start_date: "2016-01"
         end_date: 2018-05
         location: "San Francisco, CA"
         summary: Integrated facial recognition, subscription billing, and automated
-          parking gates to produce a smart parking solution.
-        skills: React, JavaScript, Stripe, Node.js, Mapbox, C, PostgreSQL
+          parking gates into a smart parking platform with payment and usage
+          data flowing through PostgreSQL-backed services.
+        skills: PostgreSQL, Node.js, React, JavaScript, Stripe, Mapbox, C
         highlights:
           - "Architected physical and online payment products, yielding ~$2.7m
-            in MRR."
+            in monthly recurring revenue with reliable billing and reporting
+            data."
           - "Built indoor mapping, directory kiosks, and wayfinding systems
             across 4 flagship shopping centers, averaging 60,000+ monthly
-            sessions."
+            sessions with operational metrics for venue stakeholders."
       - company: "Tilt.com"
         position: "Senior Systems Engineer"
         start_date: 2013-07
@@ -101,7 +119,8 @@ cv:
         skills: Node.js, Adobe Flash/Flex/FMS, MySQL, PHP, SQL Server, .NET,
           ASP Classic, HTML, CSS, JavaScript
         highlights:
-          - Publishing and ad-tech at Say Media; co-founded early social product
+          - Publishing and ad-tech at Say Media (audience data, campaign
+            delivery, and content platforms); co-founded early social product
             (Secret Feature).
           - Design-to-production prototyping (Frog Design); scaled frontend
             architecture for high-traffic Yahoo properties.
@@ -120,17 +139,18 @@ cv:
         location: "Durham, NH"
         summary: Focus on Management of Information Systems (MIS)
     skills:
+      - label: Data & Platform
+        details: Python, Java, PostgreSQL, AWS, Trino, GraphQL, Docker,
+          Kubernetes, MongoDB, Bash, Git
       - label: Languages/Frameworks/Web
         details:
-          TypeScript, JavaScript, Python, Go, React, Vue, HTML, CSS, Tailwind,
-          Nuxt, Tanstack Start, Vega Lite, Mapbox, Maplibre, Deck.gl, D3, Zod,
-          React Hook Form,
-          Vee-Validate, WebGL, WebGPU, WebRTC
+          TypeScript, JavaScript, Go, React, Vue, HTML, CSS, Tailwind, Nuxt,
+          Tanstack Start, Vega Lite, Mapbox, Maplibre, Deck.gl, D3, Zod, React
+          Hook Form, Vee-Validate, WebGL, WebGPU, WebRTC
       - label: AI Tools/Infrastructure
-        details: Kubernetes, AWS, PostgreSQL, Docker, Git, MongoDB, Bash, Trino,
-          ArcadeDB, Vite, Vitest, Vercel AI SDK, Pi, Cursor, Opencode,
-          Cloudflare Workers, Cloudflare Durable Objects, Agent Skills,
-          Turborepo, Lerna/NX
+        details: Vite, Vitest, Vercel AI SDK, Pi, Cursor, Opencode, Cloudflare
+          Workers, Cloudflare Durable Objects, Agent Skills, Turborepo,
+          Lerna/NX, ArcadeDB
   website: https://marr.github.io
   photo:
   social_networks:
