@@ -1,0 +1,202 @@
+cv:
+  # Tailored for Splunk — Principal Software Engineer (search & analytics platform).
+  # Source of truth for site build remains cv/david_marr_rendercv.yaml.
+  name: David Marr
+  headline: Principal Software Engineer — Distributed Analytics & Platform
+  location: "Boston, MA"
+  email: "dave.marr@gmail.com"
+  sections:
+    summary:
+      - Principal engineer who designs and operates large-scale analytics platforms
+        — reliable query access, multi-tenant data services, and platform
+        primitives that teams can build on without re-solving the same
+        problems.
+      - Twenty-five years shipping production systems on PostgreSQL, AWS, Python,
+        and distributed query infrastructure (Trino). I partner across
+        engineering and product, guide efforts from design through delivery, and
+        mentor engineers through design reviews and production learnings.
+    experience:
+      - company: "Context Labs"
+        position: "Principal Software Engineer / Engineering Lead (Platform)"
+        start_date: 2022-06
+        end_date: 2026-03
+        location: "Cambridge, MA"
+        summary: "Led platform engineering for a multi-tenant analytics product
+          serving distributed teams — query access, data services, reliability,
+          and reusable capabilities across reporting and operational use cases."
+        skills: Python, Node.js, TypeScript, PostgreSQL, Trino, GraphQL, Docker,
+          Kubernetes
+        highlights:
+          - Built production data-service layer in Node.js/TypeScript (GraphQL)
+            integrating with Java APIs — multi-tenancy, access control, and
+            localization as the stable query and integration surface for analytics
+            workloads.
+          - Partnered with product, analytics, and engineering stakeholders to
+            shape data models and APIs; introduced platform primitives that
+            reduced repeated plumbing across teams.
+          - Improved platform reliability and observability — operational reviews
+            and engineering standards cut incident recovery time by 50%.
+          - Guided complex efforts from early design through delivery across a
+            distributed engineering organization on three continents.
+          - Mentored engineers through code review, design discussion, and
+            production incident learnings.
+
+      - company: "Filtered.ai"
+        position: "Lead Engineer"
+        start_date: 2020-02
+        end_date: 2022-02
+        location: "Boston, MA"
+        summary: "Lead engineer building AWS-backed data pipelines and assessment
+          platform services for enterprise recruiting teams — ingestion,
+          validation, scoring, and reporting at production scale."
+        skills: Python, AWS, PostgreSQL, Node.js, SQL
+        highlights:
+          - Built ingestion, scheduling, grading, and workflow services on AWS
+            and PostgreSQL with reliability requirements suitable for enterprise
+            customers.
+          - Integrated model scoring and human-in-the-loop validation into
+            pipelines with data quality checks and operational monitoring.
+          - Collaborated with product and data science on deployment, query and
+            data-model design, and ongoing production improvements.
+
+      - company: "Turo"
+        position: "Staff Software Engineer"
+        start_date: 2018-04
+        end_date: "2019-12"
+        location: "Cambridge, MA"
+        summary: Owned backend services for trip management and dynamic pricing —
+          availability rules, rate logic, and transactional behavior under
+          production load.
+        skills: PostgreSQL, SQL, TypeScript, JavaScript
+        highlights:
+          - "Maintained pricing and host-recognition systems where product rules
+            depended on dependable service performance and reporting data."
+          - "Partnered with product and operations to translate requirements into
+            shippable backend behavior with clear operational expectations."
+
+      - company: "OneMarket / Westfield Labs"
+        position: "Senior Software Architect"
+        start_date: "2016-01"
+        end_date: 2018-05
+        location: "San Francisco, CA"
+        summary: Architected payment and venue platform services integrating
+          hardware, billing, and usage data through PostgreSQL-backed APIs —
+          reliability and reporting mattered for revenue and operations.
+        skills: PostgreSQL, SQL, Node.js, C, Stripe
+        highlights:
+          - "Designed service and data flows across payment, billing, and venue
+            systems — ~$2.7m in monthly recurring revenue depended on dependable
+            platform behavior."
+          - "Delivered systems averaging 60,000+ monthly sessions across 4
+            flagship venues with operational metrics for stakeholder reporting."
+
+      - company: "Tilt.com"
+        position: "Senior Systems Engineer"
+        start_date: 2013-07
+        end_date: 2015-12
+        location: "San Francisco, CA"
+        skills: Perl, PostgreSQL, SQL, JavaScript
+        highlights:
+          - Built and operated Perl/Dancer backend services with PostgreSQL for a
+            high-traffic payments product — request handling, data modeling, and
+            iterative performance improvements.
+          - Implemented contribution-flow changes yielding 15% lift in signups
+            through simpler service paths and data handling.
+
+      - company: Various
+        position: Previous Leadership & Technical Roles
+        start_date: 2000-09
+        end_date: 2013-04
+        location: "Massachusetts & California"
+        skills: SQL Server, MySQL, PostgreSQL, Node.js, .NET, PHP
+        highlights:
+          - Scaled architecture and integrations for high-traffic Yahoo
+            properties; enterprise web integrations (SoftArtisans).
+          - Publishing and ad-tech platform work at Say Media — audience data,
+            campaign delivery, and reporting at scale.
+          - Industrial automation backends and dashboards (GE Fanuc /
+            Intellution); co-founded early social product (Secret Feature).
+
+        date: 2000-2013
+    education:
+      - institution: "University of New Hampshire"
+        area: "Business Administration"
+        degree: "BS"
+        start_date: "1996-09"
+        end_date: 2000-05
+        location: "Durham, NH"
+        summary: Focus on Management of Information Systems (MIS)
+    skills:
+      - label: Distributed Analytics & Data
+        details: Trino, PostgreSQL, SQL, GraphQL, Python, data modeling, query
+          access patterns
+      - label: Platform & Cloud
+        details: AWS, Docker, Kubernetes, Node.js, TypeScript, Bash, Git, MongoDB
+      - label: Reliability & Operations
+        details: Observability, incident response, multi-tenancy, service
+          boundaries, production debugging, mentoring
+  website: https://marr.github.io
+  photo:
+  social_networks:
+    - network: GitHub
+      username: marr
+    - network: LinkedIn
+      username: davidmarr
+    - network: X
+      username: dmarr
+
+locale:
+  language: english
+  phrases:
+    degree_with_area: "DEGREE in AREA"
+
+design:
+  theme: harvard
+  page:
+    size: us-letter
+    show_footer: true
+    show_top_note: false
+  typography:
+    alignment: left
+  header:
+    connections:
+      phone_number_format: E164
+      hyperlink: true
+      show_icons: true
+  sections:
+    show_time_spans_in: []
+  templates:
+    footer: "*NAME -- PAGE_NUMBER/TOTAL_PAGES*"
+    top_note: "*LAST_UPDATED CURRENT_DATE*"
+    single_date: MONTH_ABBREVIATION YEAR
+    date_range: START_DATE – END_DATE
+    time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
+    one_line_entry:
+      main_column: "**LABEL:** DETAILS"
+    education_entry:
+      main_column: |-
+        **INSTITUTION**, DEGREE_WITH_AREA -- LOCATION
+        SUMMARY
+        HIGHLIGHTS
+      degree_column: null
+      date_and_location_column: DATE
+    normal_entry:
+      main_column: |-
+        **NAME** -- **LOCATION**
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: DATE
+    experience_entry:
+      main_column: |-
+        **COMPANY**, POSITION -- LOCATION
+        SUMMARY
+        HIGHLIGHTS
+        SKILLS_BLOCK
+      date_and_location_column: DATE
+    publication_entry:
+      main_column: |-
+        **TITLE**
+        SUMMARY
+        AUTHORS
+        URL (JOURNAL)
+      date_and_location_column: DATE

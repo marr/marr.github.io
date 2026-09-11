@@ -1,0 +1,217 @@
+cv:
+  # Tailored for Google Envisioning Studio — Creative Systems Engineer.
+  # Source of truth for site build remains cv/david_marr_rendercv.yaml.
+  name: David Marr
+  headline: Systems Engineer — Backend, Infrastructure & AI Platform Primitives
+  location: "Boston, MA"
+  email: "dave.marr@gmail.com"
+  sections:
+    summary:
+      - Backend and infrastructure engineer who builds the substrate underneath
+        experiments — APIs, service boundaries, databases, queues, containers,
+        and deployment pipelines that make prototypes runnable in production-like
+        conditions.
+      - Twenty-five years on Python, Node.js, PostgreSQL, Docker, Kubernetes,
+        and AWS. I wire models, agents, and services together, operate a home
+        Kubernetes cluster to stay hands-on with networking and storage, and
+        treat agentic AI as a systems primitive rather than a UI feature.
+    experience:
+      - company: "Context Labs"
+        position: "Principal Software Engineer (Platform & Infrastructure)"
+        start_date: 2022-06
+        end_date: 2026-03
+        location: "Cambridge, MA"
+        summary: "Owned backend platform infrastructure for a multi-tenant
+          analytics product — service integration, data access, auth, and
+          operational reliability across distributed systems."
+        skills: Python, Node.js, TypeScript, GraphQL, PostgreSQL, Trino, Docker,
+          Kubernetes, Bash
+        highlights:
+          - Built production integration layer in Node.js/TypeScript (GraphQL
+            BFF) wiring Java APIs, PostgreSQL, auth, tenancy, and localization
+            into a stable backend surface other teams could build against.
+          - Defined service boundaries, API contracts, and deployment patterns
+            for a distributed platform; improved observability and cut incident
+            recovery time by 50%.
+          - Established platform primitives for data access and service
+            orchestration so experiment teams spent less time re-solving
+            plumbing.
+          - Drove adoption of AI coding assistants and MCP server tooling as
+            infrastructure — agent interfaces, review guardrails, and repeatable
+            patterns for safe experimentation on real systems.
+          - Operated multi-tenant backend services where correctness, access
+            control, and uptime mattered as much as feature velocity.
+
+      - company: "Filtered.ai"
+        position: "Lead Engineer"
+        start_date: 2020-02
+        end_date: 2022-02
+        location: "Boston, MA"
+        summary: "Lead backend engineer wiring models, queues, and data pipelines
+          into a hiring-assessment platform on AWS and PostgreSQL."
+        skills: Python, AWS, PostgreSQL, Node.js, Bash
+        highlights:
+          - Built ingestion, scheduling, grading, and workflow services on AWS
+            and PostgreSQL — the backend machinery connecting product logic to
+            running infrastructure.
+          - Integrated computer-vision models and human-in-the-loop validation
+            (AWS Mechanical Turk) into batch and on-demand scoring pipelines.
+          - Owned model deployment hooks, data validation, and operational
+            monitoring for automated assessment at scale.
+
+      - company: "Turo"
+        position: "Staff Software Engineer"
+        start_date: 2018-04
+        end_date: "2019-12"
+        location: "Cambridge, MA"
+        summary: Owned backend systems for trip management and dynamic pricing —
+          the service and data machinery behind availability rules and rate
+          logic.
+        skills: PostgreSQL, TypeScript, JavaScript
+        highlights:
+          - "Built and maintained pricing and trip-management services —
+            availability rules, rate logic, and transactional consistency under
+            load."
+          - "Maintained host-recognition and incentive systems backed by
+            dependable data pipelines and service-level operational behavior."
+
+      - company: "OneMarket / Westfield Labs"
+        position: "Senior Software Architect"
+        start_date: "2016-01"
+        end_date: 2018-05
+        location: "San Francisco, CA"
+        summary: Integrated hardware, payments, and backend services into a smart
+          parking platform — cameras, billing, gate controllers, and venue APIs
+          coordinated through PostgreSQL and Node.js services.
+        skills: Node.js, PostgreSQL, C, Stripe, Bash
+        highlights:
+          - "Architected service and data flows across cameras, payment rails,
+            gate hardware, and billing systems — ~$2.7m in monthly recurring
+            revenue depended on reliable backend orchestration."
+          - "Built low-level device integration in C alongside API and database
+            services supporting 60,000+ monthly sessions across 4 flagship
+            venues."
+
+      - company: "Tilt.com"
+        position: "Senior Systems Engineer"
+        start_date: 2013-07
+        end_date: 2015-12
+        location: "San Francisco, CA"
+        skills: Perl, PostgreSQL, JavaScript, Bash
+        highlights:
+          - Built and operated Perl/Dancer backend services with PostgreSQL —
+            request handling, data modeling, and server-side rendering
+            integration for a high-traffic payments product.
+          - Iterated contribution-flow backend logic yielding 15% lift in site
+            signups through simpler service paths and data handling.
+
+      - company: Various
+        position: Previous Leadership & Technical Roles
+        start_date: 2000-09
+        end_date: 2013-04
+        location: "Massachusetts & California"
+        skills: Node.js, MySQL, PHP, .NET, SQL Server, Bash
+        highlights:
+          - Enterprise web integrations and industrial automation backends
+            (GE Fanuc / Intellution) — device data, dashboards, and service
+            plumbing.
+          - Publishing and ad-tech platform services at Say Media; co-founded
+            early social product (Secret Feature).
+          - High-traffic backend and integration work for Yahoo properties;
+            design-to-production systems prototyping at Frog Design.
+
+        date: 2000-2013
+    systems:
+      - name: Personal homelab (Kubernetes / GitOps)
+        summary: Self-hosted infrastructure lab documented on marr.github.io —
+          Talos Linux, Flux, SOPS secrets, and service orchestration on a home
+          cluster.
+        highlights:
+          - "Operate Talos Kubernetes with Flux GitOps, SOPS secrets, and
+            persistent storage classes — hands-on with containers, networking,
+            reconciliation, and failure recovery."
+          - "Built observability, service health checks, and agent-oriented
+            runbooks for a multi-service home environment documented publicly."
+    education:
+      - institution: "University of New Hampshire"
+        area: "Business Administration"
+        degree: "BS"
+        start_date: "1996-09"
+        end_date: 2000-05
+        location: "Durham, NH"
+        summary: Focus on Management of Information Systems (MIS)
+    skills:
+      - label: Infrastructure & Backend
+        details: Docker, Kubernetes, AWS, Python, Node.js, PostgreSQL, GraphQL,
+          Trino, Bash, Git, MongoDB, Go
+      - label: AI, Agents & Services
+        details: MCP, Vercel AI SDK, Cloudflare Workers, Cloudflare Durable
+          Objects, Agent Skills, Cursor, Opencode, Pi
+      - label: Systems Integration
+        details: TypeScript, C, Perl, Stripe, WebRTC, networking, service
+          orchestration, observability
+  website: https://marr.github.io
+  photo:
+  social_networks:
+    - network: GitHub
+      username: marr
+    - network: LinkedIn
+      username: davidmarr
+    - network: X
+      username: dmarr
+
+locale:
+  language: english
+  phrases:
+    degree_with_area: "DEGREE in AREA"
+
+design:
+  theme: harvard
+  page:
+    size: us-letter
+    show_footer: true
+    show_top_note: false
+  typography:
+    alignment: left
+  header:
+    connections:
+      phone_number_format: E164
+      hyperlink: true
+      show_icons: true
+  sections:
+    show_time_spans_in: []
+  templates:
+    footer: "*NAME -- PAGE_NUMBER/TOTAL_PAGES*"
+    top_note: "*LAST_UPDATED CURRENT_DATE*"
+    single_date: MONTH_ABBREVIATION YEAR
+    date_range: START_DATE – END_DATE
+    time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
+    one_line_entry:
+      main_column: "**LABEL:** DETAILS"
+    education_entry:
+      main_column: |-
+        **INSTITUTION**, DEGREE_WITH_AREA -- LOCATION
+        SUMMARY
+        HIGHLIGHTS
+      degree_column: null
+      date_and_location_column: DATE
+    normal_entry:
+      main_column: |-
+        **NAME** -- **LOCATION**
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: DATE
+    experience_entry:
+      main_column: |-
+        **COMPANY**, POSITION -- LOCATION
+        SUMMARY
+        HIGHLIGHTS
+        SKILLS_BLOCK
+      date_and_location_column: DATE
+    publication_entry:
+      main_column: |-
+        **TITLE**
+        SUMMARY
+        AUTHORS
+        URL (JOURNAL)
+      date_and_location_column: DATE
