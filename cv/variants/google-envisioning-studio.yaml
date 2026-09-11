@@ -2,61 +2,62 @@ cv:
   # Tailored for Google Envisioning Studio — Creative Systems Engineer.
   # Source of truth for site build remains cv/david_marr_rendercv.yaml.
   name: David Marr
-  headline: Creative Systems Engineer — AI Platforms, Infrastructure & Prototyping
+  headline: Systems Engineer — Backend, Infrastructure & AI Platform Primitives
   location: "Boston, MA"
   email: "dave.marr@gmail.com"
   sections:
     summary:
-      - Systems engineer who builds the substrate underneath creative work —
-        APIs, services, pipelines, and platform primitives that let designers,
-        creative technologists, and product people prototype and ship faster.
-      - Twenty-five years wiring production systems together on Python, TypeScript,
-        Node.js, Docker, Kubernetes, and AWS. I treat agentic AI as a new
-        programming primitive, run a home Kubernetes cluster to learn by doing,
-        and am most at home in ambiguous, experiment-driven environments.
+      - Backend and infrastructure engineer who builds the substrate underneath
+        experiments — APIs, service boundaries, databases, queues, containers,
+        and deployment pipelines that make prototypes runnable in production-like
+        conditions.
+      - Twenty-five years on Python, Node.js, PostgreSQL, Docker, Kubernetes,
+        and AWS. I wire models, agents, and services together, operate a home
+        Kubernetes cluster to stay hands-on with networking and storage, and
+        treat agentic AI as a systems primitive rather than a UI feature.
     experience:
       - company: "Context Labs"
-        position: "Principal Software Engineer / Engineering Lead (Platform)"
+        position: "Principal Software Engineer (Platform & Infrastructure)"
         start_date: 2022-06
         end_date: 2026-03
         location: "Cambridge, MA"
-        summary: "Built platform infrastructure for a multi-tenant analytics
-          product — the APIs, services, and integration layer that product and
-          visualization teams built on top of."
-        skills: Python, Node.js, TypeScript, GraphQL, PostgreSQL, Docker,
-          Kubernetes, Vue, Nuxt
+        summary: "Owned backend platform infrastructure for a multi-tenant
+          analytics product — service integration, data access, auth, and
+          operational reliability across distributed systems."
+        skills: Python, Node.js, TypeScript, GraphQL, PostgreSQL, Trino, Docker,
+          Kubernetes, Bash
         highlights:
           - Built production integration layer in Node.js/TypeScript (GraphQL
-            BFF) wiring Java APIs, databases, auth, and localization into a
-            single surface product teams could move on quickly.
-          - Drove adoption of AI coding assistants and MCP tooling across the
-            stack — hands-on workshops, review guardrails, and platform patterns
-            so teams could experiment with agents without breaking production.
-          - Shaped shared platform primitives (data access, charting with Vega
-            Lite, geospatial with Mapbox) that reduced repeated plumbing work
-            for feature teams.
-          - Led distributed engineering across three continents; introduced
-            lightweight delivery practices that improved velocity and cut
-            incident recovery time by 50%.
-          - Mentored engineers on systems thinking, service boundaries, and
-            how to prototype safely against real infrastructure.
+            BFF) wiring Java APIs, PostgreSQL, auth, tenancy, and localization
+            into a stable backend surface other teams could build against.
+          - Defined service boundaries, API contracts, and deployment patterns
+            for a distributed platform; improved observability and cut incident
+            recovery time by 50%.
+          - Established platform primitives for data access and service
+            orchestration so experiment teams spent less time re-solving
+            plumbing.
+          - Drove adoption of AI coding assistants and MCP server tooling as
+            infrastructure — agent interfaces, review guardrails, and repeatable
+            patterns for safe experimentation on real systems.
+          - Operated multi-tenant backend services where correctness, access
+            control, and uptime mattered as much as feature velocity.
 
       - company: "Filtered.ai"
         position: "Lead Engineer"
         start_date: 2020-02
         end_date: 2022-02
         location: "Boston, MA"
-        summary: "Lead engineer wiring models, services, and data pipelines
-          into a hiring-assessment product on AWS and PostgreSQL."
-        skills: Python, AWS, PostgreSQL, Node.js, TypeScript
+        summary: "Lead backend engineer wiring models, queues, and data pipelines
+          into a hiring-assessment platform on AWS and PostgreSQL."
+        skills: Python, AWS, PostgreSQL, Node.js, Bash
         highlights:
+          - Built ingestion, scheduling, grading, and workflow services on AWS
+            and PostgreSQL — the backend machinery connecting product logic to
+            running infrastructure.
           - Integrated computer-vision models and human-in-the-loop validation
-            (AWS Mechanical Turk) into scoring pipelines that had to be reliable
-            in production.
-          - Built ingestion, scheduling, grading, and workflow services that
-            connected product requirements to running infrastructure.
-          - Partnered with data science on model deployment, quality checks, and
-            operational monitoring for automated assessment at scale.
+            (AWS Mechanical Turk) into batch and on-demand scoring pipelines.
+          - Owned model deployment hooks, data validation, and operational
+            monitoring for automated assessment at scale.
 
       - company: "Turo"
         position: "Staff Software Engineer"
@@ -66,54 +67,58 @@ cv:
         summary: Owned backend systems for trip management and dynamic pricing
           on PostgreSQL — the machinery behind product-facing availability and
           rate logic.
-        skills: PostgreSQL, TypeScript, JavaScript, React
+        skills: PostgreSQL, TypeScript, JavaScript
         highlights:
-          - "Maintained pricing and host-recognition systems where product rules
-            depended on dependable service and data plumbing."
-          - "Worked with product and operations to translate fuzzy requirements
-            into shippable backend behavior."
+          - "Owned backend services for dynamic pricing and trip management on
+            PostgreSQL — availability rules, rate logic, and transactional
+            consistency under load."
+          - "Maintained host-recognition and incentive systems backed by
+            dependable data pipelines and service-level operational behavior."
 
       - company: "OneMarket / Westfield Labs"
         position: "Senior Software Architect"
         start_date: "2016-01"
         end_date: 2018-05
         location: "San Francisco, CA"
-        summary: Wired together hardware, payments, and web services into a smart
-          parking platform — facial recognition, billing, gates, and venue
-          software talking through APIs and databases.
-        skills: Node.js, PostgreSQL, C, JavaScript, Stripe, Mapbox
+        summary: Integrated hardware, payments, and backend services into a smart
+          parking platform — cameras, billing, gate controllers, and venue APIs
+          coordinated through PostgreSQL and Node.js services.
+        skills: Node.js, PostgreSQL, C, Stripe, Bash
         highlights:
-          - "Integrated disparate systems — cameras, payment rails, gate hardware,
-            and web apps — into a product that generated ~$2.7m in monthly
-            recurring revenue."
-          - "Built indoor mapping and kiosk software across 4 flagship shopping
-            centers, averaging 60,000+ monthly sessions."
+          - "Architected service and data flows across cameras, payment rails,
+            gate hardware, and billing systems — ~$2.7m in monthly recurring
+            revenue depended on reliable backend orchestration."
+          - "Built low-level device integration in C alongside API and database
+            services supporting 60,000+ monthly sessions across 4 flagship
+            venues."
 
       - company: "Tilt.com"
         position: "Senior Systems Engineer"
         start_date: 2013-07
         end_date: 2015-12
         location: "San Francisco, CA"
-        skills: Perl, JavaScript, PostgreSQL, React
+        skills: Perl, PostgreSQL, JavaScript, Bash
         highlights:
-          - Pioneered server-rendered React integrated with a Perl/Dancer
-            backend — early work bridging new UI patterns to existing services.
-          - Implemented and iterated a simplified contribution flow yielding 15%
-            lift in site signups.
+          - Built and operated Perl/Dancer backend services with PostgreSQL —
+            request handling, data modeling, and server-side rendering
+            integration for a high-traffic payments product.
+          - Iterated contribution-flow backend logic yielding 15% lift in site
+            signups through simpler service paths and data handling.
 
       - company: Various
         position: Previous Leadership & Technical Roles
         start_date: 2000-09
         end_date: 2013-04
         location: "Massachusetts & California"
-        skills: Node.js, JavaScript, MySQL, PHP, .NET, HTML, CSS
+        skills: Node.js, MySQL, PHP, .NET, SQL Server, Bash
         highlights:
-          - Design-to-production prototyping at Frog Design — translating
-            creative concepts into working software under tight ambiguity.
-          - Co-founded early social product (Secret Feature); publishing and
-            ad-tech platform work at Say Media.
-          - Scaled frontend architecture for high-traffic Yahoo properties;
-            enterprise integrations and industrial automation dashboards.
+          - Enterprise web integrations and industrial automation backends
+            (GE Fanuc / Intellution) — device data, dashboards, and service
+            plumbing.
+          - Publishing and ad-tech platform services at Say Media; co-founded
+            early social product (Secret Feature).
+          - High-traffic backend and integration work for Yahoo properties;
+            design-to-production systems prototyping at Frog Design.
 
         date: 2000-2013
     systems:
@@ -122,10 +127,11 @@ cv:
           Talos Linux, Flux, SOPS secrets, and service orchestration on a home
           cluster.
         highlights:
-          - "Operate and evolve a Kubernetes cluster to understand containers,
-            networking, storage, and GitOps reconciliation in practice."
-          - "Built custom observability dashboards and agent-oriented runbooks
-            so debugging stays fast as the environment grows."
+          - "Operate Talos Kubernetes with Flux GitOps, SOPS secrets, and
+            persistent storage classes — hands-on with containers, networking,
+            reconciliation, and failure recovery."
+          - "Built observability, service health checks, and agent-oriented
+            runbooks for a multi-service home environment documented publicly."
     education:
       - institution: "University of New Hampshire"
         area: "Business Administration"
@@ -135,14 +141,15 @@ cv:
         location: "Durham, NH"
         summary: Focus on Management of Information Systems (MIS)
     skills:
-      - label: Systems & Infrastructure
-        details: Docker, Kubernetes, AWS, Python, Node.js, TypeScript,
-          PostgreSQL, GraphQL, Bash, Git, MongoDB
-      - label: AI, Agents & Prototyping
-        details: Vercel AI SDK, MCP, Cursor, Opencode, Agent Skills, Cloudflare
-          Workers, Cloudflare Durable Objects, Pi
-      - label: Web & Visualization
-        details: Vue, Nuxt, React, Vega Lite, Mapbox, D3, WebGL, WebRTC, Go
+      - label: Infrastructure & Backend
+        details: Docker, Kubernetes, AWS, Python, Node.js, PostgreSQL, GraphQL,
+          Trino, Bash, Git, MongoDB, Go
+      - label: AI, Agents & Services
+        details: MCP, Vercel AI SDK, Cloudflare Workers, Cloudflare Durable
+          Objects, Agent Skills, Cursor, Opencode, Pi
+      - label: Systems Integration
+        details: TypeScript, C, Perl, Stripe, WebRTC, networking, service
+          orchestration, observability
   website: https://marr.github.io
   photo:
   social_networks:
