@@ -36,6 +36,19 @@ description: Repos I maintain—shipping work you can inspect and reuse.
   :::project-card
   ---
   tags:
+    - React
+    - CLI
+    - Vite+
+  description: Scaffold a Vite+ React app with Flexoki theme, shadcn/ui, motion, and tests—`npx @dmarr/create-react-reps`.
+  icon: i-simple-icons-react
+  title: create-react-reps
+  url: https://marr.github.io/create-react-reps
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
     - JavaScript
     - IndexedDB
   description: Job search dashboard—track companies, roles, and pipeline stages from networking through offer, with weekly outreach goals.
