@@ -1,0 +1,1 @@
+import{g as e}from"./Dfyab7Rd.js";import{ut as t}from"./D-3nUWIR.js";function n(e){return(e.endsWith(`/`)&&e.length>1?e.slice(0,-1):e)||`/`}function r(){let r=t();return e(()=>n(r.path))}export{r as t};
