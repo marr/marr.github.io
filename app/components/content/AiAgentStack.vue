@@ -29,7 +29,7 @@
             <img
               v-if="item.image"
               :src="item.image"
-              :alt=""
+              :alt="item.title"
               :class="[
                 'size-5 object-contain',
                 item.imageInvert ? 'invert dark:invert-0' : '',
