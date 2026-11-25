@@ -16,5 +16,8 @@ imageAlt: Mountain landscape blended with a hexagonal technology network pattern
 
 ::
 
+::ai-agent-stack
+::
+
 ::ai-story-grid
 ::
