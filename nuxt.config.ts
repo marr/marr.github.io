@@ -17,10 +17,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
-        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
+        { rel: "icon", href: "/favicon.ico", sizes: "32x32" },
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg", sizes: "any" },
         { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-        { rel: "preload", href: "/logo-david-marr.png", as: "image" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
