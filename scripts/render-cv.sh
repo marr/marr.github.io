@@ -5,6 +5,15 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
+
+python3() {
+  if command -v mise >/dev/null 2>&1; then
+    mise exec -- python3 "$@"
+  else
+    command python3 "$@"
+  fi
+}
+
 if ! python3 -c "import rendercv" 2>/dev/null; then
   echo "rendercv not found; installing from requirements-cv.txt" >&2
   python3 -m pip install -r "$ROOT/requirements-cv.txt"

@@ -18,9 +18,9 @@ const props = withDefaults(defineProps<Props>(), {
   description: '',
   avatar: '',
   roles: () => [
-    'Engineering Leader',
-    'Open Source Creator',
-    'Building for the Future',
+    'Developer',
+    'AI Engineer',
+    'Tinkerer of bits',
   ],
   socials: () => [],
 })
@@ -56,6 +56,13 @@ const props = withDefaults(defineProps<Props>(), {
           style="aspect-ratio: 8.035 / 1; mask: url(/logo-david-marr-wordmark.svg) center / contain no-repeat; -webkit-mask: url(/logo-david-marr-wordmark.svg) center / contain no-repeat"
         />
       </h1>
+
+      <p
+        v-if="roles?.length"
+        class="mb-6 text-pretty text-lg font-medium text-primary md:text-xl"
+      >
+        {{ roles.join(', ') }}
+      </p>
 
       <p v-if="description" class="mb-10 max-w-2xl text-pretty text-lg leading-relaxed text-muted">
         {{ description }}

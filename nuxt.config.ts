@@ -1,7 +1,51 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  modules: ["@nuxt/ui", "@nuxt/content"],
+  future: {
+    compatibilityVersion: 5,
+  },
+  modules: ["@nuxt/ui", "@nuxt/content", "nuxt-llms"],
+  llms: {
+    domain: "https://marr.github.io",
+    title: "David Marr",
+    description:
+      "Writing and open source on agent tooling, homelab GitOps, and interface craft.",
+    notes: [
+      "Personal lab notebook for peers, not a job pitch.",
+      "Flagship OSS: create-react-reps, nuxt-maplibre, flux-homelab-skill.",
+    ],
+    full: {
+      title: "Full site content",
+      description: "All pages and blog posts as markdown, suitable for agent ingestion.",
+    },
+    sections: [
+      {
+        title: "Site pages",
+        description: "Home, bookmarks, stars, background.",
+        contentCollection: "content",
+      },
+      {
+        title: "Writing",
+        description: "Blog posts on homelab GitOps, agents, and tooling.",
+        contentCollection: "blog",
+      },
+      {
+        title: "Profiles",
+        links: [
+          {
+            title: "GitHub",
+            description: "Source repos and issues.",
+            href: "https://github.com/marr",
+          },
+          {
+            title: "X",
+            description: "Threads and links to new posts.",
+            href: "https://x.com/dmarr",
+          },
+        ],
+      },
+    ],
+  },
   runtimeConfig: {
     github: {
       token: process.env.GITHUB_TOKEN || "",
@@ -42,11 +86,23 @@ export default defineNuxtConfig({
       );
       contentComponents.forEach((c) => (c.global = true));
     },
+    "vite:extendConfig"(config, { isDev }) {
+      // Vite 8: css.devSourcemap is deprecated; nuxt/vite-builder still sets it.
+      if (isDev && config.css && "devSourcemap" in config.css) {
+        const enabled = Boolean(config.css.devSourcemap);
+        delete config.css.devSourcemap;
+        config.dev ??= {};
+        config.dev.sourcemap ??= {};
+        if (config.dev.sourcemap.css === undefined) {
+          config.dev.sourcemap.css = enabled;
+        }
+      }
+    },
   },
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
-      include: ["clsx", "tailwind-merge", "dithered-logo-vue"],
+      include: ["clsx", "tailwind-merge"],
     },
     // Cloud / port-forward hostnames are not localhost; allow them so the app loads
     // in Cursor’s Simple Browser and in the browser tab that uses the forwarded URL.
@@ -97,7 +153,7 @@ export default defineNuxtConfig({
     "/nuxt-maplibre": { prerender: false },
     "/vue-squircle": { prerender: false },
     "/dithered-logo-vue": { prerender: false },
-    "/about": { redirect: { to: "/#career", statusCode: 301 } },
+    "/about": { redirect: { to: "/resume", statusCode: 301 } },
     "/ai": { redirect: { to: "/", statusCode: 301 } },
   },
 });

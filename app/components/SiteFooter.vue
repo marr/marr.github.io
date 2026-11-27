@@ -2,7 +2,10 @@
 /** Single instant for copyright year; NuxtTime keeps SSR + client output aligned. */
 const copyrightNow = new Date()
 const route = useRoute()
-const isWide = computed(() => route.path.replace(/\/+$/, '') === '/resume')
+const isWide = computed(() => {
+  const path = (route.path || '').replace(/\/+$/, '') || '/'
+  return path === '/resume' || (path.startsWith('/blog/') && path !== '/blog')
+})
 
 const socialLinks = [
   { icon: 'i-simple-icons-github', url: 'https://github.com/marr', label: 'GitHub' },

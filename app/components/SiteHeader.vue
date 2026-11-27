@@ -12,7 +12,10 @@ function isNavActive(to: string, path: string) {
   return path === to
 }
 
-const isWide = computed(() => normalizePath(route.path) === '/resume')
+const isWide = computed(() => {
+  const path = normalizePath(route.path)
+  return path === '/resume' || (path.startsWith('/blog/') && path.length > '/blog'.length)
+})
 
 const items = computed(() => {
   const path = normalizePath(route.path)
@@ -20,7 +23,8 @@ const items = computed(() => {
     { label: 'Home', to: '/', icon: 'i-lucide-house', exact: true, active: isNavActive('/', path) },
     { label: 'Blog', to: '/blog', icon: 'i-lucide-rss', active: isNavActive('/blog', path) },
     { label: 'Stars', to: '/stars', icon: 'i-lucide-star', active: isNavActive('/stars', path) },
-    { label: 'CV', to: '/resume', icon: 'i-lucide-file-user', active: isNavActive('/resume', path) },
+    { label: 'Bookmarks', to: '/bookmarks', icon: 'i-lucide-bookmark', active: isNavActive('/bookmarks', path) },
+    { label: 'Background', to: '/resume', icon: 'i-lucide-file-user', active: isNavActive('/resume', path) },
   ]
 })
 </script>

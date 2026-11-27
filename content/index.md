@@ -1,17 +1,17 @@
 ---
-title: David Marr – Engineering Leader
-description: Fan of new technology products
+title: David Marr
+description: Writing and open source on agent tooling, homelab GitOps, and interface craft.
 seo:
-  description: Engineering leader and open source creator building AI tooling, developer productivity systems, and modern frontend frameworks.
-  title: David Marr – Engineering Leader
+  description: David Marr writes and ships OSS on agents, homelab GitOps, and developer-facing UI.
+  title: David Marr – Agents, OSS, and interface craft
 ---
 
 ::home-hero
 ---
 roles:
-  - Engineering Leader
-  - Open Source Creator
-  - AI Mountaineer
+  - Developer
+  - AI Engineer
+  - Tinkerer of bits
 socials:
   - icon: i-simple-icons-github
     label: David Marr on GitHub
@@ -19,11 +19,14 @@ socials:
   - icon: i-simple-icons-x
     label: David Marr on X
     url: https://x.com/dmarr
+  - icon: i-simple-icons-bluesky
+    label: David Marr on Bluesky
+    url: https://bsky.app/profile/davidmarr.bsky.social
   - icon: i-simple-icons-linkedin
     label: David Marr on LinkedIn
     url: https://linkedin.com/in/davidmarr
 avatar: /avatar.jpg
-description: Engineering leader and open source creator building the systems, frameworks, and agentic tooling that make developers faster.
+description: Agent harnesses, homelab GitOps, and OSS you can fork. This site is a lab notebook for peers, not a résumé pitch.
 title: David Marr
 ---
 ::
@@ -31,13 +34,22 @@ title: David Marr
 ::ai-agent-stack
 ::
 
-::ai-story-grid
+::blog-featured
+---
+slugs:
+  - /blog/homelab-flux-gitops-six-months
+  - /blog/knowledge-graph-obsidian-mcp
+  - /blog/homelab-flux-gitops-journey
+title: Writing
+description: Notes worth linking—what broke, what compounded, and what I'd ship again.
+---
 ::
 
 ::project-grid
 ---
 title: Open source
 description: Repos I maintain—shipping work you can inspect and reuse.
+sectionId: open-source
 ---
   :::project-card
   ---
@@ -116,238 +128,4 @@ description: Repos I maintain—shipping work you can inspect and reuse.
   :::
 ::
 
-::project-grid
----
-title: Staples
-description: Tools I keep coming back to—data viz, docs, app shell, and UI patterns that stay in rotation.
----
-  :::project-card
-  ---
-  tags:
-    - Data Viz
-    - Grammar of Graphics
-  description: A high-level grammar of interactive graphics, built on Vega.
-  icon: i-simple-icons-vega
-  title: Vega Lite
-  url: https://vega.github.io/vega-lite
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - Framework
-    - Vue
-  description: The intuitive Vue framework for production—SSR, file routing, and modules.
-  icon: i-simple-icons-nuxt
-  title: Nuxt
-  url: https://nuxt.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - Notes
-    - PKM
-  description: A powerful knowledge base that works on local Markdown files.
-  icon: i-simple-icons-obsidian
-  title: Obsidian
-  url: https://obsidian.md
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - React
-    - Design System
-  description: Copy-paste components built on Radix and Tailwind.
-  icon: i-simple-icons-shadcnui
-  title: shadcn/ui
-  url: https://ui.shadcn.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - Security
-    - SSO
-  description: Open-source OIDC SSO and user management for self-hosted apps.
-  image: /voidauth-logo.svg
-  imageInvert: false
-  title: VoidAuth
-  url: https://voidauth.app
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - React
-    - Full‑stack
-  description: The next generation of full-stack web applications.
-  icon: i-simple-icons-tanstack
-  title: TanStack Start
-  url: https://tanstack.com/start
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - Infrastructure
-  description: Secure, immutable Linux for Kubernetes.
-  icon: i-simple-icons-talos
-  title: Talos
-  url: https://talos.dev
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - Build Tools
-    - Frontend
-  description: A unified web toolchain from VoidZero built around Vite.
-  icon: i-simple-icons-vite
-  title: Vite+
-  url: https://viteplus.dev
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - AI
-    - Developer Tools
-  description: AI agent toolkit with coding CLI, unified LLM API, and UI libraries.
-  image: /pi-logo.svg
-  title: pi-mono
-  url: https://github.com/badlogic/pi-mono
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - Git
-    - Self‑hosted
-  description: A painless self-hosted Git service.
-  icon: i-simple-icons-gitea
-  title: Gitea
-  url: https://gitea.com
-  ---
-  :::
-::
-
-::project-grid
----
-title: Exploring
-description: On the workbench right now—frameworks, infra, and ideas worth trying in depth.
----
-  :::project-card
-  ---
-  tags:
-    - Graph
-    - Vector
-    - Database
-  description: Graph-vector OLTP database—traversal, vector search, and full-text in one Rust engine on object storage.
-  icon: i-lucide-waypoints
-  title: HelixDB
-  url: https://helix-db.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - Knowledge
-    - Markdown
-    - AI
-  description: Google’s vendor-neutral spec for knowledge bundles—Markdown files with YAML frontmatter, readable by people and agents.
-  icon: i-simple-icons-markdown
-  title: Open Knowledge Format
-  url: https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - WebGPU
-    - Tools
-  description: WebGPU component library for creative effects in Vue, React, Svelte, Solid, and vanilla JS.
-  icon: i-simple-icons-webgpu
-  title: shaders.com
-  url: https://shaders.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - AI
-    - SDK
-  description: Build integrations between model providers and web frameworks.
-  icon: i-simple-icons-vercel
-  title: Vercel AI SDK
-  url: https://ai-sdk.dev
-  ---
-  :::
-::
-
-::project-grid
----
-title: Archive
-description: Older demos and experiments—still here for reference, not the main story.
----
-  :::project-card
-  ---
-  tags:
-    - JavaScript
-    - UI
-  description: A tiny reactive JavaScript library for building user interfaces.
-  icon: i-simple-icons-javascript
-  title: arrow-js
-  url: https://www.arrow-js.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - macOS
-    - Boot
-  description: Post-install patches for running newer macOS on unsupported Macs.
-  icon: i-simple-icons-apple
-  title: OpenCore Legacy Patcher
-  url: https://dortania.github.io/OpenCore-Legacy-Patcher
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - 3D
-    - SVG
-  description: Tiny engine for 3D voxel scenes rendered to SVG—boolean ops, oblique and perspective cams, zero dependencies.
-  icon: i-lucide-box
-  title: heerich
-  url: https://github.com/meodai/heerich
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - AI
-    - Developer Tools
-  description: A novel method for autonomous AI-driven software development.
-  icon: i-simple-icons-claude
-  title: Ralph Loop
-  url: https://claytonfarr.github.io/ralph-playbook/
-  ---
-  :::
-::
+Tool staples, experiments on the bench, and older demos live on [Bookmarks](/bookmarks). Career timeline and PDF are on [Background](/resume).

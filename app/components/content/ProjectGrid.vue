@@ -1,5 +1,5 @@
 <template>
-  <section class="py-10 first:pt-4">
+  <section :id="sectionId" class="scroll-mt-24 py-10 first:pt-4">
     <header
       v-if="title || description"
       class="mb-8 max-w-prose border-l-2 border-primary/40 pl-4"
@@ -28,7 +28,8 @@ interface Props {
   title?: string
   /** One line under the heading: what belongs in this section (homepage IA). */
   description?: string
+  sectionId?: string
 }
 
-const { title = '', description = '' } = defineProps<Props>()
+const { title = '', description = '', sectionId = undefined } = defineProps<Props>()
 </script>

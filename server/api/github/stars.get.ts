@@ -1,3 +1,8 @@
+import {
+  defineEventHandler,
+  getQuery,
+  setResponseHeader,
+} from "h3";
 import { fetchGitHubStars } from "../../utils/githubStars";
 
 export default defineEventHandler(async (event) => {
