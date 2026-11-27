@@ -12,12 +12,14 @@ function isNavActive(to: string, path: string) {
   return path === to
 }
 
+const isWide = computed(() => normalizePath(route.path) === '/resume')
+
 const items = computed(() => {
   const path = normalizePath(route.path)
   return [
     { label: 'Home', to: '/', icon: 'i-lucide-house', exact: true, active: isNavActive('/', path) },
-    { label: 'AI', to: '/ai', icon: 'i-lucide-bot', active: isNavActive('/ai', path) },
     { label: 'Blog', to: '/blog', icon: 'i-lucide-rss', active: isNavActive('/blog', path) },
+    { label: 'Stars', to: '/stars', icon: 'i-lucide-star', active: isNavActive('/stars', path) },
     { label: 'CV', to: '/resume', icon: 'i-lucide-file-user', active: isNavActive('/resume', path) },
   ]
 })
@@ -28,7 +30,7 @@ const items = computed(() => {
     title="David Marr — home"
     :ui="{
       root: 'sticky top-0 z-50 border-b border-default/40 bg-[rgb(var(--logo-dither-field)/0.06)] backdrop-blur-md supports-backdrop-filter:bg-[rgb(var(--logo-dither-field)/0.04)]',
-      container: 'max-w-4xl',
+      container: isWide ? 'max-w-6xl md:px-8' : 'max-w-4xl',
       center: 'hidden md:flex',
       right: 'gap-1.5',
       title: 'inline-flex h-10 items-center overflow-visible text-default transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',

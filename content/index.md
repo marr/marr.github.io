@@ -23,9 +23,15 @@ socials:
     label: David Marr on LinkedIn
     url: https://linkedin.com/in/davidmarr
 avatar: /avatar.jpg
-description: Systematically improving developer productivity and modern agentic tooling.
+description: Engineering leader and open source creator building the systems, frameworks, and agentic tooling that make developers faster.
 title: David Marr
 ---
+::
+
+::ai-agent-stack
+::
+
+::ai-story-grid
 ::
 
 ::project-grid
@@ -110,14 +116,6 @@ description: Repos I maintain—shipping work you can inspect and reuse.
   :::
 ::
 
-::github-stars
----
-title: Recently starred
-description: Repos I've bookmarked lately—tools and ideas worth a closer look.
-limit: 8
----
-::
-
 ::project-grid
 ---
 title: Staples
@@ -168,18 +166,6 @@ description: Tools I keep coming back to—data viz, docs, app shell, and UI pat
   icon: i-simple-icons-shadcnui
   title: shadcn/ui
   url: https://ui.shadcn.com
-  ---
-  :::
-
-  :::project-card
-  ---
-  tags:
-    - AI
-    - Developer Tools
-  description: A novel method for autonomous AI-driven software development.
-  icon: i-simple-icons-claude
-  title: Ralph Loop
-  url: https://claytonfarr.github.io/ralph-playbook/
   ---
   :::
 
@@ -352,5 +338,16 @@ description: Older demos and experiments—still here for reference, not the mai
   url: https://github.com/meodai/heerich
   ---
   :::
-::
 
+  :::project-card
+  ---
+  tags:
+    - AI
+    - Developer Tools
+  description: A novel method for autonomous AI-driven software development.
+  icon: i-simple-icons-claude
+  title: Ralph Loop
+  url: https://claytonfarr.github.io/ralph-playbook/
+  ---
+  :::
+::

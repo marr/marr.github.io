@@ -52,8 +52,8 @@ const props = withDefaults(defineProps<Props>(), {
         <span class="sr-only">{{ title }}</span>
         <span
           aria-hidden="true"
-          class="block h-12 bg-current md:h-16"
-          style="aspect-ratio: 1194.1 / 190; mask: url(/logo-david-marr-lockup.svg) center / contain no-repeat; -webkit-mask: url(/logo-david-marr-lockup.svg) center / contain no-repeat"
+          class="block h-7 bg-current md:h-9"
+          style="aspect-ratio: 8.035 / 1; mask: url(/logo-david-marr-wordmark.svg) center / contain no-repeat; -webkit-mask: url(/logo-david-marr-wordmark.svg) center / contain no-repeat"
         />
       </h1>
 

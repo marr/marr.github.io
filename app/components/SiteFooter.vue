@@ -1,6 +1,8 @@
 <script setup lang="ts">
 /** Single instant for copyright year; NuxtTime keeps SSR + client output aligned. */
 const copyrightNow = new Date()
+const route = useRoute()
+const isWide = computed(() => route.path.replace(/\/+$/, '') === '/resume')
 
 const socialLinks = [
   { icon: 'i-simple-icons-github', url: 'https://github.com/marr', label: 'GitHub' },
@@ -11,7 +13,7 @@ const socialLinks = [
 
 <template>
   <footer class="border-t border-default/60 mt-20">
-    <div class="max-w-4xl mx-auto px-4 py-10">
+    <div :class="['mx-auto px-4 py-10', isWide ? 'max-w-6xl md:px-8' : 'max-w-4xl']">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-sm text-muted">
           &copy;

@@ -97,6 +97,7 @@ export default defineNuxtConfig({
     "/nuxt-maplibre": { prerender: false },
     "/vue-squircle": { prerender: false },
     "/dithered-logo-vue": { prerender: false },
-    "/about": { redirect: { to: "/ai#career", statusCode: 301 } },
+    "/about": { redirect: { to: "/#career", statusCode: 301 } },
+    "/ai": { redirect: { to: "/", statusCode: 301 } },
   },
 });
