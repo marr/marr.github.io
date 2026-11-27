@@ -1,0 +1,1124 @@
+# Bookmarks
+
+::project-grid
+---
+description: Tools I keep coming back to—data viz, docs, app shell, and UI
+  patterns that stay in rotation.
+title: Staples
+---
+  :::project-card
+  ---
+  tags:
+    - Data Viz
+    - Grammar of Graphics
+  description: A high-level grammar of interactive graphics, built on Vega.
+  icon: i-simple-icons-vega
+  title: Vega Lite
+  url: https://vega.github.io/vega-lite
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Framework
+    - Vue
+  description: The intuitive Vue framework for production—SSR, file routing, and modules.
+  icon: i-simple-icons-nuxt
+  title: Nuxt
+  url: https://nuxt.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Notes
+    - PKM
+  description: A powerful knowledge base that works on local Markdown files.
+  icon: i-simple-icons-obsidian
+  title: Obsidian
+  url: https://obsidian.md
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - React
+    - Design System
+  description: Copy-paste components built on Radix and Tailwind.
+  icon: i-simple-icons-shadcnui
+  title: shadcn/ui
+  url: https://ui.shadcn.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  imageInvert: false
+  tags:
+    - Security
+    - SSO
+  description: Open-source OIDC SSO and user management for self-hosted apps.
+  image: /voidauth-logo.svg
+  title: VoidAuth
+  url: https://voidauth.app
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - React
+    - Full‑stack
+  description: The next generation of full-stack web applications.
+  icon: i-simple-icons-tanstack
+  title: TanStack Start
+  url: https://tanstack.com/start
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Infrastructure
+  description: Secure, immutable Linux for Kubernetes.
+  icon: i-simple-icons-talos
+  title: Talos
+  url: https://talos.dev
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Build Tools
+    - Frontend
+  description: A unified web toolchain from VoidZero built around Vite.
+  icon: i-simple-icons-vite
+  title: Vite+
+  url: https://viteplus.dev
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - AI
+    - Developer Tools
+  description: AI agent toolkit with coding CLI, unified LLM API, and UI libraries.
+  image: /pi-logo.svg
+  title: pi-mono
+  url: https://github.com/badlogic/pi-mono
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Git
+    - Self‑hosted
+  description: A painless self-hosted Git service.
+  icon: i-simple-icons-gitea
+  title: Gitea
+  url: https://gitea.com
+  ---
+  :::
+::
+
+::project-grid
+---
+description: On the workbench right now—frameworks, infra, and ideas worth trying in depth.
+title: Exploring
+---
+  :::project-card
+  ---
+  tags:
+    - Graph
+    - Vector
+    - Database
+  description: Graph-vector OLTP database—traversal, vector search, and full-text
+    in one Rust engine on object storage.
+  icon: i-lucide-waypoints
+  title: HelixDB
+  url: https://helix-db.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Knowledge
+    - Markdown
+    - AI
+  description: Google’s vendor-neutral spec for knowledge bundles—Markdown files
+    with YAML frontmatter, readable by people and agents.
+  icon: i-simple-icons-markdown
+  title: Open Knowledge Format
+  url: https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - WebGPU
+    - Tools
+  description: WebGPU component library for creative effects in Vue, React,
+    Svelte, Solid, and vanilla JS.
+  icon: i-simple-icons-webgpu
+  title: shaders.com
+  url: https://shaders.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - AI
+    - SDK
+  description: Build integrations between model providers and web frameworks.
+  icon: i-simple-icons-vercel
+  title: Vercel AI SDK
+  url: https://ai-sdk.dev
+  ---
+  :::
+::
+
+::project-grid
+---
+description: Older demos and experiments—still here for reference, not the main story.
+title: Archive
+---
+  :::project-card
+  ---
+  tags:
+    - JavaScript
+    - UI
+  description: A tiny reactive JavaScript library for building user interfaces.
+  icon: i-simple-icons-javascript
+  title: arrow-js
+  url: https://www.arrow-js.com
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - macOS
+    - Boot
+  description: Post-install patches for running newer macOS on unsupported Macs.
+  icon: i-simple-icons-apple
+  title: OpenCore Legacy Patcher
+  url: https://dortania.github.io/OpenCore-Legacy-Patcher
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - 3D
+    - SVG
+  description: Tiny engine for 3D voxel scenes rendered to SVG—boolean ops,
+    oblique and perspective cams, zero dependencies.
+  icon: i-lucide-box
+  title: heerich
+  url: https://github.com/meodai/heerich
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - AI
+    - Developer Tools
+  description: A novel method for autonomous AI-driven software development.
+  icon: i-simple-icons-claude
+  title: Ralph Loop
+  url: https://claytonfarr.github.io/ralph-playbook/
+  ---
+  :::
+::
+
+
+# David Marr
+
+::home-hero
+---
+roles:
+  - Developer
+  - AI Engineer
+  - Tinkerer of bits
+socials:
+  - icon: i-simple-icons-github
+    label: David Marr on GitHub
+    url: https://github.com/marr
+  - icon: i-simple-icons-x
+    label: David Marr on X
+    url: https://x.com/dmarr
+  - icon: i-simple-icons-bluesky
+    label: David Marr on Bluesky
+    url: https://bsky.app/profile/davidmarr.bsky.social
+  - icon: i-simple-icons-linkedin
+    label: David Marr on LinkedIn
+    url: https://linkedin.com/in/davidmarr
+avatar: /avatar.jpg
+description: Agent harnesses, homelab GitOps, and OSS you can fork. This site is
+  a lab notebook for peers, not a résumé pitch.
+title: David Marr
+---
+::
+
+:ai-agent-stack
+
+::blog-featured
+---
+slugs:
+  - /blog/homelab-flux-gitops-six-months
+  - /blog/knowledge-graph-obsidian-mcp
+  - /blog/homelab-flux-gitops-journey
+description: Notes worth linking—what broke, what compounded, and what I'd ship again.
+title: Writing
+---
+::
+
+::project-grid
+---
+description: Repos I maintain—shipping work you can inspect and reuse.
+sectionId: open-source
+title: Open source
+---
+  :::project-card
+  ---
+  tags:
+    - React
+    - CLI
+    - Vite+
+  description: Scaffold a Vite+ React app with Flexoki theme, shadcn/ui, motion,
+    and tests—`npx @dmarr/create-react-reps`.
+  icon: i-simple-icons-react
+  title: create-react-reps
+  url: https://marr.github.io/create-react-reps
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - JavaScript
+    - IndexedDB
+  description: Job search dashboard—track companies, roles, and pipeline stages
+    from networking through offer, with weekly outreach goals.
+  icon: i-lucide-briefcase
+  title: job-search-tracker
+  url: https://marr.github.io/job-search-tracker
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Nuxt
+    - Maps
+  description: A Nuxt module for swapping map providers in a declarative way.
+  icon: i-simple-icons-nuxt
+  title: nuxt-maplibre
+  url: https://marr.github.io/nuxt-maplibre
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Kubernetes
+    - GitOps
+    - AI
+  description: Agent skill for Flux GitOps homelabs—reconciles, SOPS secrets,
+    homepage widgets, and cluster hygiene.
+  icon: i-simple-icons-flux
+  title: flux-homelab-skill
+  url: https://github.com/marr/flux-homelab-skill
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Vue
+    - UI
+    - Deprecated
+  description: "Vue squircle masks are largely superseded by native CSS
+    `corner-shape: squircle`; demo kept for reference."
+  icon: i-simple-icons-vuedotjs
+  title: vue-squircle
+  url: https://marr.github.io/vue-squircle
+  ---
+  :::
+
+  :::project-card
+  ---
+  tags:
+    - Vue
+    - Canvas
+    - Animation
+  description: Interactive logo rendered with Floyd–Steinberg dithering, cursor
+    repulsion, and click ripples.
+  icon: i-simple-icons-vuedotjs
+  title: dithered-logo-vue
+  url: https://marr.github.io/dithered-logo-vue
+  ---
+  :::
+::
+
+Tool staples, experiments on the bench, and older demos live on [Bookmarks](https://marr.github.io/bookmarks). Career timeline and PDF are on [Background](https://marr.github.io/resume).
+
+
+# Résumé
+
+## Summary
+
+I enjoy making things work, work well, and repairing them when they don't. Mostly software, but also relationships, bicycles, electronics — anything worth doing right.
+
+Loyal to the craft, hard-working, and considerate, I try to do more with less, and maintain a beginner's curiosity.
+
+## Experience
+
+### **Context Labs**, Principal Software Engineer / Engineering Lead (UI) · [Cambridge, MA]{.resume-exp-location}
+
+June 2022 – Mar 2026
+
+Led distributed UI/UX engineering organization delivering multi-tenant analytics platform.
+
+- Managed and grew UI/UX team across three continents; introduced OKRs and reviews improving velocity and reducing incident MTTR (time to restore service) by 50%.
+- Drove adoption of AI coding assistants and MCP extensions in our Nuxt stack, pairing hands-on workshops with clear review and testing guardrails so teams shipped safely at higher cadence.
+- Built production BFF platform with GraphQL/Java, multi-tenancy, SSO, RBAC, and internationalization.
+- Developed shared UI component library with Vega Lite, MapBox, and accessible controls.
+
+[Vue]{.resume-role-skills__tag}[Nuxt]{.resume-role-skills__tag}[TypeScript]{.resume-role-skills__tag}[Python]{.resume-role-skills__tag}[GraphQL]{.resume-role-skills__tag}[Mapbox]{.resume-role-skills__tag}[PostgreSQL]{.resume-role-skills__tag}[ArcadeDB]{.resume-role-skills__tag}
+
+### **Filtered.ai**, Lead Engineer · [Boston, MA]{.resume-exp-location}
+
+Feb 2020 – Feb 2022
+
+Built AI tools to automate organization and grading of technical assessments for custom SaaS/ATS.
+
+- Implemented fraud and cheat detection using computer vision and AWS Mechanical Turk.
+- Managed full-stack implementation of hiring tools including scheduling, assessing/grading, interviewing, and workflow management.
+
+[React]{.resume-role-skills__tag}[TypeScript]{.resume-role-skills__tag}[Node.js]{.resume-role-skills__tag}[AWS]{.resume-role-skills__tag}[Python]{.resume-role-skills__tag}[PostgreSQL]{.resume-role-skills__tag}
+
+### **Turo**, Staff Software Engineer · [Cambridge, MA]{.resume-exp-location}
+
+Apr 2018 – Dec 2019
+
+Owned trip management tools with dynamic pricing, improving host experience and utilization.
+
+- Maintained the All-star host program to recognize and incentivize top hosts, supporting retention and higher-quality listings.
+
+[React]{.resume-role-skills__tag}[Redux]{.resume-role-skills__tag}[TypeScript]{.resume-role-skills__tag}[JavaScript]{.resume-role-skills__tag}[PostgreSQL]{.resume-role-skills__tag}
+
+### **OneMarket / Westfield Labs**, Senior Software Architect · [San Francisco, CA]{.resume-exp-location}
+
+Jan 2016 – May 2018
+
+Integrated facial recognition, subscription billing, and automated parking gates to produce a smart parking solution.
+
+- Architected physical and online payment products, yielding \~$2.7m in MRR.
+- Built indoor mapping, directory kiosks, and wayfinding systems across 4 flagship shopping centers, averaging 60,000+ monthly sessions.
+
+[React]{.resume-role-skills__tag}[JavaScript]{.resume-role-skills__tag}[Stripe]{.resume-role-skills__tag}[Node.js]{.resume-role-skills__tag}[Mapbox]{.resume-role-skills__tag}[C]{.resume-role-skills__tag}[PostgreSQL]{.resume-role-skills__tag}
+
+### **Tilt.com**, Senior Systems Engineer · [San Francisco, CA]{.resume-exp-location}
+
+July 2013 – Dec 2015
+
+- Implemented and iterated a simplified contribution flow yielding 15% lift in site signups.
+- Pioneered server rendered React using reification with Perl/Dancer backend.
+
+[React]{.resume-role-skills__tag}[Perl]{.resume-role-skills__tag}[JavaScript]{.resume-role-skills__tag}[PostgreSQL]{.resume-role-skills__tag}
+
+### **Various**, Previous Leadership & Technical Roles · [Massachusetts & California]{.resume-exp-location}
+
+2000-2013
+
+- Publishing and ad-tech at Say Media; co-founded early social product (Secret Feature).
+- Design-to-production prototyping (Frog Design); scaled frontend architecture for high-traffic Yahoo properties.
+- Webby-recognized career advice site (Monster.com); enterprise web integrations (SoftArtisans).
+- Industrial automation web interfaces and dashboards (GE Fanuc / Intellution)
+
+[Node.js]{.resume-role-skills__tag}[Adobe Flash/Flex/FMS]{.resume-role-skills__tag}[MySQL]{.resume-role-skills__tag}[PHP]{.resume-role-skills__tag}[SQL Server]{.resume-role-skills__tag}[.NET]{.resume-role-skills__tag}[ASP Classic]{.resume-role-skills__tag}[HTML]{.resume-role-skills__tag}[CSS]{.resume-role-skills__tag}[JavaScript]{.resume-role-skills__tag}
+
+## Education
+
+### **University of New Hampshire**, BS in Business Administration · [Durham, NH]{.resume-exp-location}
+
+Sept 1996 – May 2000
+
+Focus on Management of Information Systems (MIS)
+
+## Skills
+
+**Languages/Frameworks/Web:** TypeScript, JavaScript, Python, Go, React, Vue, HTML, CSS, Tailwind, Nuxt, Tanstack Start, Vega Lite, Mapbox, Maplibre, Deck.gl, D3, Zod, React Hook Form, Vee-Validate, WebGL, WebGPU, WebRTC
+
+**AI Tools/Infrastructure:** Kubernetes, AWS, PostgreSQL, Docker, Git, MongoDB, Bash, Trino, ArcadeDB, Vite, Vitest, Vercel AI SDK, Pi, Cursor, Opencode, Cloudflare Workers, Cloudflare Durable Objects, Agent Skills, Turborepo, Lerna/NX
+
+
+# Stars
+
+::github-stars
+---
+limit: 24
+description: Repos I've bookmarked lately—tools and ideas worth a closer look.
+title: Recently starred
+---
+::
+
+
+# Building a Homelab with Flux GitOps: Some lessons, three months in
+
+I've been running a homelab for a few years, but this March I decided to do it properly. Talos Linux on a Mac Mini, Flux for GitOps, SOPS for secrets, and a homepage dashboard that shows everything at a glance.
+
+Three months in, I have a working cluster with Immich, Plex, Grafana, CrowdSec, Traefik, and a handful of other services. More importantly, I have documentation that actually compounds — each problem I solved made the next one easier.
+
+Here's what I built, what broke, and how I'll do it again.
+
+## The Stack
+
+- **Talos Linux** — Immutable, API-driven Kubernetes. No SSH, no shell, no apt-get. Sounds limiting until you realize you never need to debug "what changed on the node."
+- **Flux** — GitOps controller. Everything lives in a git repo, Flux reconciles it to the cluster. Push a change, it lands. Revert a change, it's gone.
+- **SOPS + Age** — Encrypted secrets in git. No plaintext, no sealed-secrets complexity. Decrypt with your age key, apply, done.
+- **Homepage** — Dashboard with widgets for every service. Internal URLs, API tokens, done.
+- **Traefik** — Ingress with ACME DNS challenges for `*.example.com` certs.
+- **CrowdSec** — Bouncer + LAPI for intrusion detection at the edge, plus Talos node log acquisition for cluster-wide visibility.
+
+## The Journey (aka Things That Broke)
+
+### Storage Classes Matter More Than You Think
+
+Early mistake: I used NFS (`nfs-synology`) for everything. Loki crashed in a persistent loop with `directory not empty` errors. PostgreSQL had WAL corruption.
+
+The problem: NFS lacks POSIX fsync/locking semantics. Databases need them.
+
+| Storage Class  | Use For                       | Don't Use For              |
+| -------------- | ----------------------------- | -------------------------- |
+| `local-path`   | Databases, WAL, TSDB          | —                          |
+| `nfs-synology` | Photo libraries, bulk storage | Anything with strict fsync |
+
+**Lesson**: `local-path` for databases, NFS for everything else. One decision fixed a week of crash loops.
+
+### Node Scheduling Has Layers
+
+The cluster went through four scheduling strategies:
+
+1. Worker node only — simple, single point of failure
+2. All nodes with control-plane tolerations — apps ran on control plane, messy
+3. Worker-only apps — clean isolation
+4. Monitoring on control plane — freed worker resources when I ran out
+
+**Current rule**: Apps on workers. Monitoring on control plane. Documented exceptions in HelmRelease comments.
+
+### Helm Upgrades: The SSA Trap
+
+Flux HelmRelease upgrades failed with:
+
+```text
+invalid operation: cannot use force conflicts and force replace together
+```
+
+Turns out `install.serverSideApply` is a boolean (`false`), but `upgrade.serverSideApply` is an enum string (`"disabled"`). Same field name, different types.
+
+```yaml
+spec:
+  install:
+    serverSideApply: false   # boolean
+  upgrade:
+    serverSideApply: disabled  # enum string
+    force: true
+```
+
+The OpenTelemetry operator upgrade (0.109 → 0.110) removed `kube-rbac-proxy`, changing Service port layouts. Three-way merge created duplicate `metrics` ports. Fixed by pinning the version and using `force: true` + `serverSideApply: disabled`.
+
+**Lesson**: Check chart changelogs for breaking infrastructure changes. Stay one version behind if unsure.
+
+### Synology + Traefik = Special Handling
+
+Getting Traefik to proxy Synology DSM/Drive required three specific fixes:
+
+1. **No CrowdSec on Synology routes** — DSM's WebSocket-based UI and asset loading break with request inspection middleware
+2. **Disable HTTP/2 upstream** — Some DSM builds have HTTP/2 bugs causing connection failures
+3. **EndpointSlice-only** — Mixing v1 `Endpoints` with `EndpointSlice` causes \~50% 502s when IPs differ
+
+```yaml
+apiVersion: traefik.io/v1alpha1
+kind: ServersTransport
+metadata:
+  name: synology-insecure
+  namespace: traefik
+spec:
+  insecureSkipVerify: true
+  disableHTTP2: true
+```
+
+**Cluster hygiene tip:** If you ever have \~50% 502s on a route, check for mixed Endpoints + EndpointSlice:
+
+```bash
+kubectl get endpoints -n traefik synology-dsm  # Delete if present
+```
+
+Manually created Endpoints spawn a mirrored EndpointSlice via `endpointslicemirroring-controller`. Delete the Endpoints object and rely on Git-managed EndpointSlice only.
+
+### The VoidAuth Hairpin (CoreDNS Split-Horizon)
+
+Initial VoidAuth setup had 700-900ms latency on unauthenticated requests. Root cause: `APP_URL=https://auth.example.com` caused internal requests to hairpin NAT — out to the public IP and back.
+
+**Fix: CoreDNS split-horizon** to resolve `auth.example.com` to the Traefik ClusterIP internally:
+
+```yaml
+# infrastructure/configs/coredns.yaml
+data:
+  Corefile: |
+    .:53 {
+        # ... other config ...
+        template IN A auth.example.com {
+            answer "{{ .Name }} 30 IN A 10.101.208.179"  # Traefik ClusterIP
+        }
+        forward . /etc/resolv.conf
+        # ...
+    }
+```
+
+**Result:** p99 latency reduced from 1.2s → \~300ms (3-4x faster).
+
+### Immich Thumbnails Crashing on Old Hardware
+
+The Mac Mini is an older Ivy Bridge box (3rd-gen Intel, HD Graphics 4000) with no VAAPI, CUDA, or Vulkan support. Immich's `ffmpeg`-driven thumbnail generation started crashing with `SIGSEGV` on H.264 and HEVC iPhone MOV files — always *after* frames were successfully processed, during the cleanup phase.
+
+Root cause: hardware-acceleration incompatibility, not a software bug. An earlier investigation blamed `fluent-ffmpeg` because the segfault surfaced in the Node.js wrapper; that was wrong. The actual cause is FFmpeg trying to initialize hardware acceleration on a CPU that has no usable accel surface, then faulting mid-pipeline.
+
+**Fix:** explicitly disable hardware acceleration in the Immich server env:
+
+```yaml
+env:
+  FFMPEG_HWACCEL: "false"   # software-only encoding on Ivy Bridge
+  FFMPEG_WORKERS: "1"        # secondary mitigation
+```
+
+Full writeup in my infra repo at `docs/solutions/runtime-errors/immich-ffmpeg-sigsegffix.md`; see also the [official Immich hardware transcoding docs](https://docs.immich.app/features/hardware-transcoding/){rel="&#x22;nofollow&#x22;"}.
+
+**Lesson:** If you're running media workloads on repurposed old hardware, check the CPU's acceleration support *before* enabling hardware transcoding — a missing VAAPI surface doesn't fail cleanly, it segfaults after doing useful work. Haswell (4th gen) and newer are fine; Ivy Bridge and earlier need software-only.
+
+## What Actually Worked
+
+### SOPS for Secrets
+
+SOPS with Age keys is dead simple. One gotcha: there's no `sops --delete` command. The workaround:
+
+```bash
+# Decrypt
+SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt sops -d file.sops.yaml > /tmp/plain.yaml
+# Edit
+vim /tmp/plain.yaml
+# Re-encrypt (filename must match .sops.yaml path regex)
+cp /tmp/plain.yaml /tmp/plain.yaml.sops.yaml
+SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt sops --config .sops.yaml -e /tmp/plain.yaml.sops.yaml > file.sops.yaml
+```
+
+Annoying but reliable. Documented it once, never had to figure it out again.
+
+### Homepage Widgets & Secret Management
+
+Once you understand the rules, Homepage is great:
+
+- Secret keys must be prefixed `HOMEPAGE_VAR_` for template substitution
+- Use internal service URLs (`http://service.namespace.svc.cluster.local`)
+- `subPath` mounts don't hot-reload — Reloader handles this automatically
+
+**Gotcha: Complete secret updates** — When updating Homepage secrets, don't patch individual fields. Delete and recreate the secret to ensure all credentials are present:
+
+```bash
+kubectl delete secret -n homepage homepage-secrets
+kubectl apply -f new-secret.yaml  # With ALL credentials from SOPS
+kubectl rollout restart -n homepage deployment/homepage
+```
+
+This prevents the "missing credentials" issue where widgets show 401 errors because only some secrets were updated.
+
+Widgets for Immich, Grafana, Traefik, CrowdSec, Plex, and Synology all working.
+
+### Flux Reconciliation
+
+The workflow is muscle memory now:
+
+```bash
+# Edit the repo
+# Commit and push
+git add -A && git commit -m "feat: add thing" && git push
+
+# Reconcile
+flux reconcile kustomization apps --with-source
+
+# Verify
+kubectl get helmrelease -A
+```
+
+### Flux Web UI
+
+Flux has a built-in web UI (provided by the flux-operator) that shows the status of all GitOps resources at a glance. It's accessible at `flux.example.com` and provides:
+
+- **Reconciliation status** — Visual indicators for each Kustomization and HelmRelease
+- **Resource details** — Click into any object to see its spec and status
+- **Error visibility** — Quickly spot what's failing and why
+- **History & events** — See recent reconciliation attempts and outcomes
+
+**The enabling change:** Add these values to your `flux-instance` HelmRelease:
+
+```yaml
+spec:
+  values:
+    instance:
+      web:
+        enabled: true
+        domain: flux.example.com
+```
+
+This deploys the flux-operator UI service in the `flux-system` namespace. The service exposes port `http-web` (typically 8080) and is then exposed externally via Traefik IngressRoute:
+
+```yaml
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: flux-ui
+  namespace: flux-system
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: "Host(`flux.example.com`)"
+      services:
+        - name: flux-operator
+          port: http-web
+```
+
+The UI is particularly helpful when debugging stuck reconciliations or understanding why a HelmRelease isn't deploying. It complements the CLI workflow for day-to-day operations.
+
+**Note:** In the anonymized config, this is exposed via Traefik IngressRoute to `flux.example.com` with CrowdSec and VoidAuth protection.
+
+### Custom Grafana Dashboards
+
+Four custom dashboards were built to make monitoring actionable:
+
+- **Homelab Overview** — Single-pane view of cluster health: CPU/memory gauges for control plane and worker nodes, disk usage, and key service status
+- **K8s Cluster Health** — Deep dive into Kubernetes resource health, pod counts, and namespace-level metrics
+- **Traefik Site Health** — Request rates, response times, error rates, and service-level metrics for all ingress traffic
+- **Immich Deep Dive** — Photo library metrics: upload rates, storage usage, transcoding performance, and user activity
+
+Each dashboard is deployed as a ConfigMap with `grafana_dashboard: "1"` label, auto-discovered by Grafana. They're maintained in `infrastructure/configs/grafana-dashboards.yaml` and `traefik-dashboard.yaml`.
+
+**Why custom dashboards?** Standard Kubernetes dashboards show raw metrics; custom dashboards show *your* services in context. When Immich is slow, you can immediately see if it's storage, transcoding, or database queries.
+
+**More details:** See the [flux-homelab-skill Grafana dashboards reference](https://github.com/marr/flux-homelab-skill/blob/main/references/grafana-dashboards.md){rel="&#x22;nofollow&#x22;"} for deployment patterns and maintenance.
+
+## Documentation That Compounds
+
+The most valuable output of this project isn't the cluster — it's the `docs/solutions/` directory in your infrastructure repository.
+
+Every time I solved a non-trivial problem, I documented it: the symptoms, what didn't work, the fix, and why it works. This is the **ce\:compound** pattern — each solution documented makes the next one faster.
+
+The `flux-homelab` skill (available at [github.com/marr/flux-homelab-skill](https://github.com/marr/flux-homelab-skill){rel="&#x22;nofollow&#x22;"}) encapsulates the patterns from this homelab — Flux reconciliation, SOPS secrets, Homepage widgets, and service-specific gotchas. It's like a runbook that travels with the agent.
+
+When I ask "why is Immich down," it knows to check storage class first, then node scheduling, then Flux kustomization health. It remembers that node names changed, that OCI chart sources have two valid patterns, and that CrowdSec blocks `wget` user agents.
+
+**Skill contents include:**
+
+- **Cluster hygiene** — Detecting mixed Endpoints + EndpointSlice issues, orphaned services, hardcoded LAN IPs
+- **Flux reconciliation** — Proper sequence for GitRepository → Kustomization → HelmRelease
+- **HelmRelease patterns** — `upgrade.force` + `serverSideApply` interactions, stuck kustomization recovery
+- **Secret management** — SOPS file structure, secret synchronization, validation workflows
+
+The **ce\:compound** pattern (referenced from [Compound Engineering](https://every.to/guides/compound-engineering){rel="&#x22;nofollow&#x22;"}) is a structured approach to documentation — researching problems, assembling solutions, writing them down, and validating that they work. Each documented solution makes the next one faster. This pattern applies to any project, not just homelabs.
+
+## Getting Started with Flux Homelab Experimentation
+
+If you want to try this yourself:
+
+### 1. Pick Your Platform
+
+**Talos** is great if you want an immutable, API-driven cluster. **k3s** is great if you want something more familiar. Either way, you need:
+
+- A machine (old laptop, NUC, Mac Mini, VM)
+- A git repo for your Flux configuration
+- Time to break things
+
+### 2. Bootstrap Flux
+
+Follow the [official Flux getting started guide](https://fluxcd.io/flux/get-started/){rel="&#x22;nofollow&#x22;"} to install Flux on your cluster, then bootstrap your GitOps repository:
+
+```bash
+flux bootstrap github \
+  --owner=your-username \
+  --repository=homelab-infra \
+  --branch=main \
+  --path=clusters/my-cluster
+```
+
+This creates the bootstrap kustomization that points to your `infrastructure/` and `apps/` directories.
+
+> **Update (2026-07):** The homelab has since migrated from CLI bootstrap to the [Flux Operator](https://fluxoperator.dev/){rel="&#x22;nofollow&#x22;"} — sync now lives in a `flux-instance` HelmRelease rather than `gotk-sync.yaml`, and the `flux-system/` bootstrap manifests were removed from Git. The `flux bootstrap` flow above still works to get going, but if you'd rather start operator-first, see the [Flux Operator migration guide](https://fluxoperator.dev/docs/guides/migration/){rel="&#x22;nofollow&#x22;"}. The Flux Web UI section below already reflects the operator-managed approach, which is why it reads slightly ahead of the bootstrap step here.
+
+**Flux v2 Gotchas:**
+
+- **Namespace changes** — In v2, Flux components run in `flux-system` by default. Some older guides reference `flux` namespace.
+- **Kustomize controller** — The controller now handles kustomizations natively; you don't need separate `kustomize` CLI workflows.
+- **GitHub token scope** — The bootstrap command needs a token with `repo` and `workflow` permissions. Personal Access Tokens work, but GitHub Apps are recommended for production.
+- **Path separators** — Use forward slashes even on Windows; Flux paths are Git repository paths, not filesystem paths.
+- **OCI chart sources** — Flux 2.8+ uses `source.toolkit.fluxcd.io/v1` for GitRepository/HelmRepository/OCIRepository, but `helm.toolkit.fluxcd.io/v2` for HelmRelease. OCI-backed charts have two valid patterns: `HelmRepository` with `type: oci`, or `OCIRepository` directly. If one pattern fails, try the other.
+- **HelmRelease serverSideApply** — The `install.serverSideApply` field is a boolean, but `upgrade.serverSideApply` is an enum string (`"disabled"`). Mixing them incorrectly causes validation errors. Use:
+  ```yaml
+  install:
+    serverSideApply: false
+  upgrade:
+    serverSideApply: disabled
+    force: true
+  ```
+- **Stuck kustomizations** — If a `HelmRelease` health check fails, downstream kustomizations with `spec.dependsOn` will wait indefinitely. Check `kubectl describe kustomization <name> -n flux-system` for `HealthCheckFailed`. High `helm-controller` CPU often indicates a failing Helm release in a retry loop.
+
+### 3. Structure Your Repo
+
+```text
+homelab-infra/
+├── clusters/           # Flux bootstrap
+├── infrastructure/
+│   ├── controllers/    # Traefik, Prometheus, etc.
+│   └── configs/        # Routes, monitoring, alerts
+└── apps/
+    └── my-app/         # namespace, kustomization, helmrelease
+```
+
+### 4. Add SOPS Early
+
+Set up age encryption before you have any secrets:
+
+```bash
+age-keygen -o ~/.config/sops/age/keys.txt
+# Add the public key to .sops.yaml
+```
+
+### 5. Build Incrementally
+
+Don't try to deploy everything at once. Start with:
+
+1. Traefik (ingress)
+2. One app (immich, nextcloud, whatever)
+3. Homepage (dashboard)
+4. Monitoring (Prometheus + Grafana)
+5. Security (CrowdSec + auth)
+
+Each step teaches you something. Document each step.
+
+### 6. Document as You Go
+
+Create a `docs/solutions/` directory in your repo. When you solve something non-trivial, write it down. Use YAML frontmatter so future-you (or your AI assistant) can search by module, tags, and problem type.
+
+The compounding effect is real. Week 1 I spent hours debugging Loki crash loops. Week 12, I checked the documented solution and fixed a similar issue in minutes.
+
+## What's Next
+
+The cluster keeps growing. Next up:
+
+- Gitea Actions for CI (self-hosted runners in-cluster)
+- Synology Drive integration (finally got the Traefik routing right)
+- Better alerting rules in Alertmanager
+- Maybe a second node for actual HA
+
+The homelab isn't a project with an end state. It's an ongoing experiment where each iteration teaches something new. The key is capturing those lessons so they compound.
+
+---
+
+*For more on AI-assisted development, see my post on [Building a Knowledge Graph with Obsidian and MCP](https://marr.github.io/blog/knowledge-graph-obsidian-mcp).*
+
+
+# Homelab GitOps, Six Months In: Progress is progress
+
+Three months in, I wrote about getting a homelab cluster running — Talos Linux, Flux GitOps, SOPS secrets, a homepage dashboard that mostly worked. The honest pitch was "things that broke, and how I'll do it again."
+
+Six months in, the cluster is boring. That's the whole point of GitOps, supposedly, but I didn't expect to feel it. Nothing crashes in the night. Nothing needs a weekend. The interesting stories are no longer *things that broke* — they're *times the cluster lied to me*. Blamed the wrong component. Hid a root cause behind a plausible-looking symptom. Made me confident and wrong.
+
+The best thing I built this quarter isn't a service. It's a `docs/solutions/` directory that caught me being wrong, months after I wrote the wrong thing down. That's the compounding-documentation thesis from last time, but the honest version: documentation doesn't make you smart. It makes your future self slightly less dumb, on a delay.
+
+Here's what changed, what stalled, and what my own notes caught me lying about.
+
+## The Skill Stack Grew Layers
+
+Three months ago I had one custom skill — `homelab-flux` — and the `ce:compound` habit of writing solutions down. That was the whole agent surface. Cute, but it depended on my laptop and my memory of which doc lived where.
+
+Since then the skill layer grew actual structure, and I think this is the most under-told part of running a mature homelab:
+
+- **Three official FluxCD agent skills** — `gitops-cluster-debug`, `gitops-knowledge`, `gitops-repo-audit`. Added in May, vendored and hash-locked in `skills-lock.json`. They travel with the repo, not the machine. If my laptop dies, the next agent that opens the repo gets the same debugging runbook I do.
+- `homelab-flux` **promoted in-repo.** It used to live at the user level — my machine, my problem. Now it lives inside the infra repo, so the runbook travels with the cluster state it describes. If the cluster and the runbook ever disagree, at least they're disagreeing in the same git history.
+- **A custom** `crowdsec` **skill** — earned its own skill with a full reference tree (`appsec/`, `configure/`, `debug/`, `install/`, `migrate/`, `operate/`) because CrowdSec's scope outgrew a single solution doc and I refused to remember it all. More on that in the security section.
+
+Skills are now infrastructure. An agent debugging my cluster reads the same runbook I would, applies the same "check storage class first, then node scheduling, then Flux health" sequence I would. This is either reassuring or a sign I've automated away my own hobby. Possibly both.
+
+## Flux Bootstrap → Flux Operator (the migration that quieted things)
+
+In May I cut over from the Flux CLI's bootstrap flow to the Flux Operator. The old setup had `gotk-sync.yaml` — a CLI-generated `GitRepository` + `Kustomization` — holding the sync. The new setup has a `flux-instance` HelmRelease owning it:
+
+```yaml
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: flux-instance
+  namespace: flux-system
+spec:
+  # ... chart config ...
+  values:
+    instance:
+      sync:
+        kind: GitRepository
+        url: https://github.com/your-username/homelab-infra
+        ref:
+          branch: main
+        path: ./clusters/homelab
+```
+
+The bootstrap manifests left Git entirely. Flux now manages Flux, declaratively, in version control.
+
+It's turtles all the way down, but the turtles are in a git repo, which is the only place I trust turtles. The payoff was that the Flux Web UI I described last time — the one that read slightly ahead of the bootstrap step — finally had a coherent origin story. It's operator-managed, not bootstrapped. The two sections in the old post that contradicted each other quietly resolved themselves.
+
+## Where My Own Notes Caught Me
+
+Immich started crashing during thumbnail generation for iPhone video — H.264 and HEVC MOV files from Live Photos. The error was `ffmpeg was killed with signal SIGSEGV`. Classic segfault. Classic hunt.
+
+I blamed `fluent-ffmpeg`. Plausible! The fault surfaced in the Node.js process — the fluent-ffmpeg wrapper — and direct `ffmpeg` commands worked fine when I ran them by hand. The timing even lined up: the crash happened during the cleanup phase, after frames were successfully processed. That *smells* like a wrapper lifecycle bug. I wrote it up, documented the diagnosis, moved on.
+
+I was wrong. The `docs/solutions/` directory caught it months later during a refresh pass.
+
+The actual cause: the Mac Mini is an older Ivy Bridge box — 3rd-gen Intel, HD Graphics 4000 — with no VAAPI, CUDA, or Vulkan support. ffmpeg tries to initialize hardware acceleration during processing. On a CPU that has no accel surface, that initialization fails. And because ffmpeg is a gentleman about it, the fault doesn't surface until *after* it's done the useful work — during cleanup, out of spite.
+
+The reason I was misled: the direct `ffmpeg` commands I tested *implicitly disabled* hardware acceleration, so they worked. The Immich pipeline enabled it, so it crashed. Same binary, different default, opposite conclusion. My test was rigged to confirm my hypothesis.
+
+The fix is one environment variable:
+
+```yaml
+env:
+  FFMPEG_HWACCEL: "false"   # software-only on Ivy Bridge; the honest mode
+  FFMPEG_WORKERS: "1"        # secondary mitigation
+```
+
+The lesson isn't "check your CPU's acceleration support before enabling transcoding" — though, yes, obviously, that. Haswell (4th gen) and newer are fine; Ivy Bridge and earlier need software-only. The lesson is that my own solution doc carried the wrong diagnosis for months, and the compounding-docs discipline caught it on a re-read, not at the time of writing. I'd rather have documentation that admits it was wrong than documentation that was never wrong because I never wrote it down.
+
+## Improving Security Posture
+
+Three months ago, CrowdSec was an edge bouncer: blocked bad IPs, sat in front of Traefik, ran its LAPI. Fine. Since then it started ingesting Talos node logs too — cluster-wide acquisition, not just edge traffic — and the scope quietly outgrew a single solution doc. That's why it got its own skill with a reference tree. When the security surface grows, the skill surface follows.
+
+The other thing that happened: I found plaintext credentials in the docs.
+
+Not in the cluster — the cluster uses SOPS/Age, secrets are encrypted, that was always fine. But the *documentation* of how I'd set things up, written back when I was figuring it out, had real tokens in the examples. In the repo. In git history. Which meant I got to spend an afternoon with [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/){rel="&#x22;nofollow&#x22;"}:
+
+```bash
+# the day I made my past disappear, for legal reasons
+bfg --replace-text passwords.txt homelab-infra.git
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+git push --force
+```
+
+Documentation hygiene as lived practice, not theory: the lesson is that you write the creds down *once* while debugging, and then they live in your history forever until you surgically remove them. Better to redact at write time. I now redact at write time.
+
+## Running My Own Apps
+
+Three months ago the cluster hosted other people's Helm charts — Immich, Plex, Grafana, CrowdSec, Traefik. That's still most of it. But this quarter I started shipping my own images through the same reconciliation loop: a small AI playlist generator for Plex, and a job-search tracker. Both behind Traefik. Both reconciled by Flux like everything else.
+
+The shift is small but real. Hosting off-the-shelf software teaches you operations. Shipping your own images into the same loop teaches you the whole pipeline — build, tag, push, reconcile, break, fix, reconcile again. The cluster doesn't care that the image is mine. It just applies the manifest. Which is, I think, the highest compliment I can pay GitOps: my own software is treated with exactly the same indifference as everyone else's.
+
+## Major Upgrades Under GitOps: Immich v2 → v3
+
+The Immich v2 → v3 upgrade would've been a sweaty afternoon on a manual cluster. Under Flux it was a commit. Something broke; I reverted the commit; it un-broke. I re-tried with a config tweak; it stuck.
+
+One thread tied back to the ffmpeg saga: Immich's `FFMPEG_*` environment variables aren't officially supported, so the `FFMPEG_HWACCEL=false` fix from above is a "works, but don't call us" kind of deal. It survived the v3 upgrade, which I was not confident about and am now.
+
+## What Stalled (the Honest Beat)
+
+The original post had a "What's Next" list. Let me be honest about it:
+
+- **Gitea Actions CI with in-cluster runners** — actually shipped. Quietly. An `act_runner` deployment with DinD, living in the cluster it tests. It builds and pushes the images for the self-hosted apps (the playlist generator, the job-search tracker) through the same reconciliation loop as everything else. The blog itself publishes separately via GitHub Actions.
+- **Second node for HA** — not shipped. The Mac Mini hasn't died, so the urgency is theoretical.
+- **Better Alertmanager rules** — I'll get to it. Probably. Eventually.
+
+The mature homelab is mostly about what you choose *not* to do. I chose not to do quite a lot this quarter, and the cluster kept running anyway, which is either a win or an indictment of my ambitions.
+
+## What the Next Six Months Look Like
+
+The deferred items above are still the list, reframed as decisions rather than TODOs. Second-node HA is the next one I'll actually pick up — the Mac Mini hasn't earned its keep by failing yet, but the redundancy is the last piece between "homelab" and "homelab I'd show people without caveat."
+
+But the highest-leverage thing I can invest in is the skill layer. Not because skills are glamorous — they're the opposite of glamorous — but because I'm running out of things I personally want to debug twice. Every problem I've solved twice now has a doc. Every doc that got a diagnosis wrong now has a correction. The skill stack means the next agent — or the next me, after a machine swap, or a long pause, or a few beers — starts from the corrected version, not from zero.
+
+Three months in, I thought the cluster was the project. Six months in, the cluster is fine. The `docs/solutions/` directory is the project. The cluster just pays rent.
+
+---
+
+*Starts here: [Building a Homelab with Flux GitOps: Some lessons, three months in](https://marr.github.io/blog/homelab-flux-gitops-journey). For the AI-assisted side, see [Building a Knowledge Graph with Obsidian and MCP](https://marr.github.io/blog/knowledge-graph-obsidian-mcp).*
+
+
+# Building a Knowledge Graph with Obsidian and MCP
+
+Obsidian vaults are just folders of Markdown files. But when you connect them to an AI assistant through MCP, they become something more: a knowledge graph that your tools can navigate, search, and reason about.
+
+## The Problem: Notes Without Structure
+
+Most people dump notes into Obsidian without thinking about how they'll be used later. The result is a pile of files that's hard to search and impossible for an AI to make sense of.
+
+The community has been clear about this: **Obsidian MCP without structured note types just dumps notes wherever** — no concept of "this is a meeting note vs a project log." The structured approach is what makes the system actually usable.
+
+## Step 1: Define Your Note Types
+
+Before connecting anything to MCP, decide what kinds of notes you'll create. Each type should have its own structure:
+
+- **Meeting notes** — date, attendees, decisions, action items
+- **Project logs** — project name, status, blockers, next steps
+- **Architecture decisions** — context, options, decision, consequences
+- **Ideas** — topic, related notes, status (seeded / developing / archived)
+
+One developer in the community built an Obsidian plugin specifically for this: define note types with documented metadata, folder paths, templates, default values, and required vs optional fields. This schema layer is what separates a knowledge graph from a note graveyard.
+
+## Step 2: Connect via MCP
+
+The connection itself is straightforward. Install the [Local REST API plugin](https://github.com/coddingtonbear/obsidian-local-rest-api){rel="&#x22;nofollow&#x22;"}, enable it, copy the API key from the plugin settings, then add [Markus Pfundstein's mcp-obsidian server](https://github.com/MarkusPfundstein/mcp-obsidian){rel="&#x22;nofollow&#x22;"} (the community default for talking to Obsidian over HTTP).
+
+**Dataview** — Install the [Dataview](https://github.com/blacksmithgu/obsidian-dataview){rel="&#x22;nofollow&#x22;"} community plugin as well. `mcp-obsidian` relies on Dataview for structured queries over your vault; without it, graph-style retrieval and many tool paths will not behave as intended.
+
+**TLS certificate** — The Local REST API serves HTTPS by default with a plugin-generated certificate. For the default `OBSIDIAN_HOST` / `OBSIDIAN_PORT` setup to work without TLS errors, install or trust that certificate using the plugin’s instructions (usually from the plugin settings: export or open the cert and add it to your OS trust store). Until the client trusts the cert, connections can fail even with the correct API key.
+
+```json
+{
+  "mcpServers": {
+    "mcp-obsidian": {
+      "command": "uvx",
+      "args": ["mcp-obsidian"],
+      "env": {
+        "OBSIDIAN_API_KEY": "<your_api_key_here>",
+        "OBSIDIAN_HOST": "127.0.0.1",
+        "OBSIDIAN_PORT": "27124"
+      }
+    }
+  }
+}
+```
+
+The MCP client exposes tools to list and search the vault, read files, patch and append content, and delete files. Your vault stays queryable through whatever folder Obsidian has open.
+
+## Step 3: Build the Graph
+
+The real value comes from linking. Obsidian's `[[double bracket]]` syntax creates connections between notes. Over time, these links form a graph — and an assistant connected via MCP can traverse it.
+
+When you ask "What decisions have I made about authentication?", the model doesn't have to stop at the word "authentication." It can follow links from your project notes to architecture decisions to meeting summaries and keep context aligned with how you structured the vault.
+
+## Going Further: Vector Search
+
+For larger vaults, semantic search becomes essential. Some users create a vault vector database with MCP to let AI perform similarity search across their knowledge base. That way assistants can surface relevant notes even when the exact keywords don't match.
+
+The setup: run a local embedding model, index your vault, and expose it through MCP. Now "find notes about my authentication decisions" works even if the notes say "OAuth implementation" or "login flow."
+
+If you want that class of search without assembling pieces yourself, [QMD (Query Markup Documents)](https://github.com/tobi/qmd){rel="&#x22;nofollow&#x22;"} is worth a look: it indexes Markdown on-device, combines BM25 keyword search with vector semantic search and optional local re-ranking, and ships an MCP server (`query`, `get`, `multi_get`, and friends) so your client can retrieve structured results and full documents in one workflow.
+
+## The Docker MCP Toolkit
+
+If you want to run MCP servers in containers, the Docker MCP toolkit makes it easy. Add an Obsidian server through the catalog, paste your API key, and point any MCP-capable client at the gateway — Cursor, Claude Desktop, OpenCode, LM Studio, or others.
+
+The gateway handles authentication, tool routing, and secret management. You describe the outcome; the client and tools do the rest.
+
+## Alternative: Using the Obsidian Pi Extension
+
+If you're already using [Pi](https://pi.dev){rel="&#x22;nofollow&#x22;"} as your AI coding agent, you can connect to Obsidian through the [`@haispeed/pi-obsidian`](https://github.com/haispeed/pi-obsidian){rel="&#x22;nofollow&#x22;"} package. This provides an `obsidian_cli` tool that lets Pi interact with your vault directly.
+
+```bash
+pi install npm:@haispeed/pi-obsidian
+```
+
+Once installed, Pi gains access to Obsidian operations:
+
+- **Search** — Find notes across your vault
+- **Create** — Generate new notes with templates
+- **Tasks** — Query and manage Obsidian tasks
+- **Properties** — Read and update frontmatter
+- **Plugins** — Manage Obsidian plugins from the command line
+
+Unlike MCP, which exposes a generic HTTP interface, the Pi extension is deeply integrated into Pi's tool system. This means Pi can seamlessly read, write, and query your vault while maintaining context across conversations.
+
+The extension also includes skills for Obsidian Flavored Markdown authoring, so Pi can help you write with wikilinks, embeds, callouts, and frontmatter properties using native Obsidian syntax.
+
+If you're using Pi for development and want your notes to be part of your AI workflow, this is the natural choice.
+
+## What This Looks Like in Practice
+
+Here's a typical workflow:
+
+1. **Morning** — The assistant reads my daily note and picks up what I'm working on
+2. **During work** — I capture decisions and meeting notes as they happen
+3. **End of day** — The assistant summarizes, links related notes, updates project status
+4. **Next morning** — Context carries forward in the vault. Less re-explaining in the chat.
+
+The vault becomes an extension of your thinking. Not just a place to store notes, but a knowledge graph that helps you notice patterns you'd miss otherwise.
+
+## Getting Started
+
+If you're starting from scratch:
+
+1. Install Obsidian, the Local REST API plugin, and **Dataview**
+2. Trust the Local REST API **SSL certificate** so the default MCP env can connect over HTTPS
+3. Define 3-4 note types with templates
+4. Connect via MCP
+5. Start writing. Link everything.
+
+Your future self will thank you.
+
+---
+
+*For more on AI-assisted development, see my post on [Ralph Loops](https://marr.github.io/blog/ralph-loops).*
+
+
+# Ralph Loops
+
+With a good-enough plan, you could walk away from your computer – and have it build an entire company for you.
+
+## The concept
+
+You break down a plan into tasks. AI can help with this.
+
+Once you have a decent plan, you can run a `while` command in your terminal that continuously restarts the claude or whatever agent you are using with the result of the previous prompt.
+
+The loop focuses on a single task at a time and is always working on the most important one. Once the task is finished, it is marked complete, and goes on to the next one – using a fresh context window.
+
+Using this method, you aren't subject to context rot, or lossy session compaction.
+
+- <https://claytonfarr.github.io/ralph-playbook/>{rel="&#x22;nofollow&#x22;"}
+- <https://ghuntley.com>{rel="&#x22;nofollow&#x22;"}
+- <https://github.com/EveryInc/compound-engineering-plugin>{rel="&#x22;nofollow&#x22;"}
+
+
+# A simple publishing platform
+
+I've been through the cycle of over-engineering personal sites more times than I'd like to admit. This time, I wanted something different: a setup that gets out of the way and lets me focus on writing.
+
+## The stack
+
+With [Nuxt UI](https://ui.nuxt.com){rel="&#x22;nofollow&#x22;"} and a Git-based content workflow, I can publish and host my site for free. Here's what powers it:
+
+- **Nuxt 4** – The Vue framework for the modern web
+- **Nuxt Content** – File-based CMS with MDC support
+- **Nuxt UI** – Beautiful components out of the box
+
+## Why this approach
+
+There's no database to manage, no CMS admin panel to secure, and no monthly hosting bill. Content lives in Markdown files alongside the code. When I push to GitHub, the site rebuilds and deploys automatically.
+
+The real magic is [MDC (Markdown Components)](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="&#x22;nofollow&#x22;"}. It lets me drop Vue components directly into Markdown, which means I can build custom layouts and interactive elements without leaving the content files. The home page project cards? Those are MDC components.
+
+## Editing in the repo
+
+I write in my editor; commits go through Git as usual. Local `pnpm dev` shows the same setup the static site uses after CI builds.
+
+## Keeping it simple
+
+The entire source is available on [GitHub](https://github.com/marr/marr.github.io){rel="&#x22;nofollow&#x22;"}. There's no build configuration to speak of—Nuxt handles that. No complex deployment pipelines—GitHub Pages serves the static output. The result is a site that's fast to load, easy to maintain, and costs nothing to run.

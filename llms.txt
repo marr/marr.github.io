@@ -1,0 +1,36 @@
+# David Marr
+
+> Writing and open source on agent tooling, homelab GitOps, and interface craft.
+
+## Documentation Sets
+
+- [Full site content](https://marr.github.io/llms-full.txt): All pages and blog posts as markdown, suitable for agent ingestion.
+
+## Site pages
+
+Home, bookmarks, stars, background.
+
+- [Bookmarks](https://marr.github.io/raw/bookmarks.md): Tools in rotation, experiments on the bench, and older demos.
+- [David Marr](https://marr.github.io/raw/index.md): Writing and open source on agent tooling, homelab GitOps, and interface craft.
+- [Résumé](https://marr.github.io/raw/resume.md): CV for David Marr — engineering leader, platforms, and AI integration.
+- [Stars](https://marr.github.io/raw/stars.md): Repos I've starred lately.
+
+## Writing
+
+Blog posts on homelab GitOps, agents, and tooling.
+
+- [Building a Homelab with Flux GitOps: Some lessons, three months in](https://marr.github.io/raw/blog/homelab-flux-gitops-journey.md): How I built a home Kubernetes cluster with Flux, SOPS secrets, and a dashboard that actually works — plus the skills that helped document everything along the way.
+- [Homelab GitOps, Six Months In: Progress is progress](https://marr.github.io/raw/blog/homelab-flux-gitops-six-months.md): Six months into the Flux/Talos homelab. Self-hosted apps are now just a prompt away.
+- [Building a Knowledge Graph with Obsidian and MCP](https://marr.github.io/raw/blog/knowledge-graph-obsidian-mcp.md): How to turn your Obsidian vault into a queryable knowledge graph that AI assistants can navigate, search, and learn from.
+- [Ralph Loops](https://marr.github.io/raw/blog/ralph-loops.md): The latest craze in AI-assisted development.
+- [A simple publishing platform](https://marr.github.io/raw/blog/simple-publishing-platform.md): How I built this site with Nuxt Content and Nuxt UI
+
+## Profiles
+
+- [GitHub](https://github.com/marr): Source repos and issues.
+- [X](https://x.com/dmarr): Threads and links to new posts.
+
+## Notes
+
+- Personal lab notebook for peers, not a job pitch.
+- Flagship OSS: create-react-reps, nuxt-maplibre, flux-homelab-skill.

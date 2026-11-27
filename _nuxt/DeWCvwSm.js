@@ -1,0 +1,2 @@
+//# allFunctionsCalledOnLoad
+import{Pn as e,ar as t,tr as n,u as r}from"#entry";var i={},a={class:`mx-auto max-w-4xl px-4`};function o(r,i){return n(),e(`div`,a,[t(r.$slots,`default`)])}var s=r(i,[[`render`,o]]);export{s as default};
