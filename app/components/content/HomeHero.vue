@@ -48,15 +48,14 @@ const props = withDefaults(defineProps<Props>(), {
         />
       </div>
 
-      <h1 class="mb-3 text-4xl font-bold tracking-tight text-default md:text-5xl">
-        {{ title }}
+      <h1 class="mb-6 text-default">
+        <span class="sr-only">{{ title }}</span>
+        <span
+          aria-hidden="true"
+          class="block h-12 bg-current md:h-16"
+          style="aspect-ratio: 1194.1 / 190; mask: url(/logo-david-marr-lockup.svg) center / contain no-repeat; -webkit-mask: url(/logo-david-marr-lockup.svg) center / contain no-repeat"
+        />
       </h1>
-
-      <MorphingText
-        v-if="roles?.length"
-        :texts="roles"
-        class="mb-6 text-primary"
-      />
 
       <p v-if="description" class="mb-10 max-w-2xl text-pretty text-lg leading-relaxed text-muted">
         {{ description }}
