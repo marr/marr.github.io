@@ -54,10 +54,13 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: ${{ steps.pkgman.outputs.cache }}
-          cache-dependency-path: pnpm-lock.yaml
+          # Include package.json so a packageManager bump (e.g. pnpm 10 → 12) invalidates the store cache.
+          cache-dependency-path: |
+            pnpm-lock.yaml
+            package.json
 
       - name: Install dependencies
-        run: ${{ steps.pkgman.outputs.package_manager }} install
+        run: ${{ steps.pkgman.outputs.package_manager }} install --frozen-lockfile
 
       - uses: actions/setup-python@v6
         with:
