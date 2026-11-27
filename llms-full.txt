@@ -264,8 +264,7 @@ socials:
     label: David Marr on LinkedIn
     url: https://linkedin.com/in/davidmarr
 avatar: /avatar.jpg
-description: Agent harnesses, homelab GitOps, and OSS you can fork. This site is
-  a lab notebook for peers, not a résumé pitch.
+description: Agent harnesses, homelab GitOps, and OSS you can fork.
 title: David Marr
 ---
 ::

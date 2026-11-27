@@ -2,7 +2,7 @@
 
 > Writing and open source on agent tooling, homelab GitOps, and interface craft.
 
-<home-hero :roles="["Developer","AI Engineer","Tinkerer of bits"]" :socials="[{"icon":"i-simple-icons-github","label":"David Marr on GitHub","url":"https://github.com/marr"},{"icon":"i-simple-icons-x","label":"David Marr on X","url":"https://x.com/dmarr"},{"icon":"i-simple-icons-bluesky","label":"David Marr on Bluesky","url":"https://bsky.app/profile/davidmarr.bsky.social"},{"icon":"i-simple-icons-linkedin","label":"David Marr on LinkedIn","url":"https://linkedin.com/in/davidmarr"}]" avatar="/avatar.jpg" description="Agent harnesses, homelab GitOps, and OSS you can fork. This site is a lab notebook for peers, not a résumé pitch." title="David Marr">
+<home-hero :roles="["Developer","AI Engineer","Tinkerer of bits"]" :socials="[{"icon":"i-simple-icons-github","label":"David Marr on GitHub","url":"https://github.com/marr"},{"icon":"i-simple-icons-x","label":"David Marr on X","url":"https://x.com/dmarr"},{"icon":"i-simple-icons-bluesky","label":"David Marr on Bluesky","url":"https://bsky.app/profile/davidmarr.bsky.social"},{"icon":"i-simple-icons-linkedin","label":"David Marr on LinkedIn","url":"https://linkedin.com/in/davidmarr"}]" avatar="/avatar.jpg" description="Agent harnesses, homelab GitOps, and OSS you can fork." title="David Marr">
 
 
 
