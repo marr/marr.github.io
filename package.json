@@ -2,7 +2,7 @@
   "name": "@dmarr/cv",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@10.34.5",
+  "packageManager": "pnpm@12.24.0",
   "scripts": {
     "build": "bash scripts/render-cv.sh && nuxt build",
     "dev": "nuxt dev",
@@ -16,7 +16,6 @@
     "@tailwindcss/vite": "^4.3.5",
     "@vueuse/core": "^15.1.0",
     "better-sqlite3": "^13.2.0",
-    "dithered-logo-vue": "github:marr/dithered-logo-vue",
     "motion-v": "^2.13.0",
     "nuxt": "^4.7.0",
     "nuxt-llms": "^0.3.2",

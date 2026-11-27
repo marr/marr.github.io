@@ -55,9 +55,6 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  build: {
-    transpile: ["dithered-logo-vue"],
-  },
   app: {
     head: {
       link: [
