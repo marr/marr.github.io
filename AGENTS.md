@@ -13,16 +13,16 @@ This is a Nuxt 4 personal portfolio/blog site (`@dmarr/cv`). It is a single appl
 | Install deps | `pnpm install` |
 | Dev server | `pnpm dev` (serves at `http://localhost:3000`) |
 | Build | `pnpm build` |
-| Typecheck | `npx nuxi typecheck` |
-| Generate types | `npx nuxi prepare` |
+| Typecheck | `pnpm exec nuxt typecheck` |
+| Generate types | `pnpm exec nuxt prepare` |
 
 ### Notes
 
 - **Content routes:** `app/pages/[...slug].vue` and `blog/[...slug].vue` use `useContentPath()` so the index route always queries path `"/"` in `@nuxt/content` (router can surface `""`).
 - **Cursor skills:** Skills such as `/last30days` may appear in Cursor’s skills list and are invoked in the IDE; autonomous cloud agents do not necessarily run them unless you trigger them or wire equivalent tooling.
-- **No ESLint or linter** is configured in this project. Typecheck via `npx nuxi typecheck`.
+- **No ESLint or linter** is configured in this project. Typecheck via `pnpm exec nuxt typecheck`.
 - **No automated tests** exist in this project.
-- The project uses **pnpm 9.15.4** (pinned via `packageManager` in `package.json`). Node v22 is required.
+- The project uses **pnpm 10.34.5** (pinned via `packageManager` in `package.json`). Node v22+ is required; CI uses Node 24.
 - Pre-existing type errors exist in `MorphingText.vue` and `blog/index.vue` — these are known and not regressions.
 - The CV/resume rendering (`pnpm cv:render`) requires Python 3 + `rendercv[full]==2.8` but pre-built artifacts (`public/david-marr-resume.pdf`, `content/resume.md`) are already committed, so this is only needed when editing the CV YAML.
 - `@nuxt/content` v3 uses an embedded SQLite database (`better-sqlite3`) — no external database setup is needed.

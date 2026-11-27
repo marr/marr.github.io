@@ -1,13 +1,10 @@
-import {
-  defineEventHandler,
-  getQuery,
-  setResponseHeader,
-} from "h3";
+import { getQuery, setResponseHeader } from "h3";
+import { defineHandler, useRuntimeConfig } from "nuxt/server";
 import { fetchGitHubStars } from "../../utils/githubStars";
 
-export default defineEventHandler(async (event) => {
+export default defineHandler(async (event) => {
   const query = getQuery(event);
-  const config = useRuntimeConfig(event);
+  const config = useRuntimeConfig();
   const limit = Number(query.limit) || 8;
   const username =
     (typeof query.username === "string" && query.username) ||

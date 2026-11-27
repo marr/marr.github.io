@@ -2,6 +2,7 @@
   "name": "@dmarr/cv",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.34.5",
   "scripts": {
     "build": "bash scripts/render-cv.sh && nuxt build",
     "dev": "nuxt dev",

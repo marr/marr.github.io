@@ -127,7 +127,7 @@
 
 <script setup lang="ts">
 import { computed, useSlots } from "vue";
-import { nodeTextContent } from "@nuxtjs/mdc/runtime";
+import { nodeTextContent } from "@nuxtjs/mdc/runtime/utils/node";
 import type { CompanionLogo, ResumeExperienceLogo } from "~/utils/resumeExperienceLogos";
 import {
   logoForResumeCompany,
